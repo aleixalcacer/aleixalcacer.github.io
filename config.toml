@@ -1,0 +1,36 @@
+# The URL the site will be built for
+base_url = "https://aleixalcacer.com"
+
+# Title
+title = "Aleix Alcacer"
+
+# Whether to automatically compile all Sass files in the sass directory
+compile_sass = true
+
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = false
+
+[markdown]
+# Whether to do syntax highlighting
+# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
+highlight_code = false
+
+[extra]
+# Put all your custom variables here
+
+navbar_items = [
+	{ url = "$BASE_URL/resume", name = "Resume", icon = "fa-file"},
+	{ url = "$BASE_URL/blog", name = "Blog", icon = "fa-rss"},
+]
+
+[extra.author]
+# Avatar image
+avatar = "images/avatar.jpeg"
+
+[extra.social]
+# Social usernames
+twitter = "aleixalcacer"
+linkedin = "aleixalcacer"
+github = "aleixalcacer"
+stackoverflow = "14079719"
+email = "aleixalcacer@gmail.com"

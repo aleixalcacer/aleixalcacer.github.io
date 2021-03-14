@@ -1,0 +1,23 @@
+{% import 'macros.html' as macros %}
+
+{% extends "base.html" %}
+
+{% block header %}
+<h1 class='title is-1'>
+    <underline>{{ section.title }}</underline>
+</h1>
+
+
+{% endblock %}
+
+{% block content %}
+<div class="has-text-weight-light is-size-5 px-6">
+    {% if config.extra.author.avatar %}
+    <figure class="image is-justify-content-center is-align-items-center">
+        <img class="is-rounded" src='{{ config.extra.author.avatar }}' style="max-width: 192px" />
+    </figure>
+    {% endif %}
+    {{ macros:: social_links(social_config=config.extra.social) }}
+    {{ section.content | safe }}
+</div>
+{% endblock %}
