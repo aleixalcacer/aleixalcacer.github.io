@@ -1,12 +1,9 @@
 {% extends "base.html" %}
 
-{% block header %}
-
-<h1 class="title is-1"> {{ section.title }} </h1>
-
-{% endblock header %}
 
 {% block content %}
+
+<h1 class="title is-1"> {{ section.title }} </h1>
 
 {% for year, posts in section.pages | group_by(attribute="year") %}
 <ul class="posts flat">
