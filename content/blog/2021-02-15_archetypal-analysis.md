@@ -1,10 +1,7 @@
 +++
 title = "Archetypal Analysis"
 description = "A quick introduction to archetypal analysis."
-draft = false
-[taxonomies]
-categories = ["archetypal analysis"]
-authors = ["Aleix Alcacer"]
+draft = true
 +++
 
 Archetypal anlalysis is a branch of statistics whose purpose is to search for
