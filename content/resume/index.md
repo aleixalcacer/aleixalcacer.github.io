@@ -38,29 +38,30 @@ template = "resume.html"
 
     I teach the second module of the SIQ025 and SIQ525 subjects included in
     the master's degree in Computational Mathematics.
-
+    The topics covered in the module are git and R packages.
 
 - **Research technician** | 2018 - present
 
     I am part of the DPI2017-87333-R project of the Ministry of Science,
-    Innovation and Universities of Spain. I am in charge of conducting tests
-    and experiments and analyzing the results. I have also started researching
-    in the field of archetypal analysis, publishing several articles and
-    posters.
+    Innovation and Universities of Spain.
+    I am in charge of conducting tests and experiments and analyzing the
+    results.
+    I have also started researching in the field of archetypal analysis,
+    publishing several articles and posters.
 
 
 ### Francesc Alted
 
 - **Software analyst and designer** | 2018 - present
 
-    We are currently focusing on combining high performance algorithms and
-    chunked data compression.
+    I am focused on combining high performance algorithms and chunked data
+    compression.
     I lead the Caterva project, an open source library that allows to store
-    large multidimensional, chunked, compressed datasets. I am also part of
-    the well known Blosc project, a high performance compressor specifically
-    designed for binary data. Furthermore, I am one of the main developers of
-    a new computational engine optimized for big-data applications called
-    Iron Array.
+    large multidimensional, chunked, compressed datasets.
+    I am also part of the well known Blosc project, a high performance
+    compressor specifically designed for binary data.
+    Furthermore, I am one of the developers of a new computational engine
+    optimized for big-data applications called Iron Array.
 
 
 
