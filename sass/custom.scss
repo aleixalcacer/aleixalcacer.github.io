@@ -9,6 +9,13 @@ $primary: #FFA69E;
 $light: #BAFEDD;
 $dark: #003049;
 $black: #000000;
+$white: #FFFFFF;
+
+$dark-invert: $light;
+$light-invert: $dark;
+$white-invert: $black;
+$black-invert: $white;
+
 
 // Update Bulma's global variables
 $widescreen-enabled: false;
@@ -18,6 +25,13 @@ $title-font: Raleway;
 // Update title variables
 $title-family: Raleway;
 $title-weight: 800;
+
+// Navbar components
+$navbar-padding-horizontal: 7em;
+$navbar-background-color: $dark;
+$navbar-item-color: $white;
+$navbar-item-hover-color: $light;
+$navbar-item-hover-background-color: transparent;
 
 // Code color
 $code: $dark;
