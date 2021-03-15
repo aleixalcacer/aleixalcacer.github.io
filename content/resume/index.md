@@ -81,7 +81,7 @@ is a high performance compressor optimized for binary data.
 [Caterva](https://github.com/Blosc/Caterva)
 is a multidimensional data container on top of Blosc2.
 
-- **Creator and first maintainer** | 2018 - present
+- **Creator and primary maintainer** | 2018 - present
 
 
 ### Memprofiler
@@ -89,7 +89,7 @@ is a multidimensional data container on top of Blosc2.
 [Memprofiler](https://github.com/aleixalcacer/memprofiler)
 is a IPython extension for monitoring memory usage of Jupyter notebook cells.
 
-- **Creator and first maintainer** | 2020 - present
+- **Creator and primary maintainer** | 2020 - present
 
 
 ### Archetypes
@@ -97,7 +97,7 @@ is a IPython extension for monitoring memory usage of Jupyter notebook cells.
 [Archetypes](https://github.com/aleixalcacer/archetypes)
 is a scikit-learn compatible Python package for archetypal analysis.
 
-- **Creator and first maintainer** | 2021 - present
+- **Creator and primary maintainer** | 2021 - present
 
 
 
