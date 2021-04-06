@@ -106,6 +106,11 @@ is a scikit-learn compatible Python package for archetypal analysis.
 
 ### Articles
 
+-   A. Alcacer, I. Epifanio, J. Valero, A. Ballester.
+    *Combining Classification and User-Based Collaborative Filtering for Matching Footwear Size.*
+    Mathematics (2021).
+    DOI: [10.3390/math9070771](https://doi.org/10.3390/math9070771).
+
 -   A. Alcacer, Irene Epifanio, M. Victoria Ibáñez, Amelia Simó, A. Ballester.
     *A data-driven classification of 3D foot types by archetypal shapes based on landmarks.*
     PLoS ONE (2020).
@@ -114,20 +119,20 @@ is a scikit-learn compatible Python package for archetypal analysis.
 
 ### International Conferences
 
--   A. Alcacer, Irene Epifanio.
+-   A. Alcacer, I. Epifanio.
     *Biarchetype analysis: definition and application to sports analysis.*
     3rd BYMAT Conference (2020).
 
--   A. Alcacer, Irene Epifanio, M. Victoria Ibáñez, Amelia Simó, A. Ballester.
+-   A. Alcacer, I. Epifanio, M. V. Ibáñez, A. Simó, A. Ballester.
     *What are the types of Spanish foot shapes? Archetypoid analysis of 3D images.*
     30th International Biometric Conference, IBC (2020).
 
--   A. Alcacer, Irene Epifanio, M. Victoria Ibáñez, Amelia Simó.
+-   A. Alcacer, I. Epifanio, M. Victoria Ibáñez, A. Simó.
     *Archetypal contour functions.*
     12th Scientific Meeting Classification and Data Analysis Group, CLADAG (2019).
     ISBN: 978-88-8317-108-6.
 
--   A. Alcacer, Irene Epifanio, M. Victoria Ibáñez, Amelia Simó.
+-   A. Alcacer, I.Epifanio, M. V. Ibáñez, A. Simó.
     *Analysis of 2D foot morphology by functional archetypal analysis.*
     XVII Conferencia Española de Biometría and VII Encuentro Iberoamericano de Biometría (2019).
     ISBN: 978-84-09-11706-2.
@@ -135,10 +140,10 @@ is a scikit-learn compatible Python package for archetypal analysis.
 
 ### National Conferences
 
--   A. Alcacer, Irene Epifanio.
+-   A. Alcacer, I. Epifanio.
     *Analysis of gene expression data using biarchetype analysis.*
     V Jornadas Científicas de Estudiantes de la Sociedad Española de Bioestadística, VJSEB (2021).
 
--   A. Alcacer, Irene Epifanio, M. Victoria Ibáñez, Amelia Simó, A. Ballester.
+-   A. Alcacer, I. Epifanio, M. V. Ibáñez, A. Simó, A. Ballester.
     *A data-driven classification of 3D foot types by archetypal shapes based on landmarks.*
     V Congreso de Jóvenes Investigadores de la RSME (2020).
