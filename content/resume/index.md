@@ -132,7 +132,7 @@ is a scikit-learn compatible Python package for archetypal analysis.
     12th Scientific Meeting Classification and Data Analysis Group, CLADAG (2019).
     ISBN: 978-88-8317-108-6.
 
--   A. Alcacer, I.Epifanio, M. V. Ibáñez, A. Simó.
+-   A. Alcacer, I. Epifanio, M. V. Ibáñez, A. Simó.
     *Analysis of 2D foot morphology by functional archetypal analysis.*
     XVII Conferencia Española de Biometría and VII Encuentro Iberoamericano de Biometría (2019).
     ISBN: 978-84-09-11706-2.
