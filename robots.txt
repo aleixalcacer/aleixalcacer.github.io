@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://aleixalcacer.github.io/sitemap.xml
