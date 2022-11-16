@@ -1,27 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://github.com/aleixalcacer/quarto-website/posts/2022-06-11_archetypal-analysis/index.html</loc>
-    <lastmod>2022-11-16T18:02:32.594Z</lastmod>
+    <loc>https://aleixalcacer.com/quarto-website/posts/2022-06-11_archetypal-analysis/index.html</loc>
+    <lastmod>2022-11-16T18:16:38.799Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/aleixalcacer/quarto-website/posts/post-r-demo/index.html</loc>
-    <lastmod>2022-11-16T18:02:33.614Z</lastmod>
+    <loc>https://aleixalcacer.com/quarto-website/index.html</loc>
+    <lastmod>2022-11-16T18:16:39.759Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/aleixalcacer/quarto-website/posts/post-python-demo/index.html</loc>
-    <lastmod>2022-11-16T18:02:34.106Z</lastmod>
+    <loc>https://aleixalcacer.com/quarto-website/blog.html</loc>
+    <lastmod>2022-11-16T18:16:40.195Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/aleixalcacer/quarto-website/index.html</loc>
-    <lastmod>2022-11-16T18:02:34.430Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/aleixalcacer/quarto-website/blog.html</loc>
-    <lastmod>2022-11-16T18:02:34.774Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/aleixalcacer/quarto-website/publications.html</loc>
-    <lastmod>2022-11-16T18:02:35.154Z</lastmod>
+    <loc>https://aleixalcacer.com/quarto-website/publications.html</loc>
+    <lastmod>2022-11-16T18:16:40.759Z</lastmod>
   </url>
 </urlset>
