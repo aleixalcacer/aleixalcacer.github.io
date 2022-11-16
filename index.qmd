@@ -6,6 +6,8 @@ about:
   image-width: 10em
   image-shape: round
   links:
+    - text: Orcid
+      href: https://orcid.org/0000-0003-3566-0204
     - icon: twitter
       text: Twitter
       href: https://twitter.com/aleixalcacer

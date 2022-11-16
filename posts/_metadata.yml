@@ -1,0 +1,8 @@
+# Citation Style Language
+csl: apa.csl
+
+# Table of contents 
+toc: true
+
+# Citation information
+citation: true

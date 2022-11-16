@@ -1,7 +1,7 @@
 ---
 title: "Publications"
 bibliography: references.bib
-csl: apa.cls
+csl: posts/apa.csl
 nocite: |
   @*
 ---

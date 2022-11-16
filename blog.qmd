@@ -4,4 +4,5 @@ listing:
   contents: posts
   sort: "date desc"
   type: default
+  fields: [description, date, title, author, reading-time]
 ---

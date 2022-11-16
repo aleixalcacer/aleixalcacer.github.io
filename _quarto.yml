@@ -5,6 +5,7 @@ execute:
   freeze: auto
 
 website:
+  site-url: https://aleixalcacer.com/quarto-website
   title: "Aleix Alcacer"
   navbar:
     title: "Aleix Alcacer"
