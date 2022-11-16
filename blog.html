@@ -70,9 +70,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-description','listing-date','listing-title','listing-author','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-description"],
+      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -156,7 +156,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1669766400000" data-listing-file-modified-sort="1668599432859" data-listing-reading-time-sort="0.155">
+<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1669766400000" data-listing-file-modified-sort="1668621738097" data-listing-reading-time-sort="0.155">
 <div class="body">
 <a href="./posts/post-r-demo/index.html">
 <h3 class="no-anchor listing-title">
@@ -178,10 +178,41 @@ Nov 30, 2022
 <div class="listing-author">
 Aleix Alcacer
 </div>
+<div class="listing-reading-time">
+0 min
+</div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="news,code,archetypal analysis" data-listing-date-sort="1668556800000" data-listing-file-modified-sort="1668599432859" data-listing-reading-time-sort="0.25">
+<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1668556800000" data-listing-file-modified-sort="1668621738097" data-listing-reading-time-sort="2.03">
+<div class="body">
+<a href="./posts/2022-06-11_archetypal-analysis/index.html">
+<h3 class="no-anchor listing-title">
+Biarchetype analysis
+</h3>
+<div class="listing-subtitle">
+Simultaneous learning of samples and features based on extremes
+</div>
+<div class="listing-description">
+Archetypal analysis was introduced by <span class="citation" data-cites="Cutler1994">Cutler &amp; Breiman (1994)</span>. Let <span class="math inline">\(X\)</span> be a (real-valued) data matrix where the rows represent the samples of the data and…<span class="math inline"></span><span class="math inline"></span><span class="math inline"></span><span class="math inline"></span>
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./posts/2022-06-11_archetypal-analysis/index.html">
+<div class="listing-date">
+Nov 16, 2022
+</div>
+<div class="listing-author">
+Aleix Alcacer
+</div>
+<div class="listing-reading-time">
+2 min
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="2" data-categories="news,code,archetypal analysis" data-listing-date-sort="1668556800000" data-listing-file-modified-sort="1668621738097" data-listing-reading-time-sort="0.25">
 <div class="body">
 <a href="./posts/post-python-demo/index.html">
 <h3 class="no-anchor listing-title">
@@ -202,6 +233,9 @@ Nov 16, 2022
 </div>
 <div class="listing-author">
 Aleix Alcacer
+</div>
+<div class="listing-reading-time">
+0 min
 </div>
 </a>
 </div>
