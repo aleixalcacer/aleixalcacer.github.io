@@ -21,17 +21,17 @@
     "text": "I am Aleix Alcacer, a predoctoral researcher at Jaume I University that loves the open-source world.\nI like to develop new algorithms focusing on both performance and efficiency. Currently, I am designing new methods for the archetypal analysis."
   },
   {
-    "objectID": "publications.html",
-    "href": "publications.html",
-    "title": "Publications",
-    "section": "",
-    "text": "Alcacer, A., Epifanio, I., Ibáñez, M. V., Simó, A., & Ballester, A. (2020). A data-driven classification of 3D foot types by archetypal shapes based on landmarks. PLOS ONE, 15, e0228016. https://doi.org/10.1371/JOURNAL.PONE.0228016\n\n\nAlcacer, A., Epifanio, I., Valero, J., & Ballester, A. (2021). Combining classification and user-based collaborative filtering for matching footwear size. Mathematics 2021, Vol. 9, Page 771, 9, 771. https://doi.org/10.3390/MATH9070771"
-  },
-  {
     "objectID": "blog.html",
     "href": "blog.html",
     "title": "Blog",
     "section": "",
     "text": "R ggplot2 demo\n\n\n\n\n\n\n\n\n\n\n\n\nNov 30, 2022\n\n\nAleix Alcacer\n\n\n\n\n\n\n\n\nPython demo\n\n\n\n\n\n\n\n\n\n\n\n\nNov 16, 2022\n\n\nAleix Alcacer\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "publications.html",
+    "href": "publications.html",
+    "title": "Publications",
+    "section": "",
+    "text": "Alcacer, A., Epifanio, I., Ibáñez, M. V., Simó, A., & Ballester, A. (2020). A data-driven classification of 3D foot types by archetypal shapes based on landmarks. PLOS ONE, 15, e0228016. https://doi.org/10.1371/JOURNAL.PONE.0228016\n\n\nAlcacer, A., Epifanio, I., Valero, J., & Ballester, A. (2021). Combining classification and user-based collaborative filtering for matching footwear size. Mathematics 2021, Vol. 9, Page 771, 9, 771. https://doi.org/10.3390/MATH9070771"
   }
 ]
