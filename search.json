@@ -1,0 +1,37 @@
+[
+  {
+    "objectID": "posts/post-r-demo/index.html",
+    "href": "posts/post-r-demo/index.html",
+    "title": "R ggplot2 demo",
+    "section": "",
+    "text": "Figure 1 further explores the impact of temperature on ozone level.\n\n\nCode\nlibrary(ggplot2)\n\nggplot(airquality, aes(Temp, Ozone)) + \n  geom_point() + \n  geom_smooth(method = \"loess\")\n\n\n\n\n\nFigure 1: Temperature and ozone level."
+  },
+  {
+    "objectID": "posts/post-python-demo/index.html",
+    "href": "posts/post-python-demo/index.html",
+    "title": "Python demo",
+    "section": "",
+    "text": "For a demonstration of a line plot on a polar axis, see Figure 1.\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(\n  subplot_kw = {'projection': 'polar'} \n)\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n\n\n\n\n\nFigure 1: A line plot on a polar axis"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "About",
+    "section": "",
+    "text": "I am Aleix Alcacer, a predoctoral researcher at Jaume I University that loves the open-source world.\nI like to develop new algorithms focusing on both performance and efficiency. Currently, I am designing new methods for the archetypal analysis."
+  },
+  {
+    "objectID": "publications.html",
+    "href": "publications.html",
+    "title": "Publications",
+    "section": "",
+    "text": "Alcacer, A., Epifanio, I., Ibáñez, M. V., Simó, A., & Ballester, A. (2020). A data-driven classification of 3D foot types by archetypal shapes based on landmarks. PLOS ONE, 15, e0228016. https://doi.org/10.1371/JOURNAL.PONE.0228016\n\n\nAlcacer, A., Epifanio, I., Valero, J., & Ballester, A. (2021). Combining classification and user-based collaborative filtering for matching footwear size. Mathematics 2021, Vol. 9, Page 771, 9, 771. https://doi.org/10.3390/MATH9070771"
+  },
+  {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "Blog",
+    "section": "",
+    "text": "R ggplot2 demo\n\n\n\n\n\n\n\n\n\n\n\n\nNov 30, 2022\n\n\nAleix Alcacer\n\n\n\n\n\n\n\n\nPython demo\n\n\n\n\n\n\n\n\n\n\n\n\nNov 16, 2022\n\n\nAleix Alcacer\n\n\n\n\n\n\nNo matching items"
+  }
+]
