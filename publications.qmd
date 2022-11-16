@@ -1,0 +1,10 @@
+---
+title: "Publications"
+bibliography: references.bib
+csl: apa.cls
+nocite: |
+  @*
+---
+
+::: {#refs}
+:::

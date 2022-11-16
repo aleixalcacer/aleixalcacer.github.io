@@ -1,0 +1,27 @@
+---
+title: "About"
+image: profile.jpg
+about:
+  template: jolla
+  image-width: 10em
+  image-shape: round
+  links:
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com/aleixalcacer
+    - icon: linkedin
+      text: LinkedIn
+      href: https://linkedin.com/aleixalcacer
+    - icon: github
+      text: Github
+      href: https://github.com/aleixalcacer
+    - icon: envelope
+      text: Mail
+      href: mailto:aleixalcacer@gmail.com
+
+---
+
+I am Aleix Alcacer, a predoctoral researcher at Jaume I University that loves the open-source world.
+
+I like to develop new algorithms focusing on both performance and efficiency.
+Currently, I am designing new methods for the archetypal analysis.

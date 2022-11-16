@@ -1,0 +1,21 @@
+project:
+  type: website
+
+execute:
+  freeze: auto
+
+website:
+  title: "Aleix Alcacer"
+  navbar:
+    title: "Aleix Alcacer"
+    right:
+      - publications.qmd
+      - blog.qmd
+format:
+  html:
+    theme: lux
+    css: styles.css
+
+
+
+
