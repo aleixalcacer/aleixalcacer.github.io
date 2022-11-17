@@ -164,14 +164,10 @@ div.csl-indent {
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="../../publications.html">
- <span class="menu-text">Publications</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../blog.html">
- <span class="menu-text">Blog</span></a>
-  </li>  
+  <li class="dropdown-header">
+ <span class="menu-text">publications/index.qmd</span></li>
+  <li class="dropdown-header">
+ <span class="menu-text">posts/index.qmd</span></li>
 </ul>
               <div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
@@ -230,12 +226,12 @@ div.csl-indent {
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
 <p>Archetypal analysis was introduced by <span class="citation" data-cites="Cutler1994">Cutler &amp; Breiman (<a href="#ref-Cutler1994" role="doc-biblioref">1994</a>)</span>. Let <span class="math inline">\(X\)</span> be a (real-valued) data matrix where the rows represent the samples of the data and the columns, the features. They defined the archetypes as convex combinations of the data samples, i.e.&nbsp;<span class="math inline">\(Z = BX\)</span> where <span class="math inline">\(B\)</span> is a stochastic matrix. In addition, the data samples are approximated by convex combinations of the archetypes, i.e.&nbsp;<span class="math inline">\(X \simeq AZ\)</span> where <span class="math inline">\(A\)</span> and is also stochastic matrix. This is equivalent to solve the following optimization problem:</p>
 <p><span id="eq-aa"><span class="math display">\[
-\begin{align}
+\begin{aligned}
 \mathop{\mathrm{arg\,min\,}}_{A,B} \quad &amp;  \|X - ABX \|^2 \\
 \textrm{s.t.} \quad &amp;  \\
     &amp; \sum\nolimits_{k=1}^K A_{mk} = 1 \text{ with } A_{mk} \in [0, 1] \text{ for each } m=1,\dots, M \\
     &amp; \sum\nolimits_{m=1}^M B_{km} = 1 \text{ with } B_{km} \in [0, 1] \text{ for each } k=1,\dots, K \\
-\end{align}
+\end{aligned}
 \tag{1}\]</span></span></p>
 <p>TODO: Interpretation</p>
 </section>
@@ -244,7 +240,7 @@ div.csl-indent {
 <p>In BiAA, the archetypes are assumed to be convex combinations of the data in both dimensions, i.e.&nbsp;<span class="math inline">\(Z = BXC\)</span> where <span class="math inline">\(B\)</span> and <span class="math inline">\(C\)</span> are stochastic matrices. At the same time, the data is approximated by convex combinations of the archetypes, i.e.&nbsp;<span class="math inline">\(X \simeq AZD\)</span> where <span class="math inline">\(A\)</span> and <span class="math inline">\(D\)</span> are also stochastic matrices.</p>
 <p>This is equivalent to solve the following optimization problem:</p>
 <p><span id="eq-biaa"><span class="math display">\[
-\begin{align}
+\begin{aligned}
 \mathop{\mathrm{arg\,min\,}}_{A,B,C,D} \quad &amp;  \ell(X|ABXCD) \\
 \textrm{s.t.} \quad &amp;  \\
     &amp; \ell(X | \tilde{X}) \text{ should be a loss function} \\
@@ -252,7 +248,7 @@ div.csl-indent {
     &amp; \sum\nolimits_{m=1}^M B_{km} = 1 \text{ with } B_{km} \in [0, 1] \text{ for each } k=1,\dots, K \\
     &amp; \sum\nolimits_{n=1}^N C_{nl} = 1 \text{ with } D_{nl} \in [0, 1] \text{ for each } l=1,\dots, L \\
     &amp; \sum\nolimits_{l=1}^L D_{ln} = 1 \text{ with } D_{ln} \in [0, 1] \text{ for each } n=1,\dots, N \\
-\end{align}
+\end{aligned}
 \tag{2}\]</span></span></p>
 <p>In <a href="#eq-biaa">Equation&nbsp;2</a>, just as <span class="citation" data-cites="Seth2016">Seth &amp; Eugster (<a href="#ref-Seth2016" role="doc-biblioref">2016</a>)</span> proposed for archetypal analysis, <span class="math inline">\(\ell\)</span> could be a negative log-likelihood function. Therefore,</p>
 <ul>
