@@ -1,5 +1,19 @@
 [
   {
+    "objectID": "publications/index.html",
+    "href": "publications/index.html",
+    "title": "Publications",
+    "section": "",
+    "text": "Combining Classification and User-Based Collaborative Filtering for Matching Footwear Size. Aleix Alcacer, Irene Epifanio, Jorge Valero, Alfredo Ballester. Mathematics  (2021).\n  \n  \n    A data-driven classification of 3D foot types by archetypal shapes based on landmarks. Aleix Alcacer, Irene Epifanio, M. Victoria Ibáñez, Amelia Simó, Alfredo Ballester. PLOS ONE  (2020).\n  \n\n\nNo matching items"
+  },
+  {
+    "objectID": "publications/index.html#contributions-to-congresses",
+    "href": "publications/index.html#contributions-to-congresses",
+    "title": "Publications",
+    "section": "Contributions to congresses",
+    "text": "Contributions to congresses\n\n\n  \n    Combining user-based collaborative filtering and classification for matching footwear size. Aleix Alcacer Sales, Irene Epifanio López, Jorge Valero, Alfredo Ballester. CFE-CMStatistics  (2021).\n  \n\n\nNo matching items"
+  },
+  {
     "objectID": "posts/2022-06-11_archetypal-analysis/index.html",
     "href": "posts/2022-06-11_archetypal-analysis/index.html",
     "title": "Biarchetype analysis",
@@ -19,6 +33,13 @@
     "title": "Biarchetype analysis",
     "section": "Example",
     "text": "Example\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(\n  subplot_kw = {'projection': 'polar'} \n)\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n\n\n\n\n\nFigure 1: Temperature and ozone level."
+  },
+  {
+    "objectID": "posts/index.html",
+    "href": "posts/index.html",
+    "title": "Blog",
+    "section": "",
+    "text": "Biarchetype analysis\n\n\nSimultaneous learning of samples and features based on extremes\n\n\n\n\n\n\nNov 16, 2022\n\n\nAleix Alcacer\n\n\n2 min\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html",

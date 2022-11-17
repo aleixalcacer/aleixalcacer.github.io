@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://aleixalcacer.com/quarto-website/publications/index.html</loc>
+    <lastmod>2022-11-17T16:18:32.735Z</lastmod>
+  </url>
+  <url>
     <loc>https://aleixalcacer.com/quarto-website/posts/2022-06-11_archetypal-analysis/index.html</loc>
-    <lastmod>2022-11-17T16:15:06.207Z</lastmod>
+    <lastmod>2022-11-17T16:18:33.763Z</lastmod>
+  </url>
+  <url>
+    <loc>https://aleixalcacer.com/quarto-website/posts/index.html</loc>
+    <lastmod>2022-11-17T16:18:34.063Z</lastmod>
   </url>
   <url>
     <loc>https://aleixalcacer.com/quarto-website/index.html</loc>
-    <lastmod>2022-11-17T16:15:06.863Z</lastmod>
+    <lastmod>2022-11-17T16:18:34.347Z</lastmod>
   </url>
 </urlset>
