@@ -10,8 +10,8 @@ website:
   navbar:
     title: "Aleix Alcacer"
     right:
-      - publications.qmd
-      - blog.qmd
+      - publications/index.qmd
+      - posts/index.qmd
 format:
   html:
     theme: lux

@@ -20,12 +20,12 @@ jupyter: python3
 Archetypal analysis was introduced by @Cutler1994. Let $X$ be a (real-valued) data matrix where the rows represent the samples of the data and the columns, the features. They defined the archetypes as convex combinations of the data samples, i.e. $Z = BX$ where $B$ is a stochastic matrix. In addition, the data samples are approximated by convex combinations of the archetypes, i.e. $X \simeq AZ$ where $A$ and is also stochastic matrix. This is equivalent to solve the following optimization problem:
 
 $$
-\begin{align}
+\begin{aligned}
 \argmin_{A,B} \quad &  \|X - ABX \|^2 \\
 \textrm{s.t.} \quad &  \\
     & \sum\nolimits_{k=1}^K A_{mk} = 1 \text{ with } A_{mk} \in [0, 1] \text{ for each } m=1,\dots, M \\
     & \sum\nolimits_{m=1}^M B_{km} = 1 \text{ with } B_{km} \in [0, 1] \text{ for each } k=1,\dots, K \\
-\end{align}
+\end{aligned}
 $${#eq-aa}
 
 
@@ -38,7 +38,7 @@ In BiAA, the archetypes are assumed to be convex combinations of the data in bot
 This is equivalent to solve the following optimization problem:
 
 $$
-\begin{align}
+\begin{aligned}
 \argmin_{A,B,C,D} \quad &  \ell(X|ABXCD) \\
 \textrm{s.t.} \quad &  \\
     & \ell(X | \tilde{X}) \text{ should be a loss function} \\
@@ -46,7 +46,7 @@ $$
     & \sum\nolimits_{m=1}^M B_{km} = 1 \text{ with } B_{km} \in [0, 1] \text{ for each } k=1,\dots, K \\
     & \sum\nolimits_{n=1}^N C_{nl} = 1 \text{ with } D_{nl} \in [0, 1] \text{ for each } l=1,\dots, L \\
     & \sum\nolimits_{l=1}^L D_{ln} = 1 \text{ with } D_{ln} \in [0, 1] \text{ for each } n=1,\dots, N \\
-\end{align}
+\end{aligned}
 $${#eq-biaa}
 
 

@@ -1,0 +1,20 @@
+---
+title: "Publications"
+listing: 
+  - id: journal-publications
+    template: template.ejs
+    contents: journal-publications.yml
+  - id: congress-contributions
+    template: template.ejs
+    contents: congress-contributions.yml
+---
+
+## Publications in journals
+
+::: {#journal-publications}
+:::
+
+## Contributions to congresses
+
+::: {#congress-contributions}
+:::

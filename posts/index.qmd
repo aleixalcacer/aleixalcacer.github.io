@@ -1,0 +1,12 @@
+---
+title: "Blog"
+listing:
+  contents: .
+  sort: "date desc"
+  type: default
+  fields: [date, title, author, reading-time]
+# Table of contents 
+toc: false
+# Citation information
+citation: false
+---
