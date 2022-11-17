@@ -6,17 +6,33 @@ execute:
 
 website:
   site-url: https://aleixalcacer.com/quarto-website
+  description: "A great sample blog"
   title: "Aleix Alcacer"
   navbar:
+    background: light
     title: "Aleix Alcacer"
+    left:
+      - href: index.qmd
+        text: About
+      - href: projects/index.qmd
+        text: Projects
+      - href: publications/index.qmd
+        text: Publications
+      - href: posts/index.qmd
     right:
-      - publications/index.qmd
-      - posts/index.qmd
+      - text: "{{< fa brands twitter >}}"
+        href: "https://twitter.com/aleixalcacer"
+      - text: "{{< fa brands github >}}"
+        href: "https://github.com/aleixalcacer"
+      - text: "{{< fa rss >}}"
+        href: posts/index.xml
+  page-footer:
+    center: Made with {{< fa heart >}} using Quarto
+    background: light
+    border: false
+
 format:
   html:
-    theme: lux
+    theme:
+      light: [cosmo, theme.scss]
     css: styles.css
-
-
-
-

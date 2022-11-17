@@ -3,6 +3,9 @@ title: "Biarchetype analysis"
 subtitle: "Simultaneous learning of samples and features based on extremes"
 author: Aleix Alcacer
 date: 2022-11-16
+categories:
+  - archetypal analysis
+  - code
 bibliography: references.bib
 nocite: |
   @*

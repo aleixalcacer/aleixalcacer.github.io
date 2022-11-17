@@ -1,20 +1,20 @@
 ---
-title: "Publications"
+title: "Academic Publications"
 listing: 
   - id: journal-publications
-    template: template.ejs
+    template: journal.ejs
     contents: journal-publications.yml
   - id: congress-contributions
-    template: template.ejs
-    contents: congress-contributions.yml
+    template: conference.ejs
+    contents: conference-contributions.yml
 ---
 
-## Publications in journals
+## Journal publications
 
 ::: {#journal-publications}
 :::
 
-## Contributions to congresses
+## Conference contributions
 
-::: {#congress-contributions}
+::: {#conference-contributions}
 :::

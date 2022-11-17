@@ -1,12 +1,16 @@
 ---
-title: "Blog"
+title: "Notes"
 listing:
   contents: .
   sort: "date desc"
-  type: default
-  fields: [date, title, author, reading-time]
+  type: table
+  fields: [date, title, author]
+  image-align: left
+  feed: true
 # Table of contents 
 toc: false
 # Citation information
 citation: false
 ---
+
+A place where I write things.

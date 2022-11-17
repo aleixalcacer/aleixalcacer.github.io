@@ -1,11 +1,16 @@
-- author: "Aleix Alcacer, Irene Epifanio, Jorge Valero, Alfredo Ballester"
-  doi: "10.3390/MATH9070771"
-  journal: "Mathematics"
-  title: "Combining Classification and User-Based Collaborative Filtering for Matching Footwear Size"
-  year: "2021"
+- title: Combining Classification and User-Based Collaborative Filtering for Matching Footwear Size
+  author: Aleix Alcacer, Irene Epifanio, Jorge Valero, Alfredo Ballester
+  journal: MATHEMATICS
+  num: 7
+  vol: 9
+  year: 2021
+  doi: https://doi.org/10.3390/math9070771
 
-- author: "Aleix Alcacer, Irene Epifanio, M. Victoria Ibáñez, Amelia Simó, Alfredo Ballester"
-  doi: "10.1371/JOURNAL.PONE.0228016"
-  journal: "PLOS ONE"
-  title: "A data-driven classification of 3D foot types by archetypal shapes based on landmarks"
-  year: "2020"
+
+- title: A data-driven classification of 3D foot types by archetypal shapes based on landmarks
+  author: Aleix Alcacer, Irene Epifanio, María Victoria Ibáñez, Amelia Simó, Alfredo Ballester
+  journal: PLOS ONE
+  num: 1
+  vol: 15
+  year: 2020
+  doi: https://doi.org/10.1371/journal.pone.0228016

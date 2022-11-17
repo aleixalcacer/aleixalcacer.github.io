@@ -1,29 +1,63 @@
 ---
-title: "About"
-image: profile.jpg
+title: "Hi, I am Aleix!"
+subtitle: |
+  Predoctoral researcher and Open Source enthusiast :)
+image: /profile.jpg
 about:
-  template: jolla
-  image-width: 10em
+  id: edu-exp
+  template: solana
+  image-width: 9em
   image-shape: round
   links:
-    - text: Orcid
-      href: https://orcid.org/0000-0003-3566-0204
-    - icon: twitter
-      text: Twitter
-      href: https://twitter.com/aleixalcacer
-    - icon: linkedin
-      text: LinkedIn
-      href: https://linkedin.com/aleixalcacer
-    - icon: github
-      text: Github
-      href: https://github.com/aleixalcacer
-    - icon: envelope
-      text: Mail
-      href: mailto:aleixalcacer@gmail.com
-
+    - text: "{{< fa solid envelope >}}"
+      href: "mailto:aalcacer@uji.es"
+    - text: "{{< fa brands orcid >}}"
+      href: "https://orcid.org/0000-0003-3566-0204"
+    - text: "{{< fa brands mastodon >}}"
+      href: "https://fosstodon.org/@aleixalcacer"
+    - text: "{{< fa brands twitter >}}"
+      href: "https://twitter.com/aleixalcacer"
+    - text: "{{< fa brands linkedin >}}"
+      href: "https://www.linkedin.com/in/aleixalcacer"
+    - text: "{{< fa brands github >}}"
+      href: "https://github.com/aleixalcacer"
 ---
 
-I am Aleix Alcacer, a predoctoral researcher at Jaume I University that loves the open-source world.
+::: {#edu-exp}
+:::
 
-I like to develop new algorithms focusing on both performance and efficiency.
-Currently, I am designing new methods for the archetypal analysis.
+I am a predoctoral researcher at Jaume I University who loves the Open Source world. I like to develop new algorithms focusing on both performance and efficiency. 
+
+Currently, I am focused on designing new methods within the field of archetypal analysis.
+
+<a type="button" class="btn btn-outline-dark" href="cv.pdf">
+  See ©my complete CV
+</a>
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-8 style="text-align: left;"}
+## Education
+
+- **Ph.D. in Mathematics** | 2020 - present  
+  Jaume I University, Spain
+
+- **M.Sc. in Computacional Mathematics** | 2018 - 2020  
+  Jaume I University, Spain
+
+- **B.Sc. in Computacional Mathematics** | 2014 - 2018  
+  Jaume I University, Spain
+:::
+
+::: {.g-col-12 .g-col-md-4 style="text-align: left;"}
+## Interests
+
+- Archetypal Analysis
+- Matrix Factorization
+- HPC and Software Optimization
+- Data Visualisation
+- Knowledge Sharing
+- Continuous Learning
+:::
+
+:::

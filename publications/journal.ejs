@@ -1,0 +1,10 @@
+```{=html}
+<ul>
+    <% for (const item of items) { %>
+        <li>
+            <%= item.author %>. (<%= item.year %>). <%= item.title %>. <i><%= item.journal %></i>, <i><%= item.vol %></i>(<%= item.num %>).
+            <a href=<%= item.doi %>> <%= item.doi %> </a>
+        </li>
+    <% } %>
+</ul>
+```
