@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Aleix Alcacer</title>
+<link>https://aleixalcacer.com/quarto-website/posts/index.html</link>
+<atom:link href="https://aleixalcacer.com/quarto-website/posts/index.xml" rel="self" type="application/rss+xml"/>
+<description>A great sample blog</description>
+<generator>quarto-1.2.269</generator>
+<lastBuildDate>Wed, 16 Nov 2022 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Biarchetype analysis</title>
+  <dc:creator>Aleix Alcacer</dc:creator>
+  <link>https://aleixalcacer.com/quarto-website/posts/2022-06-11_archetypal-analysis/index.html</link>
+  <description><![CDATA[ 
+
+
+
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>Archetypal analysis was introduced by <span class="citation" data-cites="Cutler1994">Cutler &amp; Breiman (1994)</span>. Let <img src="https://latex.codecogs.com/png.latex?X"> be a (real-valued) data matrix where the rows represent the samples of the data and the columns, the features. They defined the archetypes as convex combinations of the data samples, i.e.&nbsp;<img src="https://latex.codecogs.com/png.latex?Z%20=%20BX"> where <img src="https://latex.codecogs.com/png.latex?B"> is a stochastic matrix. In addition, the data samples are approximated by convex combinations of the archetypes, i.e.&nbsp;<img src="https://latex.codecogs.com/png.latex?X%20%5Csimeq%20AZ"> where <img src="https://latex.codecogs.com/png.latex?A"> and is also stochastic matrix. This is equivalent to solve the following optimization problem:</p>
+<p><span id="eq-aa"><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Baligned%7D%0A%5Cmathop%7B%5Cmathrm%7Barg%5C,min%5C,%7D%7D_%7BA,B%7D%20%5Cquad%20&amp;%20%20%5C%7CX%20-%20ABX%20%5C%7C%5E2%20%5C%5C%0A%5Ctextrm%7Bs.t.%7D%20%5Cquad%20&amp;%20%20%5C%5C%0A%20%20%20%20&amp;%20%5Csum%5Cnolimits_%7Bk=1%7D%5EK%20A_%7Bmk%7D%20=%201%20%5Ctext%7B%20with%20%7D%20A_%7Bmk%7D%20%5Cin%20%5B0,%201%5D%20%5Ctext%7B%20for%20each%20%7D%20m=1,%5Cdots,%20M%20%5C%5C%0A%20%20%20%20&amp;%20%5Csum%5Cnolimits_%7Bm=1%7D%5EM%20B_%7Bkm%7D%20=%201%20%5Ctext%7B%20with%20%7D%20B_%7Bkm%7D%20%5Cin%20%5B0,%201%5D%20%5Ctext%7B%20for%20each%20%7D%20k=1,%5Cdots,%20K%20%5C%5C%0A%5Cend%7Baligned%7D%0A%5Ctag%7B1%7D"></span></p>
+<p>TODO: Interpretation</p>
+</section>
+<section id="biarchetype-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="biarchetype-analysis">BiArchetype Analysis</h2>
+<p>In BiAA, the archetypes are assumed to be convex combinations of the data in both dimensions, i.e.&nbsp;<img src="https://latex.codecogs.com/png.latex?Z%20=%20BXC"> where <img src="https://latex.codecogs.com/png.latex?B"> and <img src="https://latex.codecogs.com/png.latex?C"> are stochastic matrices. At the same time, the data is approximated by convex combinations of the archetypes, i.e.&nbsp;<img src="https://latex.codecogs.com/png.latex?X%20%5Csimeq%20AZD"> where <img src="https://latex.codecogs.com/png.latex?A"> and <img src="https://latex.codecogs.com/png.latex?D"> are also stochastic matrices.</p>
+<p>This is equivalent to solve the following optimization problem:</p>
+<p><span id="eq-biaa"><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Baligned%7D%0A%5Cmathop%7B%5Cmathrm%7Barg%5C,min%5C,%7D%7D_%7BA,B,C,D%7D%20%5Cquad%20&amp;%20%20%5Cell(X%7CABXCD)%20%5C%5C%0A%5Ctextrm%7Bs.t.%7D%20%5Cquad%20&amp;%20%20%5C%5C%0A%20%20%20%20&amp;%20%5Cell(X%20%7C%20%5Ctilde%7BX%7D)%20%5Ctext%7B%20should%20be%20a%20loss%20function%7D%20%5C%5C%0A%20%20%20%20&amp;%20%5Csum%5Cnolimits_%7Bk=1%7D%5EK%20A_%7Bmk%7D%20=%201%20%5Ctext%7B%20with%20%7D%20A_%7Bmk%7D%20%5Cin%20%5B0,%201%5D%20%5Ctext%7B%20for%20each%20%7D%20m=1,%5Cdots,%20M%20%5C%5C%0A%20%20%20%20&amp;%20%5Csum%5Cnolimits_%7Bm=1%7D%5EM%20B_%7Bkm%7D%20=%201%20%5Ctext%7B%20with%20%7D%20B_%7Bkm%7D%20%5Cin%20%5B0,%201%5D%20%5Ctext%7B%20for%20each%20%7D%20k=1,%5Cdots,%20K%20%5C%5C%0A%20%20%20%20&amp;%20%5Csum%5Cnolimits_%7Bn=1%7D%5EN%20C_%7Bnl%7D%20=%201%20%5Ctext%7B%20with%20%7D%20D_%7Bnl%7D%20%5Cin%20%5B0,%201%5D%20%5Ctext%7B%20for%20each%20%7D%20l=1,%5Cdots,%20L%20%5C%5C%0A%20%20%20%20&amp;%20%5Csum%5Cnolimits_%7Bl=1%7D%5EL%20D_%7Bln%7D%20=%201%20%5Ctext%7B%20with%20%7D%20D_%7Bln%7D%20%5Cin%20%5B0,%201%5D%20%5Ctext%7B%20for%20each%20%7D%20n=1,%5Cdots,%20N%20%5C%5C%0A%5Cend%7Baligned%7D%0A%5Ctag%7B2%7D"></span></p>
+<p>In Equation&nbsp;2, just as <span class="citation" data-cites="Seth2016">Seth &amp; Eugster (2016)</span> proposed for archetypal analysis, <img src="https://latex.codecogs.com/png.latex?%5Cell"> could be a negative log-likelihood function. Therefore,</p>
+<ul>
+<li><p>for Bernoulli distributions <img src="https://latex.codecogs.com/png.latex?%5Cell"> is defined as <span id="eq-bernoulli-likelihood"><img src="https://latex.codecogs.com/png.latex?%0A%5Cell(X%20%7C%20%5Ctilde%7BX%7D)%20=%20-%5Csum_%7Bm=1%7D%5EM%20%5Csum_%7Bn=1%7D%5EN%20X_%7Bmn%7D%5Cln%20(%5Ctilde%7BX%7D_%7Bmn%7D)%20+%20(1%20-%20X_%7Bmn%7D)%20%5Cln%20(1%20-%20%5Ctilde%7BX%7D_%7Bmn%7D)%0A%5Ctag%7B3%7D"></span></p></li>
+<li><p>and for normal distributions, <span id="eq-normal-likelihood"><img src="https://latex.codecogs.com/png.latex?%0A%5Cell(X%20%7C%20%5Ctilde%7BX%7D)%20=%20MN%20%5Cln%20%5Cleft(%5Csigma%20%7B%5Csqrt%20%7B2%5Cpi%20%7D%7D%5Cright)%20+%20%7B%5Cfrac%20%7B1%7D%7B2%5Csigma%5E2%7D%7D%5Csum_%7Bm=1%7D%5EM%20%5Csum_%7Bn=1%7D%5EN%20%5Cleft(%20%7BX_%7Bmn%7D-%5Ctilde%7BX%7D_%7Bmn%7D%20%7D%5Cright)%5E%7B2%7D%0A%5Ctag%7B4%7D"></span></p></li>
+</ul>
+</section>
+<section id="example" class="level2">
+<h2 class="anchored" data-anchor-id="example">Example</h2>
+<div class="cell" data-execution_count="1">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;">import</span> numpy <span class="im" style="color: #00769E;">as</span> np</span>
+<span id="cb1-2"><span class="im" style="color: #00769E;">import</span> matplotlib.pyplot <span class="im" style="color: #00769E;">as</span> plt</span>
+<span id="cb1-3"></span>
+<span id="cb1-4">r <span class="op" style="color: #5E5E5E;">=</span> np.arange(<span class="dv" style="color: #AD0000;">0</span>, <span class="dv" style="color: #AD0000;">2</span>, <span class="fl" style="color: #AD0000;">0.01</span>)</span>
+<span id="cb1-5">theta <span class="op" style="color: #5E5E5E;">=</span> <span class="dv" style="color: #AD0000;">2</span> <span class="op" style="color: #5E5E5E;">*</span> np.pi <span class="op" style="color: #5E5E5E;">*</span> r</span>
+<span id="cb1-6">fig, ax <span class="op" style="color: #5E5E5E;">=</span> plt.subplots(</span>
+<span id="cb1-7">  subplot_kw <span class="op" style="color: #5E5E5E;">=</span> {<span class="st" style="color: #20794D;">'projection'</span>: <span class="st" style="color: #20794D;">'polar'</span>} </span>
+<span id="cb1-8">)</span>
+<span id="cb1-9">ax.plot(theta, r)</span>
+<span id="cb1-10">ax.set_rticks([<span class="fl" style="color: #AD0000;">0.5</span>, <span class="dv" style="color: #AD0000;">1</span>, <span class="fl" style="color: #AD0000;">1.5</span>, <span class="dv" style="color: #AD0000;">2</span>])</span>
+<span id="cb1-11">ax.grid(<span class="va" style="color: #111111;">True</span>)</span>
+<span id="cb1-12">plt.show()</span></code></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div id="fig-airquality" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="https://aleixalcacer.com/quarto-website/posts/2022-06-11_archetypal-analysis/index_files/figure-html/fig-airquality-output-1.png" width="450" height="439" class="figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;1: Temperature and ozone level.</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2">
+<div id="ref-Cutler1994" class="csl-entry">
+Cutler, A., &amp; Breiman, L. (1994). Archetypal analysis. <em>Technometrics</em>, <em>36</em>, 338–347. <a href="https://doi.org/10.1080/00401706.1994.10485840">https://doi.org/10.1080/00401706.1994.10485840</a>
+</div>
+<div id="ref-Morup2012" class="csl-entry">
+Mørup, M., &amp; Hansen, L. K. (2012). Archetypal analysis for machine learning and data mining. <em>Neurocomputing</em>, <em>80</em>, 54–63. <a href="https://doi.org/10.1016/j.neucom.2011.06.033">https://doi.org/10.1016/j.neucom.2011.06.033</a>
+</div>
+<div id="ref-Seth2016" class="csl-entry">
+Seth, S., &amp; Eugster, M. J. A. (2016). Probabilistic archetypal analysis. <em>Machine Learning</em>, <em>102</em>, 85–113. <a href="https://doi.org/10.1007/S10994-015-5498-8/FIGURES/14">https://doi.org/10.1007/S10994-015-5498-8/FIGURES/14</a>
+</div>
+</div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{alcacer2022,
+  author = {Aleix Alcacer},
+  title = {Biarchetype Analysis},
+  date = {2022-11-16},
+  url = {https://aleixalcacer.com/quarto-website/posts/2022-06-11_archetypal-analysis},
+  langid = {en}
+}
+</code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-alcacer2022" class="csl-entry quarto-appendix-citeas">
+Aleix Alcacer. (2022, November 16). <em>Biarchetype analysis</em>. <a href="https://aleixalcacer.com/quarto-website/posts/2022-06-11_archetypal-analysis">https://aleixalcacer.com/quarto-website/posts/2022-06-11_archetypal-analysis</a>
+</div></div></section></div> ]]></description>
+  <category>archetypal analysis</category>
+  <category>code</category>
+  <guid>https://aleixalcacer.com/quarto-website/posts/2022-06-11_archetypal-analysis/index.html</guid>
+  <pubDate>Wed, 16 Nov 2022 00:00:00 GMT</pubDate>
+</item>
+</channel>
+</rss>

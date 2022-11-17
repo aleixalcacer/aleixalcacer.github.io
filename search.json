@@ -2,16 +2,16 @@
   {
     "objectID": "publications/index.html",
     "href": "publications/index.html",
-    "title": "Publications",
+    "title": "Academic Publications",
     "section": "",
-    "text": "Combining Classification and User-Based Collaborative Filtering for Matching Footwear Size. Aleix Alcacer, Irene Epifanio, Jorge Valero, Alfredo Ballester. Mathematics  (2021).\n  \n  \n    A data-driven classification of 3D foot types by archetypal shapes based on landmarks. Aleix Alcacer, Irene Epifanio, M. Victoria Ibáñez, Amelia Simó, Alfredo Ballester. PLOS ONE  (2020).\n  \n\n\nNo matching items"
+    "text": "Aleix Alcacer, Irene Epifanio, Jorge Valero, Alfredo Ballester. (2021). Combining Classification and User-Based Collaborative Filtering for Matching Footwear Size. MATHEMATICS, 9(7).\n             https://doi.org/10.3390/math9070771 \n        \n        \n            Aleix Alcacer, Irene Epifanio, María Victoria Ibáñez, Amelia Simó, Alfredo Ballester. (2020). A data-driven classification of 3D foot types by archetypal shapes based on landmarks. PLOS ONE, 15(1).\n             https://doi.org/10.1371/journal.pone.0228016 \n        \n\n\nNo matching items"
   },
   {
-    "objectID": "publications/index.html#contributions-to-congresses",
-    "href": "publications/index.html#contributions-to-congresses",
-    "title": "Publications",
-    "section": "Contributions to congresses",
-    "text": "Contributions to congresses\n\n\n  \n    Combining user-based collaborative filtering and classification for matching footwear size. Aleix Alcacer Sales, Irene Epifanio López, Jorge Valero, Alfredo Ballester. CFE-CMStatistics  (2021).\n  \n\n\nNo matching items"
+    "objectID": "publications/index.html#conference-contributions",
+    "href": "publications/index.html#conference-contributions",
+    "title": "Academic Publications",
+    "section": "Conference contributions",
+    "text": "Conference contributions"
   },
   {
     "objectID": "posts/2022-06-11_archetypal-analysis/index.html",
@@ -37,15 +37,36 @@
   {
     "objectID": "posts/index.html",
     "href": "posts/index.html",
-    "title": "Blog",
+    "title": "Notes",
     "section": "",
-    "text": "Biarchetype analysis\n\n\nSimultaneous learning of samples and features based on extremes\n\n\n\n\n\n\nNov 16, 2022\n\n\nAleix Alcacer\n\n\n2 min\n\n\n\n\n\n\nNo matching items"
+    "text": "A place where I write things.\n\n\n\n\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nNov 16, 2022\n\n\nBiarchetype analysis\n\n\nAleix Alcacer\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "About",
+    "title": "Hi, I am Aleix!",
     "section": "",
-    "text": "I am Aleix Alcacer, a predoctoral researcher at Jaume I University that loves the open-source world.\nI like to develop new algorithms focusing on both performance and efficiency. Currently, I am designing new methods for the archetypal analysis."
+    "text": "I am a predoctoral researcher at Jaume I University who loves the Open Source world. I like to develop new algorithms focusing on both performance and efficiency.\nCurrently, I am focused on designing new methods within the field of archetypal analysis.\nSee ©my complete CV"
+  },
+  {
+    "objectID": "index.html#education",
+    "href": "index.html#education",
+    "title": "Hi, I am Aleix!",
+    "section": "Education",
+    "text": "Education\n\nPh.D. in Mathematics | 2020 - present\nJaume I University, Spain\nM.Sc. in Computacional Mathematics | 2018 - 2020\nJaume I University, Spain\nB.Sc. in Computacional Mathematics | 2014 - 2018\nJaume I University, Spain"
+  },
+  {
+    "objectID": "index.html#interests",
+    "href": "index.html#interests",
+    "title": "Hi, I am Aleix!",
+    "section": "Interests",
+    "text": "Interests\n\nArchetypal Analysis\nMatrix Factorization\nHPC and Software Optimization\nData Visualisation\nKnowledge Sharing\nContinuous Learning"
+  },
+  {
+    "objectID": "projects/index.html",
+    "href": "projects/index.html",
+    "title": "Projects",
+    "section": "",
+    "text": "As an Open Source enthusiast, all of my personal projects are open for the community!\nTODO\n\n\n\n\n\n\n\n\n\nNo matching items"
   }
 ]
