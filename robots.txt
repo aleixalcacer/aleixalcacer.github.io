@@ -1,1 +1,1 @@
-Sitemap: https://aleixalcacer.com/quarto-website/sitemap.xml
+Sitemap: https://aleixalcacer.com/sitemap.xml

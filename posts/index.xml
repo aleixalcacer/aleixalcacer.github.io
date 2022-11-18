@@ -6,14 +6,14 @@
       version="2.0">
 <channel>
 <title>Aleix Alcacer</title>
-<link>https://aleixalcacer.com/quarto-website/posts/index.html</link>
-<atom:link href="https://aleixalcacer.com/quarto-website/posts/index.xml" rel="self" type="application/rss+xml"/>
+<link>https://aleixalcacer.com/posts/index.html</link>
+<atom:link href="https://aleixalcacer.com/posts/index.xml" rel="self" type="application/rss+xml"/>
 <description>A great sample blog</description>
 <generator>quarto-1.2.269</generator>
 <lastBuildDate>Wed, 16 Nov 2022 00:00:00 GMT</lastBuildDate>
 <item>
   <title>Biarchetype analysis</title>
-  <link>https://aleixalcacer.com/quarto-website/posts/2022-06-11_archetypal-analysis/index.html</link>
+  <link>https://aleixalcacer.com/posts/2022-06-11_archetypal-analysis/index.html</link>
   <description><![CDATA[ 
 
 
@@ -56,7 +56,7 @@
 <div class="cell-output cell-output-display">
 <div id="fig-airquality" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><img src="https://aleixalcacer.com/quarto-website/posts/2022-06-11_archetypal-analysis/index_files/figure-html/fig-airquality-output-1.png" width="450" height="439" class="figure-img"></p>
+<p><img src="https://aleixalcacer.com/posts/2022-06-11_archetypal-analysis/index_files/figure-html/fig-airquality-output-1.png" width="450" height="439" class="figure-img"></p>
 <p></p><figcaption class="figure-caption">Figure&nbsp;1: Temperature and ozone level.</figcaption><p></p>
 </figure>
 </div>
@@ -81,15 +81,15 @@ Seth, S., &amp; Eugster, M. J. A. (2016). Probabilistic archetypal analysis. <em
   author = {},
   title = {Biarchetype Analysis},
   date = {2022-11-16},
-  url = {https://aleixalcacer.com/quarto-website/posts/2022-06-11_archetypal-analysis},
+  url = {https://aleixalcacer.com/posts/2022-06-11_archetypal-analysis},
   langid = {en}
 }
 </code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-2022" class="csl-entry quarto-appendix-citeas">
-<em>Biarchetype analysis</em>. (2022, November 16). <a href="https://aleixalcacer.com/quarto-website/posts/2022-06-11_archetypal-analysis">https://aleixalcacer.com/quarto-website/posts/2022-06-11_archetypal-analysis</a>
+<em>Biarchetype analysis</em>. (2022, November 16). <a href="https://aleixalcacer.com/posts/2022-06-11_archetypal-analysis">https://aleixalcacer.com/posts/2022-06-11_archetypal-analysis</a>
 </div></div></section></div> ]]></description>
   <category>archetypal analysis</category>
   <category>matrix factorization</category>
-  <guid>https://aleixalcacer.com/quarto-website/posts/2022-06-11_archetypal-analysis/index.html</guid>
+  <guid>https://aleixalcacer.com/posts/2022-06-11_archetypal-analysis/index.html</guid>
   <pubDate>Wed, 16 Nov 2022 00:00:00 GMT</pubDate>
 </item>
 </channel>
