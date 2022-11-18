@@ -4,8 +4,11 @@ project:
 execute:
   freeze: auto
 
+resources:
+  - CNAME
+  
 website:
-  site-url: https://aleixalcacer.com/quarto-website
+  site-url: https://aleixalcacer.com
   description: "A great sample blog"
   title: "Aleix Alcacer"
   navbar:
