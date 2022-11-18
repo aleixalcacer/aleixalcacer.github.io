@@ -2,12 +2,12 @@
   author: Lara Ferrando, Aleix Alcacer, Atanasia Lloria, Marina Martínez-García, Belén Martínez-Serrano, Adrián Pérez-Suay, Irene Epifanio
   conference: XII International Conference on VIRTUAL CAMPUS
   location: Arequipa (Peru)
-  date: 2022-09-29
+  date: 2022/09/29
   year: 2022
   isbn: 
   labels:
     - name: slides
-      url: teaching/2022_ods_cv.pdf
+      url: publications/2022_ods_cv.pdf
     - name: video
       url: https://www.youtube.com/watch?v=qphytXdNjLM
   
@@ -15,6 +15,9 @@
   author: Aleix Alcacer, Irene Epifanio, Lara Ferrando, Atanasia Lloria, Marina Martínez-García, Belén Martínez-Serrano, Adrián Pérez Suay
   conference: ATIDES 2022
   location: Castelló de la Plana (Spain)
-  date: ""
+  date: 2022/10/15
   year: 2022
   isbn: 
+  labels:
+    - name: pdf
+      url: publications/2022_ods_atides.pdf

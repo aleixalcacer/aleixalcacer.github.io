@@ -14,11 +14,14 @@ website:
     left:
       - href: index.qmd
         text: About
+      - href: research/index.qmd
+        text: Research
+      - href: teaching/index.qmd
+        text: Teaching        
       - href: projects/index.qmd
         text: Projects
-      - href: publications/index.qmd
-        text: Publications
       - href: posts/index.qmd
+        text: Notes
     right:
       - text: "{{< fa brands twitter >}}"
         href: "https://twitter.com/aleixalcacer"

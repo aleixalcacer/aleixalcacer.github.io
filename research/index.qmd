@@ -1,5 +1,5 @@
 ---
-title: "Academic Publications"
+title: "Research"
 listing: 
   - id: journal-publications
     template: journal.ejs
@@ -7,12 +7,13 @@ listing:
   - id: conference-contributions
     template: conference.ejs
     contents: conference-contributions.yml
-  - id: teaching-conference-contributions
-    template: conference.ejs
-    contents: teaching-conference-contributions.yml
 ---
 
-## Research publications
+I have wanted to be a researcher since I was very little.
+The ability to improve people's environment through technology has always fascinated me.
+Now, I have fulfilled my dream!
+
+## Publications
 
 ### Journals
 
@@ -22,12 +23,4 @@ listing:
 ### Conferences
 
 ::: {#conference-contributions}
-:::
-
-
-## Teaching publications
-
-### Conferences
-
-::: {#teaching-conference-contributions}
 :::
