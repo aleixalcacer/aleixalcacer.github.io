@@ -1,23 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://aleixalcacer.com/quarto-website/publications/index.html</loc>
-    <lastmod>2022-11-18T11:49:53.445Z</lastmod>
-  </url>
-  <url>
     <loc>https://aleixalcacer.com/quarto-website/posts/2022-06-11_archetypal-analysis/index.html</loc>
-    <lastmod>2022-11-18T11:49:54.597Z</lastmod>
+    <lastmod>2022-11-18T15:54:08.053Z</lastmod>
   </url>
   <url>
     <loc>https://aleixalcacer.com/quarto-website/posts/index.html</loc>
-    <lastmod>2022-11-18T11:49:54.941Z</lastmod>
+    <lastmod>2022-11-18T15:54:08.793Z</lastmod>
   </url>
   <url>
     <loc>https://aleixalcacer.com/quarto-website/index.html</loc>
-    <lastmod>2022-11-18T11:49:55.281Z</lastmod>
+    <lastmod>2022-11-18T15:54:09.165Z</lastmod>
   </url>
   <url>
     <loc>https://aleixalcacer.com/quarto-website/projects/index.html</loc>
-    <lastmod>2022-11-18T11:49:55.597Z</lastmod>
+    <lastmod>2022-11-18T15:54:09.509Z</lastmod>
+  </url>
+  <url>
+    <loc>https://aleixalcacer.com/quarto-website/research/index.html</loc>
+    <lastmod>2022-11-18T15:54:09.873Z</lastmod>
+  </url>
+  <url>
+    <loc>https://aleixalcacer.com/quarto-website/teaching/index.html</loc>
+    <lastmod>2022-11-18T15:54:10.241Z</lastmod>
   </url>
 </urlset>

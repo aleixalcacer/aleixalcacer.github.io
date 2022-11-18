@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Aleix Alcacer - Aleix Alcacer Sales</title>
+<title>Aleix Alcacer - Research</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,23 +23,26 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
-<link href="site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-listing/list.min.js"></script>
+<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -59,9 +62,67 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-journal-publications .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
 
-<link rel="stylesheet" href="styles.css">
+    const options = {
+      valueNames: ['listing-title','listing-author','listing-journal','listing-num','listing-vol','listing-year','listing-doi',{ data: ['index'] },{ data: ['categories'] }],
+      
+      searchColumns: ["listing-title","listing-author","listing-journal","listing-num","listing-vol","listing-year","listing-doi"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-journal-publications'] = new List('listing-journal-publications', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-conference-contributions .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-author','listing-conference','listing-location','listing-date','listing-year','listing-isbn','listing-labels','listing-note',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author","listing-conference","listing-location","listing-date","listing-year","listing-isbn","listing-labels","listing-note"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-conference-contributions'] = new List('listing-conference-contributions', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-fixed fullcontent">
@@ -71,7 +132,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Aleix Alcacer</span>
     </a>
   </div>
@@ -81,23 +142,23 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page">
+    <a class="nav-link" href="../index.html">
  <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./research/index.html">
+    <a class="nav-link active" href="../research/index.html" aria-current="page">
  <span class="menu-text">Research</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./teaching/index.html">
+    <a class="nav-link" href="../teaching/index.html">
  <span class="menu-text">Teaching</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./projects/index.html">
+    <a class="nav-link" href="../projects/index.html">
  <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./posts/index.html">
+    <a class="nav-link" href="../posts/index.html">
  <span class="menu-text">Notes</span></a>
   </li>  
 </ul>
@@ -111,7 +172,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text"><i class="fa-brands fa-github" aria-label="github"></i></span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./posts/index.xml">
+    <a class="nav-link" href="../posts/index.xml">
  <span class="menu-text"><i class="fa-solid fa-rss" aria-label="rss"></i></span></a>
   </li>  
 </ul>
@@ -126,78 +187,82 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content page-columns page-full" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
-
-
-<div class="quarto-about-solana column-body">
-  <div class="about-entity">
-    <div class="entity-contents">
-      <header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Aleix Alcacer Sales</h1>
-<p class="subtitle lead"></p><p>Predoctoral researcher :)</p><p></p>
+<h1 class="title">Research</h1>
 </div>
+
+
+
 <div class="quarto-title-meta">
+
+    
+  
+    
   </div>
-</header> <div class="about-links">
-  <a href="mailto:aalcacer@uji.es" class="about-link">
-     <span class="about-link-text"><i class="fa-solid fa-envelope" aria-label="envelope"></i></span>
-  </a>
-  <a href="https://orcid.org/0000-0003-3566-0204" class="about-link">
-     <span class="about-link-text"><i class="fa-brands fa-orcid" aria-label="orcid"></i></span>
-  </a>
-  <a href="https://fosstodon.org/@aleixalcacer" class="about-link">
-     <span class="about-link-text"><i class="fa-brands fa-mastodon" aria-label="mastodon"></i></span>
-  </a>
-  <a href="https://twitter.com/aleixalcacer" class="about-link">
-     <span class="about-link-text"><i class="fa-brands fa-twitter" aria-label="twitter"></i></span>
-  </a>
-  <a href="https://www.linkedin.com/in/aleixalcacer" class="about-link">
-     <span class="about-link-text"><i class="fa-brands fa-linkedin" aria-label="linkedin"></i></span>
-  </a>
-  <a href="https://github.com/aleixalcacer" class="about-link">
-     <span class="about-link-text"><i class="fa-brands fa-github" aria-label="github"></i></span>
-  </a>
-</div>
-      <div class="about-contents"><div id="edu-exp">
-</div></div>
-    </div>
-    <img src="profile.jpg" class="about-image
-  round " style="height: 9em; width: 9em;">
-  </div>
-</div>
+  
 
-<p>I am a predoctoral researcher at Jaume I University who loves the Open Source world. I like to develop new algorithms focusing on both performance and efficiency.</p>
-<p>Currently, I am focused on designing new methods within the field of archetypal analysis.</p>
-<p>See my complete <a href="cv.pdf">CV</a>.</p>
-<div class="grid">
-<section id="education" class="level2 g-col-12 g-col-md-8" style="text-align: left;">
-<h2 data-anchor-id="education">Education</h2>
-<ul>
-<li><p><strong>Ph.D.&nbsp;in Mathematics</strong> | 2020 - present<br>
-Universitat Jaume I, Spain</p></li>
-<li><p><strong>M.Sc. in Computacional Mathematics</strong> | 2018 - 2020<br>
-Universitat Jaume I, Spain</p></li>
-<li><p><strong>B.Sc. in Computacional Mathematics</strong> | 2014 - 2018<br>
-Universitat Jaume I, Spain</p></li>
+</header>
+
+<p>I have wanted to be a researcher since I was very little. The ability to improve people’s environment through technology has always fascinated me. Now, I have fulfilled my dream!</p>
+<section id="publications" class="level2">
+<h2 class="anchored" data-anchor-id="publications">Publications</h2>
+<section id="journals" class="level3">
+<h3 class="anchored" data-anchor-id="journals">Journals</h3>
+<div id="listing-journal-publications" class="quarto-listing quarto-listing-container-custom">
+<ul id="quarto-journal">
+        <li class="quarto-publication">
+            Aleix Alcacer, Irene Epifanio, Jorge Valero, Alfredo Ballester (2021). Combining Classification and User-Based Collaborative Filtering for Matching Footwear Size. <i>MATHEMATICS</i>, <i>9</i>(7).
+            <a href="https://doi.org/10.3390/math9070771"> https://doi.org/10.3390/math9070771 </a>
+            <div class="quarto-labels">
+            </div>
+        </li>
+        <li class="quarto-publication">
+            Aleix Alcacer, Irene Epifanio, María Victoria Ibáñez, Amelia Simó, Alfredo Ballester (2020). A data-driven classification of 3D foot types by archetypal shapes based on landmarks. <i>PLOS ONE</i>, <i>15</i>(1).
+            <a href="https://doi.org/10.1371/journal.pone.0228016"> https://doi.org/10.1371/journal.pone.0228016 </a>
+            <div class="quarto-labels">
+            </div>
+        </li>
 </ul>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
 </section>
-<section id="interests" class="level2 g-col-12 g-col-md-4" style="text-align: left;">
-<h2 data-anchor-id="interests">Interests</h2>
-<ul>
-<li>Archetypal Analysis</li>
-<li>Matrix Factorization</li>
-<li>HPC and Software Optimization</li>
-<li>Data Visualisation</li>
-<li>Knowledge Sharing</li>
-<li>Continuous Learning</li>
+<section id="conferences" class="level3">
+<h3 class="anchored" data-anchor-id="conferences">Conferences</h3>
+<div id="listing-conference-contributions" class="quarto-listing quarto-listing-container-custom">
+<ul id="quarto-conference">
+        <li class="quarto-publication">
+            Aleix Alcacer, Irene Epifanio, Jorge Valero, Alfredo Ballester (Dec 19, 2021). <i>Combining user-based collaborative filtering and classification for matching footwear size</i>. CFE-CMStatistics 2021, London (United Kingdom). ISBN: 9789925781256
+            <div class="quarto-labels">
+            </div>
+        </li>
+        <li class="quarto-publication">
+            Aleix Alcacer, Irene Epifanio, María Victoria Ibáñez, Amelia Simó (Sep 11, 2019). <i>Archetypal contour shapes</i>. 12th Scientific Meeting Classification and Data Analysis Group (CLADAG 2019), Cassino (Italy). ISBN: 9788883171086
+            <div class="quarto-labels">
+                        <span class="quarto-label"><a href="publications/2019_cladag.pdf"> pdf </a></span>
+            </div>
+        </li>
+        <li class="quarto-publication">
+            Aleix Alcacer, Irene Epifanio, María Victoria Ibáñez, Amelia Simó (Jun 19, 2019). <i>Analysis of 2D foot morphology by functional archetypal analysis</i>. XVII Conferencia Española y VII Encuentro Iberoamericano de Biometría (CEB-EIB 2019), València (Spain). ISBN: 9788409117062
+                <br> <i> Note: Selected for the Young Statician Showcase </i>    
+            <div class="quarto-labels">
+                        <span class="quarto-label"><a href="publications/2019_cebeib.pdf"> pdf </a></span>
+            </div>
+        </li>
 </ul>
-</section>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
 </div>
 
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -220,6 +285,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
   const clipboard = new window.ClipboardJS('.code-copy-button', {
     target: function(trigger) {
       return trigger.previousElementSibling;
