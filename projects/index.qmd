@@ -1,11 +1,13 @@
 ---
 title: "Projects"
-listing: 
-  - id: open-source-projects
-    contents: open-soruce-projects.yml
+listing:
+  - id: projects
+    template: projects.ejs
+    contents: projects.yml
 ---
 
 As an Open Source enthusiast, all of my personal projects are open for the community!
 
 
-TODO
+::: {#projects}
+:::

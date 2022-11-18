@@ -4,17 +4,30 @@ listing:
   - id: journal-publications
     template: journal.ejs
     contents: journal-publications.yml
-  - id: congress-contributions
+  - id: conference-contributions
     template: conference.ejs
     contents: conference-contributions.yml
+  - id: teaching-conference-contributions
+    template: conference.ejs
+    contents: teaching-conference-contributions.yml
 ---
 
-## Journal publications
+## Research publications
+
+### Journals
 
 ::: {#journal-publications}
 :::
 
-## Conference contributions
+### Conferences
 
 ::: {#conference-contributions}
+:::
+
+
+## Teaching publications
+
+### Conferences
+
+::: {#teaching-conference-contributions}
 :::

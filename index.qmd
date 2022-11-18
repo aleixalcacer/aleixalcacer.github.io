@@ -1,7 +1,7 @@
 ---
 title: "Hi, I am Aleix!"
 subtitle: |
-  Predoctoral researcher and Open Source enthusiast :)
+  A predoctoral researcher and Open Source enthusiast :)
 image: profile.jpg
 about:
   id: edu-exp
@@ -30,9 +30,7 @@ I am a predoctoral researcher at Jaume I University who loves the Open Source wo
 
 Currently, I am focused on designing new methods within the field of archetypal analysis.
 
-<a type="button" class="btn btn-outline-dark" href="cv.pdf">
-  See ©my complete CV
-</a>
+See my complete [CV](cv.pdf).
 
 ::: {.grid}
 
@@ -40,13 +38,13 @@ Currently, I am focused on designing new methods within the field of archetypal 
 ## Education
 
 - **Ph.D. in Mathematics** | 2020 - present  
-  Jaume I University, Spain
+  Universitat Jaume I, Spain
 
 - **M.Sc. in Computacional Mathematics** | 2018 - 2020  
-  Jaume I University, Spain
+  Universitat Jaume I, Spain
 
 - **B.Sc. in Computacional Mathematics** | 2014 - 2018  
-  Jaume I University, Spain
+  Universitat Jaume I, Spain
 :::
 
 ::: {.g-col-12 .g-col-md-4 style="text-align: left;"}

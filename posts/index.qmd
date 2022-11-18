@@ -4,8 +4,7 @@ listing:
   contents: .
   sort: "date desc"
   type: table
-  fields: [date, title, author]
-  image-align: left
+  fields: [date, title, reading-time]
   feed: true
 # Table of contents 
 toc: false
