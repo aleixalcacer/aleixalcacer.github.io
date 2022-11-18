@@ -2,7 +2,7 @@
 title: "Hi, I am Aleix!"
 subtitle: |
   Predoctoral researcher and Open Source enthusiast :)
-image: /profile.jpg
+image: profile.jpg
 about:
   id: edu-exp
   template: solana
