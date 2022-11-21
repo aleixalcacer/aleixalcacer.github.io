@@ -4,9 +4,6 @@ project:
 execute:
   freeze: auto
 
-resources:
-  - CNAME
-  
 website:
   site-url: https://aleixalcacer.com
   description: "A great sample blog"
@@ -21,8 +18,8 @@ website:
         text: Research
       - href: teaching/index.qmd
         text: Teaching        
-      - href: projects/index.qmd
-        text: Projects
+      - href: os-projects/index.qmd
+        text: OS Projects
       - href: posts/index.qmd
         text: Notes
     right:
