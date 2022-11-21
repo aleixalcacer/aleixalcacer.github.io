@@ -49,13 +49,6 @@
     "text": "Interests\n\nArchetypal Analysis\nMatrix Factorization\nHPC and Software Optimization\nData Visualisation\nKnowledge Sharing\nContinuous Learning"
   },
   {
-    "objectID": "projects/index.html",
-    "href": "projects/index.html",
-    "title": "Projects",
-    "section": "",
-    "text": "As an Open Source enthusiast, all of my personal projects are open for the community!\n\nPython packages\n\n\n  \n    \n      \n        archetypes\n      \n      \n        \n      \n    \n   \n    \n      Sikit-learn compatible package for archetypal analysis.\n \n    \n    \n      \n        creator\n      \n      \n        2021 - present\n      \n    \n  \n  \n    \n      \n        memprofiler\n      \n      \n        \n      \n    \n   \n    \n      IPython extension for monitoring memory usage of Jupyter notebook cells.\n \n    \n    \n      \n        creator\n      \n      \n        2020 - present\n      \n    \n  \n  \n    \n      \n        caterva\n      \n      \n        \n      \n    \n   \n    \n      Format for n-dimensional containers built on top of Blosc2.\n \n    \n    \n      \n        mantainer\n      \n      \n        2018 - 2022\n      \n    \n  \n\nOthers\n\n\n  \n    \n      \n        cmlint\n      \n      \n        \n      \n    \n   \n    \n      Pre-commit hook for linitng commit messages and creating robust changelogs.\n \n    \n    \n      \n        creator\n      \n      \n        2022 - present\n      \n    \n  \n\n\nNo matching items"
-  },
-  {
     "objectID": "research/index.html",
     "href": "research/index.html",
     "title": "Research",
@@ -63,11 +56,11 @@
     "text": "I have wanted to be a researcher since I was very little. The ability to improve people’s environment through technology has always fascinated me. Now, I have fulfilled my dream!"
   },
   {
-    "objectID": "research/index.html#publications",
-    "href": "research/index.html#publications",
+    "objectID": "research/index.html#scientific-production",
+    "href": "research/index.html#scientific-production",
     "title": "Research",
-    "section": "Publications",
-    "text": "Publications\n\nJournals\n\n\n        \n            Aleix Alcacer, Irene Epifanio, Jorge Valero, Alfredo Ballester (2021). Combining Classification and User-Based Collaborative Filtering for Matching Footwear Size. MATHEMATICS, 9(7).\n             https://doi.org/10.3390/math9070771 \n            \n            \n        \n        \n            Aleix Alcacer, Irene Epifanio, María Victoria Ibáñez, Amelia Simó, Alfredo Ballester (2020). A data-driven classification of 3D foot types by archetypal shapes based on landmarks. PLOS ONE, 15(1).\n             https://doi.org/10.1371/journal.pone.0228016 \n            \n            \n        \n\n\nNo matching items\n\n\n\n\nConferences\n\n\n        \n            Aleix Alcacer, Irene Epifanio, Jorge Valero, Alfredo Ballester (Dec 19, 2021). Combining user-based collaborative filtering and classification for matching footwear size. CFE-CMStatistics 2021, London (United Kingdom). ISBN: 9789925781256\n            \n            \n        \n        \n            Aleix Alcacer, Irene Epifanio, María Victoria Ibáñez, Amelia Simó (Sep 11, 2019). Archetypal contour shapes. 12th Scientific Meeting Classification and Data Analysis Group (CLADAG 2019), Cassino (Italy). ISBN: 9788883171086\n            \n                         pdf \n            \n        \n        \n            Aleix Alcacer, Irene Epifanio, María Victoria Ibáñez, Amelia Simó (Jun 19, 2019). Analysis of 2D foot morphology by functional archetypal analysis. XVII Conferencia Española y VII Encuentro Iberoamericano de Biometría (CEB-EIB 2019), València (Spain). ISBN: 9788409117062\n                  Note: Selected for the Young Statician Showcase     \n            \n                         pdf \n            \n        \n\n\nNo matching items"
+    "section": "Scientific production",
+    "text": "Scientific production\n\nJournals\n\n\n        \n            Aleix Alcacer, Irene Epifanio, Jorge Valero, Alfredo Ballester (2021). Combining Classification and User-Based Collaborative Filtering for Matching Footwear Size. MATHEMATICS, 9(7).\n             10.3390/math9070771 .\n            \n            \n        \n        \n            Aleix Alcacer, Irene Epifanio, María Victoria Ibáñez, Amelia Simó, Alfredo Ballester (2020). A data-driven classification of 3D foot types by archetypal shapes based on landmarks. PLOS ONE, 15(1).\n             10.1371/journal.pone.0228016 .\n            \n            \n        \n\n\nNo matching items\n\n\n\n\nConferences\n\n\n        \n            Aleix Alcacer, Irene Epifanio, Jorge Valero, Alfredo Ballester (Dec 19, 2021). Combining user-based collaborative filtering and classification for matching footwear size. CFE-CMStatistics 2021, London (United Kingdom). ISBN: 9789925781256\n            \n            \n        \n        \n            Aleix Alcacer, Irene Epifanio, María Victoria Ibáñez, Amelia Simó (Sep 11, 2019). Archetypal contour shapes. 12th Scientific Meeting Classification and Data Analysis Group (CLADAG 2019), Cassino (Italy). ISBN: 9788883171086\n            \n                         pdf \n            \n        \n        \n            Aleix Alcacer, Irene Epifanio, María Victoria Ibáñez, Amelia Simó (Jun 19, 2019). Analysis of 2D foot morphology by functional archetypal analysis. XVII Conferencia Española y VII Encuentro Iberoamericano de Biometría (CEB-EIB 2019), València (Spain). ISBN: 9788409117062\n                  Note: Selected for the Young Statician Showcase     \n            \n                         pdf \n            \n        \n\n\nNo matching items"
   },
   {
     "objectID": "teaching/index.html",
@@ -77,17 +70,17 @@
     "text": "Apart from research, teaching is something I love. It is a tool that allows me to share my knowledge with other people."
   },
   {
-    "objectID": "teaching/index.html#publications",
-    "href": "teaching/index.html#publications",
+    "objectID": "teaching/index.html#teaching-experience",
+    "href": "teaching/index.html#teaching-experience",
     "title": "Teaching",
-    "section": "Publications",
-    "text": "Publications\n\nConferences\n\n\n        \n            Lara Ferrando, Aleix Alcacer, Atanasia Lloria, Marina Martínez-García, Belén Martínez-Serrano, Adrián Pérez-Suay, Irene Epifanio (Sep 29, 2022). Analysis of the contributions to the SDGs of university students by degrees. XII International Conference on VIRTUAL CAMPUS, Arequipa (Peru). \n            \n                         slides \n                         video \n            \n        \n        \n            Aleix Alcacer, Irene Epifanio, Lara Ferrando, Atanasia Lloria, Marina Martínez-García, Belén Martínez-Serrano, Adrián Pérez Suay (Oct 15, 2022). ¿Cuál es la percepción de los ODS del estudiantado universitario?. ATIDES 2022, Castelló de la Plana (Spain). \n            \n                         pdf \n            \n        \n\n\nNo matching items"
+    "section": "Teaching experience",
+    "text": "Teaching experience\n\n\n\n    \n        \n        \n            Course\n            Degree\n            Entity\n            ECTS\n            End Date\n        \n        \n        \n                \n                    Statistics Applied to Public Management and Administration\n                    Bachelor's Degree in Public Management and Administration\n                    UJI\n                    10,5\n                    2023\n                \n                \n                    Introduction to Statistics\n                    Bachelor's Degree in Labour Relations and Human Resources\n                    UJI\n                    1,5\n                    2022\n                \n                \n                    Software for Modelling Industrial Systems (Distance)\n                    Master's Degree in Computational Mathematics (Distance)\n\n                    UJI\n                    0\n                    2021\n                \n                \n                    Software for Modelling Industrial Systems\n                    Master's Degree in Computational Mathematics\n\n                    UJI\n                    0\n                    2021\n                \n        \n    \n  \n\nNo matching items"
   },
   {
-    "objectID": "teaching/index.html#experience",
-    "href": "teaching/index.html#experience",
+    "objectID": "teaching/index.html#innovative-teaching-production",
+    "href": "teaching/index.html#innovative-teaching-production",
     "title": "Teaching",
-    "section": "Experience",
-    "text": "Experience\n\n\n\n    \n        \n        \n            Course\n            Degree\n            Entity\n            ECTS\n            End Date\n        \n        \n        \n                \n                    Statistics Applied to Public Management and Administration\n                    Bachelor's Degree in Public Management and Administration\n                    UJI\n                    10,5\n                    2023\n                \n                \n                    Introduction to Statistics\n                    Bachelor's Degree in Labour Relations and Human Resources\n                    UJI\n                    1,5\n                    2022\n                \n                \n                    Software for Modelling Industrial Systems (Distance)\n                    Master's Degree in Computational Mathematics (Distance)\n\n                    UJI\n                    0\n                    2021\n                \n                \n                    Software for Modelling Industrial Systems\n                    Master's Degree in Computational Mathematics\n\n                    UJI\n                    0\n                    2021\n                \n        \n    \n  \n\nNo matching items"
+    "section": "Innovative teaching production",
+    "text": "Innovative teaching production\n\nConferences\n\n\n        \n            Lara Ferrando, Aleix Alcacer, Atanasia Lloria, Marina Martínez-García, Belén Martínez-Serrano, Adrián Pérez-Suay, Irene Epifanio (Sep 29, 2022). Analysis of the contributions to the SDGs of university students by degrees [Conference paper]. XII International Conference on VIRTUAL CAMPUS, Arequipa (Peru).\n            ISBN: 9781665451079.\n            10.1109/JICV56113.2022.9934727.\n            \n                         slides \n                         video \n            \n        \n        \n            Aleix Alcacer, Irene Epifanio, Lara Ferrando, Atanasia Lloria, Marina Martínez-García, Belén Martínez-Serrano, Adrián Pérez Suay (Oct 15, 2022). ¿Cuál es la percepción de los ODS del estudiantado universitario? [Conference paper]. ATIDES 2022, Castelló de la Plana (Spain).\n            \n            \n        \n\n\nNo matching items\n\n\n\n\nOther activities\n\nOrganizing committee of the ATIDES congress (2022).\nOrganizing committee of the ATIDES congress (2020)."
   }
 ]
