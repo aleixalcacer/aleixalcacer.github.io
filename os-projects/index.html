@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Aleix Alcacer - Teaching</title>
+<title>Aleix Alcacer - Open Source Projects</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -65,48 +65,20 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-experience .list');
+    const listingTargetEl = window.document.querySelector('#listing-projects .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
     }
 
     const options = {
-      valueNames: ['listing-course','listing-degree','listing-frequency','listing-date','listing-credits','listing-entity','listing-language',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] }],
+      valueNames: ['listing-category','listing-tiles',{ data: ['index'] },{ data: ['categories'] }],
       
-      searchColumns: ["listing-course","listing-degree","listing-frequency","listing-date","listing-credits","listing-entity","listing-language"],
+      searchColumns: ["listing-category","listing-tiles"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-experience'] = new List('listing-experience', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-conference-contributions .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-author','listing-conference','listing-location','listing-type','listing-date','listing-year','listing-isbn','listing-doi','listing-labels',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-conference","listing-location","listing-type","listing-date","listing-year","listing-isbn","listing-doi","listing-labels"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-conference-contributions'] = new List('listing-conference-contributions', options);
+    window['quarto-listings']['listing-projects'] = new List('listing-projects', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -150,11 +122,11 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Research</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../teaching/index.html" aria-current="page">
+    <a class="nav-link" href="../teaching/index.html">
  <span class="menu-text">Teaching</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../os-projects/index.html">
+    <a class="nav-link active" href="../os-projects/index.html" aria-current="page">
  <span class="menu-text">OS Projects</span></a>
   </li>  
   <li class="nav-item">
@@ -191,7 +163,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Teaching</h1>
+<h1 class="title">Open Source Projects</h1>
 </div>
 
 
@@ -206,90 +178,128 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>Apart from research, teaching is something I love. It is a tool that allows me to share my knowledge with other people.</p>
-<section id="innovative-teaching-production" class="level2">
-<h2 class="anchored" data-anchor-id="innovative-teaching-production">Innovative teaching production</h2>
-<section id="conferences" class="level3">
-<h3 class="anchored" data-anchor-id="conferences">Conferences</h3>
-<div id="listing-conference-contributions" class="quarto-listing quarto-listing-container-custom">
-<ul id="quarto-conference">
-        <li class="quarto-publication">
-            Lara Ferrando, Aleix Alcacer, Atanasia Lloria, Marina Martínez-García, Belén Martínez-Serrano, Adrián Pérez-Suay, Irene Epifanio (Sep 29, 2022). <i>Analysis of the contributions to the SDGs of university students by degrees</i> [Conference paper]. XII International Conference on VIRTUAL CAMPUS, Arequipa (Peru).
-            ISBN: 9781665451079.
-            <a href="https://doi.org/10.1109/JICV56113.2022.9934727">10.1109/JICV56113.2022.9934727</a>.
-            <div class="quarto-labels">
-                        <span class="quarto-label"><a href="publications/2022_ods_cv_slides.pdf"> slides </a></span>
-                        <span class="quarto-label"><a href="https://www.youtube.com/watch?v=qphytXdNjLM"> video </a></span>
-            </div>
-        </li>
-        <li class="quarto-publication">
-            Aleix Alcacer, Irene Epifanio, Lara Ferrando, Atanasia Lloria, Marina Martínez-García, Belén Martínez-Serrano, Adrián Pérez Suay (Oct 15, 2022). <i>¿Cuál es la percepción de los ODS del estudiantado universitario?</i> [Conference paper]. ATIDES 2022, Castelló de la Plana (Spain).
-            <div class="quarto-labels">
-            </div>
-        </li>
-</ul>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div>
-</section>
-<section id="other-activities" class="level3">
-<h3 class="anchored" data-anchor-id="other-activities">Other activities</h3>
-<ul>
-<li><p>Organizing committee of the ATIDES congress (2022).</p></li>
-<li><p>Organizing committee of the ATIDES congress (2020).</p></li>
-</ul>
-</section>
-</section>
-<section id="teaching-experience" class="level2">
-<h2 class="anchored" data-anchor-id="teaching-experience">Teaching experience</h2>
-<div id="listing-experience" class="quarto-listing quarto-listing-container-custom">
-
-<div class="table-responsive">
-    <table class="table table-hover">
-        <thead style="white-space: nowrap">
-        <tr>
-            <th scope="col">Course</th>
-            <th scope="col">Degree</th>
-            <th scope="col">Entity</th>
-            <th scope="col">ECTS</th>
-            <th scope="col">End Date</th>
-        </tr>
-        </thead>
-        <tbody>
-                <tr>
-                    <td>Statistics Applied to Public Management and Administration</td>
-                    <td>Bachelor's Degree in Public Management and Administration</td>
-                    <td>UJI</td>
-                    <td>10,5</td>
-                    <td>2023</td>
-                </tr>
-                <tr>
-                    <td>Introduction to Statistics</td>
-                    <td>Bachelor's Degree in Labour Relations and Human Resources</td>
-                    <td>UJI</td>
-                    <td>1,5</td>
-                    <td>2022</td>
-                </tr>
-                <tr>
-                    <td>Software for Modelling Industrial Systems (Distance)</td>
-                    <td>Master's Degree in Computational Mathematics (Distance)
-</td>
-                    <td>UJI</td>
-                    <td>0</td>
-                    <td>2021</td>
-                </tr>
-                <tr>
-                    <td>Software for Modelling Industrial Systems</td>
-                    <td>Master's Degree in Computational Mathematics
-</td>
-                    <td>UJI</td>
-                    <td>0</td>
-                    <td>2021</td>
-                </tr>
-        </tbody>
-    </table>
+<p>As an Open Source enthusiast, all of my personal projects are open for the community!</p>
+<div id="listing-projects" class="quarto-listing quarto-listing-container-custom">
+<h2 class="anchored">Python packages</h2>
+<!--- <p></p> --->
+<div class="list grid" style="column-gap: 10px;">
+  <div class="card border-2 rounded-3 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="0">
+    <div class="card-header py-1 px-2 border-bottom border-1 bg-light">
+      <small class="card-text inline-block">
+        <a href="https://archetypes.readthedocs.io" class="listing-title">archetypes</a>
+      </small>
+      <a href="https://github.com/aleixalcacer/archetypes" title="View source code" class="card-text float-end inline-block">
+        <i class="bi-github"></i>
+      </a>
+    </div>
+   <!---
+    <a href="https://archetypes.readthedocs.io">
+      <img src="" alt="Sikit-learn compatible package for archetypal analysis.
+" class="card-img-top"/>
+    </a>
+    --->
+    <div class="card-body">
+      <small class="card-text">Sikit-learn compatible package for archetypal analysis.
+ </small>
+    </div>
+    <div class="card-footer py-1 px-2 border-top border-1 bg-light">
+      <small class="card-text inline-block text-muted">
+        creator
+      </small>
+      <small class="card-text inline-block text-muted float-end">
+        2021 - present
+      </small>
+    </div>
   </div>
+  <div class="card border-2 rounded-3 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="1">
+    <div class="card-header py-1 px-2 border-bottom border-1 bg-light">
+      <small class="card-text inline-block">
+        <a href="https://github.com/aleixalcacer/memprofiler" class="listing-title">memprofiler</a>
+      </small>
+      <a href="https://github.com/aleixalcacer/memprofiler" title="View source code" class="card-text float-end inline-block">
+        <i class="bi-github"></i>
+      </a>
+    </div>
+   <!---
+    <a href="https://github.com/aleixalcacer/memprofiler">
+      <img src="" alt="IPython extension for monitoring memory usage of Jupyter notebook cells.
+" class="card-img-top"/>
+    </a>
+    --->
+    <div class="card-body">
+      <small class="card-text">IPython extension for monitoring memory usage of Jupyter notebook cells.
+ </small>
+    </div>
+    <div class="card-footer py-1 px-2 border-top border-1 bg-light">
+      <small class="card-text inline-block text-muted">
+        creator
+      </small>
+      <small class="card-text inline-block text-muted float-end">
+        2020 - present
+      </small>
+    </div>
+  </div>
+  <div class="card border-2 rounded-3 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="2">
+    <div class="card-header py-1 px-2 border-bottom border-1 bg-light">
+      <small class="card-text inline-block">
+        <a href="https://python-caterva.readthedocs.io" class="listing-title">caterva</a>
+      </small>
+      <a href="https://github.com/Blosc/python-caterva" title="View source code" class="card-text float-end inline-block">
+        <i class="bi-github"></i>
+      </a>
+    </div>
+   <!---
+    <a href="https://python-caterva.readthedocs.io">
+      <img src="" alt="Format for n-dimensional containers built on top of Blosc2.
+" class="card-img-top"/>
+    </a>
+    --->
+    <div class="card-body">
+      <small class="card-text">Format for n-dimensional containers built on top of Blosc2.
+ </small>
+    </div>
+    <div class="card-footer py-1 px-2 border-top border-1 bg-light">
+      <small class="card-text inline-block text-muted">
+        mantainer
+      </small>
+      <small class="card-text inline-block text-muted float-end">
+        2018 - 2022
+      </small>
+    </div>
+  </div>
+</div>
+<h2 class="anchored">Others</h2>
+<!--- <p></p> --->
+<div class="list grid" style="column-gap: 10px;">
+  <div class="card border-2 rounded-3 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="3">
+    <div class="card-header py-1 px-2 border-bottom border-1 bg-light">
+      <small class="card-text inline-block">
+        <a href="https://github.com/aleixalcacer/cmlint" class="listing-title">cmlint</a>
+      </small>
+      <a href="https://github.com/aleixalcacer/cmlint" title="View source code" class="card-text float-end inline-block">
+        <i class="bi-github"></i>
+      </a>
+    </div>
+   <!---
+    <a href="https://github.com/aleixalcacer/cmlint">
+      <img src="" alt="Pre-commit hook for linitng commit messages and creating robust changelogs.
+" class="card-img-top"/>
+    </a>
+    --->
+    <div class="card-body">
+      <small class="card-text">Pre-commit hook for linitng commit messages and creating robust changelogs.
+ </small>
+    </div>
+    <div class="card-footer py-1 px-2 border-top border-1 bg-light">
+      <small class="card-text inline-block text-muted">
+        creator
+      </small>
+      <small class="card-text inline-block text-muted float-end">
+        2022 - present
+      </small>
+    </div>
+  </div>
+</div>
 <div class="listing-no-matching d-none">
 No matching items
 </div>
@@ -297,7 +307,6 @@ No matching items
 
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

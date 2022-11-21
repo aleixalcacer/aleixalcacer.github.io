@@ -12,5 +12,9 @@
   {
     "listing": "/teaching/index.html",
     "items": []
+  },
+  {
+    "listing": "/os-projects/index.html",
+    "items": []
   }
 ]
