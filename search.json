@@ -1,5 +1,12 @@
 [
   {
+    "objectID": "posts/index.html",
+    "href": "posts/index.html",
+    "title": "Notes",
+    "section": "",
+    "text": "A place where I write things.\n\n\n\n\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nReading Time\n\n\n\n\n\n\nNov 16, 2022\n\n\nBiarchetype analysis\n\n\n2 min\n\n\n\n\n\n\nNo matching items"
+  },
+  {
     "objectID": "posts/2022-06-11_archetypal-analysis/index.html",
     "href": "posts/2022-06-11_archetypal-analysis/index.html",
     "title": "Biarchetype analysis",
@@ -19,13 +26,6 @@
     "title": "Biarchetype analysis",
     "section": "Example",
     "text": "Example\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(\n  subplot_kw = {'projection': 'polar'} \n)\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n\n\n\n\n\nFigure 1: Temperature and ozone level."
-  },
-  {
-    "objectID": "posts/index.html",
-    "href": "posts/index.html",
-    "title": "Notes",
-    "section": "",
-    "text": "A place where I write things.\n\n\n\n\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nReading Time\n\n\n\n\n\n\nNov 16, 2022\n\n\nBiarchetype analysis\n\n\n2 min\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html",
