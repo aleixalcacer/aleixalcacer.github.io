@@ -16,13 +16,13 @@
       role: creator
       date: 2020 - present
 
-    - title: caterva
-      href: https://python-caterva.readthedocs.io
-      code: https://github.com/Blosc/python-caterva
+    - title: blosc
+      href: https://blosc.org
+      code: https://github.com/Blosc
       description: |
-        Format for n-dimensional containers built on top of Blosc2.
+        High-performance chunk-based compressor for binary data.
       role: mantainer
-      date: 2018 - 2022
+      date: 2018 - present
 
 
 - category: Others
