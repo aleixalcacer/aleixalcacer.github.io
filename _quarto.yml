@@ -2,7 +2,7 @@ project:
   type: website
 
 execute:
-  freeze: auto
+  freeze: true
 
 website:
   site-url: https://aleixalcacer.com

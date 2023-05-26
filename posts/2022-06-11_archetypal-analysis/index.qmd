@@ -17,7 +17,7 @@ jupyter: python3
 \DeclareMathOperator*{\argmin}{arg\,min\,}
 \DeclareMathOperator*{\argmax}{arg\,max\,}
 
-## Introduction
+# Introduction
 
 Archetypal analysis was introduced by @Cutler1994. Let $X$ be a (real-valued) data matrix where the rows represent the samples of the data and the columns, the features. They defined the archetypes as convex combinations of the data samples, i.e. $Z = BX$ where $B$ is a stochastic matrix. In addition, the data samples are approximated by convex combinations of the archetypes, i.e. $X \simeq AZ$ where $A$ and is also stochastic matrix. This is equivalent to solve the following optimization problem:
 
@@ -33,7 +33,7 @@ $${#eq-aa}
 
 TODO: Interpretation
 
-## BiArchetype Analysis
+# BiArchetype Analysis
 
 In BiAA, the archetypes are assumed to be convex combinations of the data in both dimensions, i.e. $Z = BXC$ where $B$ and $C$ are stochastic matrices. At the same time, the data is approximated by convex combinations of the archetypes, i.e. $X \simeq AZD$ where $A$ and $D$ are also stochastic matrices.
 
@@ -65,7 +65,7 @@ $$
 $${#eq-normal-likelihood}
 
 
-## Example
+# Example
 
 ```{python}
 #| label: fig-airquality
@@ -84,3 +84,9 @@ ax.set_rticks([0.5, 1, 1.5, 2])
 ax.grid(True)
 plt.show()
 ```
+
+
+# References {.unnumbered}
+
+::: {#refs}
+:::

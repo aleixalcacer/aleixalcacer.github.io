@@ -2,7 +2,14 @@
 csl: apa.csl
 
 # Table of contents 
-toc: true
+toc: false
 
 # Citation information
-citation: true
+citation: false
+
+# PDF engine
+pdf-engine: pdflatex
+
+# Date format
+date-format: long
+

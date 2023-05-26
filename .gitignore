@@ -3,3 +3,8 @@ _site/
 
 # macOS files
 .DS_Store
+
+/.luarc.json
+
+posts/**/*.sty
+posts/**/*.tex

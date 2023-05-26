@@ -51,11 +51,10 @@ See my complete [CV](cv.pdf).
 ## Interests
 
 - Archetypal Analysis
-- Matrix Factorization
-- HPC and Software Optimization
 - Data Visualisation
-- Knowledge Sharing
-- Continuous Learning
+- Reinforcement learning
+- HPC and Software Optimization
+- Knowledge sharing
 :::
 
 :::
