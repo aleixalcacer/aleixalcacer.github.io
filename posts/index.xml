@@ -10,80 +10,7 @@
 <atom:link href="https://aleixalcacer.com/posts/index.xml" rel="self" type="application/rss+xml"/>
 <description>A great sample blog</description>
 <generator>quarto-1.3.353</generator>
-<lastBuildDate>Sun, 03 Dec 2023 00:00:00 GMT</lastBuildDate>
-<item>
-  <title>N-dimensional Archetypal Analysis for multivariate data</title>
-  <link>https://aleixalcacer.com/posts/2023-06-01_naa/index.html</link>
-  <description><![CDATA[ 
-
-
-
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5CDeclareMathOperator*%7B%5Cargmin%7D%7Barg%5C,min%7D%0A"></p>
-<section id="introduction" class="level1">
-<h1>Introduction</h1>
-<p>TODO</p>
-</section>
-<section id="methods" class="level1">
-<h1>Methods</h1>
-<p>TODO</p>
-<section id="background" class="level2">
-<h2 class="anchored" data-anchor-id="background">Background</h2>
-<p>TODO</p>
-</section>
-<section id="n-dimensional-archetypal-analysis" class="level2">
-<h2 class="anchored" data-anchor-id="n-dimensional-archetypal-analysis">N-dimensional Archetypal Analysis</h2>
-<p>Let <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%7BX%7D%20%5Cin%20%7B%5Cmathbb%7BR%7D%5EM%7D%5E%7BI_1%20%5Ctimes%20%5Cdots%20%5Ctimes%20I_N%7D"> be a data tensor where <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7Bx%7D_%7Bi_1,%20%5Cdots%20,i_N%7D%20%5Cin%20%5Cmathbb%7BR%7D%5EM"> be its <img src="https://latex.codecogs.com/png.latex?(i_1,%20%5Cdots,%20i_N)">-th entry.</p>
-<p>In this scenario, the archetypal tensor <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%7BZ%7D%20%5Cin%20%7B%5Cmathbb%7BR%7D%5EM%7D%5E%7BK_1%20%5Ctimes%20%5Cdots%20%5Ctimes%20K_N%7D"> will be defined as convex combinations of the tensor <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%7BX%7D">, i.e.&nbsp;<img src="https://latex.codecogs.com/png.latex?%5Cmathcal%7BZ%7D%20=%20%5Cmathcal%7BX%7D%20%5Ctimes_1%20%5Cmathcal%7BB%7D%5E%7B(1)%7D%20%5Ctimes_2%20%5Cdots%20%5Ctimes_N%20%5Cmathcal%7BB%7D%5E%7B(N)%7D"> where <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%7BB%7D%5E%7B(n)%7D%20%5Cin%20%5Cmathbb%7BR%7D%5E%7BK_n%20%5Ctimes%20I_n%7D"> for all <img src="https://latex.codecogs.com/png.latex?n=1,%5Cdots,N"> are stochastic matrices. Simultaneously, the tensor <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%7BX%7D"> will be approximated by convex combinations of the archetypal tensor <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%7BZ%7D">, i.e.&nbsp;<img src="https://latex.codecogs.com/png.latex?%5Cmathcal%7BX%7D%20%5Csimeq%20%5Cmathcal%7BZ%7D%5Ctimes_1%5Cmathcal%7BA%7D%5E%7B(1)%7D%20%5Ctimes_2%20%5Cdots%20%5Ctimes_N%20%5Cmathcal%7BA%7D%5E%7B(N)%7D"> where <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%7BA%7D%5E%7B(n)%7D%20%5Cin%20%5Cmathbb%7BR%7D%5E%7BI_n%20%5Ctimes%20K_n%7D"> for all <img src="https://latex.codecogs.com/png.latex?n=1,%5Cdots,N"> are also stochastic matrices.</p>
-<p>What has been described above can be expressed as an optimization problem: <img src="https://latex.codecogs.com/png.latex?%5Cbegin%7Bequation%7D%0A%20%20%20%20%5Cargmin_%7B%5Cmathcal%7BB%7D%5E%7B(1)%7D,%20%5Cdots,%20%5Cmathcal%7BB%7D%5E%7B(N)%7D,%20%5Cmathcal%7BA%7D%5E%7B(1)%7D,%5Cdots,%20%5Cmathcal%7BB%7D%5E%7B(N)%7D%7D%20%5Cquad%20%5Cell%5Cleft(%5Cmathcal%7BX%7D%20%7C%20(%5Cmathcal%7BX%7D%20%5Ctimes_1%20%5Cmathcal%7BB%7D%5E%7B(1)%7D%20%5Ctimes_2%20%5Cdots%20%5Ctimes_N%20%5Cmathcal%7BB%7D%5E%7B(N)%7D)%5Ctimes_1%5Cmathcal%7BA%7D%5E%7B(1)%7D%20%5Ctimes_2%20%5Cdots%20%5Ctimes_N%20%5Cmathcal%7BA%7D%5E%7B(N)%7D%5Cright)%0A%5Cend%7Bequation%7D"></p>
-<p>such that:</p>
-<ul>
-<li><img src="https://latex.codecogs.com/png.latex?%5Cell%5Cleft(%5Cmathcal%7BX%7D%7C%5Ctilde%7B%5Cmathcal%7BX%7D%7D%5Cright)"> should be a loss function.</li>
-<li><img src="https://latex.codecogs.com/png.latex?%5Csum_%7Bk=1%7D%5E%7BK_n%7D%20%5Cmathcal%7BA%7D%5E%7B(n)%7D_%7Bki%7D%20=%201"> with <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%7BA%7D%5E%7B(n)%7D_%7Bki%7D%20%5Cin%20%5B0,%201%5D"> for each <img src="https://latex.codecogs.com/png.latex?i=1,%5Cdots,%20I_n"> and <img src="https://latex.codecogs.com/png.latex?n=1,%5Cdots,N">.</li>
-<li><img src="https://latex.codecogs.com/png.latex?%5Csum_%7Bi=1%7D%5E%7BI_n%7D%20%5Cmathcal%7BB%7D%5E%7B(n)%7D_%7Bik%7D%20=%201"> with <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%7BB%7D%5E%7B(n)%7D_%7Bik%7D%20%5Cin%20%5B0,%201%5D"> for each <img src="https://latex.codecogs.com/png.latex?k=1,%5Cdots,%20K_n"> and <img src="https://latex.codecogs.com/png.latex?n=1,%5Cdots,N">.</li>
-</ul>
-</section>
-<section id="related-work" class="level2">
-<h2 class="anchored" data-anchor-id="related-work">Related work</h2>
-<p>TODO</p>
-</section>
-</section>
-<section id="results-and-discussion" class="level1">
-<h1>Results and discussion</h1>
-<p>TODO</p>
-<section id="example-1-synthetic-data" class="level2">
-<h2 class="anchored" data-anchor-id="example-1-synthetic-data">Example 1: synthetic data</h2>
-<p>TODO</p>
-</section>
-<section id="example-2-real-data-1" class="level2">
-<h2 class="anchored" data-anchor-id="example-2-real-data-1">Example 2: real data 1</h2>
-<p>TODO</p>
-</section>
-<section id="example-3-real-data-2" class="level2">
-<h2 class="anchored" data-anchor-id="example-3-real-data-2">Example 3: real data 2</h2>
-<p>TODO</p>
-</section>
-</section>
-<section id="conclusion-and-future-work" class="level1">
-<h1>Conclusion and future work</h1>
-<p>TODO</p>
-</section>
-<section id="acknowledgements" class="level1 unnumbered">
-<h1 class="unnumbered">Acknowledgements</h1>
-<p>This research was partially supported by the Spanish Ministry of Universities (FPU grant FPU20/01825).</p>
-</section>
-<section id="references" class="level1 unnumbered">
-<h1 class="unnumbered">References</h1>
-<div class="references">
-
-</div>
-
-
-</section>
-
- ]]></description>
-  <guid>https://aleixalcacer.com/posts/2023-06-01_naa/index.html</guid>
-  <pubDate>Sun, 03 Dec 2023 00:00:00 GMT</pubDate>
-</item>
+<lastBuildDate>Wed, 24 May 2023 00:00:00 GMT</lastBuildDate>
 <item>
   <title>Unleashing the Potential of the Flipped Classroom: Improving Class Attendance and Final Grades in Statistics Applied to Public Management and Administration</title>
   <link>https://aleixalcacer.com/posts/2023-05-25_iceri2023/index.html</link>
@@ -241,6 +168,148 @@ Seth, S., &amp; Eugster, M. J. A. (2016). Probabilistic archetypal analysis. <em
   <category>matrix factorization</category>
   <guid>https://aleixalcacer.com/posts/2022-06-11_archetypal-analysis/index.html</guid>
   <pubDate>Wed, 16 Nov 2022 00:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Bridging Archetypal Analysis and Stochastic Block Models</title>
+  <link>https://aleixalcacer.com/posts/2022-12-01_biaa-sbm/index.html</link>
+  <description><![CDATA[ 
+
+
+
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5CDeclareMathOperator*%7B%5Cargmin%7D%7Barg%5C,min%7D%0A%5CDeclareMathOperator*%7B%5Cargmax%7D%7Barg%5C,max%7D%0A"></p>
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<p>Research Questions:</p>
+<ul>
+<li>BiAA as a bridge between AA and SBM.</li>
+<li>BiAA extensions:
+<ul>
+<li>Multiple likelihoods (Normal, Bernoulli, Poisson)</li>
+<li>Hard assignment</li>
+<li>Degree correction</li>
+</ul></li>
+<li>What are the merits of Bi-AA as opposed to SBM?
+<ul>
+<li>Soft clustering</li>
+<li>Better interpretation</li>
+</ul></li>
+</ul>
+<p>This research paper presents an extension of the Biarchetype Analysis (BiAA) method for bridging Archetypal Analysis and Stochastic Block Models analysis. The proposed extension includes the support of multiple likelihood functions (Normal, Bernoulli and Poisson), the use of a hard assignment mode, and the application of degree correction. The paper also compares the merits of BiAA to existing stochastic block model (SBM) algorithms, with a focus on the benefits of soft clustering and better interpretation of the results.</p>
+<p>Biarchetype analysis is a statistical method that aims to uncover the underlying structure of data by grouping similar observations into clusters or archetypes. As it is said, the proposed extension of BiAA includes the incorporation of multiple likelihood functions, which allows for the use of different probability distributions to model the data. This enables the method to be applied to a wider range of data types, such as binary data, count data, and continuous data.</p>
+<p>In addition, the proposed extension includes the use of a hard assignment mode, which assigns each observation to the archetype with the highest probability of membership. This allows for a more straightforward interpretation of the results, compared to the soft assignment mode used in the original BiAA method, where each observation is assigned a probability of membership in each archetype.</p>
+<p>Finally, a degree correction is incorporated to BiAA, which adjusts the weights assigned to the nodes in the network based on their degree (i.e., the number of connections they have to other nodes). This ensures that nodes with higher degrees are not given too much influence in the calculation of the archetypes, which can lead to more accurate and unbiased results.</p>
+<p>The paper also compares the merits of BiAA to existing SBM algorithms, which are commonly used for detecting community structure in networks. One key advantage of BiAA is its ability to perform soft clustering, where each observation can belong to multiple archetypes with varying degrees of membership. This allows for a more nuanced representation of the data and the underlying structure of the network. In contrast, SBM algorithms typically perform hard clustering, where each observation is assigned to exactly one block or community.</p>
+<p>Another advantage of BiAA is its ability to provide better interpretation of the results. The archetypes identified by BiAA are derived from the data itself, and can be interpreted as extreme points in the data space. This allows for a more intuitive understanding of the patterns and structures in the data, compared to the block assignments produced by SBM algorithms, which are based on the probabilities of connections between nodes in the network.</p>
+<p>Overall, the proposed extension of BiAA offers a bridge between archetypal analysis and SBM analysis, providing a different framework for community structure detection analysis. Therefore, BiAA will be an alternative and valuable tool for uncovering the underlying structure of communities and gaining insights into the patterns and structures present in the data.</p>
+</section>
+<section id="methods" class="level1">
+<h1>Methods</h1>
+<section id="likelihood-functions" class="level2">
+<h2 class="anchored" data-anchor-id="likelihood-functions">Likelihood functions</h2>
+<p>Likelihood functions are used in statistical modeling to evaluate the quality of a model’s predictions. They are a measure of how well a model fits the observed data. By maximizing the likelihood of the model, it is possible to improve the model’s accuracy and make better predictions.</p>
+<p>In the article, log-likelihood functions will be used as error functions in the defined models. This means that the models will be trained to minimize the negative log-likelihood of their predictions, which will improve their accuracy. The Normal, Bernoulli, and Poisson log-likelihood functions will be used in this case, which are appropriate for models that make predictions using normal, binary, and count data, respectively.</p>
+<section id="normal-distribution" class="level3">
+<h3 class="anchored" data-anchor-id="normal-distribution">Normal distribution</h3>
+<p>The normal log-likelihood function is used to calculate the log-likelihood of a normal distribution given a set of data. The formula for the normal log-likelihood function is as follows:</p>
+<p><img src="https://latex.codecogs.com/png.latex?log(L)%20=%20-%5Cfrac%7Bn%7D%7B2%7D%20log(2%20%5Cpi)%20-%20%5Cfrac%7Bn%7D%7B2%7D%20log(%5Csigma%5E2)%20-%20%5Csum_%7Bi=1%7D%5E%7Bn%7D%20%5Cfrac%7B(x_i%20-%20%5Cmu)%5E2%7D%7B2%20%5Csigma%5E2%7D"></p>
+<p>where <img src="https://latex.codecogs.com/png.latex?L"> is the likelihood function, <img src="https://latex.codecogs.com/png.latex?n"> is the number of data points, <img src="https://latex.codecogs.com/png.latex?x_i"> is the <img src="https://latex.codecogs.com/png.latex?i">-th data point, <img src="https://latex.codecogs.com/png.latex?%5Cmu"> is the mean of the data, <img src="https://latex.codecogs.com/png.latex?%5Csigma"> is the standard deviation of the data, and the summation is over all data points in the sample.</p>
+</section>
+<section id="bernoulli-distribution" class="level3">
+<h3 class="anchored" data-anchor-id="bernoulli-distribution">Bernoulli distribution</h3>
+<p>The Bernoulli log-likelihood function is used to calculate the log-likelihood of a Bernoulli distribution given a set of data. The formula for the Bernoulli log-likelihood function is as follows:</p>
+<p><img src="https://latex.codecogs.com/png.latex?log(L)%20=%20%5Csum_%7Bi=1%7D%5E%7Bn%7D%20%5By_i%20%5Ccdot%20log(p)%20+%20(1%20-%20y_i)%20%5Ccdot%20log(1%20-%20p)%5D"></p>
+<p>where <img src="https://latex.codecogs.com/png.latex?L"> is the likelihood function, <img src="https://latex.codecogs.com/png.latex?y_i"> is the outcome of the binary event (1 if the event happened, 0 if it did not), <img src="https://latex.codecogs.com/png.latex?p"> is the probability of the event happening, and the summation is over all events in the data.</p>
+</section>
+<section id="poisson-distribution" class="level3">
+<h3 class="anchored" data-anchor-id="poisson-distribution">Poisson distribution</h3>
+<p>Finally, the Poisson log-likelihood function is used to calculate the log-likelihood of a Poisson distribution given a set of data. The formula for the Poisson log-likelihood function is as follows:</p>
+<p><img src="https://latex.codecogs.com/png.latex?log(L)%20=%20%5Csum_%7Bi=1%7D%5E%7Bn%7D%20%5Bn_i%20%5Ccdot%20log(%5Clambda)%20-%20%5Clambda%20-%20log(n_i!)%5D"></p>
+<p>where <img src="https://latex.codecogs.com/png.latex?L"> is the likelihood function, <img src="https://latex.codecogs.com/png.latex?n_i"> is the number of events observed in the <img src="https://latex.codecogs.com/png.latex?i">-th group, <img src="https://latex.codecogs.com/png.latex?%5Clambda"> is the rate parameter of the Poisson distribution, and the summation is over all groups in the data.</p>
+</section>
+</section>
+<section id="stochastic-block-model" class="level2">
+<h2 class="anchored" data-anchor-id="stochastic-block-model">Stochastic Block Model</h2>
+<p>The Stochastic Block Model (SBM) is a popular model used to generate synthetic networks with community structure. In an SBM, the nodes in the network are divided into groups or “blocks”, and the connections between nodes are determined by the blocks they belong to. The SBM is often used to test the performance of community detection algorithms, which are algorithms that aim to identify the groups or communities present in a network.</p>
+<p>For bipartite networks, the SBM can be viewed as a matrix factorization problem where the adjacency matrix (which represents the connections between the nodes) is decomposed into three matrices, one representing the blocks and the others representing the connections between the blocks. More specifically, let <img src="https://latex.codecogs.com/png.latex?X"> be the adjacency matrix of a network with <img src="https://latex.codecogs.com/png.latex?M"> and <img src="https://latex.codecogs.com/png.latex?N"> nodes respectively, where <img src="https://latex.codecogs.com/png.latex?A_%7Bij%7D"> is the number of connections between nodes <img src="https://latex.codecogs.com/png.latex?i"> and <img src="https://latex.codecogs.com/png.latex?j">. In the SBM, this adjacency matrix can be written as the product of three matrices, <img src="https://latex.codecogs.com/png.latex?A">, <img src="https://latex.codecogs.com/png.latex?Z"> and <img src="https://latex.codecogs.com/png.latex?C">, where <img src="https://latex.codecogs.com/png.latex?A"> is a <img src="https://latex.codecogs.com/png.latex?M%5Ctimes%20K"> matrix, <img src="https://latex.codecogs.com/png.latex?Z"> is a <img src="https://latex.codecogs.com/png.latex?K%5Ctimes%20L"> matrix and <img src="https://latex.codecogs.com/png.latex?D"> is a <img src="https://latex.codecogs.com/png.latex?L%5Ctimes%20N"> matrix:</p>
+<p><img src="https://latex.codecogs.com/png.latex?X%20%5Capprox%20AZD"></p>
+<p>Here, <img src="https://latex.codecogs.com/png.latex?A"> and <img src="https://latex.codecogs.com/png.latex?D"> are the matrices that represents the blocks, where <img src="https://latex.codecogs.com/png.latex?A_%7Bik%7D"> is the membership of node <img src="https://latex.codecogs.com/png.latex?i"> in block <img src="https://latex.codecogs.com/png.latex?k"> and <img src="https://latex.codecogs.com/png.latex?D_%7Blj%7D"> is the membership of node <img src="https://latex.codecogs.com/png.latex?j"> in block <img src="https://latex.codecogs.com/png.latex?l">. <img src="https://latex.codecogs.com/png.latex?Z"> is the matrix that represents the connections between the blocks, where <img src="https://latex.codecogs.com/png.latex?Z_%7Bkl%7D"> is the probability of a connection between nodes in block <img src="https://latex.codecogs.com/png.latex?k"> and block <img src="https://latex.codecogs.com/png.latex?l">.</p>
+<p>The matrix factorization of the adjacency matrix in the SBM allows us to model the community structure of the network by defining the blocks and the connections between the blocks. The blocks can be thought of as the groups or communities in the network, and the connections between the blocks can be used to control the strength and structure of the communities. For example, if <img src="https://latex.codecogs.com/png.latex?Z_%7Bkl%7D"> is high, it indicates that there are many connections between nodes in block <img src="https://latex.codecogs.com/png.latex?k"> and block <img src="https://latex.codecogs.com/png.latex?l">, and the corresponding communities are likely to be strongly connected. On the other hand, if <img src="https://latex.codecogs.com/png.latex?Z_%7Bkl%7D"> is low, it indicates that there are few connections between nodes in block <img src="https://latex.codecogs.com/png.latex?k"> and block <img src="https://latex.codecogs.com/png.latex?l">, and the corresponding communities are likely to be weakly connected.</p>
+<p>In summary, the Stochastic Block Model is a popular model for generating synthetic networks with community structure, and it can be viewed as a matrix factorization problem where the adjacency matrix of the network is decomposed into three matrices representing the blocks and the connections between the blocks.</p>
+<p>References: .</p>
+<pre><code># $$X_{MN} \sim A_{MK} Z_{KL} D_{LN}$$</code></pre>
+</section>
+<section id="biarchetype-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="biarchetype-analysis">Biarchetype Analysis</h2>
+<p>[Archetype and biarchetype analysis definition]</p>
+<p>Therfore, this method can be seen as a particular case of the Stochastic Block Model where the matrix <img src="https://latex.codecogs.com/png.latex?Z">, that represents the relationships between groups, is defined by taking convex combinations of the data <img src="https://latex.codecogs.com/png.latex?X">. This means that the matrix <img src="https://latex.codecogs.com/png.latex?Z">, called the archetypal matrix, is constructed as <img src="https://latex.codecogs.com/png.latex?Z%20=%20BXC"> where <img src="https://latex.codecogs.com/png.latex?X"> is the matrix representing the original data points and <img src="https://latex.codecogs.com/png.latex?B"> and <img src="https://latex.codecogs.com/png.latex?C"> are matrices that represent the coefficients of the convex combination. By defining the relationship matrix in this way, Biarchetype Analysis is able to interpret the matrix <img src="https://latex.codecogs.com/png.latex?Z"> based on input data.</p>
+</section>
+<section id="degree-correction" class="level2">
+<h2 class="anchored" data-anchor-id="degree-correction">Degree correction</h2>
+<p>A degree corrected algorithm is a variant of an existing algorithm that has been modified to account for the fact that the nodes in a network may have different degrees (i.e., different numbers of connections to other nodes). In many networks, the nodes have varying degrees, and a standard algorithm may not perform well when applied to such a network because it may give more weight to nodes with higher degrees, leading to biased or inaccurate results. A degree corrected algorithm addresses this issue by taking into account the degrees of the nodes when calculating the algorithm’s result.</p>
+<p>For example, when applying a community detection algorithm to a network generated using the SBM, it is important to take into account the degree distribution of the nodes in the network. The degree distribution of a network is the distribution of the number of connections (or “edges”) that each node has to other nodes in the network. In a network generated using the SBM, the degree distribution of the nodes will be different depending on the blocks they belong to. For example, nodes in the same block will tend to have similar degrees, while nodes in different blocks will have different degrees.</p>
+<p>If a standard community detection algorithm is applied to a network generated using the SBM, it may not perform well because it may give more weight to nodes with higher degrees, leading to biased or inaccurate results. A degree corrected version of the algorithm, on the other hand, would take into account the degree distribution of the nodes and give less weight to nodes with higher degrees, resulting in more accurate community detection.</p>
+</section>
+<section id="proposed-models" class="level2">
+<h2 class="anchored" data-anchor-id="proposed-models">Proposed Models</h2>
+<section id="soft-sbm" class="level3">
+<h3 class="anchored" data-anchor-id="soft-sbm">Soft SBM</h3>
+<img src="https://latex.codecogs.com/png.latex?%5Cbegin%7Bequation%7D%0A%20%20%20%20%5Cargmax_%7BA,%20Z,%20D%7D%20l(AZD;%20X)%0A%5Cend%7Bequation%7D"> such that:
+</section>
+<section id="hard-sbm" class="level3">
+<h3 class="anchored" data-anchor-id="hard-sbm">Hard SBM</h3>
+<img src="https://latex.codecogs.com/png.latex?%5Cbegin%7Bequation%7D%0A%20%20%20%20%5Cargmax_%7BA,%20Z,%20D%7D%20l(AZD;%20X)%0A%5Cend%7Bequation%7D"> such that:
+</section>
+</section>
+<section id="biarchetype-analysis-1" class="level2">
+<h2 class="anchored" data-anchor-id="biarchetype-analysis-1">BiArchetype Analysis</h2>
+<p>References: </p>
+<p>BiAA is a special case of SBM (<img src="https://latex.codecogs.com/png.latex?Z_%7BKL%7D%20=%20B_%7BKM%7D%20X_%7BMN%7D%20C_%7BNL%7D">).</p>
+<img src="https://latex.codecogs.com/png.latex?%5Cbegin%7Bequation%7D%0A%20%20%20%20%5Cargmax_%7BA,%20B,%20C,%20D%7D%20l(ABXCD;%20X)%0A%5Cend%7Bequation%7D"> such that:
+<section id="hard-assignment" class="level3">
+<h3 class="anchored" data-anchor-id="hard-assignment">Hard assignment</h3>
+<img src="https://latex.codecogs.com/png.latex?%5Cbegin%7Bequation%7D%0A%20%20%20%20%5Cargmax_%7BA,%20B,%20C,%20D%7D%20l(ABXCD;%20X)%0A%5Cend%7Bequation%7D"> such that:
+<p>NOTE: The prototypes are not in the boundary of the CH. References: </p>
+<p>Change restrictions 2, 3 such that</p>
+</section>
+</section>
+</section>
+<section id="results" class="level1">
+<h1>Results</h1>
+<p>Normalized Mutual Information: </p>
+<p>3 When Bernoulli likelihood is used for SBM synthetic graphs, the <img src="https://latex.codecogs.com/png.latex?Z"> matrix of the SBM and the <img src="https://latex.codecogs.com/png.latex?Z"> matrix (<img src="https://latex.codecogs.com/png.latex?Z=BXC">) of the BiAA are equal to the probabilities used to construct the graph.</p>
+<section id="sbm-based-synthetic-data" class="level2">
+<h2 class="anchored" data-anchor-id="sbm-based-synthetic-data">SBM-based synthetic data</h2>
+</section>
+<section id="biaa-based-synthetic-data" class="level2">
+<h2 class="anchored" data-anchor-id="biaa-based-synthetic-data">BiAA-based synthetic data</h2>
+</section>
+<section id="real-datasets" class="level2">
+<h2 class="anchored" data-anchor-id="real-datasets">Real datasets</h2>
+<section id="restaurant-recommender-system" class="level3">
+<h3 class="anchored" data-anchor-id="restaurant-recommender-system">Restaurant recommender system</h3>
+<p> Source: </p>
+</section>
+<section id="drug-side-effect-association" class="level3">
+<h3 class="anchored" data-anchor-id="drug-side-effect-association">Drug side-effect association</h3>
+<p> Source: </p>
+</section>
+<section id="nips-author-collaboration" class="level3">
+<h3 class="anchored" data-anchor-id="nips-author-collaboration">NIPS author collaboration</h3>
+</section>
+</section>
+<section id="discussion" class="level2">
+<h2 class="anchored" data-anchor-id="discussion">Discussion</h2>
+</section>
+<section id="conclusions" class="level2">
+<h2 class="anchored" data-anchor-id="conclusions">Conclusions</h2>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <guid>https://aleixalcacer.com/posts/2022-12-01_biaa-sbm/index.html</guid>
+  <pubDate>Fri, 26 May 2023 15:13:12 GMT</pubDate>
 </item>
 </channel>
 </rss>
