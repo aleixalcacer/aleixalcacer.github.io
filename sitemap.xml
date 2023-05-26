@@ -1,27 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://aleixalcacer.com/posts/index.html</loc>
-    <lastmod>2023-04-18T10:29:59.727Z</lastmod>
-  </url>
-  <url>
-    <loc>https://aleixalcacer.com/posts/2022-06-11_archetypal-analysis/index.html</loc>
-    <lastmod>2023-04-18T10:30:00.651Z</lastmod>
+    <loc>https://aleixalcacer.com/os-projects/index.html</loc>
+    <lastmod>2023-05-26T14:16:36.724Z</lastmod>
   </url>
   <url>
     <loc>https://aleixalcacer.com/index.html</loc>
-    <lastmod>2023-04-18T10:30:00.983Z</lastmod>
+    <lastmod>2023-05-26T14:16:38.025Z</lastmod>
   </url>
   <url>
-    <loc>https://aleixalcacer.com/research/index.html</loc>
-    <lastmod>2023-04-18T10:30:01.287Z</lastmod>
+    <loc>https://aleixalcacer.com/posts/2022-06-11_archetypal-analysis/index.html</loc>
+    <lastmod>2023-05-26T14:16:38.713Z</lastmod>
+  </url>
+  <url>
+    <loc>https://aleixalcacer.com/posts/index.html</loc>
+    <lastmod>2023-05-26T14:16:39.173Z</lastmod>
+  </url>
+  <url>
+    <loc>https://aleixalcacer.com/posts/2023-06-01_naa/index.html</loc>
+    <lastmod>2023-05-26T14:16:41.393Z</lastmod>
+  </url>
+  <url>
+    <loc>https://aleixalcacer.com/posts/2023-05-25_iceri2023/index.html</loc>
+    <lastmod>2023-05-26T14:16:43.697Z</lastmod>
   </url>
   <url>
     <loc>https://aleixalcacer.com/teaching/index.html</loc>
-    <lastmod>2023-04-18T10:30:01.915Z</lastmod>
+    <lastmod>2023-05-26T14:16:44.137Z</lastmod>
   </url>
   <url>
-    <loc>https://aleixalcacer.com/os-projects/index.html</loc>
-    <lastmod>2023-04-18T10:30:02.207Z</lastmod>
+    <loc>https://aleixalcacer.com/research/index.html</loc>
+    <lastmod>2023-05-26T14:16:44.485Z</lastmod>
   </url>
 </urlset>

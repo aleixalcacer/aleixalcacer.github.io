@@ -9,8 +9,122 @@
 <link>https://aleixalcacer.com/posts/index.html</link>
 <atom:link href="https://aleixalcacer.com/posts/index.xml" rel="self" type="application/rss+xml"/>
 <description>A great sample blog</description>
-<generator>quarto-1.2.475</generator>
-<lastBuildDate>Wed, 16 Nov 2022 00:00:00 GMT</lastBuildDate>
+<generator>quarto-1.3.353</generator>
+<lastBuildDate>Sun, 03 Dec 2023 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>N-dimensional Archetypal Analysis for multivariate data</title>
+  <link>https://aleixalcacer.com/posts/2023-06-01_naa/index.html</link>
+  <description><![CDATA[ 
+
+
+
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5CDeclareMathOperator*%7B%5Cargmin%7D%7Barg%5C,min%7D%0A"></p>
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<p>TODO</p>
+</section>
+<section id="methods" class="level1">
+<h1>Methods</h1>
+<p>TODO</p>
+<section id="background" class="level2">
+<h2 class="anchored" data-anchor-id="background">Background</h2>
+<p>TODO</p>
+</section>
+<section id="n-dimensional-archetypal-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="n-dimensional-archetypal-analysis">N-dimensional Archetypal Analysis</h2>
+<p>Let <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%7BX%7D%20%5Cin%20%7B%5Cmathbb%7BR%7D%5EM%7D%5E%7BI_1%20%5Ctimes%20%5Cdots%20%5Ctimes%20I_N%7D"> be a data tensor where <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7Bx%7D_%7Bi_1,%20%5Cdots%20,i_N%7D%20%5Cin%20%5Cmathbb%7BR%7D%5EM"> be its <img src="https://latex.codecogs.com/png.latex?(i_1,%20%5Cdots,%20i_N)">-th entry.</p>
+<p>In this scenario, the archetypal tensor <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%7BZ%7D%20%5Cin%20%7B%5Cmathbb%7BR%7D%5EM%7D%5E%7BK_1%20%5Ctimes%20%5Cdots%20%5Ctimes%20K_N%7D"> will be defined as convex combinations of the tensor <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%7BX%7D">, i.e.&nbsp;<img src="https://latex.codecogs.com/png.latex?%5Cmathcal%7BZ%7D%20=%20%5Cmathcal%7BX%7D%20%5Ctimes_1%20%5Cmathcal%7BB%7D%5E%7B(1)%7D%20%5Ctimes_2%20%5Cdots%20%5Ctimes_N%20%5Cmathcal%7BB%7D%5E%7B(N)%7D"> where <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%7BB%7D%5E%7B(n)%7D%20%5Cin%20%5Cmathbb%7BR%7D%5E%7BK_n%20%5Ctimes%20I_n%7D"> for all <img src="https://latex.codecogs.com/png.latex?n=1,%5Cdots,N"> are stochastic matrices. Simultaneously, the tensor <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%7BX%7D"> will be approximated by convex combinations of the archetypal tensor <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%7BZ%7D">, i.e.&nbsp;<img src="https://latex.codecogs.com/png.latex?%5Cmathcal%7BX%7D%20%5Csimeq%20%5Cmathcal%7BZ%7D%5Ctimes_1%5Cmathcal%7BA%7D%5E%7B(1)%7D%20%5Ctimes_2%20%5Cdots%20%5Ctimes_N%20%5Cmathcal%7BA%7D%5E%7B(N)%7D"> where <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%7BA%7D%5E%7B(n)%7D%20%5Cin%20%5Cmathbb%7BR%7D%5E%7BI_n%20%5Ctimes%20K_n%7D"> for all <img src="https://latex.codecogs.com/png.latex?n=1,%5Cdots,N"> are also stochastic matrices.</p>
+<p>What has been described above can be expressed as an optimization problem: <img src="https://latex.codecogs.com/png.latex?%5Cbegin%7Bequation%7D%0A%20%20%20%20%5Cargmin_%7B%5Cmathcal%7BB%7D%5E%7B(1)%7D,%20%5Cdots,%20%5Cmathcal%7BB%7D%5E%7B(N)%7D,%20%5Cmathcal%7BA%7D%5E%7B(1)%7D,%5Cdots,%20%5Cmathcal%7BB%7D%5E%7B(N)%7D%7D%20%5Cquad%20%5Cell%5Cleft(%5Cmathcal%7BX%7D%20%7C%20(%5Cmathcal%7BX%7D%20%5Ctimes_1%20%5Cmathcal%7BB%7D%5E%7B(1)%7D%20%5Ctimes_2%20%5Cdots%20%5Ctimes_N%20%5Cmathcal%7BB%7D%5E%7B(N)%7D)%5Ctimes_1%5Cmathcal%7BA%7D%5E%7B(1)%7D%20%5Ctimes_2%20%5Cdots%20%5Ctimes_N%20%5Cmathcal%7BA%7D%5E%7B(N)%7D%5Cright)%0A%5Cend%7Bequation%7D"></p>
+<p>such that:</p>
+<ul>
+<li><img src="https://latex.codecogs.com/png.latex?%5Cell%5Cleft(%5Cmathcal%7BX%7D%7C%5Ctilde%7B%5Cmathcal%7BX%7D%7D%5Cright)"> should be a loss function.</li>
+<li><img src="https://latex.codecogs.com/png.latex?%5Csum_%7Bk=1%7D%5E%7BK_n%7D%20%5Cmathcal%7BA%7D%5E%7B(n)%7D_%7Bki%7D%20=%201"> with <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%7BA%7D%5E%7B(n)%7D_%7Bki%7D%20%5Cin%20%5B0,%201%5D"> for each <img src="https://latex.codecogs.com/png.latex?i=1,%5Cdots,%20I_n"> and <img src="https://latex.codecogs.com/png.latex?n=1,%5Cdots,N">.</li>
+<li><img src="https://latex.codecogs.com/png.latex?%5Csum_%7Bi=1%7D%5E%7BI_n%7D%20%5Cmathcal%7BB%7D%5E%7B(n)%7D_%7Bik%7D%20=%201"> with <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%7BB%7D%5E%7B(n)%7D_%7Bik%7D%20%5Cin%20%5B0,%201%5D"> for each <img src="https://latex.codecogs.com/png.latex?k=1,%5Cdots,%20K_n"> and <img src="https://latex.codecogs.com/png.latex?n=1,%5Cdots,N">.</li>
+</ul>
+</section>
+<section id="related-work" class="level2">
+<h2 class="anchored" data-anchor-id="related-work">Related work</h2>
+<p>TODO</p>
+</section>
+</section>
+<section id="results-and-discussion" class="level1">
+<h1>Results and discussion</h1>
+<p>TODO</p>
+<section id="example-1-synthetic-data" class="level2">
+<h2 class="anchored" data-anchor-id="example-1-synthetic-data">Example 1: synthetic data</h2>
+<p>TODO</p>
+</section>
+<section id="example-2-real-data-1" class="level2">
+<h2 class="anchored" data-anchor-id="example-2-real-data-1">Example 2: real data 1</h2>
+<p>TODO</p>
+</section>
+<section id="example-3-real-data-2" class="level2">
+<h2 class="anchored" data-anchor-id="example-3-real-data-2">Example 3: real data 2</h2>
+<p>TODO</p>
+</section>
+</section>
+<section id="conclusion-and-future-work" class="level1">
+<h1>Conclusion and future work</h1>
+<p>TODO</p>
+</section>
+<section id="acknowledgements" class="level1 unnumbered">
+<h1 class="unnumbered">Acknowledgements</h1>
+<p>This research was partially supported by the Spanish Ministry of Universities (FPU grant FPU20/01825).</p>
+</section>
+<section id="references" class="level1 unnumbered">
+<h1 class="unnumbered">References</h1>
+<div class="references">
+
+</div>
+
+
+</section>
+
+ ]]></description>
+  <guid>https://aleixalcacer.com/posts/2023-06-01_naa/index.html</guid>
+  <pubDate>Sun, 03 Dec 2023 00:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Unleashing the Potential of the Flipped Classroom: Improving Class Attendance and Final Grades in Statistics Applied to Public Management and Administration</title>
+  <link>https://aleixalcacer.com/posts/2023-05-25_iceri2023/index.html</link>
+  <description><![CDATA[ 
+
+
+
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<p>TODO</p>
+</section>
+<section id="methods" class="level1">
+<h1>Methods</h1>
+<p>TODO</p>
+</section>
+<section id="results-and-discussion" class="level1">
+<h1>Results and discussion</h1>
+<p>TODO</p>
+</section>
+<section id="conclusions-and-future-work" class="level1">
+<h1>Conclusions and future work</h1>
+<p>TODO</p>
+<div style="page-break-after: always;"></div>
+</section>
+<section id="references" class="level1 unnumbered">
+<h1 class="unnumbered">References</h1>
+<div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2">
+<div id="ref-bishop2013flipped" class="csl-entry">
+Bishop, J., &amp; Verleger, M. A. (2013). The flipped classroom: A survey of the research. <em>2013 ASEE Annual Conference &amp; Exposition</em>, 23–1200.
+</div>
+</div>
+
+
+</section>
+
+ ]]></description>
+  <category>flipped-classroom</category>
+  <category>innovative teaching</category>
+  <guid>https://aleixalcacer.com/posts/2023-05-25_iceri2023/index.html</guid>
+  <pubDate>Wed, 24 May 2023 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Biarchetype analysis</title>
   <link>https://aleixalcacer.com/posts/2022-06-11_archetypal-analysis/index.html</link>
@@ -18,14 +132,14 @@
 
 
 
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
 <p>Archetypal analysis was introduced by <span class="citation" data-cites="Cutler1994">Cutler &amp; Breiman (1994)</span>. Let <img src="https://latex.codecogs.com/png.latex?X"> be a (real-valued) data matrix where the rows represent the samples of the data and the columns, the features. They defined the archetypes as convex combinations of the data samples, i.e.&nbsp;<img src="https://latex.codecogs.com/png.latex?Z%20=%20BX"> where <img src="https://latex.codecogs.com/png.latex?B"> is a stochastic matrix. In addition, the data samples are approximated by convex combinations of the archetypes, i.e.&nbsp;<img src="https://latex.codecogs.com/png.latex?X%20%5Csimeq%20AZ"> where <img src="https://latex.codecogs.com/png.latex?A"> and is also stochastic matrix. This is equivalent to solve the following optimization problem:</p>
 <p><span id="eq-aa"><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Baligned%7D%0A%5Cmathop%7B%5Cmathrm%7Barg%5C,min%5C,%7D%7D_%7BA,B%7D%20%5Cquad%20&amp;%20%20%5C%7CX%20-%20ABX%20%5C%7C%5E2%20%5C%5C%0A%5Ctextrm%7Bs.t.%7D%20%5Cquad%20&amp;%20%20%5C%5C%0A%20%20%20%20&amp;%20%5Csum%5Cnolimits_%7Bk=1%7D%5EK%20A_%7Bmk%7D%20=%201%20%5Ctext%7B%20with%20%7D%20A_%7Bmk%7D%20%5Cin%20%5B0,%201%5D%20%5Ctext%7B%20for%20each%20%7D%20m=1,%5Cdots,%20M%20%5C%5C%0A%20%20%20%20&amp;%20%5Csum%5Cnolimits_%7Bm=1%7D%5EM%20B_%7Bkm%7D%20=%201%20%5Ctext%7B%20with%20%7D%20B_%7Bkm%7D%20%5Cin%20%5B0,%201%5D%20%5Ctext%7B%20for%20each%20%7D%20k=1,%5Cdots,%20K%20%5C%5C%0A%5Cend%7Baligned%7D%0A%5Ctag%7B1%7D"></span></p>
 <p>TODO: Interpretation</p>
 </section>
-<section id="biarchetype-analysis" class="level2">
-<h2 class="anchored" data-anchor-id="biarchetype-analysis">BiArchetype Analysis</h2>
+<section id="biarchetype-analysis" class="level1">
+<h1>BiArchetype Analysis</h1>
 <p>In BiAA, the archetypes are assumed to be convex combinations of the data in both dimensions, i.e.&nbsp;<img src="https://latex.codecogs.com/png.latex?Z%20=%20BXC"> where <img src="https://latex.codecogs.com/png.latex?B"> and <img src="https://latex.codecogs.com/png.latex?C"> are stochastic matrices. At the same time, the data is approximated by convex combinations of the archetypes, i.e.&nbsp;<img src="https://latex.codecogs.com/png.latex?X%20%5Csimeq%20AZD"> where <img src="https://latex.codecogs.com/png.latex?A"> and <img src="https://latex.codecogs.com/png.latex?D"> are also stochastic matrices.</p>
 <p>This is equivalent to solve the following optimization problem:</p>
 <p><span id="eq-biaa"><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Baligned%7D%0A%5Cmathop%7B%5Cmathrm%7Barg%5C,min%5C,%7D%7D_%7BA,B,C,D%7D%20%5Cquad%20&amp;%20%20%5Cell(X%7CABXCD)%20%5C%5C%0A%5Ctextrm%7Bs.t.%7D%20%5Cquad%20&amp;%20%20%5C%5C%0A%20%20%20%20&amp;%20%5Cell(X%20%7C%20%5Ctilde%7BX%7D)%20%5Ctext%7B%20should%20be%20a%20loss%20function%7D%20%5C%5C%0A%20%20%20%20&amp;%20%5Csum%5Cnolimits_%7Bk=1%7D%5EK%20A_%7Bmk%7D%20=%201%20%5Ctext%7B%20with%20%7D%20A_%7Bmk%7D%20%5Cin%20%5B0,%201%5D%20%5Ctext%7B%20for%20each%20%7D%20m=1,%5Cdots,%20M%20%5C%5C%0A%20%20%20%20&amp;%20%5Csum%5Cnolimits_%7Bm=1%7D%5EM%20B_%7Bkm%7D%20=%201%20%5Ctext%7B%20with%20%7D%20B_%7Bkm%7D%20%5Cin%20%5B0,%201%5D%20%5Ctext%7B%20for%20each%20%7D%20k=1,%5Cdots,%20K%20%5C%5C%0A%20%20%20%20&amp;%20%5Csum%5Cnolimits_%7Bn=1%7D%5EN%20C_%7Bnl%7D%20=%201%20%5Ctext%7B%20with%20%7D%20D_%7Bnl%7D%20%5Cin%20%5B0,%201%5D%20%5Ctext%7B%20for%20each%20%7D%20l=1,%5Cdots,%20L%20%5C%5C%0A%20%20%20%20&amp;%20%5Csum%5Cnolimits_%7Bl=1%7D%5EL%20D_%7Bln%7D%20=%201%20%5Ctext%7B%20with%20%7D%20D_%7Bln%7D%20%5Cin%20%5B0,%201%5D%20%5Ctext%7B%20for%20each%20%7D%20n=1,%5Cdots,%20N%20%5C%5C%0A%5Cend%7Baligned%7D%0A%5Ctag%7B2%7D"></span></p>
@@ -35,39 +149,79 @@
 <li><p>and for normal distributions, <span id="eq-normal-likelihood"><img src="https://latex.codecogs.com/png.latex?%0A%5Cell(X%20%7C%20%5Ctilde%7BX%7D)%20=%20MN%20%5Cln%20%5Cleft(%5Csigma%20%7B%5Csqrt%20%7B2%5Cpi%20%7D%7D%5Cright)%20+%20%7B%5Cfrac%20%7B1%7D%7B2%5Csigma%5E2%7D%7D%5Csum_%7Bm=1%7D%5EM%20%5Csum_%7Bn=1%7D%5EN%20%5Cleft(%20%7BX_%7Bmn%7D-%5Ctilde%7BX%7D_%7Bmn%7D%20%7D%5Cright)%5E%7B2%7D%0A%5Ctag%7B4%7D"></span></p></li>
 </ul>
 </section>
-<section id="example" class="level2">
-<h2 class="anchored" data-anchor-id="example">Example</h2>
+<section id="example" class="level1">
+<h1>Example</h1>
 <div class="cell" data-execution_count="1">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;">import</span> numpy <span class="im" style="color: #00769E;">as</span> np</span>
-<span id="cb1-2"><span class="im" style="color: #00769E;">import</span> matplotlib.pyplot <span class="im" style="color: #00769E;">as</span> plt</span>
+<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> numpy <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> np</span>
+<span id="cb1-2"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> matplotlib.pyplot <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> plt</span>
 <span id="cb1-3"></span>
-<span id="cb1-4">r <span class="op" style="color: #5E5E5E;">=</span> np.arange(<span class="dv" style="color: #AD0000;">0</span>, <span class="dv" style="color: #AD0000;">2</span>, <span class="fl" style="color: #AD0000;">0.01</span>)</span>
-<span id="cb1-5">theta <span class="op" style="color: #5E5E5E;">=</span> <span class="dv" style="color: #AD0000;">2</span> <span class="op" style="color: #5E5E5E;">*</span> np.pi <span class="op" style="color: #5E5E5E;">*</span> r</span>
-<span id="cb1-6">fig, ax <span class="op" style="color: #5E5E5E;">=</span> plt.subplots(</span>
-<span id="cb1-7">  subplot_kw <span class="op" style="color: #5E5E5E;">=</span> {<span class="st" style="color: #20794D;">'projection'</span>: <span class="st" style="color: #20794D;">'polar'</span>} </span>
+<span id="cb1-4">r <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> np.arange(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.01</span>)</span>
+<span id="cb1-5">theta <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> np.pi <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> r</span>
+<span id="cb1-6">fig, ax <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> plt.subplots(</span>
+<span id="cb1-7">  subplot_kw <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> {<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'projection'</span>: <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'polar'</span>} </span>
 <span id="cb1-8">)</span>
 <span id="cb1-9">ax.plot(theta, r)</span>
-<span id="cb1-10">ax.set_rticks([<span class="fl" style="color: #AD0000;">0.5</span>, <span class="dv" style="color: #AD0000;">1</span>, <span class="fl" style="color: #AD0000;">1.5</span>, <span class="dv" style="color: #AD0000;">2</span>])</span>
-<span id="cb1-11">ax.grid(<span class="va" style="color: #111111;">True</span>)</span>
+<span id="cb1-10">ax.set_rticks([<span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.5</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1.5</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>])</span>
+<span id="cb1-11">ax.grid(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">True</span>)</span>
 <span id="cb1-12">plt.show()</span></code></pre></div>
 </details>
 <div class="cell-output cell-output-display">
 <div id="fig-airquality" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="https://aleixalcacer.com/posts/2022-06-11_archetypal-analysis/index_files/figure-html/fig-airquality-output-1.png" width="450" height="439" class="figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;1: Temperature and ozone level.</figcaption><p></p>
+<figcaption class="figure-caption">Figure&nbsp;1: Temperature and ozone level.</figcaption>
 </figure>
 </div>
 </div>
 </div>
-
-
-
 </section>
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2">
+<section id="references" class="level1 unnumbered">
+<h1 class="unnumbered">References</h1>
+<div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2">
 <div id="ref-Cutler1994" class="csl-entry">
 Cutler, A., &amp; Breiman, L. (1994). Archetypal analysis. <em>Technometrics</em>, <em>36</em>, 338–347. <a href="https://doi.org/10.1080/00401706.1994.10485840">https://doi.org/10.1080/00401706.1994.10485840</a>
 </div>
@@ -77,16 +231,12 @@ Mørup, M., &amp; Hansen, L. K. (2012). Archetypal analysis for machine learning
 <div id="ref-Seth2016" class="csl-entry">
 Seth, S., &amp; Eugster, M. J. A. (2016). Probabilistic archetypal analysis. <em>Machine Learning</em>, <em>102</em>, 85–113. <a href="https://doi.org/10.1007/S10994-015-5498-8/FIGURES/14">https://doi.org/10.1007/S10994-015-5498-8/FIGURES/14</a>
 </div>
-</div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{2022,
-  author = {},
-  title = {Biarchetype Analysis},
-  date = {2022-11-16},
-  url = {https://aleixalcacer.com/posts/2022-06-11_archetypal-analysis},
-  langid = {en}
-}
-</code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-2022" class="csl-entry quarto-appendix-citeas">
-<em>Biarchetype analysis</em>. (2022, November 16). <a href="https://aleixalcacer.com/posts/2022-06-11_archetypal-analysis">https://aleixalcacer.com/posts/2022-06-11_archetypal-analysis</a>
-</div></div></section></div> ]]></description>
+</div>
+
+
+</section>
+
+ ]]></description>
   <category>archetypal analysis</category>
   <category>matrix factorization</category>
   <guid>https://aleixalcacer.com/posts/2022-06-11_archetypal-analysis/index.html</guid>
