@@ -1,9 +1,5 @@
 [
   {
-    "listing": "/os-projects/index.html",
-    "items": []
-  },
-  {
     "listing": "/posts/index.html",
     "items": [
       "/posts/2022-12-01_biaa-sbm/index.html",
@@ -13,6 +9,10 @@
   },
   {
     "listing": "/teaching/index.html",
+    "items": []
+  },
+  {
+    "listing": "/os-projects/index.html",
     "items": []
   },
   {
