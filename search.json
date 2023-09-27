@@ -1,10 +1,45 @@
 [
   {
+    "objectID": "teaching/index.html",
+    "href": "teaching/index.html",
+    "title": "Teaching",
+    "section": "",
+    "text": "Teaching is more than a profession to me; it’s a calling. Here, discover my works on innovative education, reflecting my commitment to nurturing a love of learning and belief in education’s transformative power. Explore my world, where every lesson is a journey and every student holds boundless potential."
+  },
+  {
+    "objectID": "teaching/index.html#innovative-teaching-production",
+    "href": "teaching/index.html#innovative-teaching-production",
+    "title": "Teaching",
+    "section": "Innovative teaching production",
+    "text": "Innovative teaching production\n\nConferences\n\n\n        \n            Lara Ferrando, Aleix Alcacer, Atanasia Lloria, Marina Martínez-García, Belén Martínez-Serrano, Adrián Pérez-Suay, Irene Epifanio (Sep 29, 2022). Analysis of the contributions to the SDGs of university students by degrees [Conference paper]. XII International Conference on Virtual Campus (JICV), Arequipa (Peru).\n            ISBN: 9781665451079.\n            10.1109/JICV56113.2022.9934727.\n            \n                         pdf \n                         video \n            \n        \n        \n            Aleix Alcacer, Irene Epifanio, Lara Ferrando, Atanasia Lloria, Marina Martínez-García, Belén Martínez-Serrano, Adrián Pérez Suay (Oct 15, 2022). ¿Cuál es la percepción de los ODS del estudiantado universitario? [Conference paper]. ATIDES 2022, Castelló de la Plana (Spain).\n            ISBN: 9788419647146.\n            .\n            \n                         pdf \n            \n        \n\n\nNo matching items\n\n\n\n\nOther activities\n\nOrganizing committee of the ATIDES congress (2022).\nOrganizing committee of the ATIDES congress (2020)."
+  },
+  {
+    "objectID": "teaching/index.html#teaching-experience",
+    "href": "teaching/index.html#teaching-experience",
+    "title": "Teaching",
+    "section": "Teaching experience",
+    "text": "Teaching experience\n\n\n\n    \n\n\n\nCourse\nDegree\nEntity\nECTS\nEnd Date\n\n\n\n\nStatistics Applied to Public Management and Administration\nBachelor's Degree in Public Management and Administration\nUJI\n10,5\n2023\n\n\nIntroduction to Statistics\nBachelor's Degree in Labour Relations and Human Resources\nUJI\n1,5\n2022\n\n\nSoftware for Modelling Industrial Systems (Distance)\nMaster's Degree in Computational Mathematics (Distance)\nUJI\n0\n2021\n\n\nSoftware for Modelling Industrial Systems\nMaster's Degree in Computational Mathematics\nUJI\n0\n2021\n\n\n\n\n  \n\nNo matching items"
+  },
+  {
+    "objectID": "research/index.html",
+    "href": "research/index.html",
+    "title": "Research",
+    "section": "",
+    "text": "From a young age, the potential of research to improve lives through technology has captivated me. In this section, explore my publications, each marking a step in my journey of discovery and innovation. Join me in delving into the diverse realms of research that continue to inspire and drive me."
+  },
+  {
+    "objectID": "research/index.html#scientific-production",
+    "href": "research/index.html#scientific-production",
+    "title": "Research",
+    "section": "Scientific production",
+    "text": "Scientific production\n\nJournals\n\n\n        \n            Aleix Alcacer, Irene Epifanio, Jorge Valero, Alfredo Ballester (2021). Combining Classification and User-Based Collaborative Filtering for Matching Footwear Size. MATHEMATICS, 9(7).\n             10.3390/math9070771 .\n            \n            \n        \n        \n            Aleix Alcacer, Irene Epifanio, María Victoria Ibáñez, Amelia Simó, Alfredo Ballester (2020). A data-driven classification of 3D foot types by archetypal shapes based on landmarks. PLOS ONE, 15(1).\n             10.1371/journal.pone.0228016 .\n            \n            \n        \n\n\nNo matching items\n\n\n\n\nConferences\n\n\n        \n            Aleix Alcacer, Irene Epifanio, Jorge Valero, Alfredo Ballester (Dec 19, 2021). Combining user-based collaborative filtering and classification for matching footwear size. CFE-CMStatistics 2021, London (United Kingdom). ISBN: 9789925781256\n            \n                         pdf \n            \n        \n        \n            Aleix Alcacer, Irene Epifanio, María Victoria Ibáñez, Amelia Simó (Sep 11, 2019). Archetypal contour shapes. 12th Scientific Meeting Classification and Data Analysis Group (CLADAG 2019), Cassino (Italy). ISBN: 9788883171086\n            \n                         pdf \n            \n        \n        \n            Aleix Alcacer, Irene Epifanio, María Victoria Ibáñez, Amelia Simó (Jun 19, 2019). Analysis of 2D foot morphology by functional archetypal analysis. XVII Conferencia Española y VII Encuentro Iberoamericano de Biometría (CEB-EIB 2019), València (Spain). ISBN: 9788409117062\n                  Note: Selected for the Young Statician Showcase     \n            \n                         pdf \n            \n        \n\n\nNo matching items"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Aleix Alcacer Sales",
     "section": "",
-    "text": "I am a predoctoral researcher at Jaume I University who loves the Open Source world. I like to develop new algorithms focusing on both performance and efficiency.\nCurrently, I am focused on designing new methods within the field of archetypal analysis.\nSee my complete CV."
+    "text": "I am a passionate predoctoral researcher at Jaume I University, deeply immersed in the vibrant world of Open Source. My enthusiasm lies in developing innovative algorithms, with a keen focus on optimizing both performance and efficiency.\nAt present, my research endeavors are centered around crafting novel methods in the fascinating field of archetypal analysis.\nView my complete CV."
   },
   {
     "objectID": "index.html#education",
@@ -21,150 +56,10 @@
     "text": "Interests\n\nArchetypal Analysis\nData Visualisation\nReinforcement learning\nHPC and Software Optimization\nKnowledge sharing"
   },
   {
-    "objectID": "posts/2023-05-25_iceri2023/index.html",
-    "href": "posts/2023-05-25_iceri2023/index.html",
-    "title": "Unleashing the Potential of the Flipped Classroom: Improving Class Attendance and Final Grades in Statistics Applied to Public Management and Administration",
-    "section": "",
-    "text": "Introduction\nTODO\n\n\nMethods\nTODO\n\n\nResults and discussion\nTODO\n\n\nConclusions and future work\nTODO\n\n\n\nReferences\n\n\nBishop, J., & Verleger, M. A. (2013). The flipped classroom: A survey of the research. 2013 ASEE Annual Conference & Exposition, 23–1200."
-  },
-  {
-    "objectID": "posts/index.html",
-    "href": "posts/index.html",
-    "title": "Notes",
-    "section": "",
-    "text": "A place where I write things.\n\n\n\n\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nReading Time\n\n\n\n\n\n\nundefined\n\n\nBridging Archetypal Analysis and Stochastic Block Models\n\n\n11 min\n\n\n\n\nMay 24, 2023\n\n\nUnleashing the Potential of the Flipped Classroom: Improving Class Attendance and Final Grades in Statistics Applied to Public Management and Administration\n\n\n1 min\n\n\n\n\nNovember 16, 2022\n\n\nBiarchetype analysis\n\n\n3 min\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "posts/2022-12-01_biaa-sbm/index.html",
-    "href": "posts/2022-12-01_biaa-sbm/index.html",
-    "title": "Bridging Archetypal Analysis and Stochastic Block Models",
-    "section": "",
-    "text": "\\[\n\\DeclareMathOperator*{\\argmin}{arg\\,min}\n\\DeclareMathOperator*{\\argmax}{arg\\,max}\n\\]"
-  },
-  {
-    "objectID": "posts/2022-12-01_biaa-sbm/index.html#likelihood-functions",
-    "href": "posts/2022-12-01_biaa-sbm/index.html#likelihood-functions",
-    "title": "Bridging Archetypal Analysis and Stochastic Block Models",
-    "section": "Likelihood functions",
-    "text": "Likelihood functions\nLikelihood functions are used in statistical modeling to evaluate the quality of a model’s predictions. They are a measure of how well a model fits the observed data. By maximizing the likelihood of the model, it is possible to improve the model’s accuracy and make better predictions.\nIn the article, log-likelihood functions will be used as error functions in the defined models. This means that the models will be trained to minimize the negative log-likelihood of their predictions, which will improve their accuracy. The Normal, Bernoulli, and Poisson log-likelihood functions will be used in this case, which are appropriate for models that make predictions using normal, binary, and count data, respectively.\n\nNormal distribution\nThe normal log-likelihood function is used to calculate the log-likelihood of a normal distribution given a set of data. The formula for the normal log-likelihood function is as follows:\n\\[log(L) = -\\frac{n}{2} log(2 \\pi) - \\frac{n}{2} log(\\sigma^2) - \\sum_{i=1}^{n} \\frac{(x_i - \\mu)^2}{2 \\sigma^2}\\]\nwhere \\(L\\) is the likelihood function, \\(n\\) is the number of data points, \\(x_i\\) is the \\(i\\)-th data point, \\(\\mu\\) is the mean of the data, \\(\\sigma\\) is the standard deviation of the data, and the summation is over all data points in the sample.\n\n\nBernoulli distribution\nThe Bernoulli log-likelihood function is used to calculate the log-likelihood of a Bernoulli distribution given a set of data. The formula for the Bernoulli log-likelihood function is as follows:\n\\[log(L) = \\sum_{i=1}^{n} [y_i \\cdot log(p) + (1 - y_i) \\cdot log(1 - p)]\\]\nwhere \\(L\\) is the likelihood function, \\(y_i\\) is the outcome of the binary event (1 if the event happened, 0 if it did not), \\(p\\) is the probability of the event happening, and the summation is over all events in the data.\n\n\nPoisson distribution\nFinally, the Poisson log-likelihood function is used to calculate the log-likelihood of a Poisson distribution given a set of data. The formula for the Poisson log-likelihood function is as follows:\n\\[log(L) = \\sum_{i=1}^{n} [n_i \\cdot log(\\lambda) - \\lambda - log(n_i!)]\\]\nwhere \\(L\\) is the likelihood function, \\(n_i\\) is the number of events observed in the \\(i\\)-th group, \\(\\lambda\\) is the rate parameter of the Poisson distribution, and the summation is over all groups in the data."
-  },
-  {
-    "objectID": "posts/2022-12-01_biaa-sbm/index.html#stochastic-block-model",
-    "href": "posts/2022-12-01_biaa-sbm/index.html#stochastic-block-model",
-    "title": "Bridging Archetypal Analysis and Stochastic Block Models",
-    "section": "Stochastic Block Model",
-    "text": "Stochastic Block Model\nThe Stochastic Block Model (SBM) is a popular model used to generate synthetic networks with community structure. In an SBM, the nodes in the network are divided into groups or “blocks”, and the connections between nodes are determined by the blocks they belong to. The SBM is often used to test the performance of community detection algorithms, which are algorithms that aim to identify the groups or communities present in a network.\nFor bipartite networks, the SBM can be viewed as a matrix factorization problem where the adjacency matrix (which represents the connections between the nodes) is decomposed into three matrices, one representing the blocks and the others representing the connections between the blocks. More specifically, let \\(X\\) be the adjacency matrix of a network with \\(M\\) and \\(N\\) nodes respectively, where \\(A_{ij}\\) is the number of connections between nodes \\(i\\) and \\(j\\). In the SBM, this adjacency matrix can be written as the product of three matrices, \\(A\\), \\(Z\\) and \\(C\\), where \\(A\\) is a \\(M\\times K\\) matrix, \\(Z\\) is a \\(K\\times L\\) matrix and \\(D\\) is a \\(L\\times N\\) matrix:\n\\[X \\approx AZD\\]\nHere, \\(A\\) and \\(D\\) are the matrices that represents the blocks, where \\(A_{ik}\\) is the membership of node \\(i\\) in block \\(k\\) and \\(D_{lj}\\) is the membership of node \\(j\\) in block \\(l\\). \\(Z\\) is the matrix that represents the connections between the blocks, where \\(Z_{kl}\\) is the probability of a connection between nodes in block \\(k\\) and block \\(l\\).\nThe matrix factorization of the adjacency matrix in the SBM allows us to model the community structure of the network by defining the blocks and the connections between the blocks. The blocks can be thought of as the groups or communities in the network, and the connections between the blocks can be used to control the strength and structure of the communities. For example, if \\(Z_{kl}\\) is high, it indicates that there are many connections between nodes in block \\(k\\) and block \\(l\\), and the corresponding communities are likely to be strongly connected. On the other hand, if \\(Z_{kl}\\) is low, it indicates that there are few connections between nodes in block \\(k\\) and block \\(l\\), and the corresponding communities are likely to be weakly connected.\nIn summary, the Stochastic Block Model is a popular model for generating synthetic networks with community structure, and it can be viewed as a matrix factorization problem where the adjacency matrix of the network is decomposed into three matrices representing the blocks and the connections between the blocks.\nReferences: .\n# $$X_{MN} \\sim A_{MK} Z_{KL} D_{LN}$$"
-  },
-  {
-    "objectID": "posts/2022-12-01_biaa-sbm/index.html#biarchetype-analysis",
-    "href": "posts/2022-12-01_biaa-sbm/index.html#biarchetype-analysis",
-    "title": "Bridging Archetypal Analysis and Stochastic Block Models",
-    "section": "Biarchetype Analysis",
-    "text": "Biarchetype Analysis\n[Archetype and biarchetype analysis definition]\nTherfore, this method can be seen as a particular case of the Stochastic Block Model where the matrix \\(Z\\), that represents the relationships between groups, is defined by taking convex combinations of the data \\(X\\). This means that the matrix \\(Z\\), called the archetypal matrix, is constructed as \\(Z = BXC\\) where \\(X\\) is the matrix representing the original data points and \\(B\\) and \\(C\\) are matrices that represent the coefficients of the convex combination. By defining the relationship matrix in this way, Biarchetype Analysis is able to interpret the matrix \\(Z\\) based on input data."
-  },
-  {
-    "objectID": "posts/2022-12-01_biaa-sbm/index.html#degree-correction",
-    "href": "posts/2022-12-01_biaa-sbm/index.html#degree-correction",
-    "title": "Bridging Archetypal Analysis and Stochastic Block Models",
-    "section": "Degree correction",
-    "text": "Degree correction\nA degree corrected algorithm is a variant of an existing algorithm that has been modified to account for the fact that the nodes in a network may have different degrees (i.e., different numbers of connections to other nodes). In many networks, the nodes have varying degrees, and a standard algorithm may not perform well when applied to such a network because it may give more weight to nodes with higher degrees, leading to biased or inaccurate results. A degree corrected algorithm addresses this issue by taking into account the degrees of the nodes when calculating the algorithm’s result.\nFor example, when applying a community detection algorithm to a network generated using the SBM, it is important to take into account the degree distribution of the nodes in the network. The degree distribution of a network is the distribution of the number of connections (or “edges”) that each node has to other nodes in the network. In a network generated using the SBM, the degree distribution of the nodes will be different depending on the blocks they belong to. For example, nodes in the same block will tend to have similar degrees, while nodes in different blocks will have different degrees.\nIf a standard community detection algorithm is applied to a network generated using the SBM, it may not perform well because it may give more weight to nodes with higher degrees, leading to biased or inaccurate results. A degree corrected version of the algorithm, on the other hand, would take into account the degree distribution of the nodes and give less weight to nodes with higher degrees, resulting in more accurate community detection."
-  },
-  {
-    "objectID": "posts/2022-12-01_biaa-sbm/index.html#proposed-models",
-    "href": "posts/2022-12-01_biaa-sbm/index.html#proposed-models",
-    "title": "Bridging Archetypal Analysis and Stochastic Block Models",
-    "section": "Proposed Models",
-    "text": "Proposed Models\n\nSoft SBM\n\\[\\begin{equation}\n    \\argmax_{A, Z, D} l(AZD; X)\n\\end{equation}\\] such that:\n\n\nHard SBM\n\\[\\begin{equation}\n    \\argmax_{A, Z, D} l(AZD; X)\n\\end{equation}\\] such that:"
-  },
-  {
-    "objectID": "posts/2022-12-01_biaa-sbm/index.html#biarchetype-analysis-1",
-    "href": "posts/2022-12-01_biaa-sbm/index.html#biarchetype-analysis-1",
-    "title": "Bridging Archetypal Analysis and Stochastic Block Models",
-    "section": "BiArchetype Analysis",
-    "text": "BiArchetype Analysis\nReferences: \nBiAA is a special case of SBM (\\(Z_{KL} = B_{KM} X_{MN} C_{NL}\\)).\n\\[\\begin{equation}\n    \\argmax_{A, B, C, D} l(ABXCD; X)\n\\end{equation}\\] such that:\n\nHard assignment\n\\[\\begin{equation}\n    \\argmax_{A, B, C, D} l(ABXCD; X)\n\\end{equation}\\] such that:\nNOTE: The prototypes are not in the boundary of the CH. References: \nChange restrictions 2, 3 such that"
-  },
-  {
-    "objectID": "posts/2022-12-01_biaa-sbm/index.html#sbm-based-synthetic-data",
-    "href": "posts/2022-12-01_biaa-sbm/index.html#sbm-based-synthetic-data",
-    "title": "Bridging Archetypal Analysis and Stochastic Block Models",
-    "section": "SBM-based synthetic data",
-    "text": "SBM-based synthetic data"
-  },
-  {
-    "objectID": "posts/2022-12-01_biaa-sbm/index.html#biaa-based-synthetic-data",
-    "href": "posts/2022-12-01_biaa-sbm/index.html#biaa-based-synthetic-data",
-    "title": "Bridging Archetypal Analysis and Stochastic Block Models",
-    "section": "BiAA-based synthetic data",
-    "text": "BiAA-based synthetic data"
-  },
-  {
-    "objectID": "posts/2022-12-01_biaa-sbm/index.html#real-datasets",
-    "href": "posts/2022-12-01_biaa-sbm/index.html#real-datasets",
-    "title": "Bridging Archetypal Analysis and Stochastic Block Models",
-    "section": "Real datasets",
-    "text": "Real datasets\n\nRestaurant recommender system\n Source: \n\n\nDrug side-effect association\n Source: \n\n\nNIPS author collaboration"
-  },
-  {
-    "objectID": "posts/2022-12-01_biaa-sbm/index.html#discussion",
-    "href": "posts/2022-12-01_biaa-sbm/index.html#discussion",
-    "title": "Bridging Archetypal Analysis and Stochastic Block Models",
-    "section": "Discussion",
-    "text": "Discussion"
-  },
-  {
-    "objectID": "posts/2022-12-01_biaa-sbm/index.html#conclusions",
-    "href": "posts/2022-12-01_biaa-sbm/index.html#conclusions",
-    "title": "Bridging Archetypal Analysis and Stochastic Block Models",
-    "section": "Conclusions",
-    "text": "Conclusions"
-  },
-  {
-    "objectID": "posts/2022-06-11_archetypal-analysis/index.html",
-    "href": "posts/2022-06-11_archetypal-analysis/index.html",
-    "title": "Biarchetype analysis",
-    "section": "",
-    "text": "Introduction\nArchetypal analysis was introduced by Cutler & Breiman (1994). Let \\(X\\) be a (real-valued) data matrix where the rows represent the samples of the data and the columns, the features. They defined the archetypes as convex combinations of the data samples, i.e. \\(Z = BX\\) where \\(B\\) is a stochastic matrix. In addition, the data samples are approximated by convex combinations of the archetypes, i.e. \\(X \\simeq AZ\\) where \\(A\\) and is also stochastic matrix. This is equivalent to solve the following optimization problem:\n\\[\n\\begin{aligned}\n\\mathop{\\mathrm{arg\\,min\\,}}_{A,B} \\quad &  \\|X - ABX \\|^2 \\\\\n\\textrm{s.t.} \\quad &  \\\\\n    & \\sum\\nolimits_{k=1}^K A_{mk} = 1 \\text{ with } A_{mk} \\in [0, 1] \\text{ for each } m=1,\\dots, M \\\\\n    & \\sum\\nolimits_{m=1}^M B_{km} = 1 \\text{ with } B_{km} \\in [0, 1] \\text{ for each } k=1,\\dots, K \\\\\n\\end{aligned}\n\\tag{1}\\]\nTODO: Interpretation\n\n\nBiArchetype Analysis\nIn BiAA, the archetypes are assumed to be convex combinations of the data in both dimensions, i.e. \\(Z = BXC\\) where \\(B\\) and \\(C\\) are stochastic matrices. At the same time, the data is approximated by convex combinations of the archetypes, i.e. \\(X \\simeq AZD\\) where \\(A\\) and \\(D\\) are also stochastic matrices.\nThis is equivalent to solve the following optimization problem:\n\\[\n\\begin{aligned}\n\\mathop{\\mathrm{arg\\,min\\,}}_{A,B,C,D} \\quad &  \\ell(X|ABXCD) \\\\\n\\textrm{s.t.} \\quad &  \\\\\n    & \\ell(X | \\tilde{X}) \\text{ should be a loss function} \\\\\n    & \\sum\\nolimits_{k=1}^K A_{mk} = 1 \\text{ with } A_{mk} \\in [0, 1] \\text{ for each } m=1,\\dots, M \\\\\n    & \\sum\\nolimits_{m=1}^M B_{km} = 1 \\text{ with } B_{km} \\in [0, 1] \\text{ for each } k=1,\\dots, K \\\\\n    & \\sum\\nolimits_{n=1}^N C_{nl} = 1 \\text{ with } D_{nl} \\in [0, 1] \\text{ for each } l=1,\\dots, L \\\\\n    & \\sum\\nolimits_{l=1}^L D_{ln} = 1 \\text{ with } D_{ln} \\in [0, 1] \\text{ for each } n=1,\\dots, N \\\\\n\\end{aligned}\n\\tag{2}\\]\nIn Equation 2, just as Seth & Eugster (2016) proposed for archetypal analysis, \\(\\ell\\) could be a negative log-likelihood function. Therefore,\n\nfor Bernoulli distributions \\(\\ell\\) is defined as \\[\n\\ell(X | \\tilde{X}) = -\\sum_{m=1}^M \\sum_{n=1}^N X_{mn}\\ln (\\tilde{X}_{mn}) + (1 - X_{mn}) \\ln (1 - \\tilde{X}_{mn})\n\\tag{3}\\]\nand for normal distributions, \\[\n\\ell(X | \\tilde{X}) = MN \\ln \\left(\\sigma {\\sqrt {2\\pi }}\\right) + {\\frac {1}{2\\sigma^2}}\\sum_{m=1}^M \\sum_{n=1}^N \\left( {X_{mn}-\\tilde{X}_{mn} }\\right)^{2}\n\\tag{4}\\]\n\n\n\nExample\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(\n  subplot_kw = {'projection': 'polar'} \n)\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n\n\n\n\n\nFigure 1: Temperature and ozone level.\n\n\n\n\n\n\nReferences\n\n\nCutler, A., & Breiman, L. (1994). Archetypal analysis. Technometrics, 36, 338–347. https://doi.org/10.1080/00401706.1994.10485840\n\n\nMørup, M., & Hansen, L. K. (2012). Archetypal analysis for machine learning and data mining. Neurocomputing, 80, 54–63. https://doi.org/10.1016/j.neucom.2011.06.033\n\n\nSeth, S., & Eugster, M. J. A. (2016). Probabilistic archetypal analysis. Machine Learning, 102, 85–113. https://doi.org/10.1007/S10994-015-5498-8/FIGURES/14"
-  },
-  {
-    "objectID": "teaching/index.html",
-    "href": "teaching/index.html",
-    "title": "Teaching",
-    "section": "",
-    "text": "Apart from research, teaching is something I love."
-  },
-  {
-    "objectID": "teaching/index.html#innovative-teaching-production",
-    "href": "teaching/index.html#innovative-teaching-production",
-    "title": "Teaching",
-    "section": "Innovative teaching production",
-    "text": "Innovative teaching production\n\nConferences\n\n\n        \n            Lara Ferrando, Aleix Alcacer, Atanasia Lloria, Marina Martínez-García, Belén Martínez-Serrano, Adrián Pérez-Suay, Irene Epifanio (Sep 29, 2022). Analysis of the contributions to the SDGs of university students by degrees [Conference paper]. XII International Conference on VIRTUAL CAMPUS, Arequipa (Peru).\n            ISBN: 9781665451079.\n            10.1109/JICV56113.2022.9934727.\n            \n                         slides \n                         video \n            \n        \n        \n            Aleix Alcacer, Irene Epifanio, Lara Ferrando, Atanasia Lloria, Marina Martínez-García, Belén Martínez-Serrano, Adrián Pérez Suay (Oct 15, 2022). ¿Cuál es la percepción de los ODS del estudiantado universitario? [Conference paper]. ATIDES 2022, Castelló de la Plana (Spain).\n            \n            \n        \n\n\nNo matching items\n\n\n\n\nOther activities\n\nOrganizing committee of the ATIDES congress (2022).\nOrganizing committee of the ATIDES congress (2020)."
-  },
-  {
-    "objectID": "teaching/index.html#teaching-experience",
-    "href": "teaching/index.html#teaching-experience",
-    "title": "Teaching",
-    "section": "Teaching experience",
-    "text": "Teaching experience\n\n\n\n    \n\n\n\nCourse\nDegree\nEntity\nECTS\nEnd Date\n\n\n\n\nStatistics Applied to Public Management and Administration\nBachelor's Degree in Public Management and Administration\nUJI\n10,5\n2023\n\n\nIntroduction to Statistics\nBachelor's Degree in Labour Relations and Human Resources\nUJI\n1,5\n2022\n\n\nSoftware for Modelling Industrial Systems (Distance)\nMaster's Degree in Computational Mathematics (Distance)\nUJI\n0\n2021\n\n\nSoftware for Modelling Industrial Systems\nMaster's Degree in Computational Mathematics\nUJI\n0\n2021\n\n\n\n\n  \n\nNo matching items"
-  },
-  {
     "objectID": "os-projects/index.html",
     "href": "os-projects/index.html",
     "title": "Open Source Projects",
     "section": "",
-    "text": "As an Open Source enthusiast, all of my personal projects are open for the community!\n\nPython packages\n\n\n  \n    \n      \n        archetypes\n      \n      \n        \n      \n    \n   \n    \n      Sikit-learn compatible package for archetypal analysis.\n \n    \n    \n      \n        creator\n      \n      \n        2021 - present\n      \n    \n  \n  \n    \n      \n        memprofiler\n      \n      \n        \n      \n    \n   \n    \n      IPython extension for monitoring memory usage of Jupyter notebook cells.\n \n    \n    \n      \n        creator\n      \n      \n        2020 - present\n      \n    \n  \n  \n    \n      \n        blosc\n      \n      \n        \n      \n    \n   \n    \n      High-performance chunk-based compressor for binary data.\n \n    \n    \n      \n        mantainer\n      \n      \n        2018 - present\n      \n    \n  \n\nOthers\n\n\n  \n    \n      \n        cmlint\n      \n      \n        \n      \n    \n   \n    \n      Pre-commit hook for linitng commit messages and creating robust changelogs.\n \n    \n    \n      \n        creator\n      \n      \n        2022 - present\n      \n    \n  \n\n\nNo matching items"
-  },
-  {
-    "objectID": "research/index.html",
-    "href": "research/index.html",
-    "title": "Research",
-    "section": "",
-    "text": "I have wanted to be a researcher since I was very little. The ability to improve people’s environment through technology has always fascinated me."
-  },
-  {
-    "objectID": "research/index.html#scientific-production",
-    "href": "research/index.html#scientific-production",
-    "title": "Research",
-    "section": "Scientific production",
-    "text": "Scientific production\n\nJournals\n\n\n        \n            Aleix Alcacer, Irene Epifanio, Jorge Valero, Alfredo Ballester (2021). Combining Classification and User-Based Collaborative Filtering for Matching Footwear Size. MATHEMATICS, 9(7).\n             10.3390/math9070771 .\n            \n            \n        \n        \n            Aleix Alcacer, Irene Epifanio, María Victoria Ibáñez, Amelia Simó, Alfredo Ballester (2020). A data-driven classification of 3D foot types by archetypal shapes based on landmarks. PLOS ONE, 15(1).\n             10.1371/journal.pone.0228016 .\n            \n            \n        \n\n\nNo matching items\n\n\n\n\nConferences\n\n\n        \n            Aleix Alcacer, Irene Epifanio, Jorge Valero, Alfredo Ballester (Dec 19, 2021). Combining user-based collaborative filtering and classification for matching footwear size. CFE-CMStatistics 2021, London (United Kingdom). ISBN: 9789925781256\n            \n            \n        \n        \n            Aleix Alcacer, Irene Epifanio, María Victoria Ibáñez, Amelia Simó (Sep 11, 2019). Archetypal contour shapes. 12th Scientific Meeting Classification and Data Analysis Group (CLADAG 2019), Cassino (Italy). ISBN: 9788883171086\n            \n                         pdf \n            \n        \n        \n            Aleix Alcacer, Irene Epifanio, María Victoria Ibáñez, Amelia Simó (Jun 19, 2019). Analysis of 2D foot morphology by functional archetypal analysis. XVII Conferencia Española y VII Encuentro Iberoamericano de Biometría (CEB-EIB 2019), València (Spain). ISBN: 9788409117062\n                  Note: Selected for the Young Statician Showcase     \n            \n                         pdf \n            \n        \n\n\nNo matching items"
+    "text": "Dive into my world of Open Source projects, a playground of innovation and collaboration. Here, discover my contributions to the community, each solving real-world problems and advancing technology. Explore the synergy of creativity and code that each project embodies.\n\nPython packages\n\n\n  \n    \n      \n        archetypes\n      \n      \n        \n      \n    \n   \n    \n      Sikit-learn compatible package for archetypal analysis.\n \n    \n    \n      \n        creator\n      \n      \n        2021 - present\n      \n    \n  \n  \n    \n      \n        memprofiler\n      \n      \n        \n      \n    \n   \n    \n      IPython extension for monitoring memory usage of Jupyter notebook cells.\n \n    \n    \n      \n        creator\n      \n      \n        2020 - present\n      \n    \n  \n  \n    \n      \n        blosc\n      \n      \n        \n      \n    \n   \n    \n      High-performance chunk-based compressor for binary data.\n \n    \n    \n      \n        mantainer\n      \n      \n        2018 - 2023\n      \n    \n  \n\nOthers\n\n\n  \n    \n      \n        cmlint\n      \n      \n        \n      \n    \n   \n    \n      Pre-commit hook for linitng commit messages and creating robust changelogs.\n \n    \n    \n      \n        creator\n      \n      \n        2022 - present\n      \n    \n  \n\n\nNo matching items"
   }
 ]
