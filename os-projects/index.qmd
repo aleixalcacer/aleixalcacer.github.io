@@ -6,8 +6,9 @@ listing:
     contents: projects.yml
 ---
 
-As an Open Source enthusiast, all of my personal projects are open for the community!
-
+Dive into my world of Open Source projects, a playground of innovation and collaboration.
+Here, discover my contributions to the community, each solving real-world problems and advancing technology.
+Explore the synergy of creativity and code that each project embodies.
 
 ::: {#projects}
 :::

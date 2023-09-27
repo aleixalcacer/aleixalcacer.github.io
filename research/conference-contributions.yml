@@ -5,6 +5,9 @@
   date: 2021-12-19
   year: 2021
   isbn: 9789925781256
+  labels:
+    - name: pdf
+      url: https://drive.google.com/file/d/1u8V2ToL3We1NdwNKIB9PjOcgN3IAhlw6/view?usp=sharing
 
 - title: Archetypal contour shapes
   author: Aleix Alcacer, Irene Epifanio, María Victoria Ibáñez, Amelia Simó
@@ -15,7 +18,7 @@
   isbn: 9788883171086
   labels:
     - name: pdf
-      url: publications/2019_cladag.pdf
+      url: https://drive.google.com/file/d/1STv2MzvPv-Z3zTIgHqTqwFAoxmhk3yrH/view?usp=sharing
 
 - title: Analysis of 2D foot morphology by functional archetypal analysis
   author: Aleix Alcacer, Irene Epifanio, María Victoria Ibáñez, Amelia Simó
@@ -27,4 +30,4 @@
   note: Selected for the Young Statician Showcase
   labels:
     - name: pdf
-      url: publications/2019_cebeib.pdf
+      url: https://drive.google.com/file/d/1pjSPRgeuAncAxdtAqLolYyFZjF4YZxoI/view?usp=sharing

@@ -20,8 +20,8 @@ website:
         text: Teaching        
       - href: os-projects/index.qmd
         text: OS Projects
-      - href: posts/index.qmd
-        text: Notes
+#       - href: posts/index.qmd
+#         text: Notes
     right:
       - text: "{{< fa brands twitter >}}"
         href: "https://twitter.com/aleixalcacer"

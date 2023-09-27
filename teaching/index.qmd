@@ -10,7 +10,9 @@ listing:
   contents: conference-contributions.yml
 ---
 
-Apart from research, teaching is something I love.
+Teaching is more than a profession to me; it’s a calling.
+Here, discover my works on innovative education, reflecting my commitment to nurturing a love of learning and belief in education’s transformative power.
+Explore my world, where every lesson is a journey and every student holds boundless potential.
 
 ## Innovative teaching production
 

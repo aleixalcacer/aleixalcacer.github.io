@@ -1,6 +1,6 @@
 - title: Analysis of the contributions to the SDGs of university students by degrees
   author: Lara Ferrando, Aleix Alcacer, Atanasia Lloria, Marina Martínez-García, Belén Martínez-Serrano, Adrián Pérez-Suay, Irene Epifanio
-  conference: XII International Conference on VIRTUAL CAMPUS
+  conference: XII International Conference on Virtual Campus (JICV)
   location: Arequipa (Peru)
   type: paper
   date: 2022/09/29
@@ -8,8 +8,8 @@
   isbn: 9781665451079
   doi: 10.1109/JICV56113.2022.9934727
   labels:
-    - name: slides
-      url: publications/2022_ods_cv_slides.pdf
+    - name: pdf
+      url: https://drive.google.com/file/d/1Jj03_FaXHj1R-W6o_HEgsstFKYQZB5SA/view?usp=sharing
     - name: video
       url: https://www.youtube.com/watch?v=qphytXdNjLM
   
@@ -21,5 +21,9 @@
   type: paper
   date: 2022/10/15
   year: 2022
-  isbn: 
+  isbn: 9788419647146
+  labels:
+    - name: pdf
+      url: https://drive.google.com/file/d/1-RC7XEEhRy7cn0zpN7O_e9EZyUh7NxGF/view?usp=sharing
+
 
