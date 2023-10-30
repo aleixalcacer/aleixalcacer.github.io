@@ -4,7 +4,7 @@
         <li class="quarto-publication">
             <%= item.author %> <% if (item.date) { %>(<%= item.date %>)<% } %>. <i><%= item.title %></i> [Conference <%= item.type %>]. <%= item.conference %>, <%= item.location %>.
             <% if (item.isbn) { %>ISBN: <%= item.isbn %>.<% } %>
-            <% if (item.isbn) { %><a href=https://doi.org/<%= item.doi %>><%= item.doi %></a>.<% } %>
+            <% if (item.doi) { %><a href=https://doi.org/<%= item.doi %>><%= item.doi %></a>.<% } %>
 
             <div class="quarto-labels">
                 <% if (item.labels) { %>
