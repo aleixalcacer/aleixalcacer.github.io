@@ -1,3 +1,9 @@
+- title: Ordinal classification for interval-valued data and interval-valued functional data
+  author: Aleix Alcacer, Irene Epifanio, Marina Martinez-Garcia
+  journal: Expert Systems with Applications
+  year: 2023
+  doi: j.eswa.2023.122277
+  
 - title: Combining Classification and User-Based Collaborative Filtering for Matching Footwear Size
   author: Aleix Alcacer, Irene Epifanio, Jorge Valero, Alfredo Ballester
   journal: MATHEMATICS
@@ -14,8 +20,3 @@
   year: 2020
   doi: 10.1371/journal.pone.0228016
 
-- title: Ordinal classification for interval-valued data and interval-valued functional data
-  author: Aleix Alcacer, Irene Epifanio, Marina Martinez-Garcia
-  journal: Expert Systems with Applications
-  year: 2023
-  doi: j.eswa.2023.122277
