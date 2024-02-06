@@ -1,11 +1,9 @@
 ---
 title: "Aleix Alcacer Sales"
-subtitle: |
-  Predoctoral researcher :)
 image: profile.jpg
 about:
   id: edu-exp
-  template: solana
+  template: jolla
   image-width: 9em
   image-shape: round
   links:
@@ -23,14 +21,12 @@ about:
       href: "https://github.com/aleixalcacer"
 ---
 
-::: {#edu-exp}
-:::
-
 I am a passionate predoctoral researcher at Jaume I University, deeply immersed in the vibrant world of Open Source. My enthusiasm lies in developing innovative algorithms, with a keen focus on optimizing both performance and efficiency.
 
 At present, my research endeavors are centered around crafting novel methods in the fascinating field of archetypal analysis.
 
 [View my complete CV](https://cvn.fecyt.es/0000-0003-3566-0204).
+
 
 ::: {.grid}
 
