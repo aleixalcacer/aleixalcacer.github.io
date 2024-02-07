@@ -23,12 +23,9 @@ website:
 #       - href: posts/index.qmd
 #         text: Notes
     right:
-      - text: "{{< fa brands twitter >}}"
-        href: "https://twitter.com/aleixalcacer"
-      - text: "{{< fa brands github >}}"
-        href: "https://github.com/aleixalcacer"
-      - text: "{{< fa rss >}}"
+      - icon: rss-fill
         href: posts/index.xml
+      
   page-footer:
     center: Made with {{< fa heart >}} using Quarto
     background: light
