@@ -9,9 +9,6 @@ listing:
     contents: conference-contributions.yml
 ---
 
-From a young age, the potential of research to improve lives through technology has captivated me.
-In this section, explore my publications, each marking a step in my journey of discovery and innovation.
-Join me in delving into the diverse realms of research that continue to inspire and drive me.
 
 ## Scientific production
 

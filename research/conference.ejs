@@ -2,7 +2,7 @@
 <ul id="quarto-conference">
     <% for (const item of items) { %>
         <li class="quarto-publication">
-            <%= item.author %> <% if (item.date) { %>(<%= item.date %>)<% } %>. <i><%= item.title %></i>. <%= item.conference %>, <%= item.location %>. <% if (item.isbn) { %>ISBN: <%= item.isbn %><% } %>
+            <%= item.author %> <% if (item.date) { %>(<%= item.date %>)<% } %>. <i><%= item.title %></i>. <%= item.conference %>, <%= item.location %>
             <% if (item.note) { %>
                 </br> <i> Note: <%= item.note %> </i>    
             <% } %>
