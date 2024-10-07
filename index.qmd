@@ -37,7 +37,7 @@ At present, my research endeavors are centered around crafting novel methods in 
 ::: {.g-col-12 .g-col-md-8 style="text-align: left;"}
 ## Education
 
-- **Postdoctoral Researcher in Archetypal Analysis** | 2024 - present  
+- **Postdoc in Archetypal Analysis** | 2024 - present  
   Universitat Jaume I, Spain
 
 - **Ph.D. in Statistics** | 2020 - 2024  
