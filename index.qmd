@@ -37,10 +37,10 @@ At present, my research endeavors are centered around crafting novel methods in 
 ::: {.g-col-12 .g-col-md-8 style="text-align: left;"}
 ## Education
 
-- **Postdoctoral Researcher** | 2024 - present  
+- **Postdoctoral Researcher in Archetypal Analysis** | 2024 - present  
   Universitat Jaume I, Spain
 
-- **Ph.D. in Mathematics** | 2020 - 2024  
+- **Ph.D. in Statistics** | 2020 - 2024  
   Universitat Jaume I, Spain
 
 - **M.Sc. in Computacional Mathematics** | 2018 - 2020  
