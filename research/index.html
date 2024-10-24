@@ -126,6 +126,34 @@ ul.task-list li input[type="checkbox"] {
       window['quarto-listing-loaded']();
     }
   })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-other-contributions .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-author','listing-conference','listing-location','listing-date','listing-year','listing-labels',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author","listing-conference","listing-location","listing-date","listing-year","listing-labels"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-other-contributions'] = new List('listing-other-contributions', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
   </script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
@@ -306,8 +334,8 @@ No matching items
 </div>
 </div>
 </section>
-<section id="conferences" class="level3">
-<h3 class="anchored" data-anchor-id="conferences">Conferences</h3>
+<section id="main-conferences" class="level3">
+<h3 class="anchored" data-anchor-id="main-conferences">Main Conferences</h3>
 <div id="listing-conference-contributions" class="quarto-listing quarto-listing-container-custom">
 <ul id="quarto-conference">
     
@@ -317,7 +345,7 @@ No matching items
             <div class="quarto-labels">
                 
                     
-                        <span class="quarto-label"><a href="https://drive.google.com/file/d/1u8V2ToL3We1NdwNKIB9PjOcgN3IAhlw6/view?usp=sharing"> pdf </a></span>
+                        <span class="quarto-label"><a href="https://drive.google.com/file/d/1u8V2ToL3We1NdwNKIB9PjOcgN3IAhlw6/view?usp=sharing"> certificate </a></span>
                     
                 
             </div>
@@ -329,7 +357,7 @@ No matching items
             <div class="quarto-labels">
                 
                     
-                        <span class="quarto-label"><a href="https://drive.google.com/file/d/1STv2MzvPv-Z3zTIgHqTqwFAoxmhk3yrH/view?usp=sharing"> pdf </a></span>
+                        <span class="quarto-label"><a href="https://drive.google.com/file/d/1STv2MzvPv-Z3zTIgHqTqwFAoxmhk3yrH/view?usp=sharing"> certificate </a></span>
                     
                 
             </div>
@@ -343,7 +371,7 @@ No matching items
             <div class="quarto-labels">
                 
                     
-                        <span class="quarto-label"><a href="https://drive.google.com/file/d/1pjSPRgeuAncAxdtAqLolYyFZjF4YZxoI/view?usp=sharing"> pdf </a></span>
+                        <span class="quarto-label"><a href="https://drive.google.com/file/d/1pjSPRgeuAncAxdtAqLolYyFZjF4YZxoI/view?usp=sharing"> certificate </a></span>
                     
                 
             </div>
@@ -354,6 +382,10 @@ No matching items
             
             <div class="quarto-labels">
                 
+                    
+                        <span class="quarto-label"><a href=""> certificate </a></span>
+                    
+                
             </div>
         </li>
     
@@ -362,9 +394,77 @@ No matching items
 No matching items
 </div>
 </div>
-
-
-
+</section>
+<section id="other-contributions" class="level3">
+<h3 class="anchored" data-anchor-id="other-contributions">Other Contributions</h3>
+<div id="listing-other-contributions" class="quarto-listing quarto-listing-container-custom">
+<ul id="quarto-conference">
+    
+        <li class="quarto-publication">
+            Aleix Alcacer, Irene Epifanio (Jun 20, 2022). <i>Discovering archetypal football teams and stats with biarchetype analysis</i>. useR! 2022 The R User Conference, Online (USA)
+            
+            <div class="quarto-labels">
+                
+                    
+                        <span class="quarto-label"><a href="https://drive.google.com/file/d/1_8Q4T7I4juT5fw-7dg4avKohDXozUrep/view?usp=share_link"> certificate </a></span>
+                    
+                
+            </div>
+        </li>
+    
+        <li class="quarto-publication">
+            Aleix Alcacer, Irene Epifanio (Jan 27, 2021). <i>Analysis of gene expression data using biarchetype analysis</i>. V Jornadas Científicas de Estudiantes de la SEB, València (Spain)
+            
+            <div class="quarto-labels">
+                
+                    
+                        <span class="quarto-label"><a href="https://drive.google.com/file/d/1OKskCOxs2pIlgVwUq_GISBVkhTERg1-e/view?usp=share_link"> certificate </a></span>
+                    
+                
+            </div>
+        </li>
+    
+        <li class="quarto-publication">
+            Aleix Alcacer, Irene Epifanio (Dec 19, 2020). <i>Biarchetype analysis: definition and application to sports analysis</i>. 3rd BYMAT Conference, València (Spain)
+            
+            <div class="quarto-labels">
+                
+                    
+                        <span class="quarto-label"><a href="https://drive.google.com/file/d/1mQsWxFN7vP3-oLnu6eO7Oy-6ndnGbKZi/view?usp=share_link"> certificate </a></span>
+                    
+                
+            </div>
+        </li>
+    
+        <li class="quarto-publication">
+            Aleix Alcacer, Irene Epifanio, María Victoria Ibáñez, Amelia Simó, Alfredo Ballester (Jul 19, 2020). <i>What are the types of Spanish foot shapes? Archetypoid analysis of 3D images</i>. 2020 Virtual International Biometric Conference, Seúl (South Korea)
+            
+            <div class="quarto-labels">
+                
+                    
+                        <span class="quarto-label"><a href="https://drive.google.com/file/d/1F5Fc9_BZ5q0cQjhbsTOq0wkhM49JuxCJ/view?usp=share_link"> certificate </a></span>
+                    
+                
+            </div>
+        </li>
+    
+        <li class="quarto-publication">
+            Aleix Alcacer, Irene Epifanio, María Victoria Ibáñez, Amelia Simó, Alfredo Ballester (Jan 27, 2020). <i>A data-driven classification of 3D foot types by archetypal shapes based on landmarks</i>. V Congreso de Jóvenes Investigadores de la RSME, Castelló de la Plana (Spain)
+            
+            <div class="quarto-labels">
+                
+                    
+                        <span class="quarto-label"><a href="https://drive.google.com/file/d/145hFdLUrQDOpyVsHuIsUSWs-c2-w35xX/view?usp=share_link"> certificate </a></span>
+                    
+                
+            </div>
+        </li>
+    
+</ul>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
 </section>
 </section>
 
@@ -796,8 +896,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       &nbsp;
     </div>   
     <div class="nav-footer-center">
-<p>Made with <i class="fa-solid fa-heart" aria-label="heart"></i> using Quarto</p>
-</div>
+      <div class="footer-contents">Made with  using Quarto</div>  
+    </div>
     <div class="nav-footer-right">
       &nbsp;
     </div>
