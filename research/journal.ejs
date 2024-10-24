@@ -11,6 +11,11 @@
             <% } %>
             .
             <a href=https://doi.org/<%= item.doi %>> <%= item.doi %> </a>.
+
+            <%if (item.jif) { %>
+                <br><i><%= item.jif_year %> JIF: <%= item.jif %> (<%= item.jif_quartile %>) in <%= item.jif_category %></i>
+            <% } %>
+            
             <div class="quarto-labels">
                 <% if (item.code) { %>
                     <span class="quarto-label"><a href="<%- item.code %>"> CODE </a></span>
