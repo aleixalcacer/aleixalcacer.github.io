@@ -5,6 +5,9 @@ listing:
   contents: experience.yml
   template: experience.ejs
   date-format: "YYYY"
+- id: journal-publications
+  template: journal.ejs
+  contents: journal-publications.yml
 - id: conference-contributions
   template: conference.ejs
   contents: conference-contributions.yml
@@ -12,6 +15,11 @@ listing:
 
 
 ## Innovative teaching production
+
+### Publications
+
+::: {#journal-publications}
+:::
 
 ### Conferences
 
