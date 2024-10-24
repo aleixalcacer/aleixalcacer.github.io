@@ -101,6 +101,34 @@ ul.task-list li input[type="checkbox"] {
   
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-journal-publications .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-author','listing-journal','listing-num','listing-vol','listing-year','listing-doi','listing-ISSN','listing-jif','listing-jif_year','listing-jif_quartile','listing-jif_category',{ data: ['index'] },{ data: ['categories'] }],
+      
+      searchColumns: ["listing-title","listing-author","listing-journal","listing-num","listing-vol","listing-year","listing-doi","listing-ISSN","listing-jif","listing-jif_year","listing-jif_quartile","listing-jif_category"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-journal-publications'] = new List('listing-journal-publications', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
     const listingTargetEl = window.document.querySelector('#listing-conference-contributions .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
@@ -237,6 +265,38 @@ window.Quarto = {
 
 <section id="innovative-teaching-production" class="level2">
 <h2 class="anchored" data-anchor-id="innovative-teaching-production">Innovative teaching production</h2>
+<section id="publications" class="level3">
+<h3 class="anchored" data-anchor-id="publications">Publications</h3>
+<div id="listing-journal-publications" class="quarto-listing quarto-listing-container-custom">
+<ul id="quarto-journal">
+    
+        <li class="quarto-publication">
+            Lara Ferrando, Ismael Cabero, Aleix Alcacer, Atanasia Lloria, Marina Martínez-García, Belén Martínez-Serrano, Adrián Pérez-Suay, Irene Epifanio (2024). Investigación de la autopercepción del estudiantado universitario sobre su influencia en los ODS. <i>Campus Virtuales</i> 
+            
+                <i>, 1</i>
+            
+            
+                (13)
+            
+            .
+            <a href="https://doi.org/10.54988/cv.2024.1.136"> 10.54988/cv.2024.1.136 </a>.
+
+            
+                <br><i>2023 JIF: 2 (Q2 in Education &amp; Educational Research)</i>
+            
+            
+            <div class="quarto-labels">
+                
+                
+            </div>
+        </li>
+    
+</ul>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
+</section>
 <section id="conferences" class="level3">
 <h3 class="anchored" data-anchor-id="conferences">Conferences</h3>
 <div id="listing-conference-contributions" class="quarto-listing quarto-listing-container-custom">
