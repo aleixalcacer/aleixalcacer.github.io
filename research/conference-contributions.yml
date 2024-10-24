@@ -6,7 +6,7 @@
   year: 2021
   isbn: 9789925781256
   labels:
-    - name: pdf
+    - name: certificate
       url: https://drive.google.com/file/d/1u8V2ToL3We1NdwNKIB9PjOcgN3IAhlw6/view?usp=sharing
 
 - title: Archetypal contour shapes
@@ -17,7 +17,7 @@
   year: 2019
   isbn: 9788883171086
   labels:
-    - name: pdf
+    - name: certificate
       url: https://drive.google.com/file/d/1STv2MzvPv-Z3zTIgHqTqwFAoxmhk3yrH/view?usp=sharing
 
 - title: Analysis of 2D foot morphology by functional archetypal analysis
@@ -29,7 +29,7 @@
   isbn: 9788409117062
   note: Selected for the Young Statician Showcase
   labels:
-    - name: pdf
+    - name: certificate
       url: https://drive.google.com/file/d/1pjSPRgeuAncAxdtAqLolYyFZjF4YZxoI/view?usp=sharing
 
 - title: Relational Episodic Inference for Fictive Planning
@@ -38,3 +38,6 @@
   location: Oxford (United Kingdom)
   date: 2023-08-06
   year: 2023
+  labels:
+    - name: certificate
+      url: 

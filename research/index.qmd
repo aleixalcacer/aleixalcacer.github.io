@@ -7,6 +7,9 @@ listing:
   - id: conference-contributions
     template: conference.ejs
     contents: conference-contributions.yml
+  - id: other-contributions
+    template: conference.ejs
+    contents: other-contributions.yml
 ---
 
 
@@ -17,7 +20,11 @@ listing:
 ::: {#journal-publications}
 :::
 
-### Conferences
+### Main Conferences
 
 ::: {#conference-contributions}
 :::
+
+### Other Contributions
+
+::: {#other-contributions}
