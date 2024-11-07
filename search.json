@@ -67,20 +67,20 @@
     "href": "skills/index.html",
     "title": "Professional skills",
     "section": "",
-    "text": "Spanish: Native\nCatalan: Native - C1 (Advanced)\nEnglish: B1 (Intermediate)\nFrench: A2 (Basic)"
-  },
-  {
-    "objectID": "skills/index.html#languages",
-    "href": "skills/index.html#languages",
-    "title": "Professional skills",
-    "section": "",
-    "text": "Spanish: Native\nCatalan: Native - C1 (Advanced)\nEnglish: B1 (Intermediate)\nFrench: A2 (Basic)"
+    "text": "ProcessingAnalysisVisualization\n\n\n\nPython: pandas, polars\nR: readr, dplyr, tidyr\n\n\n\n\nPython: numpy, scipy, scikit-learn, torch\nR: tidymodels, caret\n\n\n\n\nPython: matplotlib, seaborn, altair, plotly, streamlit\nR: ggplot2, plotly, shiny"
   },
   {
     "objectID": "skills/index.html#data-science",
     "href": "skills/index.html#data-science",
     "title": "Professional skills",
-    "section": "Data science",
-    "text": "Data science\n\nProcessingAnalysisVisualization\n\n\n\nPython: pandas, polars\nR: readr, dplyr, tidyr\n\n\n\n\nPython: numpy, scipy, scikit-learn, torch\nR: tidymodels, caret\n\n\n\n\nPython: matplotlib, seaborn, altair, plotly, streamlit\nR: ggplot2, plotly, shiny"
+    "section": "",
+    "text": "ProcessingAnalysisVisualization\n\n\n\nPython: pandas, polars\nR: readr, dplyr, tidyr\n\n\n\n\nPython: numpy, scipy, scikit-learn, torch\nR: tidymodels, caret\n\n\n\n\nPython: matplotlib, seaborn, altair, plotly, streamlit\nR: ggplot2, plotly, shiny"
+  },
+  {
+    "objectID": "skills/index.html#languages",
+    "href": "skills/index.html#languages",
+    "title": "Professional skills",
+    "section": "Languages",
+    "text": "Languages\n\n\n\nLanguage\nLevel\nCertification\n\n\n\n\nSpanish\nNative or Bilingual\n-\n\n\nCatalan\nNative or Bilingual\nC1\n\n\nEnglish\nProfessional Working\nB2"
   }
 ]
