@@ -1,0 +1,29 @@
+---
+title: Professional skills
+---
+
+
+## Languages
+
+- Spanish: Native
+- Catalan: Native - C1 (Advanced)
+- English: B1 (Intermediate)
+- French: A2 (Basic)
+
+## Data science
+
+::: {.panel-tabset}
+
+### Processing
+- Python: pandas, polars
+- R: readr, dplyr, tidyr
+
+### Analysis
+- Python: numpy, scipy, scikit-learn, torch
+- R: tidymodels, caret
+
+### Visualization
+- Python: matplotlib, seaborn, altair, plotly, streamlit
+- R: ggplot2, plotly, shiny
+
+:::

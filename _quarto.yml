@@ -20,8 +20,8 @@ website:
         text: Teaching        
       - href: os-projects/index.qmd
         text: OS Projects
-#       - href: posts/index.qmd
-#         text: Notes
+      - href: skills/index.qmd
+        text: Skills
     right:
       - icon: rss-fill
         href: posts/index.xml
