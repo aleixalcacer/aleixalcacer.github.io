@@ -2,14 +2,6 @@
 title: Professional skills
 ---
 
-
-## Languages
-
-- Spanish: Native
-- Catalan: Native - C1 (Advanced)
-- English: B1 (Intermediate)
-- French: A2 (Basic)
-
 ## Data science
 
 ::: {.panel-tabset}
@@ -27,3 +19,14 @@ title: Professional skills
 - R: ggplot2, plotly, shiny
 
 :::
+
+
+## Languages
+
+
+| Language | Level    | Certification |
+|:--------:|:-------------------:|:--:|
+| Spanish  | Native or Bilingual |  - |
+| Catalan  | Native or Bilingual | C1 |
+| English  | Professional Working| B2 |
+
