@@ -1,0 +1,44 @@
+---
+title: Conceptos básicos de aprendizaje automático
+description: Introducción a los conceptos básicos de aprendizaje automático
+date: 2025/01/31
+draft: true
+categories: ["Machine Learning"]
+---
+
+
+## ¿Qué es el aprendizaje automático?
+
+El aprendizaje automático es un subcampo de la inteligencia artificial que se centra en el desarrollo de algoritmos y modelos que permiten a las computadoras aprender a partir de los datos.
+
+Se dice que un algoritmo aprende a partir de una experiencia *E* con respecto a una tarea *T* y una medida de rendimiento *P*, si su rendimiento en la tarea *T*, medido por *P*, mejora con la experiencia *E*.
+
+Por ejemplo, consideremos el problema de clasificación de spam. En este caso, la tarea *T* es clasificar los correos electrónicos como spam o no spam, la experiencia *E* es el conjunto de correos electrónicos que se utilizan para entrenar el algoritmo y la medida de rendimiento *P* podría ser la precisión del algoritmo en la clasificación de los correos electrónicos.
+
+
+### La tarea *T*
+
+Hay distintos tipos de tareas en el aprendizaje automático, como la clasificación, la regresión y el agrupamiento. En la clasificación, la tarea consiste en asignar una etiqueta a un objeto de entrada de un conjunto de etiquetas predefinidas. Por ejemplo, clasificar un correo electrónico como spam o no spam. En la regresión, la tarea consiste en predecir un valor numérico a partir de un conjunto de datos de entrada. Por ejemplo, predecir el precio de una casa en función de sus características. En el agrupamiento, la tarea consiste en agrupar objetos similares en grupos. Por ejemplo, agrupar clientes en función de sus preferencias de compra.
+
+
+### La medida de rendimiento *P*
+
+Para evaluar el rendimiento de un algoritmo de aprendizaje automático, es necesario definir una medida de rendimiento *P*. Esta medida puede ser de varios tipos, como la precisión, la sensibilidad, la especificidad, el error cuadrático medio, etc. La elección de la medida de rendimiento adecuada depende del tipo de tarea y de los objetivos del problema.
+
+
+### La experiencia *E*
+
+Los algoritmos de aprendizaje automático se clasifican generalmente en dos categorías: supervisados y no supervisados dependiendo del tipo de experiencia (conjunto de datos) que utilizan para aprender. En el aprendizaje supervisado, el algoritmo aprende a partir de ejemplos etiquetados, es decir, pares de entrada-salida. Por ejemplo, en el problema de clasificación de spam, los correos electrónicos se etiquetan como spam o no spam. En el aprendizaje no supervisado, el algoritmo aprende a partir de ejemplos no etiquetados, es decir, solo de las entradas. Por ejemplo, en el problema de agrupamiento, los objetos se agrupan en función de sus similitudes.  También existen otros tipos de aprendizaje, como el aprendizaje por refuerzo, donde el algoritmo no solo aprende de ejemplos, sino también de la retroalimentación que recibe del entorno.
+
+Usualmente, los datos se presentan como una matriz $\bf{X}$ de tamaño $n \times m$, donde $n$ es el número de ejemplos y $m$ es el número de características. Cada fila de la matriz $\bf{X}$ corresponde a un ejemplo y cada columna corresponde a una característica. Además, en el aprendizaje supervisado, se tiene un vector $\bf{y}$ de tamaño $n$ que contiene las etiquetas de los ejemplos. 
+
+### Ejemplo
+
+...
+
+
+## Generalización
+
+Una de las cosas más importantes en el aprendizaje automático es la capacidad de generalización de un algoritmo. La generalización se refiere a la habilidad de un algoritmo de realizar tareas correctamente en datos no vistos previamente. Un algoritmo que generaliza bien es capaz de adaptarse a diferentes conjuntos de datos y a nuevos ejemplos. Por el contrario, un algoritmo que no generaliza bien puede ajustarse a los datos de entrenamiento pero no ser capaz de realizar tareas correctamente en datos no vistos previamente.
+
+...

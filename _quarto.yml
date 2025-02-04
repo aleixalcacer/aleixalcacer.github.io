@@ -1,5 +1,8 @@
 project:
   type: website
+  preview:
+    port: 4200
+    browser: false
 
 execute:
   freeze: true
@@ -22,6 +25,8 @@ website:
         text: OS Projects
       - href: skills/index.qmd
         text: Skills
+      - href: posts/index.qmd
+        text: Blog
     right:
       - icon: rss-fill
         href: posts/index.xml

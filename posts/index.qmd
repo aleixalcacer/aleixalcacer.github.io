@@ -1,0 +1,11 @@
+---
+title: "Thoughts and Writings"
+author: ""
+listing:
+  sort: "date desc"
+  type: table
+  feed: true
+  categories: true
+  fields: [date, title, description, reading-time]
+---
+
