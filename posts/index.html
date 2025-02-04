@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="">
 
-<title>Research – Aleix Alcacer</title>
+<title>Thoughts and Writings – Aleix Alcacer</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -73,76 +74,20 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-journal-publications .list');
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
     }
 
     const options = {
-      valueNames: ['listing-title','listing-author','listing-journal','listing-num','listing-vol','listing-year','listing-doi','listing-jif','listing-jif_year','listing-jif_quartile','listing-jif_category',{ data: ['index'] },{ data: ['categories'] }],
+      valueNames: ['listing-date','listing-title','listing-description','listing-reading-time',{ data: ['index'] },{ data: ['categories'] }],
       
-      searchColumns: ["listing-title","listing-author","listing-journal","listing-num","listing-vol","listing-year","listing-doi","listing-jif","listing-jif_year","listing-jif_quartile","listing-jif_category"],
+      searchColumns: [],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-journal-publications'] = new List('listing-journal-publications', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-conference-contributions .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-author','listing-conference','listing-location','listing-date','listing-year','listing-isbn','listing-note','listing-labels',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-conference","listing-location","listing-date","listing-year","listing-isbn","listing-note","listing-labels"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-conference-contributions'] = new List('listing-conference-contributions', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-other-contributions .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-author','listing-conference','listing-location','listing-date','listing-year','listing-labels',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-conference","listing-location","listing-date","listing-year","listing-labels"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-other-contributions'] = new List('listing-other-contributions', options);
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -187,9 +132,9 @@ window.Quarto = {
 </script>
 
 <link rel="stylesheet" href="../styles.css">
-</head>
+<link rel="alternate" type="application/rss+xml" title="Aleix Alcacer" href="index.xml" data-external="1"></head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -211,7 +156,7 @@ window.Quarto = {
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../research/index.html" aria-current="page"> 
+    <a class="nav-link" href="../research/index.html"> 
 <span class="menu-text">Research</span></a>
   </li>  
   <li class="nav-item">
@@ -227,7 +172,7 @@ window.Quarto = {
 <span class="menu-text">Skills</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../posts/index.html"> 
+    <a class="nav-link active" href="../posts/index.html" aria-current="page"> 
 <span class="menu-text">Blog</span></a>
   </li>  
 </ul>
@@ -248,13 +193,15 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(0)</span></div></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Research</h1>
+<h1 class="title">Thoughts and Writings</h1>
 </div>
 
 
@@ -271,285 +218,41 @@ window.Quarto = {
 </header>
 
 
-<section id="scientific-production" class="level2">
-<h2 class="anchored" data-anchor-id="scientific-production">Scientific production</h2>
-<section id="journals" class="level3">
-<h3 class="anchored" data-anchor-id="journals">Journals</h3>
-<div id="listing-journal-publications" class="quarto-listing quarto-listing-container-custom">
-<ul id="quarto-journal">
-    
-        <li class="quarto-publication">
-            Aleix Alcacer, Irene Epifanio (2024). Outlier detection of clustered functional data with image and signal processing applications by archetype analysis. <i>PLOS ONE</i> 
-            
-            
-            .
-            <a href="https://doi.org/10.1371/journal.pone.0311418"> 10.1371/journal.pone.0311418 </a>.
 
-            
-                <br><i>2023 JIF: 2.9 (Q1 in Multidisciplinary Sciences)</i>
-            
-            
-            <div class="quarto-labels">
-                
-                
-            </div>
-        </li>
-    
-        <li class="quarto-publication">
-            Aleix Alcacer, Irene Epifanio, Ximo Gual-Arnau (2024). Biarchetype Analysis: Simultaneous Learning of Observations and Features Based on Extremes. <i>IEEE Transactions on Pattern Analysis and Machine Intelligence</i> 
-            
-            
-            .
-            <a href="https://doi.org/10.1109/TPAMI.2024.3400730"> 10.1109/TPAMI.2024.3400730 </a>.
 
-            
-                <br><i>2023 JIF: 20.8 (Q1 in Computer Science, Artificial Intelligence)</i>
-            
-            
-            <div class="quarto-labels">
-                
-                
-            </div>
-        </li>
-    
-        <li class="quarto-publication">
-            Aleix Alcacer, Irene Epifanio, Marina Martinez-Garcia (2024). Ordinal classification for interval-valued data and interval-valued functional data. <i>Expert Systems with Applications</i> 
-            
-                <i>, 238</i>
-            
-            
-            .
-            <a href="https://doi.org/10.1016/j.eswa.2023.122277"> 10.1016/j.eswa.2023.122277 </a>.
 
-            
-                <br><i>2023 JIF: 7.5 (Q1 in Computer Science, Artificial Intelligence)</i>
-            
-            
-            <div class="quarto-labels">
-                
-                
-            </div>
-        </li>
-    
-        <li class="quarto-publication">
-            Aleix Alcacer, Irene Epifanio, Jorge Valero, Alfredo Ballester (2021). Combining Classification and User-Based Collaborative Filtering for Matching Footwear Size. <i>MATHEMATICS</i> 
-            
-                <i>, 9</i>
-            
-            
-                (7)
-            
-            .
-            <a href="https://doi.org/10.3390/math9070771"> 10.3390/math9070771 </a>.
 
-            
-                <br><i>2021 JIF: 2.592 (Q1 in Mathematics)</i>
-            
-            
-            <div class="quarto-labels">
-                
-                
-            </div>
-        </li>
-    
-        <li class="quarto-publication">
-            Aleix Alcacer, Irene Epifanio, María Victoria Ibáñez, Amelia Simó, Alfredo Ballester (2020). A data-driven classification of 3D foot types by archetypal shapes based on landmarks. <i>PLOS ONE</i> 
-            
-                <i>, 15</i>
-            
-            
-                (1)
-            
-            .
-            <a href="https://doi.org/10.1371/journal.pone.0228016"> 10.1371/journal.pone.0228016 </a>.
-
-            
-                <br><i>2020 JIF: 3.24 (Q2 in Multidisciplinary Sciences)</i>
-            
-            
-            <div class="quarto-labels">
-                
-                
-            </div>
-        </li>
-    
-</ul>
+<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
+<div class="listing-actions-group">
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filter">
+    </div>
+</div>
+<table class="quarto-listing-table table">
+<thead>
+<tr>
+<th>
+Date
+</th>
+<th>
+Title
+</th>
+<th>
+Description
+</th>
+<th>
+Reading Time
+</th>
+</tr>
+</thead>
+<tbody class="list">
+</tbody>
+</table>
 <div class="listing-no-matching d-none">
 No matching items
 </div>
-</div>
-</section>
-<section id="main-conferences" class="level3">
-<h3 class="anchored" data-anchor-id="main-conferences">Main Conferences</h3>
-<div id="listing-conference-contributions" class="quarto-listing quarto-listing-container-custom">
-<ul id="quarto-conference">
-    
-        <li class="quarto-publication">
-            Aleix Alcacer, Irene Epifanio, Jorge Valero, Alfredo Ballester (Dec 19, 2021). <i>Combining user-based collaborative filtering and classification for matching footwear size</i>. CFE-CMStatistics 2021, London (United Kingdom).
-            ISBN: 9789925781256.
-            
-                <br> <i> Note: Invited presentation </i>    
-            
-
-            <div class="quarto-labels">
-                
-                    
-                        <span class="quarto-label"><a href="https://drive.google.com/file/d/1u8V2ToL3We1NdwNKIB9PjOcgN3IAhlw6/view?usp=sharing"> certificate </a></span>
-                    
-                
-            </div>
-        </li>
-    
-        <li class="quarto-publication">
-            Aleix Alcacer, Irene Epifanio, María Victoria Ibáñez, Amelia Simó (Sep 11, 2019). <i>Archetypal contour shapes</i>. 12th Scientific Meeting Classification and Data Analysis Group (CLADAG 2019), Cassino (Italy).
-            ISBN: 9788883171086.
-            
-                <br> <i> Note: Invited presentation </i>    
-            
-
-            <div class="quarto-labels">
-                
-                    
-                        <span class="quarto-label"><a href="https://drive.google.com/file/d/1STv2MzvPv-Z3zTIgHqTqwFAoxmhk3yrH/view?usp=sharing"> certificate </a></span>
-                    
-                
-            </div>
-        </li>
-    
-        <li class="quarto-publication">
-            Aleix Alcacer, Irene Epifanio, María Victoria Ibáñez, Amelia Simó (Jun 19, 2019). <i>Analysis of 2D foot morphology by functional archetypal analysis</i>. XVII Conferencia Española y VII Encuentro Iberoamericano de Biometría (CEB-EIB 2019), València (Spain).
-            ISBN: 9788409117062.
-            
-                <br> <i> Note: Invited presentation. Selected for the Young Statician Showcase </i>    
-            
-
-            <div class="quarto-labels">
-                
-                    
-                        <span class="quarto-label"><a href="https://drive.google.com/file/d/1pjSPRgeuAncAxdtAqLolYyFZjF4YZxoI/view?usp=sharing"> certificate </a></span>
-                    
-                
-            </div>
-        </li>
-    
-        <li class="quarto-publication">
-            Aleix Alcacer, Marina Martínez Garcia, Daniel McNamee, Raphael Kaplan (Aug 6, 2023). <i>Relational Episodic Inference for Fictive Planning</i>. Cognitive Computational Neuroscience, Oxford (United Kingdom).
-            
-            
-
-            <div class="quarto-labels">
-                
-                    
-                        <span class="quarto-label"><a href=""> certificate </a></span>
-                    
-                
-            </div>
-        </li>
-    
-</ul>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div>
-</section>
-<section id="other-contributions" class="level3">
-<h3 class="anchored" data-anchor-id="other-contributions">Other Contributions</h3>
-<div id="listing-other-contributions" class="quarto-listing quarto-listing-container-custom">
-<ul id="quarto-conference">
-    
-        <li class="quarto-publication">
-            Aleix Alcacer, Irene Epifanio (Nov 21, 2024). <i>Análisis de biarquetipos en R</i>. LatinR 2024, Online.
-            
-            
-
-            <div class="quarto-labels">
-                
-                    
-                        <span class="quarto-label"><a href="https://www.youtube.com/watch?v=-27LeNWW0kA&amp;list=PL9-E3cL2KgKnhXXfAo1ahd_cJKwRFGf0l&amp;index=5"> video </a></span>
-                    
-                
-            </div>
-        </li>
-    
-        <li class="quarto-publication">
-            Aleix Alcacer, Irene Epifanio (Jun 20, 2022). <i>Discovering archetypal football teams and stats with biarchetype analysis</i>. useR! 2022 The R User Conference, Online (USA).
-            
-            
-
-            <div class="quarto-labels">
-                
-                    
-                        <span class="quarto-label"><a href="https://drive.google.com/file/d/1_8Q4T7I4juT5fw-7dg4avKohDXozUrep/view?usp=share_link"> certificate </a></span>
-                    
-                
-            </div>
-        </li>
-    
-        <li class="quarto-publication">
-            Aleix Alcacer, Irene Epifanio (Jan 27, 2021). <i>Analysis of gene expression data using biarchetype analysis</i>. V Jornadas Científicas de Estudiantes de la SEB, València (Spain).
-            
-            
-
-            <div class="quarto-labels">
-                
-                    
-                        <span class="quarto-label"><a href="https://drive.google.com/file/d/1OKskCOxs2pIlgVwUq_GISBVkhTERg1-e/view?usp=share_link"> certificate </a></span>
-                    
-                
-            </div>
-        </li>
-    
-        <li class="quarto-publication">
-            Aleix Alcacer, Irene Epifanio (Dec 19, 2020). <i>Biarchetype analysis: definition and application to sports analysis</i>. 3rd BYMAT Conference, València (Spain).
-            
-            
-
-            <div class="quarto-labels">
-                
-                    
-                        <span class="quarto-label"><a href="https://drive.google.com/file/d/1mQsWxFN7vP3-oLnu6eO7Oy-6ndnGbKZi/view?usp=share_link"> certificate </a></span>
-                    
-                
-            </div>
-        </li>
-    
-        <li class="quarto-publication">
-            Aleix Alcacer, Irene Epifanio, María Victoria Ibáñez, Amelia Simó, Alfredo Ballester (Jul 19, 2020). <i>What are the types of Spanish foot shapes? Archetypoid analysis of 3D images</i>. 2020 Virtual International Biometric Conference, Seúl (South Korea).
-            
-            
-
-            <div class="quarto-labels">
-                
-                    
-                        <span class="quarto-label"><a href="https://drive.google.com/file/d/1F5Fc9_BZ5q0cQjhbsTOq0wkhM49JuxCJ/view?usp=share_link"> certificate </a></span>
-                    
-                
-            </div>
-        </li>
-    
-        <li class="quarto-publication">
-            Aleix Alcacer, Irene Epifanio, María Victoria Ibáñez, Amelia Simó, Alfredo Ballester (Jan 27, 2020). <i>A data-driven classification of 3D foot types by archetypal shapes based on landmarks</i>. V Congreso de Jóvenes Investigadores de la RSME, Castelló de la Plana (Spain).
-            
-            
-
-            <div class="quarto-labels">
-                
-                    
-                        <span class="quarto-label"><a href="https://drive.google.com/file/d/145hFdLUrQDOpyVsHuIsUSWs-c2-w35xX/view?usp=share_link"> certificate </a></span>
-                    
-                
-            </div>
-        </li>
-    
-</ul>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div>
-</section>
-</section>
-
-</main> <!-- /main -->
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -974,8 +677,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       &nbsp;
     </div>   
     <div class="nav-footer-center">
-      <div class="footer-contents">Made with  using Quarto</div>  
-    </div>
+<p>Made with <i class="fa-solid fa-heart" aria-label="heart"></i> using Quarto</p>
+</div>
     <div class="nav-footer-right">
       &nbsp;
     </div>
