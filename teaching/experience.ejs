@@ -7,7 +7,7 @@
             <th scope="col">Degree</th>
             <th scope="col">Entity</th>
             <th scope="col">ECTS</th>
-            <th scope="col">End Date</th>
+            <th scope="col">Year</th>
         </tr>
         </thead>
         <tbody>
@@ -17,7 +17,7 @@
                     <td><%= item.degree %></td>
                     <td><%= item.entity %></td>
                     <td><%= item.credits %></td>
-                    <td ><%= item.date %></td>
+                    <td><%= item.year - 1 %>/<%= item.year %></td>
                 </tr>
             <% } %>
         </tbody>

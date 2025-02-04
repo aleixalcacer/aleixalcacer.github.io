@@ -4,7 +4,6 @@ listing:
 - id: experience
   contents: experience.yml
   template: experience.ejs
-  date-format: "YYYY"
 - id: journal-publications
   template: journal.ejs
   contents: journal-publications.yml

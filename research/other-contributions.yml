@@ -1,3 +1,13 @@
+- title: Análisis de biarquetipos en R
+  author: Aleix Alcacer, Irene Epifanio
+  conference: LatinR 2024
+  location: Online
+  date: 21-11-2024
+  year: 2024
+  labels:
+    - name: video
+      url: https://www.youtube.com/watch?v=-27LeNWW0kA&list=PL9-E3cL2KgKnhXXfAo1ahd_cJKwRFGf0l&index=5
+
 - title: Discovering archetypal football teams and stats with biarchetype analysis
   author: Aleix Alcacer, Irene Epifanio
   conference: useR! 2022 The R User Conference

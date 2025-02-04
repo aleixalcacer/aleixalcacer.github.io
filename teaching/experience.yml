@@ -1,24 +1,63 @@
+# 2025
+
+- course: Introduction to Statistics
+  degree: Bachelor's Degree in Public Management and Administration
+  year: 2025
+  credits: 5
+  entity: UJI
+  language: Catalan
+
+- course: Bachelor's Thesis
+  degree: Bachelor's Degree in Computational Mathematics
+  year: 2025
+  credits: 0.94
+  entity: UJI
+  language: Spanish/English
+
+
+# 2024
+
 - course: Statistics Applied to Public Management and Administration
   degree: Bachelor's Degree in Public Management and Administration
-  frequency: 2
-  date: 2024/05/17
-  credits: 16,5
+  year: 2024
+  credits: 6
+  entity: UJI
+  language: Catalan
+
+
+# 2023
+
+- course: Statistics Applied to Public Management and Administration
+  degree: Bachelor's Degree in Public Management and Administration
+  year: 2023
+  credits: 6
+  entity: UJI
+  language: Catalan
+
+
+# 2022
+
+- course: Statistics Applied to Public Management and Administration
+  degree: Bachelor's Degree in Public Management and Administration
+  year: 2022s
+  credits: 4.5
   entity: UJI
   language: Catalan
 
 - course: Introduction to Statistics
   degree: Bachelor's Degree in Labour Relations and Human Resources
-  frequency: 1
-  date: 2022/05/17
-  credits: 1,5
+  year: 2022
+  credits: 1.5
   entity: UJI
   language: Catalan
+
+
+# 2021
 
 - course: Software for Modelling Industrial Systems (Distance)
   degree: |
     Master's Degree in Computational Mathematics (Distance)
-  frequency: 1
-  date: 2021/07/31
+  year: 2021
   credits: 2
   entity: UJI
   language: Spanish
@@ -26,8 +65,7 @@
 - course: Software for Modelling Industrial Systems
   degree: |
     Master's Degree in Computational Mathematics
-  frequency: 1
-  date: 2021/07/31
+  year: 2021
   credits: 2
   entity: UJI
   language: Spanish
