@@ -1,10 +1,6 @@
 [
   {
-    "listing": "/posts/index.html",
-    "items": []
-  },
-  {
-    "listing": "/research/index.html",
+    "listing": "/os-projects/index.html",
     "items": []
   },
   {
@@ -12,7 +8,11 @@
     "items": []
   },
   {
-    "listing": "/os-projects/index.html",
+    "listing": "/research/index.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/index.html",
     "items": []
   }
 ]

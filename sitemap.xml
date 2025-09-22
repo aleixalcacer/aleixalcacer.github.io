@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://aleixalcacer.com/posts/index.html</loc>
-    <lastmod>2025-02-04T11:12:38.703Z</lastmod>
-  </url>
-  <url>
-    <loc>https://aleixalcacer.com/research/index.html</loc>
-    <lastmod>2025-02-04T11:12:38.704Z</lastmod>
+    <loc>https://aleixalcacer.com/os-projects/index.html</loc>
+    <lastmod>2025-09-22T09:43:22.787Z</lastmod>
   </url>
   <url>
     <loc>https://aleixalcacer.com/teaching/index.html</loc>
-    <lastmod>2025-02-04T11:12:38.705Z</lastmod>
-  </url>
-  <url>
-    <loc>https://aleixalcacer.com/os-projects/index.html</loc>
-    <lastmod>2025-02-04T11:12:38.703Z</lastmod>
-  </url>
-  <url>
-    <loc>https://aleixalcacer.com/skills/index.html</loc>
-    <lastmod>2025-02-04T11:12:38.704Z</lastmod>
+    <lastmod>2025-09-22T09:43:22.788Z</lastmod>
   </url>
   <url>
     <loc>https://aleixalcacer.com/index.html</loc>
-    <lastmod>2025-02-04T11:12:38.703Z</lastmod>
+    <lastmod>2025-09-22T09:43:22.787Z</lastmod>
+  </url>
+  <url>
+    <loc>https://aleixalcacer.com/research/index.html</loc>
+    <lastmod>2025-09-22T09:43:22.788Z</lastmod>
+  </url>
+  <url>
+    <loc>https://aleixalcacer.com/posts/index.html</loc>
+    <lastmod>2025-09-22T09:43:22.787Z</lastmod>
+  </url>
+  <url>
+    <loc>https://aleixalcacer.com/skills/index.html</loc>
+    <lastmod>2025-09-22T09:43:22.788Z</lastmod>
   </url>
 </urlset>
