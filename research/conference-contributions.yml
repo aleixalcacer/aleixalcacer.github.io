@@ -1,3 +1,23 @@
+- title: Fair archetypal analysis for fair representation
+  author: Aleix Alcacer, Irene Epifanio
+  conference: 8th International Conference on Econometrics and Statistics
+  location: Tokyo (Japan)
+  date: 2025-08-23
+  year: 2025
+  labels:
+    - name: certificate
+      url: https://drive.google.com/file/d/1IJiLpssqLg4x1P6TAPUiXHn2KspnSCDD/view?usp=sharing
+
+- title: Relational Episodic Inference for Fictive Planning
+  author: Aleix Alcacer, Marina Martínez Garcia, Daniel McNamee, Raphael Kaplan
+  conference: Cognitive Computational Neuroscience
+  location: Oxford (United Kingdom)
+  date: 2023-08-06
+  year: 2023
+  labels:
+    - name: certificate
+      url: 
+
 - title: Combining user-based collaborative filtering and classification for matching footwear size
   author: Aleix Alcacer, Irene Epifanio, Jorge Valero, Alfredo Ballester
   conference: CFE-CMStatistics 2021
@@ -33,13 +53,3 @@
   labels:
     - name: certificate
       url: https://drive.google.com/file/d/1pjSPRgeuAncAxdtAqLolYyFZjF4YZxoI/view?usp=sharing
-
-- title: Relational Episodic Inference for Fictive Planning
-  author: Aleix Alcacer, Marina Martínez Garcia, Daniel McNamee, Raphael Kaplan
-  conference: Cognitive Computational Neuroscience
-  location: Oxford (United Kingdom)
-  date: 2023-08-06
-  year: 2023
-  labels:
-    - name: certificate
-      url: 

@@ -5,9 +5,9 @@
   vol:
   year: 2024
   doi: 10.1371/journal.pone.0311418
-  jif: 2.9
-  jif_year: 2023
-  jif_quartile: Q1
+  jif: 2.6
+  jif_year: 2024
+  jif_quartile: Q2
   jif_category: Multidisciplinary Sciences
 
 
@@ -17,8 +17,8 @@
   year: 2024
   vol: 
   doi: 10.1109/TPAMI.2024.3400730
-  jif: 20.8
-  jif_year: 2023
+  jif: 18.6
+  jif_year: 2024
   jif_quartile: Q1
   jif_category: Computer Science, Artificial Intelligence
 
@@ -29,7 +29,7 @@
   vol: 238
   doi: 10.1016/j.eswa.2023.122277
   jif: 7.5
-  jif_year: 2023
+  jif_year: 2024
   jif_quartile: Q1
   jif_category: Computer Science, Artificial Intelligence
 
