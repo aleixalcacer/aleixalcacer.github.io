@@ -53,3 +53,45 @@
   labels:
     - name: pdf
       url: https://drive.google.com/file/d/14Y9yVRgpkgZXmavjeeLdCryGmCa01FOs/view?usp=drive_link
+
+
+- title: "Investigating university students' self-perception of their influence on the Sdgs"
+  author: Lara ferrando, Ismael Cabero, Aleix Alcacer, Atanasia Lloria, Marina Martínez-García, Belén Martínez-Serrano, Adrián Pérez-Suay, Irene Epifanio
+  type: paper
+  date: 2024/01/31
+  year: 2024
+  conference: Campus Virtuales
+  location: Online
+  doi: 10.54988/cv.2024.1.1362
+  labels:
+    - name: pdf
+      url: https://drive.google.com/file/d/1MlSFP5ZujaVTv9iWoT6JrSxBrE4Pg9f2/view?usp=share_link
+
+
+- title: "Universal design for learning in statistics of industrial design engineering"
+  author: Aleix Alcacer, Irene Epifanio, Atanasia Lloria, Marina Martínez-García, Belén Martínez-Serrano
+  type: paper
+  date: 2024/11/11
+  year: 2024
+  conference: ICERI 2024
+  location: Seville (Spain)
+  isbn: 9788409630103
+  issn: 23401095
+  doi: 10.21125/iceri.2024.0290
+  labels:
+    - name: pdf
+      url: https://drive.google.com/file/d/1UZDECoBN4d0djg-xoKudh3OEypVIHq8z/view?usp=share_link
+
+- title: "Enhancing learning and motivation in statistics by a digital escape room"
+  author: Aleix Alcacer, Irene Epifanio, Atanasia Lloria, Marina Martínez-García, Belén Martínez-Serrano
+  type: paper
+  date: 2025/11/10
+  year: 2025
+  conference: ICERI 2025
+  location: Seville (Spain)
+  isbn: 9788409787067
+  issn: 23401095
+  doi: 10.21125/iceri.2025.0412
+  labels:
+    - name: pdf
+      url: https://drive.google.com/file/d/1QoqdoMjuxT_bEgx-v7MYJATOkUJ9fMST/view?usp=share_link
