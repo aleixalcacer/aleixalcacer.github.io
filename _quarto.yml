@@ -23,8 +23,8 @@ website:
         text: Teaching        
       - href: os-projects/index.qmd
         text: OS Projects
-      - href: skills/index.qmd
-        text: Skills
+      # - href: skills/index.qmd
+      #   text: Skills
       - href: posts/index.qmd
         text: Blog
     right:
