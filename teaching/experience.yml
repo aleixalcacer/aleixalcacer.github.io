@@ -1,6 +1,18 @@
+# Bachelor
+
+# 2026
+
+- course: Statistics Applied to Public Management and Administration
+  code: GA1216
+  degree: Bachelor's Degree in Public Management and Administration
+  year: 2026
+  credits: 6
+  entity: UJI
+
 # 2025
 
 - course: Introduction to Statistics
+  code: GA1206
   degree: Bachelor's Degree in Public Management and Administration
   year: 2025
   credits: 5
@@ -8,6 +20,7 @@
   language: Catalan
 
 - course: Bachelor's Thesis
+  code: MT1054
   degree: Bachelor's Degree in Computational Mathematics
   year: 2025
   credits: 0.94
@@ -18,6 +31,7 @@
 # 2024
 
 - course: Statistics Applied to Public Management and Administration
+  code: GA1216
   degree: Bachelor's Degree in Public Management and Administration
   year: 2024
   credits: 6
@@ -28,6 +42,7 @@
 # 2023
 
 - course: Statistics Applied to Public Management and Administration
+  code: GA1216
   degree: Bachelor's Degree in Public Management and Administration
   year: 2023
   credits: 6
@@ -38,6 +53,7 @@
 # 2022
 
 - course: Statistics Applied to Public Management and Administration
+
   degree: Bachelor's Degree in Public Management and Administration
   year: 2022s
   credits: 4.5
@@ -45,6 +61,7 @@
   language: Catalan
 
 - course: Introduction to Statistics
+  code: RL0906
   degree: Bachelor's Degree in Labour Relations and Human Resources
   year: 2022
   credits: 1.5
@@ -52,9 +69,12 @@
   language: Catalan
 
 
+# Master
+
 # 2021
 
 - course: Software for Modelling Industrial Systems (Distance)
+  code: SIQ525
   degree: |
     Master's Degree in Computational Mathematics (Distance)
   year: 2021
@@ -63,6 +83,7 @@
   language: Spanish
 
 - course: Software for Modelling Industrial Systems
+ code: SIQ025
   degree: |
     Master's Degree in Computational Mathematics
   year: 2021
