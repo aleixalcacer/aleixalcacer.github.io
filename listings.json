@@ -1,18 +1,18 @@
 [
   {
-    "listing": "/os-projects/index.html",
-    "items": []
-  },
-  {
-    "listing": "/teaching/index.html",
-    "items": []
-  },
-  {
     "listing": "/research/index.html",
     "items": []
   },
   {
     "listing": "/posts/index.html",
+    "items": []
+  },
+  {
+    "listing": "/os-projects/index.html",
+    "items": []
+  },
+  {
+    "listing": "/teaching/index.html",
     "items": []
   }
 ]

@@ -1,52 +1,24 @@
 [
   {
-    "objectID": "os-projects/index.html",
-    "href": "os-projects/index.html",
-    "title": "Open Source Projects",
+    "objectID": "skills/index.html",
+    "href": "skills/index.html",
+    "title": "Professional skills",
     "section": "",
-    "text": "Python packages\n\n\n\n\n\n  \n    \n      \n        archetypes\n      \n       \n      \n        \n      \n       \n    \n   \n    \n      Sikit-learn compatible package for archetypal analysis.\n \n    \n    \n      \n        creator\n      \n      \n        2021 - present\n      \n    \n  \n\n  \n    \n      \n        memprofiler\n      \n       \n      \n        \n      \n       \n    \n   \n    \n      IPython extension for monitoring memory usage of Jupyter notebook cells.\n \n    \n    \n      \n        creator\n      \n      \n        2020 - present\n      \n    \n  \n\n  \n    \n      \n        blosc\n      \n       \n      \n        \n      \n       \n    \n   \n    \n      High-performance chunk-based compressor for binary data.\n \n    \n    \n      \n        mantainer\n      \n      \n        2018 - 2023\n      \n    \n  \n\n\n\nOthers\n\n\n\n\n\n  \n    \n      \n        cmlint\n      \n       \n      \n        \n      \n       \n    \n   \n    \n      Pre-commit hook for linitng commit messages and creating robust changelogs.\n \n    \n    \n      \n        creator\n      \n      \n        2022 - present\n      \n    \n  \n\n\n\nNo matching items"
+    "text": "ProcessingAnalysisVisualization\n\n\n\nPython: pandas, polars\nR: readr, dplyr, tidyr\n\n\n\n\nPython: numpy, scipy, scikit-learn, torch\nR: tidymodels, caret\n\n\n\n\nPython: matplotlib, seaborn, altair, plotly, streamlit\nR: ggplot2, plotly, shiny"
   },
   {
-    "objectID": "teaching/index.html",
-    "href": "teaching/index.html",
-    "title": "Teaching",
+    "objectID": "skills/index.html#data-science",
+    "href": "skills/index.html#data-science",
+    "title": "Professional skills",
     "section": "",
-    "text": "Lara Ferrando, Ismael Cabero, Aleix Alcacer, Atanasia Lloria, Marina Martínez-García, Belén Martínez-Serrano, Adrián Pérez-Suay, Irene Epifanio (2024). Investigación de la autopercepción del estudiantado universitario sobre su influencia en los ODS. Campus Virtuales \n            \n                , 1\n            \n            \n                (13)\n            \n            .\n             10.54988/cv.2024.1.1362 .\n\n            \n                2023 JIF: 2 (Q2 in Education & Educational Research)\n            \n            \n            \n                \n                \n            \n        \n    \n\nNo matching items\n\n\n\n\n\n\n    \n        \n            Lara Ferrando, Aleix Alcacer, Atanasia Lloria, Marina Martínez-García, Belén Martínez-Serrano, Adrián Pérez-Suay, Irene Epifanio (Sep 29, 2022). Analysis of the contributions to the SDGs of university students by degrees [Conference paper]. XII International Conference on Virtual Campus (JICV), Arequipa (Peru).\n            ISBN: 9781665451079.\n            10.1109/JICV56113.2022.9934727.\n\n            \n                \n                    \n                         pdf \n                    \n                         video \n                    \n                \n            \n        \n    \n        \n            Aleix Alcacer, Irene Epifanio, Lara Ferrando, Atanasia Lloria, Marina Martínez-García, Belén Martínez-Serrano, Adrián Pérez Suay (Oct 15, 2022). ¿Cuál es la percepción de los ODS del estudiantado universitario? [Conference paper]. ATIDES 2022, Castelló de la Plana (Spain).\n            ISBN: 9788419647146.\n            \n\n            \n                \n                    \n                         pdf \n                    \n                \n            \n        \n    \n        \n            I. Epifanio, A. Alcacer, L. Ferrando, X. Gual-Arnau, A. Lloria, H. Martín-Cruz, M. Martínez-Garcia, J.J. Moyano-Fernández, E. Pérez-Callejo, I. Sepúlveda (Nov 13, 2023). Integrating Sustainable Development Goals in statistics and math subjects in university teaching [Conference paper]. ICERI 2023, Seville (Spain).\n            ISBN: 9788409559428.\n            10.21125/iceri.2023.0121.\n\n            \n                \n                    \n                         pdf \n                    \n                \n            \n        \n    \n        \n            A. Alcacer, I. Epifanio (Nov 13, 2023). Unleashing the potential of the flipped classroom: Improving class attendance and final grades in statistics applied to Public Management andAadministration [Conference paper]. ICERI 2023, Seville (Spain).\n            ISBN: 9788409559428.\n            10.21125/iceri.2023.0122.\n\n            \n                \n                    \n                         pdf \n                    \n                \n            \n        \n    \n\nNo matching items\n\n\n\n\n\nOrganizing committee of the ATIDES congress (2022)."
+    "text": "ProcessingAnalysisVisualization\n\n\n\nPython: pandas, polars\nR: readr, dplyr, tidyr\n\n\n\n\nPython: numpy, scipy, scikit-learn, torch\nR: tidymodels, caret\n\n\n\n\nPython: matplotlib, seaborn, altair, plotly, streamlit\nR: ggplot2, plotly, shiny"
   },
   {
-    "objectID": "teaching/index.html#innovative-teaching-production",
-    "href": "teaching/index.html#innovative-teaching-production",
-    "title": "Teaching",
-    "section": "",
-    "text": "Lara Ferrando, Ismael Cabero, Aleix Alcacer, Atanasia Lloria, Marina Martínez-García, Belén Martínez-Serrano, Adrián Pérez-Suay, Irene Epifanio (2024). Investigación de la autopercepción del estudiantado universitario sobre su influencia en los ODS. Campus Virtuales \n            \n                , 1\n            \n            \n                (13)\n            \n            .\n             10.54988/cv.2024.1.1362 .\n\n            \n                2023 JIF: 2 (Q2 in Education & Educational Research)\n            \n            \n            \n                \n                \n            \n        \n    \n\nNo matching items\n\n\n\n\n\n\n    \n        \n            Lara Ferrando, Aleix Alcacer, Atanasia Lloria, Marina Martínez-García, Belén Martínez-Serrano, Adrián Pérez-Suay, Irene Epifanio (Sep 29, 2022). Analysis of the contributions to the SDGs of university students by degrees [Conference paper]. XII International Conference on Virtual Campus (JICV), Arequipa (Peru).\n            ISBN: 9781665451079.\n            10.1109/JICV56113.2022.9934727.\n\n            \n                \n                    \n                         pdf \n                    \n                         video \n                    \n                \n            \n        \n    \n        \n            Aleix Alcacer, Irene Epifanio, Lara Ferrando, Atanasia Lloria, Marina Martínez-García, Belén Martínez-Serrano, Adrián Pérez Suay (Oct 15, 2022). ¿Cuál es la percepción de los ODS del estudiantado universitario? [Conference paper]. ATIDES 2022, Castelló de la Plana (Spain).\n            ISBN: 9788419647146.\n            \n\n            \n                \n                    \n                         pdf \n                    \n                \n            \n        \n    \n        \n            I. Epifanio, A. Alcacer, L. Ferrando, X. Gual-Arnau, A. Lloria, H. Martín-Cruz, M. Martínez-Garcia, J.J. Moyano-Fernández, E. Pérez-Callejo, I. Sepúlveda (Nov 13, 2023). Integrating Sustainable Development Goals in statistics and math subjects in university teaching [Conference paper]. ICERI 2023, Seville (Spain).\n            ISBN: 9788409559428.\n            10.21125/iceri.2023.0121.\n\n            \n                \n                    \n                         pdf \n                    \n                \n            \n        \n    \n        \n            A. Alcacer, I. Epifanio (Nov 13, 2023). Unleashing the potential of the flipped classroom: Improving class attendance and final grades in statistics applied to Public Management andAadministration [Conference paper]. ICERI 2023, Seville (Spain).\n            ISBN: 9788409559428.\n            10.21125/iceri.2023.0122.\n\n            \n                \n                    \n                         pdf \n                    \n                \n            \n        \n    \n\nNo matching items\n\n\n\n\n\nOrganizing committee of the ATIDES congress (2022)."
-  },
-  {
-    "objectID": "teaching/index.html#teaching-experience",
-    "href": "teaching/index.html#teaching-experience",
-    "title": "Teaching",
-    "section": "Teaching experience",
-    "text": "Teaching experience\n\n\n    \n\n\n\nCourse\nDegree\nEntity\nECTS\nYear\n\n\n\n\nIntroduction to Statistics\nBachelor's Degree in Public Management and Administration\nUJI\n5\n2024/2025\n\n\nBachelor's Thesis\nBachelor's Degree in Computational Mathematics\nUJI\n0.94\n2024/2025\n\n\nStatistics Applied to Public Management and Administration\nBachelor's Degree in Public Management and Administration\nUJI\n6\n2023/2024\n\n\nStatistics Applied to Public Management and Administration\nBachelor's Degree in Public Management and Administration\nUJI\n6\n2022/2023\n\n\nStatistics Applied to Public Management and Administration\nBachelor's Degree in Public Management and Administration\nUJI\n4.5\nNaN/2022s\n\n\nIntroduction to Statistics\nBachelor's Degree in Labour Relations and Human Resources\nUJI\n1.5\n2021/2022\n\n\nSoftware for Modelling Industrial Systems (Distance)\nMaster's Degree in Computational Mathematics (Distance)\nUJI\n2\n2020/2021\n\n\nSoftware for Modelling Industrial Systems\nMaster's Degree in Computational Mathematics\nUJI\n2\n2020/2021\n\n\n\n\n  \nNo matching items"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Aleix Alcacer Sales",
-    "section": "",
-    "text": "I am a passionate postdoctoral researcher at Jaume I University, deeply immersed in the vibrant world of Open Source. My enthusiasm lies in developing innovative algorithms, with a keen focus on optimizing both performance and efficiency.\nAt present, my research endeavors are centered around crafting novel methods in the fascinating field of archetypal analysis.\nView my complete CV.\n \n  \n   \n  \n      GitHub\n  \n  \n      Orcid\n  \n  \n      Twitter\n  \n  \n      LinkedIn\n  \n  \n      Email"
-  },
-  {
-    "objectID": "index.html#education",
-    "href": "index.html#education",
-    "title": "Aleix Alcacer Sales",
-    "section": "Education",
-    "text": "Education\n\nPostdoc in Archetypal Analysis | 2024 - present\nUniversitat Jaume I, Spain\nPh.D. in Statistics | 2020 - 2024\nUniversitat Jaume I, Spain\nM.Sc. in Computacional Mathematics | 2018 - 2020\nUniversitat Jaume I, Spain\nB.Sc. in Computacional Mathematics | 2014 - 2018\nUniversitat Jaume I, Spain"
-  },
-  {
-    "objectID": "index.html#interests",
-    "href": "index.html#interests",
-    "title": "Aleix Alcacer Sales",
-    "section": "Interests",
-    "text": "Interests\n\nArchetypal Analysis\nMachine Learning\nData Visualisation\nReinforcement learning\nHPC and Software Optimization\nKnowledge sharing"
+    "objectID": "skills/index.html#languages",
+    "href": "skills/index.html#languages",
+    "title": "Professional skills",
+    "section": "Languages",
+    "text": "Languages\n\n\n\nLanguage\nLevel\nCertification\n\n\n\n\nSpanish\nNative or Bilingual\n-\n\n\nCatalan\nNative or Bilingual\nC1\n\n\nEnglish\nProfessional Working\nB2"
   },
   {
     "objectID": "research/index.html",
@@ -70,24 +42,52 @@
     "text": "Date\nTitle\nDescription\nReading Time\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "skills/index.html",
-    "href": "skills/index.html",
-    "title": "Professional skills",
+    "objectID": "os-projects/index.html",
+    "href": "os-projects/index.html",
+    "title": "Open Source Projects",
     "section": "",
-    "text": "ProcessingAnalysisVisualization\n\n\n\nPython: pandas, polars\nR: readr, dplyr, tidyr\n\n\n\n\nPython: numpy, scipy, scikit-learn, torch\nR: tidymodels, caret\n\n\n\n\nPython: matplotlib, seaborn, altair, plotly, streamlit\nR: ggplot2, plotly, shiny"
+    "text": "Python packages\n\n\n\n\n\n  \n    \n      \n        archetypes\n      \n       \n      \n        \n      \n       \n    \n   \n    \n      Sikit-learn compatible package for archetypal analysis.\n \n    \n    \n      \n        creator\n      \n      \n        2021 - present\n      \n    \n  \n\n  \n    \n      \n        memprofiler\n      \n       \n      \n        \n      \n       \n    \n   \n    \n      IPython extension for monitoring memory usage of Jupyter notebook cells.\n \n    \n    \n      \n        creator\n      \n      \n        2020 - present\n      \n    \n  \n\n  \n    \n      \n        blosc\n      \n       \n      \n        \n      \n       \n    \n   \n    \n      High-performance chunk-based compressor for binary data.\n \n    \n    \n      \n        mantainer\n      \n      \n        2018 - 2023\n      \n    \n  \n\n\n\nOthers\n\n\n\n\n\n  \n    \n      \n        cmlint\n      \n       \n      \n        \n      \n       \n    \n   \n    \n      Pre-commit hook for linitng commit messages and creating robust changelogs.\n \n    \n    \n      \n        creator\n      \n      \n        2022 - present\n      \n    \n  \n\n\n\nNo matching items"
   },
   {
-    "objectID": "skills/index.html#data-science",
-    "href": "skills/index.html#data-science",
-    "title": "Professional skills",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Aleix Alcacer Sales",
     "section": "",
-    "text": "ProcessingAnalysisVisualization\n\n\n\nPython: pandas, polars\nR: readr, dplyr, tidyr\n\n\n\n\nPython: numpy, scipy, scikit-learn, torch\nR: tidymodels, caret\n\n\n\n\nPython: matplotlib, seaborn, altair, plotly, streamlit\nR: ggplot2, plotly, shiny"
+    "text": "I am a passionate postdoctoral researcher at Jaume I University, deeply immersed in the vibrant world of Open Source. My enthusiasm lies in developing innovative algorithms, with a keen focus on optimizing both performance and efficiency.\nAt present, my research endeavors are centered around crafting novel methods in the fascinating field of archetypal analysis.\nView my complete CV.\n \n  \n   \n  \n      GitHub\n  \n  \n      Orcid\n  \n  \n      Twitter\n  \n  \n      LinkedIn\n  \n  \n      Email"
   },
   {
-    "objectID": "skills/index.html#languages",
-    "href": "skills/index.html#languages",
-    "title": "Professional skills",
-    "section": "Languages",
-    "text": "Languages\n\n\n\nLanguage\nLevel\nCertification\n\n\n\n\nSpanish\nNative or Bilingual\n-\n\n\nCatalan\nNative or Bilingual\nC1\n\n\nEnglish\nProfessional Working\nB2"
+    "objectID": "index.html#education",
+    "href": "index.html#education",
+    "title": "Aleix Alcacer Sales",
+    "section": "Education",
+    "text": "Education\n\nPostdoc in Archetypal Analysis | 2024 - present\nUniversitat Jaume I, Spain\nPh.D. in Statistics | 2020 - 2024\nUniversitat Jaume I, Spain\nM.Sc. in Computacional Mathematics | 2018 - 2020\nUniversitat Jaume I, Spain\nB.Sc. in Computacional Mathematics | 2014 - 2018\nUniversitat Jaume I, Spain"
+  },
+  {
+    "objectID": "index.html#interests",
+    "href": "index.html#interests",
+    "title": "Aleix Alcacer Sales",
+    "section": "Interests",
+    "text": "Interests\n\nArchetypal Analysis\nMachine Learning\nData Visualisation\nReinforcement learning\nHPC and Software Optimization\nKnowledge sharing"
+  },
+  {
+    "objectID": "teaching/index.html",
+    "href": "teaching/index.html",
+    "title": "Teaching",
+    "section": "",
+    "text": "Lara Ferrando, Ismael Cabero, Aleix Alcacer, Atanasia Lloria, Marina Martínez-García, Belén Martínez-Serrano, Adrián Pérez-Suay, Irene Epifanio (2024). Investigación de la autopercepción del estudiantado universitario sobre su influencia en los ODS. Campus Virtuales \n            \n                , 1\n            \n            \n                (13)\n            \n            .\n             10.54988/cv.2024.1.1362 .\n\n            \n                2023 JIF: 2 (Q2 in Education & Educational Research)\n            \n            \n            \n                \n                \n            \n        \n    \n\nNo matching items\n\n\n\n\n\n\n    \n        \n            Lara Ferrando, Aleix Alcacer, Atanasia Lloria, Marina Martínez-García, Belén Martínez-Serrano, Adrián Pérez-Suay, Irene Epifanio (Sep 29, 2022). Analysis of the contributions to the SDGs of university students by degrees [Conference paper]. XII International Conference on Virtual Campus (JICV), Arequipa (Peru).\n            ISBN: 9781665451079.\n            10.1109/JICV56113.2022.9934727.\n\n            \n                \n                    \n                         pdf \n                    \n                         video \n                    \n                \n            \n        \n    \n        \n            Aleix Alcacer, Irene Epifanio, Lara Ferrando, Atanasia Lloria, Marina Martínez-García, Belén Martínez-Serrano, Adrián Pérez Suay (Oct 15, 2022). ¿Cuál es la percepción de los ODS del estudiantado universitario? [Conference paper]. ATIDES 2022, Castelló de la Plana (Spain).\n            ISBN: 9788419647146.\n            \n\n            \n                \n                    \n                         pdf \n                    \n                \n            \n        \n    \n        \n            I. Epifanio, A. Alcacer, L. Ferrando, X. Gual-Arnau, A. Lloria, H. Martín-Cruz, M. Martínez-Garcia, J.J. Moyano-Fernández, E. Pérez-Callejo, I. Sepúlveda (Nov 13, 2023). Integrating Sustainable Development Goals in statistics and math subjects in university teaching [Conference paper]. ICERI 2023, Seville (Spain).\n            ISBN: 9788409559428.\n            10.21125/iceri.2023.0121.\n\n            \n                \n                    \n                         pdf \n                    \n                \n            \n        \n    \n        \n            A. Alcacer, I. Epifanio (Nov 13, 2023). Unleashing the potential of the flipped classroom: Improving class attendance and final grades in statistics applied to Public Management andAadministration [Conference paper]. ICERI 2023, Seville (Spain).\n            ISBN: 9788409559428.\n            10.21125/iceri.2023.0122.\n\n            \n                \n                    \n                         pdf \n                    \n                \n            \n        \n    \n        \n            Lara ferrando, Ismael Cabero, Aleix Alcacer, Atanasia Lloria, Marina Martínez-García, Belén Martínez-Serrano, Adrián Pérez-Suay, Irene Epifanio (Jan 31, 2024). Investigating university students' self-perception of their influence on the Sdgs [Conference paper]. Campus Virtuales, Online.\n            \n            10.54988/cv.2024.1.1362.\n\n            \n                \n                    \n                         pdf \n                    \n                \n            \n        \n    \n        \n            Aleix Alcacer, Irene Epifanio, Atanasia Lloria, Marina Martínez-García, Belén Martínez-Serrano (Nov 11, 2024). Universal design for learning in statistics of industrial design engineering [Conference paper]. ICERI 2024, Seville (Spain).\n            ISBN: 9788409630103.\n            10.21125/iceri.2024.0290.\n\n            \n                \n                    \n                         pdf \n                    \n                \n            \n        \n    \n        \n            Aleix Alcacer, Irene Epifanio, Atanasia Lloria, Marina Martínez-García, Belén Martínez-Serrano (Nov 10, 2025). Enhancing learning and motivation in statistics by a digital escape room [Conference paper]. ICERI 2025, Seville (Spain).\n            ISBN: 9788409787067.\n            10.21125/iceri.2025.0412.\n\n            \n                \n                    \n                         pdf \n                    \n                \n            \n        \n    \n\nNo matching items\n\n\n\n\n\nOrganizing committee of the ATIDES congress (2022)."
+  },
+  {
+    "objectID": "teaching/index.html#innovative-teaching-production",
+    "href": "teaching/index.html#innovative-teaching-production",
+    "title": "Teaching",
+    "section": "",
+    "text": "Lara Ferrando, Ismael Cabero, Aleix Alcacer, Atanasia Lloria, Marina Martínez-García, Belén Martínez-Serrano, Adrián Pérez-Suay, Irene Epifanio (2024). Investigación de la autopercepción del estudiantado universitario sobre su influencia en los ODS. Campus Virtuales \n            \n                , 1\n            \n            \n                (13)\n            \n            .\n             10.54988/cv.2024.1.1362 .\n\n            \n                2023 JIF: 2 (Q2 in Education & Educational Research)\n            \n            \n            \n                \n                \n            \n        \n    \n\nNo matching items\n\n\n\n\n\n\n    \n        \n            Lara Ferrando, Aleix Alcacer, Atanasia Lloria, Marina Martínez-García, Belén Martínez-Serrano, Adrián Pérez-Suay, Irene Epifanio (Sep 29, 2022). Analysis of the contributions to the SDGs of university students by degrees [Conference paper]. XII International Conference on Virtual Campus (JICV), Arequipa (Peru).\n            ISBN: 9781665451079.\n            10.1109/JICV56113.2022.9934727.\n\n            \n                \n                    \n                         pdf \n                    \n                         video \n                    \n                \n            \n        \n    \n        \n            Aleix Alcacer, Irene Epifanio, Lara Ferrando, Atanasia Lloria, Marina Martínez-García, Belén Martínez-Serrano, Adrián Pérez Suay (Oct 15, 2022). ¿Cuál es la percepción de los ODS del estudiantado universitario? [Conference paper]. ATIDES 2022, Castelló de la Plana (Spain).\n            ISBN: 9788419647146.\n            \n\n            \n                \n                    \n                         pdf \n                    \n                \n            \n        \n    \n        \n            I. Epifanio, A. Alcacer, L. Ferrando, X. Gual-Arnau, A. Lloria, H. Martín-Cruz, M. Martínez-Garcia, J.J. Moyano-Fernández, E. Pérez-Callejo, I. Sepúlveda (Nov 13, 2023). Integrating Sustainable Development Goals in statistics and math subjects in university teaching [Conference paper]. ICERI 2023, Seville (Spain).\n            ISBN: 9788409559428.\n            10.21125/iceri.2023.0121.\n\n            \n                \n                    \n                         pdf \n                    \n                \n            \n        \n    \n        \n            A. Alcacer, I. Epifanio (Nov 13, 2023). Unleashing the potential of the flipped classroom: Improving class attendance and final grades in statistics applied to Public Management andAadministration [Conference paper]. ICERI 2023, Seville (Spain).\n            ISBN: 9788409559428.\n            10.21125/iceri.2023.0122.\n\n            \n                \n                    \n                         pdf \n                    \n                \n            \n        \n    \n        \n            Lara ferrando, Ismael Cabero, Aleix Alcacer, Atanasia Lloria, Marina Martínez-García, Belén Martínez-Serrano, Adrián Pérez-Suay, Irene Epifanio (Jan 31, 2024). Investigating university students' self-perception of their influence on the Sdgs [Conference paper]. Campus Virtuales, Online.\n            \n            10.54988/cv.2024.1.1362.\n\n            \n                \n                    \n                         pdf \n                    \n                \n            \n        \n    \n        \n            Aleix Alcacer, Irene Epifanio, Atanasia Lloria, Marina Martínez-García, Belén Martínez-Serrano (Nov 11, 2024). Universal design for learning in statistics of industrial design engineering [Conference paper]. ICERI 2024, Seville (Spain).\n            ISBN: 9788409630103.\n            10.21125/iceri.2024.0290.\n\n            \n                \n                    \n                         pdf \n                    \n                \n            \n        \n    \n        \n            Aleix Alcacer, Irene Epifanio, Atanasia Lloria, Marina Martínez-García, Belén Martínez-Serrano (Nov 10, 2025). Enhancing learning and motivation in statistics by a digital escape room [Conference paper]. ICERI 2025, Seville (Spain).\n            ISBN: 9788409787067.\n            10.21125/iceri.2025.0412.\n\n            \n                \n                    \n                         pdf \n                    \n                \n            \n        \n    \n\nNo matching items\n\n\n\n\n\nOrganizing committee of the ATIDES congress (2022)."
+  },
+  {
+    "objectID": "teaching/index.html#teaching-experience",
+    "href": "teaching/index.html#teaching-experience",
+    "title": "Teaching",
+    "section": "Teaching experience",
+    "text": "Teaching experience\n\n\n    \n\n\n\nCourse\nDegree\nEntity\nECTS\nYear\n\n\n\n\nIntroduction to Statistics\nBachelor's Degree in Public Management and Administration\nUJI\n5\n2024/2025\n\n\nBachelor's Thesis\nBachelor's Degree in Computational Mathematics\nUJI\n0.94\n2024/2025\n\n\nStatistics Applied to Public Management and Administration\nBachelor's Degree in Public Management and Administration\nUJI\n6\n2023/2024\n\n\nStatistics Applied to Public Management and Administration\nBachelor's Degree in Public Management and Administration\nUJI\n6\n2022/2023\n\n\nStatistics Applied to Public Management and Administration\nBachelor's Degree in Public Management and Administration\nUJI\n4.5\nNaN/2022s\n\n\nIntroduction to Statistics\nBachelor's Degree in Labour Relations and Human Resources\nUJI\n1.5\n2021/2022\n\n\nSoftware for Modelling Industrial Systems (Distance)\nMaster's Degree in Computational Mathematics (Distance)\nUJI\n2\n2020/2021\n\n\nSoftware for Modelling Industrial Systems\nMaster's Degree in Computational Mathematics\nUJI\n2\n2020/2021\n\n\n\n\n  \nNo matching items"
   }
 ]
