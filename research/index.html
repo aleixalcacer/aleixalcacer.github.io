@@ -131,6 +131,62 @@ ul.task-list li input[type="checkbox"] {
   
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-book-chapters .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-author','listing-book','listing-series','listing-publisher','listing-year','listing-doi',{ data: ['index'] },{ data: ['categories'] }],
+      
+      searchColumns: ["listing-title","listing-author","listing-book","listing-series","listing-publisher","listing-year","listing-doi"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-book-chapters'] = new List('listing-book-chapters', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-conference-proceedings .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-author','listing-book','listing-series','listing-publisher','listing-year','listing-doi',{ data: ['index'] },{ data: ['categories'] }],
+      
+      searchColumns: ["listing-title","listing-author","listing-book","listing-series","listing-publisher","listing-year","listing-doi"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-conference-proceedings'] = new List('listing-conference-proceedings', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
     const listingTargetEl = window.document.querySelector('#listing-conference-contributions .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
@@ -299,8 +355,8 @@ window.Quarto = {
 
 <section id="scientific-production" class="level2">
 <h2 class="anchored" data-anchor-id="scientific-production">Scientific production</h2>
-<section id="journals" class="level3">
-<h3 class="anchored" data-anchor-id="journals">Journals</h3>
+<section id="peer-reviewed-journal-articles" class="level3">
+<h3 class="anchored" data-anchor-id="peer-reviewed-journal-articles">Peer-Reviewed Journal Articles</h3>
 <div id="listing-journal-publications" class="quarto-listing quarto-listing-container-custom">
 <ul id="quarto-journal">
     
@@ -403,10 +459,66 @@ window.Quarto = {
 <div class="listing-no-matching d-none">No matching items</div>
 </div>
 </section>
-<section id="main-conferences" class="level3">
-<h3 class="anchored" data-anchor-id="main-conferences">Main Conferences</h3>
+<section id="book-chapters" class="level3">
+<h3 class="anchored" data-anchor-id="book-chapters">Book Chapters</h3>
+<div id="listing-book-chapters" class="quarto-listing quarto-listing-container-custom">
+<ul id="quarto-book-chapter">
+    
+        <li class="quarto-publication">
+            Aleix Alcacer, Irene Epifanio (2026). Representing asymmetric relationships by h-plots. Discovering the archetypal patterns of cross-journal citation relationships. In <i>Analysis of asymmetric relationships: Case studies</i>
+            
+                (Behaviormetrics: Quantitative Approaches to Human Behavior)
+            
+            . Springer.
+            <a href="https://doi.org/10.48550/arXiv.2601.05400"> 10.48550/arXiv.2601.05400 </a>.
+
+            <div class="quarto-labels">
+                
+                
+            </div>
+        </li>
+    
+</ul>
+<div class="listing-no-matching d-none">No matching items</div>
+</div>
+</section>
+<section id="conference-proceedings" class="level3">
+<h3 class="anchored" data-anchor-id="conference-proceedings">Conference Proceedings</h3>
+<div id="listing-conference-proceedings" class="quarto-listing quarto-listing-container-custom">
+<ul id="quarto-proceeding">
+    
+        <li class="quarto-publication">
+            Aleix Alcacer, Irene Epifanio (2026). Archetypal cases for questionnaires with nominal multiple choice questions. In <i>Statistical Methods for Data Analysis and Decision Sciences</i>
+            
+                (Italian Statistical Society Series on Advances in Statistics)
+            
+            . Springer.
+            <a href="https://doi.org/10.48550/arXiv.2601.05392"> 10.48550/arXiv.2601.05392 </a>.
+
+            <div class="quarto-labels">
+                
+                
+            </div>
+        </li>
+    
+</ul>
+<div class="listing-no-matching d-none">No matching items</div>
+</div>
+</section>
+<section id="conference-presentations" class="level3">
+<h3 class="anchored" data-anchor-id="conference-presentations">Conference Presentations</h3>
 <div id="listing-conference-contributions" class="quarto-listing quarto-listing-container-custom">
 <ul id="quarto-conference">
+    
+        <li class="quarto-publication">
+            Aleix Alcacer, Irene Epifanio (Aug 23, 2025). <i>Representing asymmetric relationships by h-plots. Discovering the archetypal patterns of cross-journal citation relationships</i>. 108 Symposium of the Behaviormetric Society, Tokyo (Japan).
+            
+            
+
+            <div class="quarto-labels">
+                
+            </div>
+        </li>
     
         <li class="quarto-publication">
             Aleix Alcacer, Irene Epifanio (Aug 23, 2025). <i>Fair archetypal analysis for fair representation</i>. 8th International Conference on Econometrics and Statistics, Tokyo (Japan).
@@ -488,8 +600,8 @@ window.Quarto = {
 <div class="listing-no-matching d-none">No matching items</div>
 </div>
 </section>
-<section id="other-contributions" class="level3">
-<h3 class="anchored" data-anchor-id="other-contributions">Other Contributions</h3>
+<section id="others" class="level3">
+<h3 class="anchored" data-anchor-id="others">Others</h3>
 <div id="listing-other-contributions" class="quarto-listing quarto-listing-container-custom">
 <ul id="quarto-conference">
     
@@ -608,6 +720,9 @@ window.Quarto = {
 </ul>
 <div class="listing-no-matching d-none">No matching items</div>
 </div>
+
+
+
 </section>
 
 </main> <!-- /main -->
@@ -1018,8 +1133,8 @@ window.Quarto = {
       &nbsp;
     </div>   
     <div class="nav-footer-center">
-      <div class="footer-contents">Made with  using Quarto</div>  
-    </div>
+<p>Made with <i class="fa-solid fa-heart" aria-label="heart"></i> using Quarto</p>
+</div>
     <div class="nav-footer-right">
       &nbsp;
     </div>
