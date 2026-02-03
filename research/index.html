@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.26">
+<meta name="generator" content="quarto-1.8.27">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -39,7 +39,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap-daa91ef1ba8f3dbf514e8e3765dba6de.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
@@ -73,6 +73,34 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <script>
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-research-stays .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-institution','listing-location','listing-dates','listing-host','listing-description',{ data: ['index'] },{ data: ['categories'] }],
+      
+      searchColumns: ["listing-institution","listing-location","listing-dates","listing-host","listing-description"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-research-stays'] = new List('listing-research-stays', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
     const listingTargetEl = window.document.querySelector('#listing-journal-publications .list');
@@ -553,6 +581,33 @@ window.Quarto = {
 <div class="listing-no-matching d-none">No matching items</div>
 </div>
 </section>
+</section>
+<section id="research-stays" class="level2">
+<h2 class="anchored" data-anchor-id="research-stays">Research Stays</h2>
+<div id="listing-research-stays" class="quarto-listing quarto-listing-container-custom">
+<ul id="quarto-stays">
+    
+        <li class="quarto-publication">
+            <b>Blosc Development Team</b>, Castelló de la Plana, Spain (Feb 2021 - Sept 2021).
+            <br>Host: Francesc Alted.
+            <br><i>Develop two codecs for Blosc using AA and fuzzy k-means.</i>
+        </li>
+    
+        <li class="quarto-publication">
+            <b>Technical University of Denmark (DTU)</b>, Lyngby, Denmark (Oct 2023 - Dec 2023).
+            <br>Host: Morten Mørup.
+            <br><i>Extend AA to n dimensions along with other minor extensions.</i>
+        </li>
+    
+        <li class="quarto-publication">
+            <b>Technical University of Denmark (DTU)</b>, Lyngby, Denmark (Oct 2024 - Dec 2024).
+            <br>Host: Morten Mørup.
+            <br><i>Extend AA to n dimensions along with other minor extensions.</i>
+        </li>
+    
+</ul>
+<div class="listing-no-matching d-none">No matching items</div>
+</div>
 </section>
 
 </main> <!-- /main -->
