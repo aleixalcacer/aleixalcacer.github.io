@@ -1,6 +1,9 @@
 ---
 title: "Research"
-listing: 
+listing:
+  - id: research-stays
+    template: stays.ejs
+    contents: research-stays.yml
   - id: journal-publications
     template: journal.ejs
     contents: journal-publications.yml
@@ -11,7 +14,6 @@ listing:
     template: conference.ejs
     contents: other-contributions.yml
 ---
-
 
 ## Scientific production
 
@@ -28,3 +30,8 @@ listing:
 ### Other Contributions
 
 ::: {#other-contributions}
+:::
+
+## Research Stays
+
+::: {#research-stays}

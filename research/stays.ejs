@@ -1,0 +1,11 @@
+```{=html}
+<ul id="quarto-stays">
+    <% for (const item of items) { %>
+        <li class="quarto-publication">
+            <b><%= item.institution %></b>, <%= item.location %> (<%= item.dates %>).
+            <br>Host: <%= item.host %>.
+            <br><i><%= item.description %></i>
+        </li>
+    <% } %>
+</ul>
+```
