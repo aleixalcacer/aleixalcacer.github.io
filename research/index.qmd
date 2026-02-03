@@ -7,6 +7,12 @@ listing:
   - id: journal-publications
     template: journal.ejs
     contents: journal-publications.yml
+  - id: book-chapters
+    template: book-chapter.ejs
+    contents: book-chapters.yml
+  - id: conference-proceedings
+    template: proceeding.ejs
+    contents: conference-proceedings.yml
   - id: conference-contributions
     template: conference.ejs
     contents: conference-contributions.yml
@@ -17,17 +23,27 @@ listing:
 
 ## Scientific production
 
-### Journals
+### Peer-Reviewed Journal Articles
 
 ::: {#journal-publications}
 :::
 
-### Main Conferences
+### Book Chapters
+
+::: {#book-chapters}
+:::
+
+### Conference Proceedings
+
+::: {#conference-proceedings}
+:::
+
+### Conference Presentations
 
 ::: {#conference-contributions}
 :::
 
-### Other Contributions
+### Others
 
 ::: {#other-contributions}
 :::
@@ -35,3 +51,4 @@ listing:
 ## Research Stays
 
 ::: {#research-stays}
+:::
