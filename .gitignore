@@ -8,3 +8,17 @@ _site/
 
 posts/**/*.sty
 posts/**/*.tex
+
+# Generated listing files (source: _data/cv.yml)
+research/journal-publications.yml
+research/book-chapters.yml
+research/conference-proceedings.yml
+research/conference-contributions.yml
+research/other-contributions.yml
+research/research-stays.yml
+teaching/experience.yml
+teaching/journal-publications.yml
+teaching/conference-contributions.yml
+os-projects/projects.yml
+_includes/education.qmd
+_includes/interests.qmd

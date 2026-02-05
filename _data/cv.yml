@@ -1,0 +1,571 @@
+# ============================================
+# PERSONAL INFORMATION
+# ============================================
+personal:
+  name: "Aleix Alcacer Sales"
+  email: "aalcacer@uji.es"
+  website: "https://aleixalcacer.com"
+  orcid: "0000-0003-3566-0204"
+  cv_url: "https://cvn.fecyt.es/0000-0003-3566-0204"
+  image: "profile.jpg"
+  bio: |
+    I am a passionate postdoctoral researcher at Jaume I University, deeply immersed in the vibrant world of Open Source. My enthusiasm lies in developing innovative algorithms, with a keen focus on optimizing both performance and efficiency.
+
+    At present, my research endeavors are centered around crafting novel methods in the fascinating field of archetypal analysis.
+  social:
+    - platform: github
+      icon: "fa brands github"
+      url: "https://github.com/aleixalcacer"
+      label: "GitHub"
+    - platform: orcid
+      icon: "fa brands orcid"
+      url: "https://orcid.org/0000-0003-3566-0204"
+      label: "Orcid"
+    - platform: twitter
+      icon: "fa brands x-twitter"
+      url: "https://twitter.com/aleixalcacer"
+      label: "Twitter"
+    - platform: linkedin
+      icon: "fa brands linkedin"
+      url: "https://www.linkedin.com/in/aleixalcacer"
+      label: "LinkedIn"
+    - platform: email
+      icon: "fa solid envelope"
+      url: "mailto:aalcacer@uji.es"
+      label: "Email"
+
+# ============================================
+# EDUCATION
+# ============================================
+education:
+  - degree: "Postdoc in Archetypal Analysis"
+    institution: "Universitat Jaume I"
+    location: "Spain"
+    start_year: 2024
+    end_year: null
+  - degree: "Ph.D. in Statistics"
+    institution: "Universitat Jaume I"
+    location: "Spain"
+    start_year: 2020
+    end_year: 2024
+  - degree: "M.Sc. in Computational Mathematics"
+    institution: "Universitat Jaume I"
+    location: "Spain"
+    start_year: 2018
+    end_year: 2020
+  - degree: "B.Sc. in Computational Mathematics"
+    institution: "Universitat Jaume I"
+    location: "Spain"
+    start_year: 2014
+    end_year: 2018
+
+# ============================================
+# RESEARCH INTERESTS
+# ============================================
+interests:
+  - "Archetypal Analysis"
+  - "Machine Learning"
+  - "Data Visualisation"
+  - "Reinforcement Learning"
+  - "HPC and Software Optimization"
+  - "Knowledge Sharing"
+
+# ============================================
+# PUBLICATIONS (BibTeX-compatible fields)
+# ============================================
+publications:
+  articles:
+    - type: article
+      key: alcacer2024outlier
+      title: "Outlier detection of clustered functional data with image and signal processing applications by archetype analysis"
+      author: "Alcacer, Aleix and Epifanio, Irene"
+      journal: "PLOS ONE"
+      year: 2024
+      volume: null
+      number: null
+      doi: "10.1371/journal.pone.0311418"
+      jif: 2.6
+      jif_year: 2024
+      jif_quartile: "Q2"
+      jif_category: "Multidisciplinary Sciences"
+
+    - type: article
+      key: alcacer2024biarchetype
+      title: "Biarchetype Analysis: Simultaneous Learning of Observations and Features Based on Extremes"
+      author: "Alcacer, Aleix and Epifanio, Irene and Gual-Arnau, Ximo"
+      journal: "IEEE Transactions on Pattern Analysis and Machine Intelligence"
+      year: 2024
+      volume: null
+      number: null
+      doi: "10.1109/TPAMI.2024.3400730"
+      jif: 18.6
+      jif_year: 2024
+      jif_quartile: "Q1"
+      jif_category: "Computer Science, Artificial Intelligence"
+
+    - type: article
+      key: alcacer2024ordinal
+      title: "Ordinal classification for interval-valued data and interval-valued functional data"
+      author: "Alcacer, Aleix and Epifanio, Irene and Martinez-Garcia, Marina"
+      journal: "Expert Systems with Applications"
+      year: 2024
+      volume: 238
+      number: null
+      doi: "10.1016/j.eswa.2023.122277"
+      jif: 7.5
+      jif_year: 2024
+      jif_quartile: "Q1"
+      jif_category: "Computer Science, Artificial Intelligence"
+
+    - type: article
+      key: alcacer2021combining
+      title: "Combining Classification and User-Based Collaborative Filtering for Matching Footwear Size"
+      author: "Alcacer, Aleix and Epifanio, Irene and Valero, Jorge and Ballester, Alfredo"
+      journal: "MATHEMATICS"
+      year: 2021
+      volume: 9
+      number: 7
+      doi: "10.3390/math9070771"
+      jif: 2.592
+      jif_year: 2021
+      jif_quartile: "Q1"
+      jif_category: "Mathematics"
+
+    - type: article
+      key: alcacer2020datadriven
+      title: "A data-driven classification of 3D foot types by archetypal shapes based on landmarks"
+      author: "Alcacer, Aleix and Epifanio, Irene and Ibáñez, María Victoria and Simó, Amelia and Ballester, Alfredo"
+      journal: "PLOS ONE"
+      year: 2020
+      volume: 15
+      number: 1
+      doi: "10.1371/journal.pone.0228016"
+      jif: 3.240
+      jif_year: 2020
+      jif_quartile: "Q2"
+      jif_category: "Multidisciplinary Sciences"
+
+  incollection:
+    - type: incollection
+      key: alcacer2026hplots
+      title: "Representing asymmetric relationships by h-plots. Discovering the archetypal patterns of cross-journal citation relationships"
+      author: "Alcacer, Aleix and Epifanio, Irene"
+      booktitle: "Analysis of asymmetric relationships: Case studies"
+      series: "Behaviormetrics: Quantitative Approaches to Human Behavior"
+      publisher: "Springer"
+      year: 2026
+      doi: "10.48550/arXiv.2601.05400"
+
+  inproceedings:
+    - type: inproceedings
+      key: alcacer2026archetypal
+      title: "Archetypal cases for questionnaires with nominal multiple choice questions"
+      author: "Alcacer, Aleix and Epifanio, Irene"
+      booktitle: "Statistical Methods for Data Analysis and Decision Sciences"
+      series: "Italian Statistical Society Series on Advances in Statistics"
+      publisher: "Springer"
+      year: 2026
+      doi: "10.48550/arXiv.2601.05392"
+
+  presentations:
+    - type: presentation
+      key: alcacer2025hplots
+      title: "Representing asymmetric relationships by h-plots. Discovering the archetypal patterns of cross-journal citation relationships"
+      author: "Alcacer, Aleix and Epifanio, Irene"
+      conference: "108 Symposium of the Behaviormetric Society"
+      location: "Tokyo (Japan)"
+      date: "2025-08-23"
+      year: 2025
+
+    - type: presentation
+      key: alcacer2025fair
+      title: "Fair archetypal analysis for fair representation"
+      author: "Alcacer, Aleix and Epifanio, Irene"
+      conference: "8th International Conference on Econometrics and Statistics"
+      location: "Tokyo (Japan)"
+      date: "2025-08-23"
+      year: 2025
+      labels:
+        - name: "certificate"
+          url: "https://drive.google.com/file/d/1IJiLpssqLg4x1P6TAPUiXHn2KspnSCDD/view?usp=sharing"
+
+    - type: presentation
+      key: alcacer2023relational
+      title: "Relational Episodic Inference for Fictive Planning"
+      author: "Alcacer, Aleix and Martínez Garcia, Marina and McNamee, Daniel and Kaplan, Raphael"
+      conference: "Cognitive Computational Neuroscience"
+      location: "Oxford (United Kingdom)"
+      date: "2023-08-06"
+      year: 2023
+      labels:
+        - name: "certificate"
+          url: ""
+
+    - type: presentation
+      key: alcacer2021combining_conf
+      title: "Combining user-based collaborative filtering and classification for matching footwear size"
+      author: "Alcacer, Aleix and Epifanio, Irene and Valero, Jorge and Ballester, Alfredo"
+      conference: "CFE-CMStatistics 2021"
+      location: "London (United Kingdom)"
+      date: "2021-12-19"
+      year: 2021
+      isbn: "9789925781256"
+      note: "Invited presentation"
+      labels:
+        - name: "certificate"
+          url: "https://drive.google.com/file/d/1u8V2ToL3We1NdwNKIB9PjOcgN3IAhlw6/view?usp=sharing"
+
+    - type: presentation
+      key: alcacer2019archetypal
+      title: "Archetypal contour shapes"
+      author: "Alcacer, Aleix and Epifanio, Irene and Ibáñez, María Victoria and Simó, Amelia"
+      conference: "12th Scientific Meeting Classification and Data Analysis Group (CLADAG 2019)"
+      location: "Cassino (Italy)"
+      date: "2019-09-11"
+      year: 2019
+      isbn: "9788883171086"
+      note: "Invited presentation"
+      labels:
+        - name: "certificate"
+          url: "https://drive.google.com/file/d/1STv2MzvPv-Z3zTIgHqTqwFAoxmhk3yrH/view?usp=sharing"
+
+    - type: presentation
+      key: alcacer2019analysis
+      title: "Analysis of 2D foot morphology by functional archetypal analysis"
+      author: "Alcacer, Aleix and Epifanio, Irene and Ibáñez, María Victoria and Simó, Amelia"
+      conference: "XVII Conferencia Española y VII Encuentro Iberoamericano de Biometría (CEB-EIB 2019)"
+      location: "València (Spain)"
+      date: "2019-06-19"
+      year: 2019
+      isbn: "9788409117062"
+      note: "Invited presentation. Selected for the Young Statician Showcase"
+      labels:
+        - name: "certificate"
+          url: "https://drive.google.com/file/d/1pjSPRgeuAncAxdtAqLolYyFZjF4YZxoI/view?usp=sharing"
+
+  other:
+    - type: presentation
+      key: alcacer2024biarchetyper
+      title: "Análisis de biarquetipos en R"
+      author: "Alcacer, Aleix and Epifanio, Irene"
+      conference: "LatinR 2024"
+      location: "Online"
+      date: "2024-11-21"
+      year: 2024
+      labels:
+        - name: "video"
+          url: "https://www.youtube.com/watch?v=-27LeNWW0kA&list=PL9-E3cL2KgKnhXXfAo1ahd_cJKwRFGf0l&index=5"
+
+    - type: presentation
+      key: alcacer2022football
+      title: "Discovering archetypal football teams and stats with biarchetype analysis"
+      author: "Alcacer, Aleix and Epifanio, Irene"
+      conference: "useR! 2022 The R User Conference"
+      location: "Online (USA)"
+      date: "2022-06-20"
+      year: 2022
+      labels:
+        - name: "certificate"
+          url: "https://drive.google.com/file/d/1_8Q4T7I4juT5fw-7dg4avKohDXozUrep/view?usp=share_link"
+
+    - type: presentation
+      key: alcacer2021geneexpression
+      title: "Analysis of gene expression data using biarchetype analysis"
+      author: "Alcacer, Aleix and Epifanio, Irene"
+      conference: "V Jornadas Científicas de Estudiantes de la SEB"
+      location: "València (Spain)"
+      date: "2021-01-27"
+      year: 2021
+      labels:
+        - name: "certificate"
+          url: "https://drive.google.com/file/d/1OKskCOxs2pIlgVwUq_GISBVkhTERg1-e/view?usp=share_link"
+
+    - type: presentation
+      key: alcacer2020biarchetype
+      title: "Biarchetype analysis: definition and application to sports analysis"
+      author: "Alcacer, Aleix and Epifanio, Irene"
+      conference: "3rd BYMAT Conference"
+      location: "València (Spain)"
+      date: "2020-12-19"
+      year: 2020
+      labels:
+        - name: "certificate"
+          url: "https://drive.google.com/file/d/1mQsWxFN7vP3-oLnu6eO7Oy-6ndnGbKZi/view?usp=share_link"
+
+    - type: presentation
+      key: alcacer2020foottypes
+      title: "What are the types of Spanish foot shapes? Archetypoid analysis of 3D images"
+      author: "Alcacer, Aleix and Epifanio, Irene and Ibáñez, María Victoria and Simó, Amelia and Ballester, Alfredo"
+      conference: "2020 Virtual International Biometric Conference"
+      location: "Seúl (South Korea)"
+      date: "2020-07-19"
+      year: 2020
+      labels:
+        - name: "certificate"
+          url: "https://drive.google.com/file/d/1F5Fc9_BZ5q0cQjhbsTOq0wkhM49JuxCJ/view?usp=share_link"
+
+    - type: presentation
+      key: alcacer2020datadriven_conf
+      title: "A data-driven classification of 3D foot types by archetypal shapes based on landmarks"
+      author: "Alcacer, Aleix and Epifanio, Irene and Ibáñez, María Victoria and Simó, Amelia and Ballester, Alfredo"
+      conference: "V Congreso de Jóvenes Investigadores de la RSME"
+      location: "Castelló de la Plana (Spain)"
+      date: "2020-01-27"
+      year: 2020
+      labels:
+        - name: "certificate"
+          url: "https://drive.google.com/file/d/145hFdLUrQDOpyVsHuIsUSWs-c2-w35xX/view?usp=share_link"
+
+# ============================================
+# RESEARCH STAYS
+# ============================================
+research_stays:
+  - institution: "Blosc Development Team"
+    location: "Castelló de la Plana, Spain"
+    dates: "Feb 2021 - Sept 2021"
+    host: "Francesc Alted"
+    description: "Develop two codecs for Blosc using AA and fuzzy k-means."
+
+  - institution: "Technical University of Denmark (DTU)"
+    location: "Lyngby, Denmark"
+    dates: "Oct 2023 - Dec 2023"
+    host: "Morten Mørup"
+    description: "Extend AA to n dimensions along with other minor extensions."
+
+  - institution: "Technical University of Denmark (DTU)"
+    location: "Lyngby, Denmark"
+    dates: "Oct 2024 - Dec 2024"
+    host: "Morten Mørup"
+    description: "Extend AA to n dimensions along with other minor extensions."
+
+# ============================================
+# TEACHING
+# ============================================
+teaching:
+  experience:
+    - course: "Statistics Applied to Public Management and Administration"
+      code: "GA1216"
+      degree: "Bachelor's Degree in Public Management and Administration"
+      year: 2026
+      credits: 6
+      entity: "UJI"
+      language: null
+
+    - course: "Introduction to Statistics"
+      code: "GA1206"
+      degree: "Bachelor's Degree in Public Management and Administration"
+      year: 2025
+      credits: 5
+      entity: "UJI"
+      language: "Catalan"
+
+    - course: "Bachelor's Thesis"
+      code: "MT1054"
+      degree: "Bachelor's Degree in Computational Mathematics"
+      year: 2025
+      credits: 0.94
+      entity: "UJI"
+      language: "Spanish/English"
+
+    - course: "Statistics Applied to Public Management and Administration"
+      code: "GA1216"
+      degree: "Bachelor's Degree in Public Management and Administration"
+      year: 2024
+      credits: 6
+      entity: "UJI"
+      language: "Catalan"
+
+    - course: "Statistics Applied to Public Management and Administration"
+      code: "GA1216"
+      degree: "Bachelor's Degree in Public Management and Administration"
+      year: 2023
+      credits: 6
+      entity: "UJI"
+      language: "Catalan"
+
+    - course: "Statistics Applied to Public Management and Administration"
+      code: null
+      degree: "Bachelor's Degree in Public Management and Administration"
+      year: 2022
+      credits: 4.5
+      entity: "UJI"
+      language: "Catalan"
+
+    - course: "Introduction to Statistics"
+      code: "RL0906"
+      degree: "Bachelor's Degree in Labour Relations and Human Resources"
+      year: 2022
+      credits: 1.5
+      entity: "UJI"
+      language: "Catalan"
+
+    - course: "Software for Modelling Industrial Systems (Distance)"
+      code: "SIQ525"
+      degree: "Master's Degree in Computational Mathematics (Distance)"
+      year: 2021
+      credits: 2
+      entity: "UJI"
+      language: "Spanish"
+
+    - course: "Software for Modelling Industrial Systems"
+      code: "SIQ025"
+      degree: "Master's Degree in Computational Mathematics"
+      year: 2021
+      credits: 2
+      entity: "UJI"
+      language: "Spanish"
+
+  publications:
+    - type: article
+      key: ferrando2024sdg
+      title: "Investigación de la autopercepción del estudiantado universitario sobre su influencia en los ODS"
+      author: "Ferrando, Lara and Cabero, Ismael and Alcacer, Aleix and Lloria, Atanasia and Martínez-García, Marina and Martínez-Serrano, Belén and Pérez-Suay, Adrián and Epifanio, Irene"
+      journal: "Campus Virtuales"
+      year: 2024
+      volume: 1
+      number: 13
+      doi: "10.54988/cv.2024.1.1362"
+      issn: "22551514"
+      jif: 2.0
+      jif_year: 2023
+      jif_quartile: "Q2"
+      jif_category: "Education & Educational Research"
+
+  conferences:
+    - type: paper
+      key: ferrando2022sdg
+      title: "Analysis of the contributions to the SDGs of university students by degrees"
+      author: "Ferrando, Lara and Alcacer, Aleix and Lloria, Atanasia and Martínez-García, Marina and Martínez-Serrano, Belén and Pérez-Suay, Adrián and Epifanio, Irene"
+      conference: "XII International Conference on Virtual Campus (JICV)"
+      location: "Arequipa (Peru)"
+      date: "2022/09/29"
+      year: 2022
+      isbn: "9781665451079"
+      doi: "10.1109/JICV56113.2022.9934727"
+      labels:
+        - name: "pdf"
+          url: "https://drive.google.com/file/d/1Jj03_FaXHj1R-W6o_HEgsstFKYQZB5SA/view?usp=sharing"
+        - name: "video"
+          url: "https://www.youtube.com/watch?v=qphytXdNjLM"
+
+    - type: paper
+      key: alcacer2022ods
+      title: "¿Cuál es la percepción de los ODS del estudiantado universitario?"
+      author: "Alcacer, Aleix and Epifanio, Irene and Ferrando, Lara and Lloria, Atanasia and Martínez-García, Marina and Martínez-Serrano, Belén and Pérez Suay, Adrián"
+      conference: "ATIDES 2022"
+      location: "Castelló de la Plana (Spain)"
+      date: "2022/10/15"
+      year: 2022
+      isbn: "9788419647146"
+      labels:
+        - name: "pdf"
+          url: "https://drive.google.com/file/d/18UhHBLY8DOGCmi0li0oVBXn9QhQr41s7/view?usp=share_link"
+
+    - type: paper
+      key: epifanio2023integrating
+      title: "Integrating Sustainable Development Goals in statistics and math subjects in university teaching"
+      author: "Epifanio, I. and Alcacer, A. and Ferrando, L. and Gual-Arnau, X. and Lloria, A. and Martín-Cruz, H. and Martínez-Garcia, M. and Moyano-Fernández, J.J. and Pérez-Callejo, E. and Sepúlveda, I."
+      conference: "ICERI 2023"
+      location: "Seville (Spain)"
+      date: "2023/11/13"
+      year: 2023
+      isbn: "9788409559428"
+      issn: "23401095"
+      doi: "10.21125/iceri.2023.0121"
+      labels:
+        - name: "pdf"
+          url: "https://drive.google.com/file/d/18UhHBLY8DOGCmi0li0oVBXn9QhQr41s7/view?usp=drive_link"
+
+    - type: paper
+      key: alcacer2023flipped
+      title: "Unleashing the potential of the flipped classroom: Improving class attendance and final grades in statistics applied to Public Management and Administration"
+      author: "Alcacer, A. and Epifanio, I."
+      conference: "ICERI 2023"
+      location: "Seville (Spain)"
+      date: "2023/11/13"
+      year: 2023
+      isbn: "9788409559428"
+      issn: "23401095"
+      doi: "10.21125/iceri.2023.0122"
+      labels:
+        - name: "pdf"
+          url: "https://drive.google.com/file/d/14Y9yVRgpkgZXmavjeeLdCryGmCa01FOs/view?usp=drive_link"
+
+    - type: paper
+      key: ferrando2024investigating
+      title: "Investigating university students' self-perception of their influence on the Sdgs"
+      author: "Ferrando, Lara and Cabero, Ismael and Alcacer, Aleix and Lloria, Atanasia and Martínez-García, Marina and Martínez-Serrano, Belén and Pérez-Suay, Adrián and Epifanio, Irene"
+      conference: "Campus Virtuales"
+      location: "Online"
+      date: "2024/01/31"
+      year: 2024
+      doi: "10.54988/cv.2024.1.1362"
+      labels:
+        - name: "pdf"
+          url: "https://drive.google.com/file/d/1MlSFP5ZujaVTv9iWoT6JrSxBrE4Pg9f2/view?usp=share_link"
+
+    - type: paper
+      key: alcacer2024udl
+      title: "Universal design for learning in statistics of industrial design engineering"
+      author: "Alcacer, Aleix and Epifanio, Irene and Lloria, Atanasia and Martínez-García, Marina and Martínez-Serrano, Belén"
+      conference: "ICERI 2024"
+      location: "Seville (Spain)"
+      date: "2024/11/11"
+      year: 2024
+      isbn: "9788409630103"
+      issn: "23401095"
+      doi: "10.21125/iceri.2024.0290"
+      labels:
+        - name: "pdf"
+          url: "https://drive.google.com/file/d/1UZDECoBN4d0djg-xoKudh3OEypVIHq8z/view?usp=share_link"
+
+    - type: paper
+      key: alcacer2025escaperoom
+      title: "Enhancing learning and motivation in statistics by a digital escape room"
+      author: "Alcacer, Aleix and Epifanio, Irene and Lloria, Atanasia and Martínez-García, Marina and Martínez-Serrano, Belén"
+      conference: "ICERI 2025"
+      location: "Seville (Spain)"
+      date: "2025/11/10"
+      year: 2025
+      isbn: "9788409787067"
+      issn: "23401095"
+      doi: "10.21125/iceri.2025.0412"
+      labels:
+        - name: "pdf"
+          url: "https://drive.google.com/file/d/1QoqdoMjuxT_bEgx-v7MYJATOkUJ9fMST/view?usp=share_link"
+
+# ============================================
+# OPEN SOURCE PROJECTS
+# ============================================
+projects:
+  - category: "Python packages"
+    items:
+      - title: "archetypes"
+        href: "https://archetypes.readthedocs.io"
+        code: "https://github.com/aleixalcacer/archetypes"
+        description: "Scikit-learn compatible package for archetypal analysis."
+        role: "creator"
+        date: "2021 - present"
+
+      - title: "memprofiler"
+        href: "https://github.com/aleixalcacer/memprofiler"
+        code: "https://github.com/aleixalcacer/memprofiler"
+        description: "IPython extension for monitoring memory usage of Jupyter notebook cells."
+        role: "creator"
+        date: "2020 - present"
+
+      - title: "blosc"
+        href: "https://blosc.org"
+        code: "https://github.com/Blosc"
+        description: "High-performance chunk-based compressor for binary data."
+        role: "maintainer"
+        date: "2018 - 2023"
+
+  - category: "Others"
+    items:
+      - title: "cmlint"
+        href: "https://github.com/aleixalcacer/cmlint"
+        code: "https://github.com/aleixalcacer/cmlint"
+        description: "Pre-commit hook for linting commit messages and creating robust changelogs."
+        role: "creator"
+        date: "2022 - present"
