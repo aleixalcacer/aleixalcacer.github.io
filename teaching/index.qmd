@@ -1,35 +1,25 @@
 ---
-title: Teaching
-listing:
-- id: experience
-  contents: experience.yml
-  template: experience.ejs
-- id: journal-publications
-  template: journal.ejs
-  contents: journal-publications.yml
-- id: conference-contributions
-  template: conference.ejs
-  contents: conference-contributions.yml
+title: "Teaching"
 ---
 
+## Teaching Innovation
 
-## Innovative teaching production
+### Journal Articles
 
-### Publications
+{{< include ../_includes/teaching-publications.qmd >}}
 
-::: {#journal-publications}
-:::
+### Conference Papers
 
-### Conferences
+{{< include ../_includes/teaching-conferences.qmd >}}
 
-::: {#conference-contributions}
-:::
+### Teaching Innovation Projects
 
-### Other activities
+{{< include ../_includes/teaching-projects.qmd >}}
 
-* Organizing committee of the ATIDES congress (2022).
+### Service
 
-## Teaching experience
+{{< include ../_includes/teaching-service.qmd >}}
 
-::: {#experience}
-:::
+## Teaching Experience
+
+{{< include ../_includes/teaching-experience.qmd >}}

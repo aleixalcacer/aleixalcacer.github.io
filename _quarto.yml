@@ -13,7 +13,7 @@ execute:
 
 website:
   site-url: https://aleixalcacer.com
-  description: "A great sample blog"
+  description: "Personal website of Aleix Alcacer - Postdoctoral researcher"
   title: "Aleix Alcacer"
   navbar:
     background: light
@@ -21,6 +21,8 @@ website:
     left:
       - href: index.qmd
         text: About
+      - href: cv/index.qmd
+        text: CV
       - href: research/index.qmd
         text: Research
       - href: teaching/index.qmd

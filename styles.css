@@ -19,12 +19,128 @@
   padding: 0.25em 0.75em;
   font-size: .65em;
   text-transform: uppercase;
-  border: solid 1px;
+  border: solid 1px #D4C4B5;
   border-radius: 0.25rem;
-  opacity: .6;
+  background-color: #FAF6F1;
+  color: #8C7B6B;
+  transition: all 0.2s ease;
+}
+
+.quarto-publication .quarto-labels .quarto-label:hover {
+  background-color: #F0E8E0;
+  border-color: #B4846C;
 }
 
 .quarto-publication .quarto-labels .quarto-label a {
   color: inherit;
   text-decoration: none;
+}
+
+/* ============================================
+   INTERESTS SECTION
+   ============================================ */
+.interests-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem 1.25rem;
+  padding: 0;
+  list-style: none;
+  margin: 0;
+}
+
+.interest-tag {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1rem;
+  color: #9C6644;
+}
+
+.interest-tag i {
+  margin-right: 0.4rem;
+}
+
+/* ============================================
+   OS PROJECTS
+   ============================================ */
+.project-card {
+  border: 1px solid #E8E0D8 !important;
+  border-radius: 0.25rem !important;
+  background-color: #FFFDF9;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card .card-header {
+  background-color: #F7F2ED !important;
+  border-bottom: 1px solid #E8E0D8 !important;
+  padding: 0.6rem 0.8rem !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-card .card-header .listing-title {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #4A4543;
+  text-decoration: none;
+}
+
+.project-card .card-header .listing-title:hover {
+  color: #9C6644;
+}
+
+.project-card .card-header .bi-github {
+  font-size: 1rem;
+  color: #8C8279;
+}
+
+.project-card .card-header a:hover .bi-github {
+  color: #9C6644;
+}
+
+.project-card .card-body {
+  padding: 0.8rem !important;
+  flex-grow: 1;
+}
+
+.project-card .card-body .card-text {
+  font-size: 0.85rem !important;
+  color: #8C8279;
+  line-height: 1.5;
+}
+
+.project-card .card-footer {
+  background-color: transparent !important;
+  border-top: 1px solid #E8E0D8 !important;
+  padding: 0.5rem 0.8rem !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-card .role-text {
+  font-size: 0.8rem;
+  color: #8C7B6B;
+  font-style: italic;
+}
+
+.project-card .date-text {
+  font-size: 0.8rem;
+  color: #8C8279;
+}
+
+/* Projects grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.projects-section h2 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
 }

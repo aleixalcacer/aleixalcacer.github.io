@@ -1,3 +1,85 @@
 /*-- scss:defaults --*/
-$link-color: #39729E;
-$text-muted: #6a737b;
+
+// Warm, elegant color palette
+$primary:       #B4846C;  // Warm terracotta - friendly yet professional
+$link-color:    #9C6644;  // Warm brown for links
+$body-color:    #3D3A36;  // Warm charcoal for text
+$text-muted:    #8C8279;  // Warm gray for secondary text
+$body-bg:       #FFFBF7;  // Subtle warm cream background
+
+// Navbar and footer
+$navbar-bg:     #FFFBF7;
+$footer-bg:     #FFFBF7;
+
+// Headings
+$headings-color: #4A4543;  // Warm dark gray
+
+// Code blocks
+$code-color:    #9C6644;
+
+// Borders and subtle elements
+$border-color:  #E8E0D8;
+
+/*-- scss:rules --*/
+
+// Subtle warm tint for cards and code blocks
+.card, pre {
+  background-color: #FFFDF9;
+  border-color: $border-color;
+}
+
+// Navbar styling
+.navbar {
+  background-color: #F7F2ED !important;
+  border-bottom: 1px solid $border-color;
+
+  .navbar-brand {
+    color: #4A4543 !important;
+    font-weight: 600;
+  }
+
+  .nav-link {
+    color: #6B635B !important;
+  }
+
+  .nav-link:hover {
+    color: #9C6644 !important;
+  }
+}
+
+// Footer styling
+.quarto-footer {
+  border-top: 1px solid $border-color;
+}
+
+// Link hover effect
+a:hover {
+  color: darken($link-color, 10%);
+}
+
+// Softer horizontal rules
+hr {
+  border-color: $border-color;
+}
+
+// Active nav link styling
+.navbar .nav-link.active {
+  color: $link-color !important;
+  font-weight: 600;
+}
+
+// Table styling
+.table {
+  --bs-table-bg: transparent;
+  --bs-table-hover-bg: #F7F2ED;
+  border-color: $border-color;
+
+  thead {
+    background-color: #F7F2ED;
+    color: $headings-color;
+  }
+
+  th, td {
+    border-color: $border-color;
+  }
+}

@@ -1,54 +1,41 @@
 ---
 title: "Research"
-listing:
-  - id: research-stays
-    template: stays.ejs
-    contents: research-stays.yml
-  - id: journal-publications
-    template: journal.ejs
-    contents: journal-publications.yml
-  - id: book-chapters
-    template: book-chapter.ejs
-    contents: book-chapters.yml
-  - id: conference-proceedings
-    template: proceeding.ejs
-    contents: conference-proceedings.yml
-  - id: conference-contributions
-    template: conference.ejs
-    contents: conference-contributions.yml
-  - id: other-contributions
-    template: conference.ejs
-    contents: other-contributions.yml
 ---
 
-## Scientific production
+## Publications
 
-### Peer-Reviewed Journal Articles
+### Journal Articles
 
-::: {#journal-publications}
-:::
+{{< include ../_includes/journal-publications.qmd >}}
 
 ### Book Chapters
 
-::: {#book-chapters}
-:::
+{{< include ../_includes/book-chapters.qmd >}}
 
 ### Conference Proceedings
 
-::: {#conference-proceedings}
-:::
+{{< include ../_includes/conference-proceedings.qmd >}}
 
-### Conference Presentations
+### Talks
 
-::: {#conference-contributions}
-:::
+{{< include ../_includes/conference-contributions.qmd >}}
 
-### Others
+### Other Contributions
 
-::: {#other-contributions}
-:::
+{{< include ../_includes/other-contributions.qmd >}}
 
 ## Research Stays
 
-::: {#research-stays}
-:::
+{{< include ../_includes/research-stays.qmd >}}
+
+## Research Projects
+
+{{< include ../_includes/research-projects.qmd >}}
+
+## Grants & Fellowships
+
+{{< include ../_includes/grants.qmd >}}
+
+## Service
+
+{{< include ../_includes/research-service.qmd >}}

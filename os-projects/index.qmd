@@ -1,11 +1,5 @@
 ---
 title: "Open Source Projects"
-listing:
-  - id: projects
-    template: projects.ejs
-    contents: projects.yml
 ---
 
-
-::: {#projects}
-:::
+{{< include ../_includes/projects.qmd >}}

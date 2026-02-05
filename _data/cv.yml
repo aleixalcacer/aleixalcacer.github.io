@@ -7,7 +7,7 @@ personal:
   website: "https://aleixalcacer.com"
   orcid: "0000-0003-3566-0204"
   cv_url: "https://cvn.fecyt.es/0000-0003-3566-0204"
-  image: "profile.jpg"
+  image: "profile2.jpg"
   bio: |
     I am a passionate postdoctoral researcher at Jaume I University, deeply immersed in the vibrant world of Open Source. My enthusiasm lies in developing innovative algorithms, with a keen focus on optimizing both performance and efficiency.
 
@@ -197,9 +197,6 @@ publications:
       location: "Oxford (United Kingdom)"
       date: "2023-08-06"
       year: 2023
-      labels:
-        - name: "certificate"
-          url: ""
 
     - type: presentation
       key: alcacer2021combining_conf
@@ -533,6 +530,160 @@ teaching:
       labels:
         - name: "pdf"
           url: "https://drive.google.com/file/d/1QoqdoMjuxT_bEgx-v7MYJATOkUJ9fMST/view?usp=share_link"
+
+# ============================================
+# AWARDS & HONORS
+# ============================================
+awards:
+  - title: "Premio fin de carrera"
+    institution: "Universitat Jaume I"
+    year: 2018
+    description: "B.Sc. graduation award"
+  - title: "Excellent Cum Laude"
+    institution: "Universitat Jaume I"
+    year: 2024
+    description: "PhD thesis with European Doctorate mention"
+
+# ============================================
+# GRANTS & FELLOWSHIPS
+# ============================================
+grants:
+  - name: "FPU20/01825"
+    entity: "Ministerio de Ciencia e Innovación"
+    type: "Predoctoral fellowship"
+    date: "2021-11-15"
+    duration: "46 months"
+  - name: "ACIF/2021/015"
+    entity: "Generalitat Valenciana"
+    type: "Predoctoral fellowship"
+    date: "2021-09-23"
+    duration: "2 months"
+  - name: "PREDOC/2021/18"
+    entity: "Universidad Jaume I"
+    type: "Predoctoral fellowship"
+    date: "2021-12-14"
+    duration: null
+
+# ============================================
+# LANGUAGES
+# ============================================
+languages:
+  - language: "Spanish"
+    level: "Native"
+  - language: "Catalan"
+    level: "C1"
+  - language: "English"
+    level: "B2"
+  - language: "French"
+    level: "A2"
+
+# ============================================
+# PROFESSIONAL SERVICE
+# ============================================
+research_service:
+  - description: "Reviewer for Elsevier journals"
+
+teaching_service:
+  - description: "Organizing committee of ATIDES 2022 congress"
+
+# ============================================
+# RESEARCH PROJECTS (Funded R&D)
+# ============================================
+research_projects:
+  - title: "Statistical learning methods based on archetypal analysis and applications in science and technology"
+    code: "CIPROM/2023/66"
+    program: "PROMETEO"
+    funder: "Conselleria de Educación, Universidades y Empleo"
+    pi: "Irene Epifanio López"
+    dates: "2024-2028"
+    amount: "484,590 €"
+    role: "Researcher"
+
+  - title: "Methods for archetypal analysis in high dimensions"
+    code: "PID2022-141699OB-I00"
+    program: "National R&D Plan"
+    funder: "Ministerio de Ciencia e Innovación"
+    pi: "Irene Epifanio López"
+    dates: "2023-2026"
+    amount: "96,800 €"
+    role: "Researcher"
+
+  - title: "New methods of archetypal analysis and tools for their use"
+    code: "UJI-B2020-22"
+    program: "UJI Research Promotion Plan"
+    funder: "Universitat Jaume I"
+    pi: "Irene Epifanio López"
+    dates: "2020-2023"
+    amount: "33,500 €"
+    role: "Researcher"
+
+  - title: "Archetypal analysis: advances in theory and methodology and new applications"
+    code: "PGC2018-096321-B-I00"
+    program: "National R&D Plan"
+    funder: "Ministerio de Ciencia, Innovación y Universidades"
+    pi: "Irene Epifanio López"
+    dates: "2019-2023"
+    amount: "45,980 €"
+    role: "Researcher"
+
+  - title: "Statistical analysis of 3D images and shapes in the footwear industry 4.0"
+    code: "UJI-B2018-04"
+    program: "UJI Research Promotion Plan"
+    funder: "Universitat Jaume I"
+    pi: "Irene Epifanio López"
+    dates: "2019-2021"
+    amount: "20,000 €"
+    role: "Researcher"
+
+  - title: "Statistical methods for the analysis of 3D images. Application in health and industry"
+    code: "AICO/2018/005"
+    program: "R&D Groups of Excellence"
+    funder: "Generalitat Valenciana"
+    pi: "María Victoria Ibáñez Gual"
+    dates: "2018-2020"
+    amount: "44,400 €"
+    role: "Researcher"
+
+  - title: "Extreme observations and archetypes in high dimensions: new detection, visualization, representation methods with application to biomedical sciences"
+    code: "GV/2018/213"
+    program: "Emerging Research Groups"
+    funder: "Generalitat Valenciana"
+    pi: "Irene Epifanio López"
+    dates: "2018-2019"
+    amount: "7,200 €"
+    role: "Researcher"
+
+# ============================================
+# TEACHING INNOVATION PROJECTS
+# ============================================
+teaching_projects:
+  - title: "Universal Design for Learning (DUA)"
+    code: "4709/24"
+    funder: "Universitat Jaume I"
+    role: "Principal Investigator"
+    dates: "2024-present"
+    description: "Implementing Universal Design for Learning principles in statistics courses"
+
+  - title: "SDGs in Mathematics and Statistics"
+    code: "4364/23"
+    funder: "Universitat Jaume I"
+    role: "Researcher"
+    dates: "2023-2024"
+    description: "Integrating Sustainable Development Goals in mathematics and statistics teaching"
+
+  - title: "SDGs in Mathematics and Statistics"
+    code: "4077/22"
+    funder: "Universitat Jaume I"
+    role: "Researcher"
+    dates: "2022-2023"
+    description: "Integrating Sustainable Development Goals in mathematics and statistics teaching"
+
+  - title: "SDGs in Mathematics and Statistics"
+    code: "3983/21"
+    funder: "Universitat Jaume I"
+    role: "Researcher"
+    dates: "2021-2022"
+    description: "Integrating Sustainable Development Goals in mathematics and statistics teaching"
 
 # ============================================
 # OPEN SOURCE PROJECTS

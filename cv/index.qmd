@@ -1,0 +1,23 @@
+---
+title: "CV"
+---
+
+## Work Experience
+
+{{< include ../_includes/work-experience.qmd >}}
+
+## Education
+
+{{< include ../_includes/education.qmd >}}
+
+## Awards & Honors
+
+{{< include ../_includes/awards.qmd >}}
+
+## Languages
+
+{{< include ../_includes/languages.qmd >}}
+
+## Research Stays
+
+{{< include ../_includes/research-stays.qmd >}}
