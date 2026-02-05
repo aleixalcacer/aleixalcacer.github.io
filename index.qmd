@@ -11,15 +11,12 @@ about:
       href: "https://github.com/aleixalcacer"
     - text: "{{< fa brands orcid >}} Orcid"
       href: "https://orcid.org/0000-0003-3566-0204"
-    # - text: "{{< fa brands mastodon >}}"
-    #   href: "https://fosstodon.org/@aleixalcacer"
     - text: "{{< fa brands x-twitter >}} Twitter"
       href: "https://twitter.com/aleixalcacer"
     - text: "{{< fa brands linkedin >}} LinkedIn"
       href: "https://www.linkedin.com/in/aleixalcacer"
     - text: "{{< fa solid envelope >}} Email"
       href: "mailto:aalcacer@uji.es"
-
 ---
 
 ::: {#hero-heading style="text-align: center;"}
@@ -37,28 +34,13 @@ At present, my research endeavors are centered around crafting novel methods in 
 ::: {.g-col-12 .g-col-md-8 style="text-align: left;"}
 ## Education
 
-- **Postdoc in Archetypal Analysis** | 2024 - present  
-  Universitat Jaume I, Spain
-
-- **Ph.D. in Statistics** | 2020 - 2024  
-  Universitat Jaume I, Spain
-
-- **M.Sc. in Computacional Mathematics** | 2018 - 2020  
-  Universitat Jaume I, Spain
-
-- **B.Sc. in Computacional Mathematics** | 2014 - 2018  
-  Universitat Jaume I, Spain
+{{< include _includes/education.qmd >}}
 :::
 
 ::: {.g-col-12 .g-col-md-4 style="text-align: left;"}
 ## Interests
 
-- Archetypal Analysis
-- Machine Learning
-- Data Visualisation
-- Reinforcement learning
-- HPC and Software Optimization
-- Knowledge sharing
+{{< include _includes/interests.qmd >}}
 :::
 
 :::

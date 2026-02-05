@@ -2,7 +2,7 @@
 <ul id="quarto-book-chapter">
     <% for (const item of items) { %>
         <li class="quarto-publication">
-            <%= item.author %> (<%= item.year %>). <%= item.title %>. In <i><%= item.book %></i>
+            <%= item.author %> (<%= item.year %>). <%= item.title %>. In <i><%= item.booktitle %></i>
             <% if (item.series) { %>
                 (<%= item.series %>)
             <% } %>

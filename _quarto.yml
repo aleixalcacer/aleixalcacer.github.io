@@ -1,8 +1,12 @@
 project:
   type: website
+  pre-render: python _scripts/generate-listings.py
   preview:
     port: 4200
     browser: false
+
+metadata-files:
+  - _data/cv.yml
 
 execute:
   freeze: true
