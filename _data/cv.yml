@@ -574,6 +574,11 @@ teaching:
 # AWARDS & HONORS
 # ============================================
 awards:
+  - title: "Educational Innovation Award"
+    institution: "Universitat Jaume I"
+    year: 2025
+    description: "Project: Integració dels ODS en la docència d'assignatures de matemàtiques i estadística"
+
   - title: "PhD Thesis - Excellent Cum Laude"
     institution: "Universitat Jaume I"
     year: 2024
