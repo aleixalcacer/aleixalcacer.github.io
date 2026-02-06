@@ -392,15 +392,42 @@ def render_teaching_projects(projects: list) -> str:
     return '\n'.join(lines)
 
 
+def format_work_date(date_str: str) -> str:
+    """Convert date string to Month Year format (e.g., '2024-09-28' -> 'Sep 2024')."""
+    if not date_str:
+        return "present"
+    try:
+        date_str = date_str.replace("/", "-")
+        date = datetime.strptime(date_str, "%Y-%m-%d")
+        return date.strftime("%b %Y")
+    except (ValueError, AttributeError):
+        return str(date_str)
+
+
 def generate_work_experience_qmd(work_data: list) -> str:
     """Generate Quarto markdown for work experience section."""
-    lines = []
+    lines = ['```{=html}', '<ul id="quarto-work-experience">']
     for item in work_data:
-        end_year = item.get("end_year") or "present"
-        lines.append(f"- **{item['position']}** | {item['start_year']} - {end_year}  ")
-        lines.append(f"  {item['institution']}, {item['location']}")
-        lines.append("")
-    return "\n".join(lines)
+        start = format_work_date(item.get("start_date"))
+        end = format_work_date(item.get("end_date"))
+        lines.append('    <li class="quarto-publication">')
+        lines.append(f'        <strong>{item["position"]}</strong> | {start} - {end}')
+
+        # Institution and department
+        inst_line = f'        <br>{item["institution"]}'
+        if item.get("department"):
+            inst_line += f', {item["department"]}'
+        inst_line += f' ({item["location"]})'
+        lines.append(inst_line)
+
+        # Description if present
+        if item.get("description"):
+            lines.append(f'        <br><i>{item["description"]}</i>')
+
+        lines.append('    </li>')
+    lines.append('</ul>')
+    lines.append('```')
+    return '\n'.join(lines)
 
 
 def generate_education_qmd(education_data: list) -> str:
