@@ -415,14 +415,11 @@ def generate_work_experience_qmd(work_data: list) -> str:
         lines.append(f"- **{item['position']}** | {start} - {end}  ")
 
         # Institution and location
-        inst_line = f"  {item['institution']}"
-        if item.get("department"):
-            inst_line += f", {item['department']}"
-        inst_line += f", {item['location']}"
-        lines.append(inst_line)
+        lines.append(f"  {item['institution']}, {item['location']}")
 
-        # Description
+        # Description on new line
         if item.get("description"):
+            lines.append("")
             lines.append(f"  *{item['description']}*")
 
         lines.append("")
