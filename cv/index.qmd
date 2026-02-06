@@ -21,7 +21,3 @@ title: "CV"
 ## Languages
 
 {{< include ../_includes/languages.qmd >}}
-
-## Research Stays
-
-{{< include ../_includes/research-stays.qmd >}}
