@@ -42,13 +42,6 @@
     "text": "Languages\n\n\n    \n        Spanish: Native\n    \n    \n        Catalan: C1\n    \n    \n        English: B2\n    \n    \n        French: A2"
   },
   {
-    "objectID": "cv/index.html#research-stays",
-    "href": "cv/index.html#research-stays",
-    "title": "CV",
-    "section": "Research Stays",
-    "text": "Research Stays\n\n\n    \n        Blosc Development Team, Castelló de la Plana, Spain (Feb 2021 - Sept 2021)\n        Host: Francesc Alted\n        Develop two codecs for Blosc using AA and fuzzy k-means.\n    \n    \n        Technical University of Denmark (DTU), Lyngby, Denmark (Oct 2023 - Dec 2023)\n        Host: Morten Mørup\n        Extend AA to n dimensions along with other minor extensions.\n    \n    \n        Technical University of Denmark (DTU), Lyngby, Denmark (Oct 2024 - Dec 2024)\n        Host: Morten Mørup\n        Extend AA to n dimensions along with other minor extensions."
-  },
-  {
     "objectID": "research/index.html",
     "href": "research/index.html",
     "title": "Research",
