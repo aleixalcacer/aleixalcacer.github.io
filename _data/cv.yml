@@ -40,7 +40,6 @@ personal:
 work_experience:
   - position: "Postdoctoral Researcher"
     institution: "Universitat Jaume I"
-    department: "Dep. de Matemàtiques"
     location: "Castellón, Spain"
     start_date: "2024-11-15"
     end_date: null
@@ -48,7 +47,6 @@ work_experience:
 
   - position: "Predoctoral Researcher"
     institution: "Universitat Jaume I"
-    department: "Dep. de Matemàtiques"
     location: "Castellón, Spain"
     start_date: "2021-10-01"
     end_date: "2024-11-15"
@@ -63,7 +61,6 @@ work_experience:
 
   - position: "Research Technician"
     institution: "Universitat Jaume I"
-    department: "Dep. de Matemàtiques"
     location: "Castellón, Spain"
     start_date: "2018-10-17"
     end_date: "2021-08-31"
@@ -577,14 +574,20 @@ teaching:
 # AWARDS & HONORS
 # ============================================
 awards:
-  - title: "Premio fin de carrera"
-    institution: "Universitat Jaume I"
-    year: 2018
-    description: "B.Sc. graduation award"
-  - title: "Excellent Cum Laude"
+  - title: "PhD Thesis - Excellent Cum Laude"
     institution: "Universitat Jaume I"
     year: 2024
-    description: "PhD thesis with European Doctorate mention"
+    description: "With International Mention and Industrial Mention"
+
+  - title: "M.Sc. Graduation Award"
+    institution: "Universitat Jaume I"
+    year: 2020
+    description: "Best academic record in Master's in Computational Mathematics"
+
+  - title: "B.Sc. Graduation Award"
+    institution: "Universitat Jaume I"
+    year: 2018
+    description: "Best academic record in Bachelor's in Computational Mathematics"
 
 # ============================================
 # GRANTS & FELLOWSHIPS
