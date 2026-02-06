@@ -17,8 +17,16 @@ jobs:
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
         with:
-          # To install LaTeX to build PDF book 
-          tinytex: true 
+          # To install LaTeX to build PDF book
+          tinytex: true
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install Python dependencies
+        run: pip install pyyaml
 
       - name: Render and Publish
         uses: quarto-dev/quarto-actions/publish@v2
