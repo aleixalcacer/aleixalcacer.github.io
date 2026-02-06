@@ -381,8 +381,6 @@ def render_teaching_projects(projects: list) -> str:
         lines.append(f'        <strong>{item["title"]}</strong>')
         if item.get("code"):
             lines.append(f'        <br>Code: {item["code"]}')
-        if item.get("program"):
-            lines.append(f'        <br>Program: {item["program"]}')
         lines.append(f'        <br>Funder: {item["funder"]}')
         if item.get("pi"):
             lines.append(f'        <br>PI: {item["pi"]}')
