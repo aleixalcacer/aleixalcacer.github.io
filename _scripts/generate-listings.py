@@ -392,6 +392,17 @@ def render_teaching_projects(projects: list) -> str:
     return '\n'.join(lines)
 
 
+def generate_work_experience_qmd(work_data: list) -> str:
+    """Generate Quarto markdown for work experience section."""
+    lines = []
+    for item in work_data:
+        end_year = item.get("end_year") or "present"
+        lines.append(f"- **{item['position']}** | {item['start_year']} - {end_year}  ")
+        lines.append(f"  {item['institution']}, {item['location']}")
+        lines.append("")
+    return "\n".join(lines)
+
+
 def generate_education_qmd(education_data: list) -> str:
     """Generate Quarto markdown for education section."""
     lines = []
@@ -468,6 +479,7 @@ def main():
         "teaching-publications.qmd": render_journal_articles(cv["teaching"]["publications"]),
         "teaching-conferences.qmd": render_teaching_conferences(cv["teaching"]["conferences"]),
         "projects.qmd": render_projects(cv["projects"]),
+        "work-experience.qmd": generate_work_experience_qmd(cv["work_experience"]),
         "education.qmd": generate_education_qmd(cv["education"]),
         "interests.qmd": generate_interests_qmd(cv["interests"]),
         "about.qmd": generate_about_qmd(cv["personal"], cv["personal"]["cv_url"]),

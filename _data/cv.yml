@@ -35,6 +35,22 @@ personal:
       label: "Email"
 
 # ============================================
+# WORK EXPERIENCE
+# ============================================
+work_experience:
+  - position: "Postdoctoral Researcher"
+    institution: "Universitat Jaume I"
+    location: "Spain"
+    start_year: 2024
+    end_year: null
+
+  - position: "Predoctoral Researcher"
+    institution: "Universitat Jaume I"
+    location: "Spain"
+    start_year: 2020
+    end_year: 2024
+
+# ============================================
 # EDUCATION
 # ============================================
 education:
