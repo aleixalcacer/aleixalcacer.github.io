@@ -395,7 +395,7 @@ def render_teaching_projects(projects: list) -> str:
 def format_work_date(date_str: str) -> str:
     """Convert date string to Month Year format (e.g., '2024-09-28' -> 'Sep 2024')."""
     if not date_str:
-        return "present"
+        return "Present"
     try:
         date_str = date_str.replace("/", "-")
         date = datetime.strptime(date_str, "%Y-%m-%d")
@@ -405,27 +405,28 @@ def format_work_date(date_str: str) -> str:
 
 
 def generate_work_experience_qmd(work_data: list) -> str:
-    """Generate Quarto markdown for work experience section."""
-    lines = ['```{=html}', '<ul id="quarto-work-experience">']
+    """Generate Quarto markdown for work experience section with card design."""
+    lines = ['```{=html}', '<div class="work-experience-container">']
     for item in work_data:
         start = format_work_date(item.get("start_date"))
         end = format_work_date(item.get("end_date"))
-        lines.append('    <li class="quarto-publication">')
-        lines.append(f'        <strong>{item["position"]}</strong> | {start} - {end}')
 
-        # Institution and department
-        inst_line = f'        <br>{item["institution"]}'
+        lines.append('  <div class="work-card">')
+        lines.append('    <div class="work-card-header">')
+        lines.append(f'      <span class="work-position">{item["position"]}</span>')
+        lines.append(f'      <span class="work-dates">{start} — {end}</span>')
+        lines.append('    </div>')
+        lines.append('    <div class="work-card-body">')
+        lines.append(f'      <div class="work-institution">{item["institution"]}</div>')
         if item.get("department"):
-            inst_line += f', {item["department"]}'
-        inst_line += f' ({item["location"]})'
-        lines.append(inst_line)
-
-        # Description if present
+            lines.append(f'      <div class="work-department">{item["department"]}</div>')
+        lines.append(f'      <div class="work-location">{item["location"]}</div>')
         if item.get("description"):
-            lines.append(f'        <br><i>{item["description"]}</i>')
+            lines.append(f'      <p class="work-description">{item["description"]}</p>')
+        lines.append('    </div>')
+        lines.append('  </div>')
 
-        lines.append('    </li>')
-    lines.append('</ul>')
+    lines.append('</div>')
     lines.append('```')
     return '\n'.join(lines)
 
