@@ -32,10 +32,6 @@ title: "Research"
 
 {{< include ../_includes/research-projects.qmd >}}
 
-## Grants & Fellowships
-
-{{< include ../_includes/grants.qmd >}}
-
 ## Service
 
 {{< include ../_includes/research-service.qmd >}}
