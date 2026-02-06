@@ -647,7 +647,7 @@ research_projects:
     pi: "Irene Epifanio López"
     dates: "2024-2028"
     amount: "484,590 €"
-    role: "Researcher"
+    role: "Team member"
 
   - title: "Methods for archetypal analysis in high dimensions"
     code: "PID2022-141699OB-I00"
@@ -656,7 +656,7 @@ research_projects:
     pi: "Irene Epifanio López"
     dates: "2023-2026"
     amount: "96,800 €"
-    role: "Researcher"
+    role: "Team member"
 
   - title: "New methods of archetypal analysis and tools for their use"
     code: "UJI-B2020-22"
@@ -665,7 +665,7 @@ research_projects:
     pi: "Irene Epifanio López"
     dates: "2020-2023"
     amount: "33,500 €"
-    role: "Researcher"
+    role: "Team member"
 
   - title: "Archetypal analysis: advances in theory and methodology and new applications"
     code: "PGC2018-096321-B-I00"
@@ -674,7 +674,7 @@ research_projects:
     pi: "Irene Epifanio López"
     dates: "2019-2023"
     amount: "45,980 €"
-    role: "Researcher"
+    role: "Team member"
 
   - title: "Statistical analysis of 3D images and shapes in the footwear industry 4.0"
     code: "UJI-B2018-04"
@@ -683,7 +683,7 @@ research_projects:
     pi: "Irene Epifanio López"
     dates: "2019-2021"
     amount: "20,000 €"
-    role: "Researcher"
+    role: "Team member"
 
   - title: "Statistical methods for the analysis of 3D images. Application in health and industry"
     code: "AICO/2018/005"
@@ -692,7 +692,7 @@ research_projects:
     pi: "María Victoria Ibáñez Gual"
     dates: "2018-2020"
     amount: "44,400 €"
-    role: "Researcher"
+    role: "Team member"
 
   - title: "Extreme observations and archetypes in high dimensions: new detection, visualization, representation methods with application to biomedical sciences"
     code: "GV/2018/213"
@@ -701,39 +701,41 @@ research_projects:
     pi: "Irene Epifanio López"
     dates: "2018-2019"
     amount: "7,200 €"
-    role: "Researcher"
+    role: "Team member"
 
 # ============================================
 # TEACHING INNOVATION PROJECTS
 # ============================================
 teaching_projects:
   - title: "Disseny universal per a l'aprenentatge (DUA) en estadística del grau en enginyeria en disseny industrial i desenvolupament de productes"
-    code: "4709/24"
     funder: "Universitat Jaume I"
-    pi: "Aleix Alcacer Sales"
     dates: "2024-present"
     role: "Principal Investigator"
 
   - title: "Integració dels ODS en la docència d'assignatures de matemàtiques i estadística"
-    code: "4364/23"
     funder: "Universitat Jaume I"
-    pi: "Irene Epifanio López"
     dates: "2023-2024"
-    role: "Researcher"
+    role: "Team member"
+
+  - title: "L'ús de la xarxa social TikTok com a eina motivadora de l'estudiantat en alguns estudis cientificotècnics"
+    funder: "Universitat Jaume I"
+    dates: "2023-2024"
+    role: "Team member"
 
   - title: "Integració dels ODS en la docència d'assignatures de matemàtiques i estadística"
-    code: "4077/22"
     funder: "Universitat Jaume I"
-    pi: "Irene Epifanio López"
     dates: "2022-2023"
-    role: "Researcher"
+    role: "Team member"
+
+  - title: "Detecció del rendiment acadèmic i explotació de dades mitjançant fitxers de registre Moodle"
+    funder: "Universitat de València"
+    dates: "2022-2023"
+    role: "Team member"
 
   - title: "Integració dels ODS en la docència d'assignatures de matemàtiques i estadística"
-    code: "3983/21"
     funder: "Universitat Jaume I"
-    pi: "Irene Epifanio López"
     dates: "2021-2022"
-    role: "Researcher"
+    role: "Team member"
 
 # ============================================
 # OPEN SOURCE PROJECTS

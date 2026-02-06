@@ -361,7 +361,6 @@ def render_research_projects(projects: list) -> str:
         if item.get("program"):
             lines.append(f'        <br>Program: {item["program"]}')
         lines.append(f'        <br>Funder: {item["funder"]}')
-        lines.append(f'        <br>PI: {item["pi"]}')
         lines.append(f'        <br>Period: {item["dates"]}')
         if item.get("amount"):
             lines.append(f'        <br>Funding: {item["amount"]}')
@@ -379,14 +378,8 @@ def render_teaching_projects(projects: list) -> str:
     for item in projects:
         lines.append('    <li class="quarto-publication">')
         lines.append(f'        <strong>{item["title"]}</strong>')
-        if item.get("code"):
-            lines.append(f'        <br>Code: {item["code"]}')
         lines.append(f'        <br>Funder: {item["funder"]}')
-        if item.get("pi"):
-            lines.append(f'        <br>PI: {item["pi"]}')
         lines.append(f'        <br>Period: {item["dates"]}')
-        if item.get("amount"):
-            lines.append(f'        <br>Funding: {item["amount"]}')
         if item.get("role"):
             lines.append(f'        <br><small class="text-muted">Role: {item["role"]}</small>')
         lines.append('    </li>')
