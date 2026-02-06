@@ -32,12 +32,9 @@ jobs:
         run: python _scripts/generate-listings.py
 
       - name: Render
-        uses: quarto-dev/quarto-actions/render@v2
+        run: quarto render
 
       - name: Publish
-        uses: quarto-dev/quarto-actions/publish@v2
-        with:
-          target: gh-pages
-          render: false
+        run: quarto publish gh-pages --no-browser --no-prompt
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
