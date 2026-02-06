@@ -381,11 +381,16 @@ def render_teaching_projects(projects: list) -> str:
         lines.append(f'        <strong>{item["title"]}</strong>')
         if item.get("code"):
             lines.append(f'        <br>Code: {item["code"]}')
+        if item.get("program"):
+            lines.append(f'        <br>Program: {item["program"]}')
         lines.append(f'        <br>Funder: {item["funder"]}')
-        lines.append(f'        <br>Role: {item["role"]}')
+        if item.get("pi"):
+            lines.append(f'        <br>PI: {item["pi"]}')
         lines.append(f'        <br>Period: {item["dates"]}')
-        if item.get("description"):
-            lines.append(f'        <br><i>{item["description"]}</i>')
+        if item.get("amount"):
+            lines.append(f'        <br>Funding: {item["amount"]}')
+        if item.get("role"):
+            lines.append(f'        <br><small class="text-muted">Role: {item["role"]}</small>')
         lines.append('    </li>')
     lines.append('</ul>')
     lines.append('```')

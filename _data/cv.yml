@@ -709,31 +709,35 @@ research_projects:
 teaching_projects:
   - title: "Universal Design for Learning (DUA)"
     code: "4709/24"
+    program: "Teaching Innovation Projects"
     funder: "Universitat Jaume I"
-    role: "Principal Investigator"
+    pi: "Aleix Alcacer Sales"
     dates: "2024-present"
-    description: "Implementing Universal Design for Learning principles in statistics courses"
+    role: "Principal Investigator"
 
   - title: "SDGs in Mathematics and Statistics"
     code: "4364/23"
+    program: "Teaching Innovation Projects"
     funder: "Universitat Jaume I"
-    role: "Researcher"
+    pi: "Irene Epifanio López"
     dates: "2023-2024"
-    description: "Integrating Sustainable Development Goals in mathematics and statistics teaching"
+    role: "Researcher"
 
   - title: "SDGs in Mathematics and Statistics"
     code: "4077/22"
+    program: "Teaching Innovation Projects"
     funder: "Universitat Jaume I"
-    role: "Researcher"
+    pi: "Irene Epifanio López"
     dates: "2022-2023"
-    description: "Integrating Sustainable Development Goals in mathematics and statistics teaching"
+    role: "Researcher"
 
   - title: "SDGs in Mathematics and Statistics"
     code: "3983/21"
+    program: "Teaching Innovation Projects"
     funder: "Universitat Jaume I"
-    role: "Researcher"
+    pi: "Irene Epifanio López"
     dates: "2021-2022"
-    description: "Integrating Sustainable Development Goals in mathematics and statistics teaching"
+    role: "Researcher"
 
 # ============================================
 # OPEN SOURCE PROJECTS
