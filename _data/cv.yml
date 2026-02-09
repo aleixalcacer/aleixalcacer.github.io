@@ -215,6 +215,7 @@ publications:
       location: "Tokyo (Japan)"
       date: "2025-08-23"
       year: 2025
+      note: "Invited presentation"
 
     - type: presentation
       key: alcacer2025fair
@@ -356,23 +357,23 @@ publications:
 # RESEARCH STAYS
 # ============================================
 research_stays:
-  - institution: "Blosc Development Team"
-    location: "Castelló de la Plana, Spain"
-    dates: "Feb 2021 - Sept 2021"
-    host: "Francesc Alted"
-    description: "Develop two codecs for Blosc using AA and fuzzy k-means."
+  - institution: "Technical University of Denmark (DTU)"
+    location: "Lyngby, Denmark"
+    dates: "Oct 2024 - Dec 2024"
+    host: "Morten Mørup"
+    description: "Collaborated on extending archetypal analysis to n-dimensional tensors. Developed novel algorithms for multi-way data decomposition."
 
   - institution: "Technical University of Denmark (DTU)"
     location: "Lyngby, Denmark"
     dates: "Oct 2023 - Dec 2023"
     host: "Morten Mørup"
-    description: "Extend AA to n dimensions along with other minor extensions."
+    description: "Collaborated on extending archetypal analysis to n-dimensional tensors. Developed novel algorithms for multi-way data decomposition."
 
-  - institution: "Technical University of Denmark (DTU)"
-    location: "Lyngby, Denmark"
-    dates: "Oct 2024 - Dec 2024"
-    host: "Morten Mørup"
-    description: "Extend AA to n dimensions along with other minor extensions."
+  - institution: "Blosc Development Team"
+    location: "Castelló de la Plana, Spain"
+    dates: "Feb 2021 - Sept 2021"
+    host: "Francesc Alted"
+    description: "Developed two compression codecs for Blosc2 using archetypal analysis and fuzzy k-means clustering. Optimized performance for scientific data compression."
 
 # ============================================
 # TEACHING

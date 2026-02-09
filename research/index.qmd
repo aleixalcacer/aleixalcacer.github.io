@@ -16,13 +16,9 @@ title: "Research"
 
 {{< include ../_includes/conference-proceedings.qmd >}}
 
-### Talks
+## Conference Presentations & Talks
 
 {{< include ../_includes/conference-contributions.qmd >}}
-
-### Other Contributions
-
-{{< include ../_includes/other-contributions.qmd >}}
 
 ## Research Stays
 

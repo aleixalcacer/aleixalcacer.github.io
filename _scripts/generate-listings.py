@@ -147,21 +147,26 @@ def render_conference_proceedings(proceedings: list) -> str:
     return '\n'.join(lines)
 
 
-def render_conference_presentations(presentations: list) -> str:
+def render_conference_presentations(presentations: list, sort_by_date: bool = False) -> str:
     """Generate HTML for conference presentations (APA-like format).
 
-    Format: Author (Date). *Title* [Conference presentation]. Conference, Location.
+    Format: Author (Date). *Title*. Conference, Location.
     """
+    items = presentations
+    if sort_by_date:
+        # Sort by date descending (most recent first)
+        items = sorted(presentations, key=lambda x: x.get("date", ""), reverse=True)
+
     lines = ['```{=html}', '<ul id="quarto-conference">']
-    for item in presentations:
+    for item in items:
         lines.append('    <li class="quarto-publication">')
 
         # Author (Date).
         date_formatted = format_date(item.get("date"))
         citation = f'{item["author"]} ({date_formatted}). '
 
-        # *Title* [Conference presentation].
-        citation += f'<i>{item["title"]}</i> [Conference presentation]. '
+        # *Title*.
+        citation += f'<i>{item["title"]}</i>. '
 
         # Conference, Location.
         citation += f'{item["conference"]}, {item["location"]}.'
@@ -492,8 +497,10 @@ def main():
         "journal-publications.qmd": render_journal_articles(cv["publications"]["articles"]),
         "book-chapters.qmd": render_book_chapters(cv["publications"]["incollection"]),
         "conference-proceedings.qmd": render_conference_proceedings(cv["publications"]["inproceedings"]),
-        "conference-contributions.qmd": render_conference_presentations(cv["publications"]["presentations"]),
-        "other-contributions.qmd": render_conference_presentations(cv["publications"]["other"]),
+        "conference-contributions.qmd": render_conference_presentations(
+            cv["publications"]["presentations"] + cv["publications"]["other"],
+            sort_by_date=True
+        ),
         "research-stays.qmd": render_research_stays(cv["research_stays"]),
         "teaching-experience.qmd": render_teaching_experience(cv["teaching"]["experience"]),
         "teaching-publications.qmd": render_journal_articles(cv["teaching"]["publications"]),
