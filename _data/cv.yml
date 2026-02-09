@@ -57,7 +57,7 @@ work_experience:
     location: "Remote"
     start_date: "2018-10-11"
     end_date: "2021-09-30"
-    description: "Designed and developed Caterva, a high-performance multidimensional data container with compression. Contributed to IronArray, an advanced computational array library."
+    description: "Designed and implemented Blosc's multidimensional storage architecture and contributed to IronArray, an advanced computational array library for high-performance data processing."
 
   - position: "Research Technician"
     institution: "Universitat Jaume I"
