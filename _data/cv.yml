@@ -195,8 +195,7 @@ publications:
       year: 2026
       doi: "10.48550/arXiv.2601.05400"
 
-  inproceedings:
-    - type: inproceedings
+    - type: incollection
       key: alcacer2026archetypal
       title: "Archetypal cases for questionnaires with nominal multiple choice questions"
       author: "Alcacer, Aleix and Epifanio, Irene"
@@ -207,6 +206,15 @@ publications:
       doi: "10.48550/arXiv.2601.05392"
 
   presentations:
+    - type: presentation
+      key: alcacer2025archetypal
+      title: "Archetypal cases for questionnaires with nominal multiple choice questions"
+      author: "Alcacer, Aleix and Epifanio, Irene"
+      conference: "Third Conference of the Statistics and Data Science Group of the Italian Statistical Society"
+      location: "Milan (Italy)"
+      date: "2025-04-03"
+      year: 2025
+
     - type: presentation
       key: alcacer2025hplots
       title: "Representing asymmetric relationships by h-plots. Discovering the archetypal patterns of cross-journal citation relationships"
@@ -643,65 +651,44 @@ teaching_service:
 research_projects:
   - title: "Statistical learning methods based on archetypal analysis and applications in science and technology"
     code: "CIPROM/2023/66"
-    program: "PROMETEO"
-    funder: "Conselleria de Educación, Universidades y Empleo"
-    pi: "Irene Epifanio López"
+    funder: "PROMETEO, Conselleria de Educación, Universidades y Empleo"
     dates: "2024-2028"
-    amount: "484,590 €"
     role: "Team member"
 
-  - title: "Methods for archetypal analysis in high dimensions"
-    code: "PID2022-141699OB-I00"
-    program: "National R&D Plan"
-    funder: "Ministerio de Ciencia e Innovación"
-    pi: "Irene Epifanio López"
+  - title: "Desarrollo de técnicas de aprendizaje estadístico y redes neuronales a la variedad de Riemann del espacio de la forma tridimensional. Aplicaciones en biomecánica"
+    code: "PID2022-141699NB-I00"
+    funder: "Agencia Estatal de Investigación"
     dates: "2023-2026"
-    amount: "96,800 €"
     role: "Team member"
 
-  - title: "New methods of archetypal analysis and tools for their use"
+  - title: "Memoria episódica en el mundo prosocial"
+    code: "PID2021-122338NA-I00"
+    funder: "Agencia Estatal de Investigación"
+    dates: "2022-2026"
+    role: "Team member"
+
+  - title: "Estudio de la neuroplasticidad en el aprendizaje de resolución de problemas aritmético-algebraicos con error de inversión"
+    code: "PID2020-118763GA-I00"
+    funder: "Agencia Estatal de Investigación"
+    dates: "2021-2026"
+    role: "Team member"
+
+  - title: "Aprenentatge estadístic per big data. aplicacions en indústria i medicina"
     code: "UJI-B2020-22"
-    program: "UJI Research Promotion Plan"
     funder: "Universitat Jaume I"
-    pi: "Irene Epifanio López"
-    dates: "2020-2023"
-    amount: "33,500 €"
+    dates: "2021-2023"
     role: "Team member"
 
-  - title: "Archetypal analysis: advances in theory and methodology and new applications"
-    code: "PGC2018-096321-B-I00"
-    program: "National R&D Plan"
-    funder: "Ministerio de Ciencia, Innovación y Universidades"
-    pi: "Irene Epifanio López"
-    dates: "2019-2023"
-    amount: "45,980 €"
+  - title: "Procedimientos de big data para la asignación de talla de calzado en venta online con información antropométrica 3D"
+    code: "DPI2017-87333-R"
+    funder: "Ministerio de Economía, Industria y Competitividad"
+    dates: "2018-2021"
     role: "Team member"
 
-  - title: "Statistical analysis of 3D images and shapes in the footwear industry 4.0"
-    code: "UJI-B2018-04"
-    program: "UJI Research Promotion Plan"
+  - title: "Aprenentatge estadístic en problemes de big data aplicat a la determinació de la talla de roba en infants"
+    code: "UJI-B2017-13"
     funder: "Universitat Jaume I"
-    pi: "Irene Epifanio López"
-    dates: "2019-2021"
-    amount: "20,000 €"
-    role: "Team member"
-
-  - title: "Statistical methods for the analysis of 3D images. Application in health and industry"
-    code: "AICO/2018/005"
-    program: "R&D Groups of Excellence"
-    funder: "Generalitat Valenciana"
-    pi: "María Victoria Ibáñez Gual"
-    dates: "2018-2020"
-    amount: "44,400 €"
-    role: "Team member"
-
-  - title: "Extreme observations and archetypes in high dimensions: new detection, visualization, representation methods with application to biomedical sciences"
-    code: "GV/2018/213"
-    program: "Emerging Research Groups"
-    funder: "Generalitat Valenciana"
-    pi: "Irene Epifanio López"
-    dates: "2018-2019"
-    amount: "7,200 €"
+    dates: "2018-2021"
     role: "Team member"
 
 # ============================================

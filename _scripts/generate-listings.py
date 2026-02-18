@@ -360,15 +360,9 @@ def render_research_projects(projects: list) -> str:
     lines = ['```{=html}', '<ul id="quarto-research-projects">']
     for item in projects:
         lines.append('    <li class="quarto-publication">')
-        lines.append(f'        <strong>{item["title"]}</strong>')
-        if item.get("code"):
-            lines.append(f'        <br>Code: {item["code"]}')
-        if item.get("program"):
-            lines.append(f'        <br>Program: {item["program"]}')
-        lines.append(f'        <br>Funder: {item["funder"]}')
-        lines.append(f'        <br>Period: {item["dates"]}')
-        if item.get("amount"):
-            lines.append(f'        <br>Funding: {item["amount"]}')
+        lines.append(f'        <strong>{item["code"]}</strong> ({item["dates"]})')
+        lines.append(f'        <br>{item["title"]}')
+        lines.append(f'        <br><small class="text-muted">Funder: {item["funder"]}</small>')
         if item.get("role"):
             lines.append(f'        <br><small class="text-muted">Role: {item["role"]}</small>')
         lines.append('    </li>')
@@ -496,7 +490,6 @@ def main():
     include_mappings = {
         "journal-publications.qmd": render_journal_articles(cv["publications"]["articles"]),
         "book-chapters.qmd": render_book_chapters(cv["publications"]["incollection"]),
-        "conference-proceedings.qmd": render_conference_proceedings(cv["publications"]["inproceedings"]),
         "conference-contributions.qmd": render_conference_presentations(
             cv["publications"]["presentations"] + cv["publications"]["other"],
             sort_by_date=True

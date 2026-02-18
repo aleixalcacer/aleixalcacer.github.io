@@ -12,10 +12,6 @@ title: "Research"
 
 {{< include ../_includes/book-chapters.qmd >}}
 
-### Conference Proceedings
-
-{{< include ../_includes/conference-proceedings.qmd >}}
-
 ## Conference Presentations & Talks
 
 {{< include ../_includes/conference-contributions.qmd >}}
