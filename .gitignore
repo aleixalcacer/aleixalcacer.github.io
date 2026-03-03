@@ -11,3 +11,7 @@ posts/**/*.tex
 
 # Generated include files (source: _data/cv.yml)
 _includes/
+
+# Quarto generated files
+*.html.md
+site_libs/
