@@ -115,6 +115,20 @@ interests:
 publications:
   articles:
     - type: article
+      key: alcacer2026fuzzy
+      title: "Comparative Insights: Fuzzy Clustering Versus Archetypal Analysis in Vector Quantisation for Blosc2"
+      author: "Alcacer, Aleix and Epifanio, Irene"
+      journal: "Electronics Letters"
+      year: 2026
+      volume: 62
+      number: 1
+      doi: "10.1049/ell2.70555"
+      jif: null
+      jif_year: null
+      jif_quartile: null
+      jif_category: null
+
+    - type: article
       key: alcacer2024outlier
       title: "Outlier detection of clustered functional data with image and signal processing applications by archetype analysis"
       author: "Alcacer, Aleix and Epifanio, Irene"
