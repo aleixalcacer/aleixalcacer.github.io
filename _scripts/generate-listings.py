@@ -64,9 +64,13 @@ def render_journal_articles(articles: list) -> str:
 
         lines.append(f'        {citation}')
 
+        metrics = item.get("metrics", {})
+        print(metrics)
+        
+        print(item)
         # JIF info
-        if item.get("jif"):
-            lines.append(f'        <br><small class="text-muted">{item["jif_year"]} JIF: {item["jif"]} ({item["jif_quartile"]} in {item["jif_category"]})</small>')
+        for name, info in metrics.items():
+            lines.append(f'<br><small class="text-muted">{name.upper()}: {info["value"]} ({info["quartile"]} in {info["category"]})</small>')
 
         # Labels
         labels = render_labels(item)
@@ -343,16 +347,25 @@ def render_languages(languages: list) -> str:
     return '\n'.join(lines)
 
 
+# put the year in parenthesis, use a pill for certificate link
 def render_service(service: list) -> str:
     """Generate HTML for professional service."""
     lines = ['```{=html}', '<ul id="quarto-service">']
     for item in service:
         lines.append('    <li>')
         lines.append(f'        {item["description"]}')
+        if item.get("year"):
+            lines.append(f' ({item["year"]})')
+        
+        # Labels
+        labels = render_labels(item)
+        if labels:
+            lines.append(f'        {labels}')
         lines.append('    </li>')
     lines.append('</ul>')
     lines.append('```')
     return '\n'.join(lines)
+
 
 
 def render_research_projects(projects: list) -> str:

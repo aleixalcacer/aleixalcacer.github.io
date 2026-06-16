@@ -8,14 +8,14 @@
   margin-bottom: -1em;
 }
 
-.quarto-publication .quarto-labels {
+.quarto-labels {
   display: flex;
   column-gap: 0.4em;
   padding-bottom: 1em;
   margin-top: 0.25em;
 }
 
-.quarto-publication .quarto-labels .quarto-label {
+.quarto-labels .quarto-label {
   padding: 0.25em 0.75em;
   font-size: .65em;
   text-transform: uppercase;
@@ -26,12 +26,12 @@
   transition: all 0.2s ease;
 }
 
-.quarto-publication .quarto-labels .quarto-label:hover {
+.quarto-labels .quarto-label:hover {
   background-color: #F0E8E0;
   border-color: #B4846C;
 }
 
-.quarto-publication .quarto-labels .quarto-label a {
+.quarto-labels .quarto-label a {
   color: inherit;
   text-decoration: none;
 }
