@@ -1,0 +1,24 @@
+---
+interface AwardItem {
+  title: string;
+  year?: string;
+  meta?: string;
+  description?: string;
+}
+interface Props { items: AwardItem[]; }
+const { items } = Astro.props;
+---
+
+{items.length ? (
+  <ul class="item-list">
+    {items.map((item) => (
+      <li class="item">
+        <p class="item-title">
+          {item.title}{item.year && <> <span class="item-meta">({item.year})</span></>}
+        </p>
+        {item.meta && <p class="item-meta">{item.meta}</p>}
+        {item.description && <p class="item-desc">{item.description}</p>}
+      </li>
+    ))}
+  </ul>
+) : <p class="empty-note">No entries yet.</p>}

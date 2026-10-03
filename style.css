@@ -1,0 +1,11 @@
+:root { color-scheme: light dark; }
+body { margin: 0; font: 17px/1.6 system-ui, sans-serif; }
+main { max-width: 40rem; margin: 0 auto; padding: 3rem 1rem; }
+header { display: flex; align-items: center; gap: 1rem; }
+header img { border-radius: 50%; }
+h1 { margin: 0; font-size: 1.5rem; }
+header p { margin: 0; opacity: .7; }
+h2 { margin-top: 2.5rem; font-size: 1rem; text-transform: uppercase; letter-spacing: .05em; opacity: .7; }
+ul { padding-left: 1.2rem; }
+li { margin-bottom: .6rem; }
+.links a { margin-right: 1rem; }

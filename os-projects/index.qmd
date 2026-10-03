@@ -1,5 +1,0 @@
----
-title: "Open Source Projects"
----
-
-{{< include ../_includes/projects.qmd >}}

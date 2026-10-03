@@ -1,0 +1,613 @@
+{
+  "personal": {
+    "name": "Aleix Alcacer Sales",
+    "orcid": "0000-0003-3566-0204",
+    "web": "aleixalcacer.com"
+  },
+  "experience": [
+    {
+      "current": true,
+      "role": "Junior Research Staff",
+      "institution": "Universitat Jaume I",
+      "start": "2024",
+      "end": ""
+    },
+    {
+      "current": false,
+      "role": "Trainee Research Staff (POP Phase)",
+      "institution": "Universitat Jaume I",
+      "start": "2024",
+      "end": "2024"
+    },
+    {
+      "current": false,
+      "role": "Trainee Research Staff - ACIF(GV) Programme",
+      "institution": "Universitat Jaume I",
+      "start": "2021",
+      "end": "2021"
+    },
+    {
+      "current": false,
+      "role": "Trainee Research Staff (FPU Programme, State Plan)",
+      "institution": "Universitat Jaume I",
+      "start": "2021",
+      "end": "2024"
+    },
+    {
+      "current": false,
+      "role": "External Lecturer",
+      "institution": "Universitat Jaume I",
+      "start": "2021",
+      "end": "2021"
+    },
+    {
+      "current": false,
+      "role": "Mid-Level Research Technician",
+      "institution": "Universitat Jaume I",
+      "start": "2018",
+      "end": "2021"
+    },
+    {
+      "current": false,
+      "role": "Software Analyst and Designer",
+      "institution": "Francesc Alted",
+      "start": "2018",
+      "end": "2021"
+    }
+  ],
+  "education": [
+    {
+      "degree": "Doctoral Programme in Sciences",
+      "institution": "Universitat Jaume I",
+      "end": "",
+      "thesis": "New developments and applications of Archetypal Analysis"
+    },
+    {
+      "degree": "Master's Degree in Computational Mathematics",
+      "institution": "Universitat Jaume I",
+      "end": "",
+      "thesis": ""
+    },
+    {
+      "degree": "Bachelor's Degree in Computational Mathematics",
+      "institution": "Universitat Jaume I",
+      "end": "",
+      "thesis": ""
+    }
+  ],
+  "languages": [
+    {
+      "name": "French",
+      "level": "A2"
+    },
+    {
+      "name": "English",
+      "level": "B2"
+    },
+    {
+      "name": "Catalan",
+      "level": "C1"
+    }
+  ],
+  "research_lines": [
+    {
+      "title": "2D and 3D Shape Analysis, Statistical Learning in Artificial Intelligence, Stereology",
+      "description": "Shape Analysis. Applications in medicine and anthropometry. Big Data. Supervised and unsupervised statistical learning (archetype analysis, random forests, neural networks, multidimensional scaling, clustering, etc.). Functional data analysis. Image analysis. Closed random sets and point processes. Development and implementation of equations in stereology",
+      "institution": "Universitat Jaume I",
+      "supervisor": "Amelia Simó Vidal",
+      "since": "2020"
+    }
+  ],
+  "projects": [
+    {
+      "title": "Statistical Learning Methods Based on Archetypal Analysis for Complex and Big Data with Applications",
+      "institution": "Universitat Jaume I",
+      "start": "2024",
+      "end": "2028",
+      "budget": "484,590 EUR"
+    },
+    {
+      "title": "Development of Statistical Learning Techniques and Neural Networks on the Riemannian Manifold of Three-Dimensional Shape Space. Applications in Biomechanics",
+      "institution": "Universitat Jaume I",
+      "start": "2023",
+      "end": "2026",
+      "budget": "53,875 EUR"
+    },
+    {
+      "title": "Episodic Memory in the Prosocial World",
+      "institution": "Universitat Jaume I",
+      "start": "2022",
+      "end": "2026",
+      "budget": "151,008 EUR"
+    },
+    {
+      "title": "Statistical Learning for Big Data. Applications in Industry and Medicine.",
+      "institution": "Universitat Jaume I",
+      "start": "2021",
+      "end": "2023",
+      "budget": "15,150 EUR"
+    },
+    {
+      "title": "Study of Neuroplasticity in Learning to Solve Arithmetic-Algebraic Problems with Inversion Error",
+      "institution": "Universitat Jaume I",
+      "start": "2021",
+      "end": "2025",
+      "budget": "48,400 EUR"
+    },
+    {
+      "title": "Statistical Learning in Big Data Problems Applied to Determining Clothing Sizes in Children",
+      "institution": "Universitat Jaume I",
+      "start": "2018",
+      "end": "2021",
+      "budget": "8,446 EUR"
+    },
+    {
+      "title": "Big Data Procedures for Assigning Footwear Sizes in Online Sales with 3D Anthropometric Information",
+      "institution": "Universitat Jaume I",
+      "start": "2018",
+      "end": "2021",
+      "budget": "53,240 EUR"
+    }
+  ],
+  "contracts": [
+    {
+      "title": "Industrial Doctorate Agreement",
+      "description": "Two new codecs were developed for the Blosc compressor using Archetypal Analysis",
+      "institution": "Francesc Alted",
+      "start": "",
+      "end": ""
+    }
+  ],
+  "research_stays": [
+    {
+      "institution": "Technical University of Denmark",
+      "start": "2023",
+      "end": "2023",
+      "description": "I collaborated on the extension of archetypal analysis to n-dimensional tensors. I developed novel algorithms for the decomposition of multidirectional data."
+    },
+    {
+      "institution": "Technical University of Denmark",
+      "start": "2022",
+      "end": "2022",
+      "description": "I collaborated on the extension of archetypal analysis to n-dimensional tensors. I developed novel algorithms for the decomposition of multidirectional data."
+    },
+    {
+      "institution": "Francesc Alted",
+      "start": "2021",
+      "end": "2021",
+      "description": ""
+    }
+  ],
+  "articles": [
+    {
+      "authors": "Alcacer, A. & Epifanio, I.",
+      "year": "2026",
+      "title": "Comparative Insights: Fuzzy Clustering Versus Archetypal Analysis in Vector Quantisation for Blosc2",
+      "journal": "Electronic Letters",
+      "volume": "",
+      "number": "2",
+      "doi": ""
+    },
+    {
+      "authors": "Alcacer, A., Epifanio, I. & Gual, J.",
+      "year": "2024",
+      "title": "Biarchetype Analysis: Simultaneous Learning of Observations and Features Based on Extremes",
+      "journal": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+      "volume": "46",
+      "number": "3",
+      "doi": "10.1109/TPAMI.2024.3400730"
+    },
+    {
+      "authors": "Alcacer, A., Martínez, M. & Epifanio, I.",
+      "year": "2024",
+      "title": "Ordinal classification for interval-valued data and interval-valued functional data",
+      "journal": "Expert Systems with Applications",
+      "volume": "238",
+      "number": "3",
+      "doi": "10.1016/j.eswa.2023.122277"
+    },
+    {
+      "authors": "Alcacer, A. & Epifanio, I.",
+      "year": "2024",
+      "title": "Outlier detection of clustered functional data with image and signal processing applications by archetype analysis",
+      "journal": "PLOS One",
+      "volume": "19",
+      "number": "2",
+      "doi": ""
+    },
+    {
+      "authors": "Alcacer, A., Epifanio, I., Valero, J. & Ballester, A.",
+      "year": "2021",
+      "title": "Combining Classification and User-Based Collaborative Filtering for Matching Footwear Size",
+      "journal": "Mathematics",
+      "volume": "9",
+      "number": "4",
+      "doi": "10.3390/math9070771"
+    },
+    {
+      "authors": "Alcacer, A., Epifanio, I., Ibáñez, M., Simó, A. & Ballester, A.",
+      "year": "2020",
+      "title": "A data-driven classification of 3D foot types by archetypal shapes based on landmarks",
+      "journal": "PLOS One",
+      "volume": "15",
+      "number": "5",
+      "doi": "10.1371/journal.pone.0228016"
+    }
+  ],
+  "chapters": [
+    {
+      "authors": "",
+      "year": "",
+      "title": "Archetypal Analysis: Characterizing data by extremes",
+      "book": "WAM",
+      "doi": ""
+    },
+    {
+      "authors": "Alcacer, A. & Epifanio, I.",
+      "year": "",
+      "title": "Representing asymmetric relationships by h-plots. Discovering the archetypal patterns of cross-journal citation relationships",
+      "book": "108 Symposium of the Behaviormetric Society",
+      "doi": ""
+    }
+  ],
+  "conferences": [
+    {
+      "authors": "Alcacer, A. & Epifanio, I.",
+      "year": "2025",
+      "title": "Archetypal cases for questionnaires with nominal multiple choice questions",
+      "conference": "Third Conference of the Statistics and Data Science Group of the Italian Statistical Society",
+      "location": "Milan"
+    },
+    {
+      "authors": "Alcacer, A. & Epifanio, I.",
+      "year": "2025",
+      "title": "Fair archetypal analysis for fair representation",
+      "conference": "8th International Conference on Econometrics and Statistics",
+      "location": "Tokyo"
+    },
+    {
+      "authors": "Alcacer, A. & Epifanio, I.",
+      "year": "2024",
+      "title": "Análisis de biarquetipos en R",
+      "conference": "LatinR 2024",
+      "location": ""
+    },
+    {
+      "authors": "Alcacer, A., Martínez, M., McNamee, D. & Kaplan, R.",
+      "year": "2023",
+      "title": "Relational Episodic Inference for Fictive Planning",
+      "conference": "Conference on Cognitive Computational Neuroscience",
+      "location": "Oxford"
+    },
+    {
+      "authors": "Alcacer, A. & Epifanio, I.",
+      "year": "2022",
+      "title": "Discovering archetypal football teams and stats with biarchetype analysis",
+      "conference": "useR! 2022 The R User Conference",
+      "location": "Online"
+    },
+    {
+      "authors": "Alcacer, A. & Epifanio, I.",
+      "year": "2021",
+      "title": "Analysis of gene expression data using biarchetype analysis",
+      "conference": "V Jornadas Científicas de Estudiantes de la SEB",
+      "location": "València"
+    },
+    {
+      "authors": "Alcacer, A., Epifanio, I., Valero, J. & Ballester, A.",
+      "year": "2021",
+      "title": "Combining user-based collaborative filtering and classification for matching footwear size",
+      "conference": "CFE-CMStatistics 2021",
+      "location": "London"
+    },
+    {
+      "authors": "Alcacer, A., Epifanio, I., Ibáñez, M., Simó, A. & Ballester, A.",
+      "year": "2020",
+      "title": "A data-driven classification of 3D foot types by archetypal shapes based on landmarks",
+      "conference": "V Congreso de Jóvenes Investigadores de la RSME",
+      "location": "Castelló"
+    },
+    {
+      "authors": "Alcacer, A. & Epifanio, I.",
+      "year": "2020",
+      "title": "Biarchetype analysis: definition and application to sports analysis",
+      "conference": "3rd BYMAT Conference – Bringing Young Mathematicians Together",
+      "location": "On line"
+    },
+    {
+      "authors": "Alcacer, A., Epifanio, I., Ibáñez, M., Simó, A. & Ballester, A.",
+      "year": "2020",
+      "title": "What are the types of Spanish foot shapes? Archetypoid analysis of 3D images",
+      "conference": "2020 Virtual International Biometric Conference",
+      "location": "Seúl"
+    },
+    {
+      "authors": "Alcacer, A., Epifanio, I., Ibáñez, M. & Simó, A.",
+      "year": "2019",
+      "title": "Analysis of 2D foot morphology by functional archetypal analysis",
+      "conference": "XVII Conferencia Española y VII Encuentro Iberoamericano de Biometría (CEB-EIB 2019)",
+      "location": "València"
+    },
+    {
+      "authors": "Alcacer, A., Epifanio, I., Ibáñez, M. & Simó, A.",
+      "year": "2019",
+      "title": "Archetypal contour shapes",
+      "conference": "12th Scientific Meeting Classification and Data Analysis Group (CLADAG 2019)",
+      "location": "Cassino"
+    }
+  ],
+  "reviews": [],
+  "awards": [
+    {
+      "title": "Educational Innovation Award 2025",
+      "description": "Educational Innovation Award 2025, granted by Universitat Jaume I, to the project \"Integration of the SDGs in the Teaching of Mathematics and Statistics Subjects\"",
+      "institution": "Universitat Jaume I",
+      "year": "2025"
+    },
+    {
+      "title": "Award for Best Presentation and Best Paper in Diversity, Equity and Gender in Digital Education",
+      "description": "Award for Best Presentation and Best Paper in \"Diversity, Equity and Gender in Digital Education\", granted at the XII International Conference on Virtual Campus (2022), for the work \"Analysis of the contributions to the SDGs of university students by degrees\".",
+      "institution": "XII International Conference on VIRTUAL CAMPUS",
+      "year": "2022"
+    }
+  ],
+  "grants": [
+    {
+      "reference": "ACIF/2021/015",
+      "institution": "Generalitat Valenciana",
+      "year": "2021"
+    },
+    {
+      "reference": "FPU20/01825",
+      "institution": "Ministerio de Ciencia e Innovación",
+      "year": "2021"
+    },
+    {
+      "reference": "PREDOC/2021/18",
+      "institution": "Universidad Jaime I",
+      "year": "2021"
+    }
+  ],
+  "accreditations": [
+    {
+      "title": "Tenure-Track Lecturer (PhD)",
+      "institution": "Agència Valenciana d'Avaluació i Prospectiva",
+      "year": "2025"
+    }
+  ],
+  "research_training": [
+    {
+      "title": "Create Impact with Your Research: Science Entrepreneurship",
+      "institution": "Universitat Jaume I",
+      "hours": "22",
+      "year": "2026"
+    },
+    {
+      "title": "Research Evaluation, Research and Academic Career",
+      "institution": "Universitat Jaume I",
+      "hours": "5",
+      "year": "2026"
+    },
+    {
+      "title": "Funding in the Early Stages of the Research Career (Basic Level - R1 and R2)",
+      "institution": "Universitat Jaume I",
+      "hours": "6",
+      "year": "2026"
+    }
+  ],
+  "teaching": [
+    {
+      "course": "Statistics Applied to Public Management and Administration",
+      "degree": "Bachelor's Degree in Public Management and Administration",
+      "credits": "6",
+      "year": "2026"
+    },
+    {
+      "course": "Introduction to Statistics",
+      "degree": "Bachelor's Degree in Public Management and Administration",
+      "credits": "5",
+      "year": "2025"
+    },
+    {
+      "course": "External Work Placement",
+      "degree": "Bachelor's Degree in Computational Mathematics",
+      "credits": "0.24",
+      "year": "2025"
+    },
+    {
+      "course": "Bachelor's Thesis",
+      "degree": "Bachelor's Degree in Computational Mathematics",
+      "credits": "0.7",
+      "year": "2025"
+    },
+    {
+      "course": "Statistics Applied to Public Management and Administration",
+      "degree": "Bachelor's Degree in Public Management and Administration",
+      "credits": "6",
+      "year": "2024"
+    },
+    {
+      "course": "Statistics Applied to Public Management and Administration",
+      "degree": "Bachelor's Degree in Public Management and Administration",
+      "credits": "6",
+      "year": "2023"
+    },
+    {
+      "course": "Statistics Applied to Public Management and Administration",
+      "degree": "Bachelor's Degree in Public Management and Administration",
+      "credits": "4.5",
+      "year": "2022"
+    },
+    {
+      "course": "Introduction to Statistics (Statistics)",
+      "degree": "Bachelor's Degree in Labour Relations and Human Resources",
+      "credits": "1.5",
+      "year": "2022"
+    },
+    {
+      "course": "Industrial Systems Modelling Software",
+      "degree": "Master's Degree in Computational Mathematics (2013 Programme) (On-Campus)",
+      "credits": "2",
+      "year": "2021"
+    },
+    {
+      "course": "Industrial Systems Modelling Software (DL)",
+      "degree": "Master's Degree in Computational Mathematics (2013 Programme) (Distance Learning)",
+      "credits": "2",
+      "year": "2021"
+    }
+  ],
+  "theses": [
+    {
+      "title": "Detection of Handball Players Using Neural Networks",
+      "institution": "Universitat Jaume I",
+      "start": "2025",
+      "end": ""
+    }
+  ],
+  "teaching_training": [
+    {
+      "title": "New Lecturer Course",
+      "institution": "Universitat Jaume I",
+      "hours": "200"
+    },
+    {
+      "title": "Designing Questionnaires in the Virtual Classroom (Intermediate-Advanced Level)",
+      "institution": "Universitat Jaume I",
+      "hours": "15"
+    },
+    {
+      "title": "Design and Use of Multimedia Presentations in Online Teaching",
+      "institution": "Universitat Jaume I",
+      "hours": "12"
+    },
+    {
+      "title": "University Teaching with a Gender Perspective in Mathematics",
+      "institution": "Universitat Jaume I",
+      "hours": "10"
+    },
+    {
+      "title": "Tools and Strategies for Learning Assessment",
+      "institution": "Universitat Jaume I",
+      "hours": "10"
+    },
+    {
+      "title": "Virtual Conference on Mathematical Coeducation. Breaking Stereotypes",
+      "institution": "Universitat Jaume I",
+      "hours": "8"
+    },
+    {
+      "title": "Active Methodology: Designing an Escape Game (ESCAPE ROOM)",
+      "institution": "Universitat Jaume I",
+      "hours": "8"
+    },
+    {
+      "title": "Teaching Methodology for University Education",
+      "institution": "Universitat Jaume I",
+      "hours": "10"
+    },
+    {
+      "title": "Planning University Teaching",
+      "institution": "Universitat Jaume I",
+      "hours": "10"
+    },
+    {
+      "title": "Workshop \"How to Include the Sustainable Development Goals (SDGs) in Your Subject?\"",
+      "institution": "Universitat Jaume I",
+      "hours": "10"
+    }
+  ],
+  "teaching_projects": [
+    {
+      "title": "Universal Design for Learning (UDL) in Statistics and Mathematics",
+      "institution": "Universitat Jaume I",
+      "start": "",
+      "end": "2025"
+    },
+    {
+      "title": "The Use of the Social Network TikTok as a Motivational Tool for Students in Some Scientific-Technical Studies",
+      "institution": "Universitat Jaume I",
+      "start": "",
+      "end": "2024"
+    },
+    {
+      "title": "Detection of Academic Performance and Data Mining Using Moodle Log Files",
+      "institution": "Universitat de València",
+      "start": "",
+      "end": "2023"
+    },
+    {
+      "title": "Integration of the SDGs in the Teaching of Mathematics and Statistics Subjects",
+      "institution": "Universitat Jaume I",
+      "start": "",
+      "end": "2023"
+    }
+  ],
+  "teaching_articles": [
+    {
+      "authors": "Ferrando, L., Cabero, I., Alcacer, A., Lloria, A., Martínez, M., Martínez, B., Pérez, A. & Epifanio, I.",
+      "year": "2024",
+      "title": "Research on University Students' Self-Perception of Their Influence on the SDGs",
+      "journal": "Campus Virtuales",
+      "doi": "10.54988/cv.2024.1.1362"
+    }
+  ],
+  "teaching_conferences": [
+    {
+      "authors": "",
+      "year": "2026",
+      "title": "Integrating Sustainable Development Goals in Statistics and Mathematics Subjects in University Teaching",
+      "conference": "II Congrés Internacional sobre Aprenentatge i Noves Vies d'Innovació, CANVIES 2026"
+    },
+    {
+      "authors": "",
+      "year": "2025",
+      "title": "Enhancing Learning and Motivation in Statistics by a Digital Escape Room",
+      "conference": "18th International Conference of Education, Research and Innovation, ICERI 2024"
+    },
+    {
+      "authors": "",
+      "year": "2024",
+      "title": "Universal design for learning in statistics of industrial design engineering",
+      "conference": "17th International Conference of Education, Research and Innovation, ICERI 2024"
+    },
+    {
+      "authors": "",
+      "year": "2023",
+      "title": "Integrating Sustainable Development Goals in Statistics and Math Subjects in University Teaching",
+      "conference": "16th International Conference of Education, Research and Innovation, ICERI 2023"
+    },
+    {
+      "authors": "",
+      "year": "2023",
+      "title": "Unleashing the Potential of the Flipped Classroom: Improving Class Attendance and Final Grades in Statistics Applied to Public Management and Administration",
+      "conference": "16th International Conference of Education, Research and Innovation, ICERI 2023"
+    },
+    {
+      "authors": "",
+      "year": "2022",
+      "title": "What is the perception of the SDGs among university students?",
+      "conference": "Avances en Tecnologías, Innovación y Desafíos de la Educación Superior 2022. ATIDES2022"
+    },
+    {
+      "authors": "",
+      "year": "2022",
+      "title": "Analysis of the contributions to the SDGs of university students by degrees",
+      "conference": "XII International Conference on Virtual Campus"
+    },
+    {
+      "authors": "Alcacer, A., Arnal, A., Barrachina, S., Castelló, J., Epifanio, I., Ferrando, L., Galindo, C., Gregori, P., Martínez, V. & Masero, L.",
+      "year": "2022",
+      "title": "Proceedings of the Virtual Congress on Advances in Technologies, Innovation and Challenges of Higher Education. ATIDES 2022",
+      "conference": "Universitat Jaume I"
+    }
+  ],
+  "teaching_others": [
+    {
+      "authors": "Alcacer, A. & Epifanio, I.",
+      "year": "2023",
+      "title": "Resources on Integrating the Sustainable Development Goals in Statistics",
+      "venue": "Universitat Jaume I"
+    }
+  ]
+}

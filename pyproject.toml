@@ -1,0 +1,15 @@
+[project]
+name = "aleixalcacer-github-io"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "anthropic>=0.55.0",
+    "pymupdf>=1.27.2.3",
+    "pypdf>=6.13.2",
+    "pyyaml>=6.0.3",
+]
+
+[tool.cvn]
+orcid = "0000-0003-3566-0204"

@@ -1,0 +1,137 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import cv from "../../data/cv.json";
+import Group from "../../components/Group.astro";
+import ProjectList from "../../components/ProjectList.astro";
+import AwardList from "../../components/AwardList.astro";
+import PubList from "../../components/PubList.astro";
+
+const {
+  research_lines, projects, contracts, research_stays,
+  research_training, articles, chapters, conferences,
+  reviews, grants, accreditations,
+} = cv;
+
+const researchLineItems = research_lines.map((l) => ({
+  title: l.title,
+  description: l.description || undefined,
+  meta: [
+    l.supervisor && `Supervisor: ${l.supervisor}`,
+    l.since && `Since ${l.since}`,
+  ],
+}));
+
+const projectItems = projects.map((p) => ({
+  title: p.title,
+  meta: [p.institution, `${p.start} – ${p.end || "present"}`, p.budget || undefined],
+}));
+
+const contractItems = contracts.map((c) => ({
+  title: c.title,
+  description: (c as any).description || undefined,
+  meta: [c.institution, c.start && `${c.start} – ${(c as any).end || "present"}`],
+}));
+
+const stayItems = research_stays.map((s) => ({
+  title: s.institution,
+  description: s.description || undefined,
+  meta: [`${s.start} – ${s.end || "present"}`],
+}));
+
+const trainingItems = research_training.map((t: any) => ({
+  title: t.title,
+  meta: [t.institution, t.hours && `${t.hours} h`, t.year || undefined],
+}));
+
+const grantItems = grants.map((g) => ({
+  title: g.reference,
+  year: g.year || undefined,
+  meta: g.institution,
+}));
+
+const accreditationItems = accreditations.map((a) => ({
+  title: a.title,
+  year: a.year || undefined,
+  meta: a.institution,
+}));
+
+const reviewItems = reviews.map((r) => ({
+  title: r.role || "Reviewer",
+  meta: r.institution,
+}));
+
+const articleItems = articles.map((pub) => ({
+  authors: pub.authors,
+  year: pub.year,
+  title: pub.title,
+  doi: pub.doi || undefined,
+  venue: pub.journal,
+  venueSuffix: `${pub.volume ? `, ${pub.volume}` : ""}${pub.number ? `(${pub.number})` : ""}` || undefined,
+}));
+
+const chapterItems = chapters.map((c) => ({
+  authors: c.authors || undefined,
+  year: c.year,
+  title: c.title,
+  doi: c.doi || undefined,
+  venuePrefix: c.book ? "In " : undefined,
+  venue: c.book || undefined,
+}));
+
+const conferenceItems = conferences.map((c) => ({
+  authors: c.authors || undefined,
+  year: c.year,
+  title: c.title,
+  venue: c.conference,
+  venueSuffix: c.location ? `, ${c.location}` : undefined,
+}));
+---
+
+<Layout title="Research — Aleix Alcacer">
+  <section id="research">
+    <div class="container">
+      <p class="section-title">Research</p>
+
+      <Group title="Research Lines">
+        <ProjectList items={researchLineItems} />
+      </Group>
+
+      <Group title="Scientific Output">
+        <p class="subgroup-title">Journal Articles</p>
+        <PubList items={articleItems} />
+        <p class="subgroup-title">Books & Book Chapters</p>
+        <PubList items={chapterItems} />
+        <p class="subgroup-title">Conference Contributions</p>
+        <PubList items={conferenceItems} />
+      </Group>
+
+      <Group title="Research Projects">
+        <ProjectList items={projectItems} />
+      </Group>
+
+      <Group title="Research Contracts & Agreements">
+        <ProjectList items={contractItems} />
+      </Group>
+
+      <Group title="Research Stays">
+        <ProjectList items={stayItems} />
+      </Group>
+
+      <Group title="Specialized Training">
+        <ProjectList items={trainingItems} />
+      </Group>
+
+      <Group title="Grants & Fellowships">
+        <AwardList items={grantItems} />
+      </Group>
+
+      <Group title="Accreditations">
+        <AwardList items={accreditationItems} />
+      </Group>
+
+      <Group title="Peer Review">
+        <AwardList items={reviewItems} />
+      </Group>
+    </div>
+  </section>
+</Layout>

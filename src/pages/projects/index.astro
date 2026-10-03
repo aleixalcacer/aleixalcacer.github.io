@@ -1,0 +1,33 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import projects from "../../data/projects.json";
+import Group from "../../components/Group.astro";
+import ProjectList from "../../components/ProjectList.astro";
+
+const toItems = (ps: typeof projects) =>
+  ps.map((p) => ({
+    title: p.title,
+    description: p.description || undefined,
+    meta: [p.role || undefined, p.year || undefined],
+    links: p.links,
+  }));
+
+const openSource = toItems(projects.filter((p) => p.type === "open-source"));
+const sideProjects = toItems(projects.filter((p) => p.type === "side-project"));
+---
+
+<Layout title="Software Projects — Aleix Alcacer">
+  <section id="projects">
+    <div class="container">
+      <p class="section-title">Software Projects</p>
+
+      <Group title="Open-Source Libraries">
+        <ProjectList items={openSource} />
+      </Group>
+
+      <Group title="Personal Projects">
+        <ProjectList items={sideProjects} />
+      </Group>
+    </div>
+  </section>
+</Layout>
