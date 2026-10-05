@@ -1,0 +1,10 @@
+<nav class="site">
+<a href="/">Home</a>
+<a href="/notes/">Notes</a>
+</nav>
+<script>
+  document.querySelectorAll("nav.site a").forEach(function (a) {
+    var here = location.pathname.replace(/index\.html$/, "");
+    if (a.pathname === here || (a.pathname !== "/" && here.startsWith(a.pathname))) a.classList.add("cur");
+  });
+</script>

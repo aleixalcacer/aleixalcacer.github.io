@@ -1,0 +1,11 @@
+format:
+  html:
+    title-block-style: default
+    fig-format: svg
+    include-before-body:
+      text: "<main class=\"note\">"
+    include-after-body:
+      text: "</main>"
+
+execute:
+  echo: false

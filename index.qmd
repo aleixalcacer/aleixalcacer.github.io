@@ -1,0 +1,81 @@
+---
+title: "Aleix Alcacer Sales"
+subtitle: "Assistant Professor · Universitat Jaume I"
+format:
+  html:
+    template-partials:
+      - title-block.html
+pagetitle: "Aleix Alcacer Sales — Archetypal analysis"
+description: "Assistant Professor at Universitat Jaume I. Research on archetypal analysis: interpretable representations of data as mixtures of extreme cases."
+---
+
+```{python}
+#| echo: false
+#| output: asis
+import json
+from html import escape as e
+from pathlib import Path
+
+import yaml
+from IPython.display import Markdown
+
+d = yaml.safe_load(Path("data.yaml").read_text())
+
+
+def link(text, url):
+    return f'<a href="{e(url)}">{e(text)}</a>' if url else e(text)
+
+
+def section(title, items):
+    lis = "\n".join(f"<li>{i}</li>" for i in items)
+    return f"\n<h2>{title}</h2>\n<ul>\n{lis}\n</ul>\n"
+
+
+person = json.dumps(
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": d["name"],
+        "jobTitle": d["role"].split(" · ")[0],
+        "affiliation": {"@type": "CollegeOrUniversity", "name": "Universitat Jaume I", "url": "https://www.uji.es"},
+        "url": d["site"] + "/",
+        "image": d["site"] + "/profile.jpg",
+        "description": d["description"],
+        "sameAs": [l["url"] for l in d["links"] if l["url"].startswith("http")] + [d["papers_all"]["url"]],
+    },
+    ensure_ascii=False,
+    indent=2,
+)
+links = "\n".join(link(l["label"], l["url"]) for l in d["links"])
+software = [
+    f'{link(s["name"], s["url"])} ({e(s["when"])}) — {e(s["role"])}. {e(s["text"])}'
+    for s in d["software"]
+]
+papers = [
+    f'{link(p["title"], p.get("url"))}. '
+    + (f'With {e(p["with"])}. ' if "with" in p else "")
+    + f'<em>{e(p["venue"])}</em>, {p["year"]}.'
+    for p in d["papers"]
+]
+papers.append(link(d["papers_all"]["label"] + " →", d["papers_all"]["url"]))
+background = [e(t["text"]) for t in d["background"]]
+collab = [
+    e(t["text"]) + (f' Paper: {link(t["paper"]["label"], t["paper"]["url"])}.' if "paper" in t else "")
+    for t in d["collaborations"]
+]
+
+html = f"""
+
+<script type="application/ld+json">
+{person}
+</script>
+<p>{e(d["bio"])}</p>
+<p class="links">
+{links}
+</p>
+{section("Selected papers", papers)}{section("Collaborations", collab)}{section("Software", software)}{section("Background", background)}
+<script src="simplex.js" defer></script>
+</main>
+"""
+print("```{=html}\n" + html + "\n```")
+```

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="A visual introduction to archetypal analysis: describing data as mixtures of extreme cases.">
+
+<title>Archetypal analysis, visually</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://www.aleixalcacer.com/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://www.aleixalcacer.com/profile.jpg">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Aleix Alcacer Sales — Archetypal analysis">
+<meta property="og:description" content="Assistant Professor at Universitat Jaume I. Research on archetypal analysis: interpretable representations of data as mixtures of extreme cases.">
+<meta property="og:url" content="https://www.aleixalcacer.com/">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/requirejs@2.3.6/require.min.js" integrity="sha384-c9c+LnTbwQ3aujuU7ULEPVvgLs+Fn6fJUvIGTsuu1ZcCf11fiEubah0ttpca4ntM sha384-6V1/AdqZRWk1KAlWbKBlGhN7VG4iE/yAZcO6NZPMF8od0vukrvr0tg4qY6NSrItx" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<nav class="site">
+<a href="/">Home</a>
+<a href="/notes/">Notes</a>
+</nav>
+<script>
+  document.querySelectorAll("nav.site a").forEach(function (a) {
+    var here = location.pathname.replace(/index\.html$/, "");
+    if (a.pathname === here || (a.pathname !== "/" && here.startsWith(a.pathname))) a.classList.add("cur");
+  });
+</script>
+<main class="note">
+
+<header id="title-block-header">
+<h1 class="title">Archetypal analysis, visually</h1>
+
+</header>
+
+
+<p>Archetypal analysis (AA) describes a dataset through a handful of extreme cases, the <strong>archetypes</strong>, and explains every observation as a mixture of them. Instead of asking “which group does this point belong to?”, it asks “how much of each extreme does this point have?”</p>
+<div id="1784a2e5" class="cell" data-execution_count="4">
+<div class="cell-output cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img src="archetypal-analysis_files/figure-html/cell-5-output-1.svg"></p>
+<figcaption>150 points (grey) and the three archetypes AA finds (coloured). The archetypes sit near the corners of the cloud, and the triangle they span contains the data.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<h2 id="every-point-is-a-mixture">Every point is a mixture</h2>
+<p>Take any point of the cloud. It can be written as a weighted average of the archetypes: the weights are never negative and add up to one, so they say <em>how much</em> of each archetype the point contains. Below, each point is coloured by blending the colours of the archetypes with its weights, and one point is highlighted with a line to each archetype, as thick as its weight. Points near a corner are almost pure; points in the middle mix all three.</p>
+<div id="4fb94f39" class="cell" data-execution_count="5">
+<div class="cell-output cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img src="archetypal-analysis_files/figure-html/cell-6-output-1.svg"></p>
+<figcaption>Each point is a mixture of the archetypes. The highlighted point is joined to every archetype by a line whose thickness is its weight.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>In matrix form, with the data <span class="math inline">X \in \mathbb{R}^{n \times p}</span> and <span class="math inline">k</span> archetypes stored as the rows of <span class="math inline">Z \in \mathbb{R}^{k \times p}</span>, the weights of the <span class="math inline">n</span> observations form a matrix <span class="math inline">A \in \mathbb{R}^{n \times k}</span> and the data are approximated by <span class="math inline">X \approx A Z</span>. The second ingredient is what makes AA special: the archetypes are themselves mixtures of observations, <span class="math inline">Z = B X</span>. Fitting the model means solving</p>
+<p><span class="math display">
+\min_{A,\,B}\ \lVert X - A B X \rVert_F^2
+\quad\text{s.t.}\quad A\mathbf{1} = \mathbf{1},\ B\mathbf{1} = \mathbf{1},\ A, B \ge 0 .
+</span></p>
+<p><span class="math inline">A</span> says how much of each archetype every observation has; <span class="math inline">B</span> says which observations each archetype is made of. Because <span class="math inline">B</span> is also a mixture, the archetypes never leave the data: they are extreme, but they look like real observations, so you can inspect them as such.</p>
+<h2 id="archetypes-are-not-centroids">Archetypes are not centroids</h2>
+<p>A centroid, as in k-means, is the average of a group: it describes a <em>typical</em> case, and it lies inside the cloud. An archetype is the opposite: it describes an <em>extreme</em> case, and it lies on the boundary. Same data, same number of groups, very different summaries.</p>
+<div id="2dae0ea6" class="cell" data-execution_count="6">
+<div class="cell-output cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img src="archetypal-analysis_files/figure-html/cell-7-output-1.svg"></p>
+<figcaption>k-means (left) and archetypal analysis (right) on the same points. Each point is coloured by similarity: k-means splits the plane into groups (dashed lines) and gives each point the colour of its nearest centroid, AA blends the colours of the archetypes with its weights. Centroids describe typical cases inside the cloud; archetypes describe the extremes.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Compared with methods like PCA, which can produce components with negative loadings that look like no real observation, archetypes are always non-negative mixtures of the data itself, so they stay within its range and are easy to interpret.</p>
+<h2 id="how-the-archetypes-move">How the archetypes move</h2>
+<p>Fitting starts from random archetypes. Each iteration moves them towards the extremes while the reconstruction error <span class="math inline">\lVert X - ABX\rVert_F^2</span> drops.</p>
+<div id="e03811a0" class="cell" data-execution_count="7">
+<div class="cell-output cell-output-display" data-execution_count="63">
+<figure>
+<img src="media/archetypes.svg" alt="Archetypes moving towards the extremes of the data">
+<figcaption>Archetypes during fitting: they start at random positions and move to the extremes.</figcaption>
+</figure>
+</div>
+</div>
+<h2 id="going-further">Going further</h2>
+<p>AA is most useful when the extremes tell you more than the averages do. It has been used, for example, to <a href="https://doi.org/10.1371/journal.pone.0228016">classify 3D foot shapes</a> from landmarks, describing each foot as a mixture of a few archetypal shapes.</p>
+<p>The idea also goes beyond a single data matrix. <a href="https://doi.org/10.1109/TPAMI.2024.3400730">Biarchetype analysis</a> finds archetypes of the observations and of the features at the same time, and <a href="https://doi.org/10.1109/TPAMI.2026.3740133">A Survey on Archetypal Analysis</a> reviews the method, its variants and its applications.</p>
+<p>The code behind the figures here is a short from-scratch implementation, written only to illustrate the idea. For real analyses use <a href="https://github.com/aleixalcacer/archetypes">archetypes</a>, a Python library for archetypal analysis that is compatible with scikit-learn.</p>
+
+</main>
+
+
+
+
+</body></html>

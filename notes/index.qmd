@@ -1,0 +1,7 @@
+---
+title: "Notes"
+---
+
+Short explanations of topics I work on.
+
+- [Archetypal analysis, visually](archetypal-analysis.html)

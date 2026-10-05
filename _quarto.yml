@@ -1,0 +1,26 @@
+project:
+  type: default
+  output-dir: docs
+  resources:
+    - /CNAME
+    - /favicon.ico
+    - /favicon.svg
+    - /profile.jpg
+    - /simplex.js
+    - /notes/media
+
+execute:
+  freeze: auto
+
+
+
+format:
+  html:
+    theme: none
+    minimal: true
+    css: style.css
+    title-block-style: none
+    toc: false
+    html-math-method: katex
+    include-in-header: head.html
+    include-before-body: nav.html

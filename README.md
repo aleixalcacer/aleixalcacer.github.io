@@ -1,18 +1,18 @@
 # aleixalcacer.github.io
 
-Personal website. Plain HTML + CSS, no framework.
+Personal website, built with [Quarto](https://quarto.org). No theme or framework: `style.css` holds all the styling and `simplex.js` animates the polyhedron in the header.
 
-Content lives in `data.yaml`. After editing it, regenerate the page:
+The home page is `index.qmd`; a Python cell in it renders the content from `data.yaml`. After editing, preview or rebuild into `docs/`:
 
 ```bash
-python build.py   # needs pyyaml
+uv sync                 # once: creates .venv from pyproject.toml
+uv run quarto preview   # live preview
+uv run quarto render    # build into docs/
 ```
 
-Commit `data.yaml` and `index.html`. GitHub Pages serves the repo root.
+GitHub Pages serves the `docs/` folder (Settings → Pages → Deploy from a branch → `/docs`). Commit `docs/` and `_freeze/` too.
 
-`simplex.js` animates the rotating polyhedron in the header (no dependencies); `style.css` holds all the styling.
-
-A pre-commit hook in `.githooks/` regenerates `index.html` automatically. Enable it once per clone:
+A pre-commit hook in `.githooks/` re-renders automatically. Enable it once per clone:
 
 ```bash
 git config core.hooksPath .githooks
