@@ -1,10 +1,28 @@
 """Generate index.html from data.yaml.  Usage: python build.py"""
+import json
 from html import escape as e
 from pathlib import Path
 
 import yaml
 
 d = yaml.safe_load(Path("data.yaml").read_text())
+
+
+person = json.dumps(
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": d["name"],
+        "jobTitle": d["role"].split(" · ")[0],
+        "affiliation": {"@type": "CollegeOrUniversity", "name": "Universitat Jaume I", "url": "https://www.uji.es"},
+        "url": d["site"] + "/",
+        "image": d["site"] + "/profile.jpg",
+        "description": d["description"],
+        "sameAs": [l["url"] for l in d["links"] if not l["url"].startswith("mailto:")] + [d["papers_all"]["url"]],
+    },
+    ensure_ascii=False,
+    indent=2,
+)
 
 
 def link(text, url):
@@ -47,6 +65,10 @@ page = f"""<!doctype html>
   <meta property="og:url" content="{e(d["site"])}/">
   <meta property="og:image" content="{e(d["site"])}/profile.jpg">
   <meta name="twitter:card" content="summary">
+  <link rel="canonical" href="{e(d["site"])}/">
+  <script type="application/ld+json">
+{person}
+  </script>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
 </head>

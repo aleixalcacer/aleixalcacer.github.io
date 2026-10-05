@@ -1,0 +1,6 @@
+#!/bin/sh
+# Regenerate index.html from data.yaml so a commit can never publish a stale page.
+cd "$(git rev-parse --show-toplevel)" || exit 1
+PY=.venv/bin/python
+[ -x "$PY" ] || PY=python3
+"$PY" build.py && git add index.html
