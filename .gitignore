@@ -9,3 +9,8 @@ __pycache__/
 /docs/
 
 **/*.quarto_ipynb
+
+# local settings: show the draft notes on this machine only
+_environment.local
+
+/_*.local
