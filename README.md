@@ -10,10 +10,4 @@ uv run quarto preview   # live preview
 uv run quarto render    # build into docs/
 ```
 
-GitHub Pages serves the `docs/` folder (Settings → Pages → Deploy from a branch → `/docs`). Commit `docs/` and `_freeze/` too.
-
-A pre-commit hook in `.githooks/` re-renders automatically. Enable it once per clone:
-
-```bash
-git config core.hooksPath .githooks
-```
+GitHub Actions builds and publishes the site on every push to `main` (`.github/workflows/publish.yml`), so `docs/` is not committed. In Settings → Pages, set Source to **GitHub Actions**. Commit `_freeze/`: it holds the executed output of the notes, so the build does not need to re-run them.
