@@ -83,6 +83,9 @@ figure { margin: 2rem 0; text-align: center; }
 figure img { max-width: 100%; height: auto; }
 figcaption { margin-top: .5rem; color: var(--muted); font-size: .85rem; }
 
+/* references (notes) */
+#refs .csl-entry { margin: .5rem 0; padding-left: 1.5rem; text-indent: -1.5rem; color: var(--muted); font-size: .9rem; }
+
 /* site navigation */
 nav.site { max-width: 44rem; margin: 0 auto; padding: 1.25rem 1.25rem 0; display: flex; gap: 1.25rem; font: .8rem var(--mono); letter-spacing: .04em; }
 nav.site a { color: var(--text); padding-bottom: .15rem; border-bottom: 2px solid transparent; transition: color .15s, border-color .15s; }
