@@ -7,7 +7,6 @@ project:
     - /favicon.svg
     - /profile.jpg
     - /simplex.js
-    - /notes/media
 
 execute:
   freeze: auto

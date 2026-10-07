@@ -154,10 +154,12 @@ Compared with methods like PCA, which can produce components with negative loadi
 
 Fitting starts from random archetypes. Each iteration moves them towards the extremes while the reconstruction error $\lVert X - ABX\rVert_F^2$ drops.
 
-```{python}
-from pathlib import Path
+The animation is a single looping SVG, generated from the matplotlib figure with [svganim](https://github.com/aleixalcacer/svganim): no GIF and no JavaScript.
 
-from IPython.display import HTML
+```{python}
+#| fig-cap: "Archetypes during fitting: they start at random positions and move to the extremes."
+#| fig-alt: "Archetypes moving towards the extremes of the data"
+from IPython.display import SVG
 from svganim import anim_to_svg
 
 fig = plt.figure(figsize=(3.3, 3.0))
@@ -176,14 +178,9 @@ def update(f):
     arch.set_offsets(history[f])
 
 
-Path("media").mkdir(exist_ok=True)
-anim_to_svg(fig, update, len(history), fps=20, hold=1.5, path="media/archetypes.svg")
+svg = anim_to_svg(fig, update, len(history), fps=20, hold=1.5)
 plt.close(fig)
-
-HTML("""<figure>
-<img src="media/archetypes.svg" alt="Archetypes moving towards the extremes of the data">
-<figcaption>Archetypes during fitting: they start at random positions and move to the extremes.</figcaption>
-</figure>""")
+SVG(data=svg)
 ```
 
 ## Going further

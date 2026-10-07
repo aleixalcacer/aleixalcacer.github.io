@@ -8,6 +8,7 @@ dependencies = [
     "matplotlib",
     "numpy",
     "pyyaml",
+    "svganim>=0.3.0",
 ]
 
 [tool.uv]

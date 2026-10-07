@@ -15,6 +15,7 @@ dependencies = [
     { name = "matplotlib" },
     { name = "numpy" },
     { name = "pyyaml" },
+    { name = "svganim" },
 ]
 
 [package.metadata]
@@ -23,6 +24,7 @@ requires-dist = [
     { name = "matplotlib" },
     { name = "numpy" },
     { name = "pyyaml" },
+    { name = "svganim", specifier = ">=0.3.0" },
 ]
 
 [[package]]
@@ -2090,6 +2092,18 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/28/e3/55dcc2cfbc3ca9c29519eb6884dd1415ecb53b0e934862d3559ddcb7e20b/stack_data-0.6.3.tar.gz", hash = "sha256:836a778de4fec4dcd1dcd89ed8abff8a221f58308462e1c4aa2a3cf30148f0b9", size = 44707, upload-time = "2023-09-30T13:58:05.479Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/f1/7b/ce1eafaf1a76852e2ec9b22edecf1daa58175c090266e9f6c64afcd81d91/stack_data-0.6.3-py3-none-any.whl", hash = "sha256:d5558e0c25a4cb0853cddad3d77da9891a08cb85dd9f9f91b9f8cd66e511e695", size = 24521, upload-time = "2023-09-30T13:58:03.53Z" },
+]
+
+[[package]]
+name = "svganim"
+version = "0.3.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "matplotlib" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/64/5b/01d6f006618530161940c5e4a5c8303ea9efba493ff1e974d6baf2d72f27/svganim-0.3.0.tar.gz", hash = "sha256:082718a94daeeb917b0ad7c672de76a05bceb7e660f7d2ea2cfc15638234f5f8", size = 12590, upload-time = "2026-10-06T22:36:19.699Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/6d/c4/520e0c636389faebd4fd2e8f433f25ffde62f1faaac8fc5669413e64b166/svganim-0.3.0-py3-none-any.whl", hash = "sha256:a07869f9508b0aef5fe05fa50a0643019f2be17fa49ea419733e729e3122d118", size = 15510, upload-time = "2026-10-06T22:36:18.605Z" },
 ]
 
 [[package]]
