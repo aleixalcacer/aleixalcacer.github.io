@@ -6,8 +6,6 @@ categories: [archetypal analysis]
 bibliography: references.bib
 link-citations: true
 image: og.png
-aliases:
-  - /notes/archetypal-analysis.html
 ---
 
 Think of a paint shop. It does not sell thousands of colours: it sells a few pure ones, and every other colour is a mix of them. **Archetypal analysis** (AA) does the same with data. It looks for a handful of extreme, "pure" cases, the **archetypes**, and describes everything else as a mixture of them.

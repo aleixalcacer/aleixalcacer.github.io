@@ -89,12 +89,14 @@ figcaption { margin-top: .5rem; color: var(--muted); font-size: .85rem; }
 /* maths: a wide formula scrolls on its own instead of widening the page */
 .katex-display { overflow-x: auto; overflow-y: hidden; }
 
-/* notes index */
-ul.notes li { margin-bottom: 1.6rem; }
-.note-title { font-size: 1.15rem; font-weight: 600; letter-spacing: -.01em; }
-ul.notes p { margin: .25rem 0 0; }
-ul.notes p.meta { margin-top: .5rem; display: flex; flex-wrap: wrap; align-items: center; gap: .5rem; color: var(--muted); font: .78rem var(--mono); }
-ul.notes p.meta span { padding: .05rem .55rem; border: 1px solid var(--line); border-radius: 6px; }
+/* notes index: the list that Quarto generates */
+.quarto-listing .quarto-post { margin-bottom: 1.6rem; padding-left: 1rem; border-left: 2px solid var(--line); }
+.quarto-listing .quarto-post:hover { border-left-color: var(--accent); }
+.quarto-listing h3 { margin: 0; font-size: 1.15rem; font-weight: 600; letter-spacing: -.01em; }
+.quarto-listing .listing-description p { margin: .25rem 0 0; }
+.quarto-listing .delink a, .quarto-listing .metadata a { color: inherit; text-decoration: none; }
+.quarto-listing .listing-date { margin-top: .5rem; color: var(--muted); font: .78rem var(--mono); }
+.d-none { display: none; }
 
 /* site navigation */
 nav.site { max-width: 44rem; margin: 0 auto; padding: 1.25rem 1.25rem 0; display: flex; gap: 1.25rem; font: .8rem var(--mono); letter-spacing: .04em; }

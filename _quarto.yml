@@ -10,11 +10,6 @@ project:
     - /notes/*/og.png
     - /simplex.js
 
-execute:
-  freeze: auto
-
-
-
 format:
   html:
     theme: none

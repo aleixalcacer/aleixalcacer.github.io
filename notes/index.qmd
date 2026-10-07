@@ -1,49 +1,17 @@
 ---
 title: "Notes"
 description: "Short, visual explanations of topics I work on."
-execute:
-  freeze: false
 image: ../profile.jpg
-format:
-  html:
-    include-after-body:
-      text: "</main>"
+listing:
+  contents: "*/index.qmd"
+  sort: "date desc"
+  fields: [title, description, date]
+  date-format: "MMMM D, YYYY"
+  sort-ui: false
+  filter-ui: false
 ---
 
-```{python}
-#| output: asis
-import math
-import re
-from datetime import date, datetime
-from html import escape as e
-from pathlib import Path
+Short, visual explanations of topics I work on, written to be readable without a technical background.
 
-import yaml
-
-notes = []
-for path in Path(".").glob("*/index.qmd"):  # one folder per article
-    _, front, body = path.read_text().split("---", 2)
-    meta = yaml.safe_load(front)
-    prose = re.sub(r"```.*?```", lambda m: " ".join(re.findall(r'fig-cap: "(.*?)"', m.group(0))), body, flags=re.S)
-    prose = re.sub(r"\$\$.*?\$\$", "", prose, flags=re.S)
-    when = meta["date"] if isinstance(meta["date"], date) else datetime.strptime(meta["date"], "%Y-%m-%d").date()
-    notes.append({
-        "url": path.parent.name + "/",
-        "title": meta["title"],
-        "description": meta.get("description", ""),
-        "date": when,
-        "tags": meta.get("categories", []),
-        "minutes": max(1, math.ceil(len(re.findall(r"\w+", prose)) / 200)),
-    })
-
-items = []
-for n in sorted(notes, key=lambda n: n["date"], reverse=True):
-    tags = "".join(f"<span>{e(t)}</span>" for t in n["tags"])
-    items.append(f"""<li>
-<a class="note-title" href="{e(n['url'])}">{e(n['title'])}</a>
-<p>{e(n['description'])}</p>
-<p class="meta"><time datetime="{n['date']}">{n['date']:%B} {n['date'].day}, {n['date'].year}</time> · {n['minutes']} min read{tags}</p>
-</li>""")
-
-print("```{=html}\n<p>Short, visual explanations of topics I work on, written to be readable without a technical background.</p>\n<ul class=\"notes\">\n" + "\n".join(items) + "\n</ul>\n```")
-```
+::: {#listing}
+:::

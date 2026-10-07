@@ -10,7 +10,7 @@ uv run quarto preview   # live preview
 uv run quarto render    # build into docs/
 ```
 
-GitHub Actions builds and publishes the site on every push to `main` (`.github/workflows/publish.yml`), so `docs/` is not committed. In Settings → Pages, set Source to **GitHub Actions**. Commit `_freeze/`: it holds the executed output of the notes, so the build does not need to re-run them.
+GitHub Actions builds and publishes the site on every push to `main` (`.github/workflows/publish.yml`), so `docs/` is not committed. In Settings → Pages, set Source to **GitHub Actions**. The build runs the code of the notes by itself.
 
 ## Adding a note
 
@@ -35,6 +35,4 @@ image: og.png            # optional
 ---
 ```
 
-If a note is renamed, add `aliases: [/notes/old-name/]` to its front matter so the old address redirects.
-
-Quarto sometimes fails with a "No such file or directory" error when it moves the generated HTML; running `uv run quarto render` again fixes it. After changing a note's text or code, render twice and commit `_freeze/` too.
+Quarto sometimes fails with a "No such file or directory" error when it moves the generated HTML; running `uv run quarto render` again fixes it.
