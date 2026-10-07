@@ -33,3 +33,4 @@ website:
   open-graph: true
   twitter-card: true
   search: false
+  draft-mode: gone

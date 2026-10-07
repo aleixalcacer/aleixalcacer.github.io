@@ -21,11 +21,11 @@ from pathlib import Path
 import yaml
 
 notes = []
-for path in Path(".").glob("*/index.qmd"):  # one folder per article; folders starting with an underscore are drafts and are not listed
-    if path.parent.name.startswith("_"):
-        continue
+for path in Path(".").glob("*/index.qmd"):  # one folder per article
     _, front, body = path.read_text().split("---", 2)
     meta = yaml.safe_load(front)
+    if meta.get("draft"):  # drafts are not listed
+        continue
     prose = re.sub(r"```.*?```", lambda m: " ".join(re.findall(r'fig-cap: "(.*?)"', m.group(0))), body, flags=re.S)
     prose = re.sub(r"\$\$.*?\$\$", "", prose, flags=re.S)
     when = meta["date"] if isinstance(meta["date"], date) else datetime.strptime(meta["date"], "%Y-%m-%d").date()

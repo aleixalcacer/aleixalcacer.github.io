@@ -4,6 +4,7 @@ version = "0.0.0"
 description = "Personal website"
 requires-python = ">=3.12"
 dependencies = [
+    "archetypes>=0.12.2",
     "jupyter",
     "matplotlib",
     "numpy",
