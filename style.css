@@ -36,8 +36,9 @@ header img {
   outline: 2px solid var(--accent); outline-offset: 3px;
   box-shadow: 0 8px 24px color-mix(in srgb, var(--accent) 30%, transparent);
 }
-h1 { margin: 0; font-size: 2.1rem; font-weight: 700; letter-spacing: -.02em; line-height: 1.15; }
+h1, .name { margin: 0; font-size: 2.1rem; font-weight: 700; letter-spacing: -.02em; line-height: 1.15; }
 header p { margin: .3rem 0 0; color: var(--muted); }
+header .name { margin: 0; color: var(--text); }
 
 /* archetypal-analysis motif: a simplex whose interior points are mixtures of its vertices */
 .simplex { width: 120px; margin: -12px 0 -12px auto; flex: none; overflow: visible; cursor: grab; touch-action: none; user-select: none; }
@@ -49,7 +50,7 @@ header p { margin: .3rem 0 0; color: var(--muted); }
   main { padding: 2.5rem 1.25rem; }
   header { gap: 1rem; }
   header img { width: 72px; height: 72px; }
-  h1 { font-size: 1.6rem; }
+  h1, .name { font-size: 1.6rem; }
 }
 
 .links { display: flex; flex-wrap: wrap; gap: .5rem; margin: 1.5rem 0 0; }
@@ -73,10 +74,17 @@ h2 {
 }
 h2::after { content: ""; flex: 1; height: 1px; background: var(--line); }
 
+/* in the notes the headings are plain, like in an article */
+main.note h2 { display: block; margin: 2.75rem 0 .75rem; color: var(--text); font: 700 1.4rem/1.3 system-ui, -apple-system, "Segoe UI", sans-serif; letter-spacing: -.01em; text-transform: none; }
+main.note h2::after { content: none; }
+
 ul { margin: 0; padding: 0; list-style: none; }
 li { margin-bottom: 1rem; padding-left: 1rem; border-left: 2px solid var(--line); }
 li:hover { border-left-color: var(--accent); }
 em { color: var(--muted); font-style: normal; }
+
+/* the date of a note is shown in the notes index, not above the article */
+main.note header:has(> .date) { display: none; }
 
 /* figures (notes) */
 figure { margin: 2rem 0; text-align: center; }
