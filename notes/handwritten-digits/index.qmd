@@ -1,0 +1,294 @@
+---
+title: "Handwritten digits as mixtures of archetypes"
+description: "What if every handwritten digit were a recipe made of a few pure ones? A hands-on example of archetypal analysis with 1,797 digit images and the Python library archetypes."
+date: "2026-10-07"
+categories: [archetypal analysis, python]
+draft: true
+---
+
+In [the previous note](/notes/archetypal-analysis/) we described a cloud of dots as mixtures of a few extreme cases. Dots on a page are easy to picture, but archetypal analysis works on anything that can be turned into numbers. A picture is exactly that, and the results are surprisingly easy to read.
+
+```{python}
+#| include: false
+import warnings
+
+import matplotlib.pyplot as plt
+import numpy as np
+from archetypes import AA
+from IPython.display import SVG
+from matplotlib.colors import LinearSegmentedColormap, to_rgb
+from matplotlib.ticker import PercentFormatter
+from matplotlib_inline.backend_inline import set_matplotlib_formats
+from sklearn.datasets import load_digits
+from svganim import anim_to_svg
+
+warnings.filterwarnings("ignore")
+
+BG, DARK, INK, GREY, GREEN = "#fffdf9", "#1c1917", "#78716c", "#a8a29e", "#5f7a2f"
+COLORS = ["#4f7cac", "#5f7a2f", "#c2713a"]
+FONT, TITLE = 11, 12  # the same sizes as in the other note
+plt.rcParams.update({"text.color": INK, "axes.edgecolor": INK, "axes.labelcolor": INK, "xtick.color": INK, "ytick.color": INK,
+                     "figure.facecolor": "none", "axes.facecolor": "none", "savefig.facecolor": "none", "font.size": FONT})
+set_matplotlib_formats("svg", bbox_inches=None)
+W, H2 = 5.6, 2.57  # every figure is 5.6 inches wide
+
+PAPER = LinearSegmentedColormap.from_list("paper", [BG, DARK])  # white paper to black ink, in the colours of the site
+PERCENT = LinearSegmentedColormap.from_list("percent", [BG, GREEN])
+
+
+def pic(ax, pixels, **kw):
+    """Draw a digit (64 grey levels from 0 to 1) as a crisp 8 x 8 picture."""
+    ax.imshow(np.asarray(pixels).reshape(8, 8), cmap=PAPER, vmin=0, vmax=1, interpolation="nearest", **kw)
+    ax.set_xticks([])
+    ax.set_yticks([])
+    for side in ax.spines.values():
+        side.set_color(GREY)
+        side.set_linewidth(0.8)
+```
+
+```{python}
+#| include: false
+data = load_digits()
+X, y, n = data.data / 16.0, data.target, len(data.target)  # 1,797 digits, 64 pixels each, grey levels from 0 to 1
+total = ((X - X.mean(axis=0)) ** 2).sum()
+
+aa = AA(n_archetypes=10, n_init=3, max_iter=400, random_state=0)
+A = aa.fit_transform(X)  # one recipe per digit: 10 percentages that add up to 100%
+Z, B = aa.archetypes_, aa.B_
+
+# the mean recipe of every real digit, and which digit each archetype looks like most
+mean_recipe = np.array([A[y == c].mean(axis=0) for c in range(10)])  # (digit, archetype)
+looks_like = mean_recipe.argmax(axis=0)
+order = np.argsort(looks_like, kind="stable")  # sort the archetypes by the digit they look like
+A, Z, B, looks_like, mean_recipe = A[:, order], Z[order], B[order], looks_like[order], mean_recipe[:, order]
+unexplained = float(((A @ Z - X) ** 2).sum() / total)
+
+found = sorted(set(looks_like.tolist()))
+missing = sorted(set(range(10)) - set(found))
+twice = sorted(c for c in found if (looks_like == c).sum() > 1)
+behind = int(np.median((B > 0.02).sum(axis=1)))  # real digits behind each archetype
+```
+
+## A picture is a table of numbers
+
+A grey image is a table of numbers: one per pixel, from 0 (white) to 16 (black) here. The digits in this note are tiny, 8×8 pixels, so each one is 64 numbers.
+
+```{python}
+#| fig-cap: "A handwritten 3 and the table of numbers behind it: one number per pixel, from 0 (white) to 16 (black)."
+#| fig-alt: "A tiny 8 by 8 pixel picture of the digit 3, with the grey level of every pixel written on top of it."
+three = data.images[np.flatnonzero(y == 3)[0]]
+fig = plt.figure(figsize=(W, 3.0))
+ax = fig.add_axes([0.25, 0.02, 0.5, 0.96])
+ax.imshow(three / 16, cmap=PAPER, vmin=0, vmax=1, interpolation="nearest")
+for (row, col), v in np.ndenumerate(three):
+    ax.text(col, row, f"{int(v)}", ha="center", va="center", fontsize=10, color=DARK if v < 9 else BG)
+ax.set_xticks([])
+ax.set_yticks([])
+plt.show()
+```
+
+Think of every digit as a dot in a space with 64 directions instead of two. We cannot draw that space, but the ideas of the previous note work in it exactly the same way. We will use 1,797 handwritten digits, a small public collection that comes with scikit-learn.
+
+```{python}
+#| fig-cap: "Sixty of the 1,797 handwritten digits. The algorithm will never be told which digit is which."
+#| fig-alt: "A grid of sixty tiny pictures of handwritten digits."
+sample = np.random.default_rng(0).choice(n, 60, replace=False)
+fig, axes = plt.subplots(5, 12, figsize=(W, W * 5 / 12))
+for ax, i in zip(axes.ravel(), sample):
+    pic(ax, X[i])
+fig.subplots_adjust(left=0, right=1, bottom=0, top=1, wspace=0.08, hspace=0.08)
+plt.show()
+```
+
+## Ten pure digits
+
+Let us ask archetypal analysis for 10 archetypes. It only sees the pictures, never which digit each one is.
+
+```{python}
+#| fig-cap: "The average of all the digits (left) and the 10 archetypes (right). Under each archetype, the digit it looks like most."
+#| fig-alt: "A blurry grey smudge, the average digit, next to ten crisp pictures of digits, the archetypes, each labelled with a number."
+fig = plt.figure(figsize=(W, H2))
+side = 0.125 * W / H2  # height that makes the pictures square
+big = 0.19 * W / H2
+ax = fig.add_axes([0.02, 0.5 - big / 2, 0.19, big])
+pic(ax, X.mean(axis=0))
+fig.text(0.115, 0.5 - big / 2 - 0.03, "average", ha="center", va="top")
+for j in range(10):
+    row, col = divmod(j, 5)
+    y0 = 0.60 - row * 0.40
+    ax = fig.add_axes([0.27 + col * 0.145, y0, 0.125, side])
+    pic(ax, Z[j])
+    fig.text(0.27 + col * 0.145 + 0.0625, y0 - 0.02, f"≈ {looks_like[j]}", ha="center", va="top")
+plt.show()
+```
+
+They look like digits. The *average* digit, on the left, is a grey smudge, because it mixes everything. The archetypes are crisp for the reason we saw in the previous note: each one is built from real digits, about `{python} behind` of them, so it keeps their sharp strokes.
+
+Nobody told the algorithm that there are digits from 0 to 9, and yet its archetypes look like the digits `{python} ", ".join(str(c) for c in found)`. Two of them look like the digit `{python} " and ".join(str(c) for c in twice)`, and none looks like the digit `{python} " or ".join(str(c) for c in missing)`.
+
+## A digit without an archetype
+
+If no archetype looks like an 8, can archetypal analysis still describe an 8? Of course: an 8 is a mixture. This is the recipe of one of them.
+
+```{python}
+#| fig-cap: "A real 8 written as a recipe of archetypes: the three main ingredients and their percentages. The rest of the recipe is spread over the other archetypes."
+#| fig-alt: "A picture of a handwritten 8, followed by an approximately-equal sign and three pictures of archetypes added together, each with its percentage."
+gap = ((A @ Z - X) ** 2).sum(axis=1)
+sorted_recipes = np.sort(A, axis=1)[:, ::-1]
+candidates = [i for i in np.flatnonzero(y == missing[0]) if 0.55 < sorted_recipes[i, :3].sum() < 0.95 and sorted_recipes[i, 2] > 0.12]
+example = min(candidates, key=lambda i: gap[i])  # an 8 that the recipe describes well
+ingredients = np.argsort(A[example])[::-1][:3]
+
+H3 = 1.5
+fig = plt.figure(figsize=(W, H3))
+items = [("img", X[example], f"a real {y[example]}", None), ("op", "≈", None, None)]
+for k, j in enumerate(ingredients):
+    items += [("img", Z[j], f"{A[example, j]:.0%}", COLORS[k]), ("op", "+" if k < 2 else "+ …", None, None)]
+x = 0.03
+for kind, content, caption, color in items:
+    width = 0.15 if kind == "img" else (0.05 if content != "+ …" else 0.09)
+    if kind == "img":
+        ax = fig.add_axes([x, 0.30, width, width * W / H3])
+        pic(ax, content)
+        if color:
+            for side in ax.spines.values():
+                side.set_color(color)
+                side.set_linewidth(2.5)
+        fig.text(x + width / 2, 0.26, caption, ha="center", va="top", color=color or INK, fontweight="bold" if color else "normal")
+    else:
+        fig.text(x + width / 2, 0.30 + 0.15 * W / H3 / 2, content, ha="center", va="center", fontsize=18)
+    x += width + 0.012
+plt.show()
+```
+
+This 8 is mostly a mixture of the archetypes that look like the digits `{python} ", ".join(str(looks_like[j]) for j in ingredients)`, whose round strokes together make up an 8. It is a recipe like the ones in the previous note: percentages that add up to 100%.
+
+## Sliding between archetypes
+
+Because every digit is a mixture, we can also run the recipe in reverse and create digits by choosing the percentages ourselves. In the animation, the dot of the previous note has become a picture. At an archetype we see that pure digit; in between, the shapes melt into one another.
+
+```{python}
+#| fig-cap: "Mixing three archetypes. The picture on the left is the mixture given by the percentages on the right."
+#| fig-alt: "An animation of a picture that gradually changes from one digit to another while three bars show how much of each of three archetypes it contains."
+trio = [int(np.flatnonzero(looks_like == c)[0]) for c in (0, 1, 7)]
+fig = plt.figure(figsize=(W, H2))
+big = fig.add_axes([0.02, 0.04, 0.44, 0.92])
+picture = big.imshow(Z[trio[0]].reshape(8, 8), cmap=PAPER, vmin=0, vmax=1, interpolation="nearest")
+big.set_xticks([])
+big.set_yticks([])
+for side in big.spines.values():
+    side.set_color(GREY)
+
+bars, texts = [], []
+for r, j in enumerate(trio):
+    y0 = 0.68 - r * 0.32
+    pic(fig.add_axes([0.52, y0, 0.125, 0.27]), Z[j])
+    track = fig.add_axes([0.67, y0 + 0.085, 0.20, 0.10])
+    track.set_xlim(0, 1)
+    track.set_ylim(0, 1)
+    track.axis("off")
+    track.barh([0.5], [1], height=1, color=GREY, alpha=0.2)
+    bars.append(track.barh([0.5], [0], height=1, color=COLORS[r])[0])
+    texts.append(track.text(1.12, 0.5, "", va="center", ha="left"))
+
+
+def mix(w):
+    picture.set_data((w @ Z[trio]).reshape(8, 8))
+    shares = np.round(100 * w).astype(int)
+    shares[np.argmax(w)] += 100 - shares.sum()
+    for bar, text, wj, s in zip(bars, texts, w, shares):
+        bar.set_width(wj)
+        text.set_text(f"{s}%")
+
+
+stops = [[1, 0, 0], [0, 1, 0], [0, 0, 1], [1, 0, 0], [0.34, 0.33, 0.33], [1, 0, 0]]
+frames = []
+for a, b in zip(stops[:-1], stops[1:]):
+    frames += [np.array(a)] * 6
+    for s in np.linspace(0, 1, 14)[1:-1]:
+        e = s * s * (3 - 2 * s)
+        frames.append((1 - e) * np.array(a) + e * np.array(b))
+frames += [np.array(stops[-1])] * 6
+
+svg = anim_to_svg(fig, lambda f: mix(frames[f]), len(frames), fps=14, hold=0.5)
+plt.close(fig)
+SVG(data=svg)
+```
+
+## What is each digit made of?
+
+We can also ask, for every real digit, which archetypes it is made of. Each row shows the average recipe of one digit, from 0 to 9, and each column is one archetype.
+
+```{python}
+#| fig-cap: "The average recipe of every real digit (rows) in terms of the 10 archetypes (columns), in percent. Dark green means that the archetype is a large part of that digit."
+#| fig-alt: "A table with ten rows, one per digit, and ten columns, one per archetype, whose cells are shaded from white to green according to their percentage."
+fig = plt.figure(figsize=(W, 4.1))
+heat = fig.add_axes([0.10, 0.03, 0.88, 0.76])
+heat.imshow(mean_recipe, cmap=PERCENT, vmin=0, vmax=0.8, aspect="auto")
+for (row, col), v in np.ndenumerate(mean_recipe):
+    if v >= 0.04:
+        heat.text(col, row, f"{v:.0%}", ha="center", va="center", fontsize=9, color=DARK if v < 0.45 else BG)
+heat.set_yticks(range(10), [str(c) for c in range(10)])
+heat.set_xticks([])
+heat.set_ylabel("real digit")
+for side in heat.spines.values():
+    side.set_visible(False)
+col_width = 0.88 / 10
+for j in range(10):
+    pic(fig.add_axes([0.10 + j * col_width + 0.004, 0.81, col_width - 0.008, 0.17]), Z[j])
+plt.show()
+```
+
+Most digits are mainly their own archetype. The most mixed one is the `{python} int(np.argmin(mean_recipe.max(axis=1)))`, the digit that has no archetype of its own: no single archetype is more than `{python} f"{mean_recipe[np.argmin(mean_recipe.max(axis=1))].max():.0%}"` of it. That is what a mixture looks like in practice.
+
+## How good is the description?
+
+With 10 archetypes, `{python} f"{unexplained:.0%}"` of the variation of the digits is left unexplained, and it only goes down slowly as we add more.
+
+```{python}
+#| fig-cap: "Unexplained variation against the number of archetypes. Unlike the cloud of athletes in the previous note, there is no clear elbow: pictures are much richer than a cloud of dots."
+#| fig-alt: "A line chart that starts high and decreases slowly as the number of archetypes grows from 2 to 30."
+ks = [2, 4, 6, 8, 10, 15, 20, 30]
+errors = []
+for k in ks:
+    model = AA(n_archetypes=k, n_init=1, max_iter=300, random_state=0)
+    Ak = model.fit_transform(X)
+    errors.append(float(((Ak @ model.archetypes_ - X) ** 2).sum() / total))
+
+fig, ax = plt.subplots(figsize=(W, 3.0), layout="constrained")
+ax.plot(ks, errors, color=GREY, lw=2, zorder=1)
+ax.scatter(ks, errors, s=60, color=[GREEN if k == 10 else GREY for k in ks], zorder=2)
+ax.set_xlabel("number of archetypes")
+ax.set_ylabel("unexplained variation")
+ax.set_ylim(0, 1)
+ax.yaxis.set_major_formatter(PercentFormatter(1, decimals=0))
+ax.spines[["top", "right"]].set_visible(False)
+plt.show()
+```
+
+Pictures are much richer than a cloud of dots, so it takes many archetypes to rebuild them faithfully. That is not what archetypal analysis is for. If all you want is to rebuild images with as few numbers as possible, other methods, such as PCA, do it better. Archetypes trade some accuracy for something else: a small set of pure, readable cases. Here, ten of them are enough to see, at a glance, the different ways of writing the digits.
+
+## Try it yourself
+
+The `archetypes` library follows the scikit-learn conventions, so using it feels familiar. Install it with `pip install archetypes`.
+
+```{python}
+#| echo: true
+#| eval: false
+from archetypes import AA
+from sklearn.datasets import load_digits
+
+X = load_digits().data / 16                     # 1,797 digits of 64 pixels, from 0 to 1
+aa = AA(n_archetypes=10, n_init=3, random_state=0)
+weights = aa.fit_transform(X)                   # one recipe per digit: 10 percentages that add up to 1
+archetypes = aa.archetypes_                     # the 10 pure digits, 64 pixels each
+```
+
+`weights` has one row per digit and `archetypes` has one row per archetype. To see an archetype as a picture, reshape its 64 numbers into an 8×8 table: `archetypes[0].reshape(8, 8)`.
+
+## In short
+
+- A picture is a table of numbers, so archetypal analysis can describe it as a **mixture of archetypes** too.
+- The archetypes of the digits are **real-looking digits**, because each one is built from real pictures.
+- A digit that has no archetype, like the 8, is simply **a mixture of several**.
+- It is not the best tool to rebuild pictures, but it is a very good one to **read** them.
