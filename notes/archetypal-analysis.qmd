@@ -1,31 +1,71 @@
 ---
 title: "Archetypal analysis, visually"
-description: "A visual introduction to archetypal analysis: describing data as mixtures of extreme cases."
+description: "A gentle, visual introduction to archetypal analysis: describing data as mixtures of a few extreme cases."
+bibliography: references.bib
+link-citations: true
 ---
 
-Archetypal analysis (AA) describes a dataset through a handful of extreme cases, the **archetypes**, and explains every observation as a mixture of them. Instead of asking "which group does this point belong to?", it asks "how much of each extreme does this point have?"
+Think of a paint shop. It does not sell thousands of colours: it sells a few pure ones, and every other colour is a mix of them. **Archetypal analysis** (AA) does the same with data. It looks for a handful of extreme, "pure" cases, the **archetypes**, and describes everything else as a mixture of them.
+
+Instead of asking *"which group does this belong to?"*, it asks *"how much of each extreme does this have?"* No maths is needed to follow the ideas below; the formulas are at the end for the curious.
 
 ```{python}
 from itertools import permutations
 
 import matplotlib.pyplot as plt
 import numpy as np
+from IPython.display import SVG
 from matplotlib.colors import to_rgb
-from matplotlib.patches import Polygon
+from matplotlib.ticker import PercentFormatter
 from matplotlib_inline.backend_inline import set_matplotlib_formats
+from svganim import anim_to_svg
 
-plt.rcParams.update({"text.color": "#78716c", "axes.edgecolor": "#78716c", "figure.facecolor": "none", "axes.facecolor": "none", "savefig.facecolor": "none"})
+INK, GREY, GREEN = "#78716c", "#a8a29e", "#5f7a2f"
+plt.rcParams.update({"text.color": INK, "axes.edgecolor": INK, "axes.labelcolor": INK, "xtick.color": INK, "ytick.color": INK,
+                     "figure.facecolor": "none", "axes.facecolor": "none", "savefig.facecolor": "none", "font.size": 11})
 set_matplotlib_formats("svg", bbox_inches=None)  # keep the full canvas, no cropping
+
+NAMES = ["Sprinter", "Marathoner", "Weightlifter"]
+COLORS = ["#4f7cac", "#5f7a2f", "#c2713a"]
+RGB = np.array([to_rgb(c) for c in COLORS])
+XLIM, YLIM = (-1, 1), (-1, 1)  # replaced once the data exist
+W, H2 = 5.6, 2.57  # every figure is 5.6 inches wide, so text has the same size in all of them, also when scaled down on a phone
+
+
+def stage(ax):
+    ax.set_xlim(*XLIM)
+    ax.set_ylim(*YLIM)
+    ax.set_aspect("equal")
+    ax.axis("off")
+
+
+def panel(width=5.6):
+    fig = plt.figure(figsize=(width, width * (YLIM[1] - YLIM[0]) / (XLIM[1] - XLIM[0])))
+    ax = fig.add_axes([0, 0, 1, 1])
+    stage(ax)
+    return fig, ax
+
+
+def hull(ax, Z):
+    return ax.fill(*Z.T, color=GREEN, alpha=0.10)[0]
+
+
+def label(ax, Z):
+    for z, name, dy, va in zip(Z, NAMES, [0.09, -0.09, -0.09], ["bottom", "top", "top"]):
+        ax.text(z[0], z[1] + dy, name, ha="center", va=va)
 ```
 
 ```{python}
-rng = np.random.default_rng(1)
-corners = np.array([[0.0, 1.0], [-0.87, -0.5], [0.87, -0.5]])
-X = rng.dirichlet([0.6, 0.6, 0.6], 150) @ corners + rng.normal(0, 0.02, (150, 2))
-n, k = len(X), 3
-```
+# imaginary athletes: three overlapping types, so the cloud sticks out in three directions without sharp corners
+rng = np.random.default_rng(3)
+anchors = np.array([[0.0, 1.0], [-0.87, -0.5], [0.87, -0.5]])
+X = anchors[rng.choice(3, 150, p=[0.45, 0.3, 0.25])] * 0.5 + rng.normal(0, 0.35, (150, 2))
+n = len(X)
+XLIM = (X[:, 0].min() - 0.4, X[:, 0].max() + 0.4)  # room for the labels
+YLIM = (X[:, 1].min() - 0.4, X[:, 1].max() + 0.4)
+total = ((X - X.mean(axis=0)) ** 2).sum()
 
-```{python}
+
 def softmax(W):
     E = np.exp(W - W.max(axis=1, keepdims=True))
     return E / E.sum(axis=1, keepdims=True)
@@ -35,150 +75,412 @@ def softmax_grad(S, G):
     return S * (G - (G * S).sum(axis=1, keepdims=True))
 
 
-Wa = rng.normal(0, 0.1, (n, k))
-Wb = rng.normal(0, 0.1, (k, n))
-Wb[np.arange(k), rng.choice(n, k, replace=False)] += 8  # each archetype starts at a random observation
-m = [np.zeros_like(Wa), np.zeros_like(Wb)]
-v = [np.zeros_like(Wa), np.zeros_like(Wb)]
-lr = 0.05
-history = []
+def fit(X, k, seed=0, steps=600, lr=0.05):
+    """Archetypal analysis by gradient descent (Adam). Returns the weights A and B, the archetypes
+    seen along the way, the step of each snapshot and the error (share of variation left unexplained).
+    Snapshots are dense at the start, when the archetypes move the most."""
+    snaps = set(np.unique(np.round(np.geomspace(1, steps, 90)).astype(int)))
+    rng = np.random.default_rng(seed)
+    n = len(X)
+    Wa = rng.normal(0, 0.1, (n, k))
+    Wb = rng.normal(0, 0.1, (k, n))
+    Wb[np.arange(k), rng.choice(n, k, replace=False)] += 8  # each archetype starts at a random observation
+    m = [np.zeros_like(Wa), np.zeros_like(Wb)]
+    v = [np.zeros_like(Wa), np.zeros_like(Wb)]
+    history, ts, error = [], [], []
+    for t in range(1, steps + 1):
+        A, B = softmax(Wa), softmax(Wb)
+        Z = B @ X
+        R = A @ Z - X
+        if t in snaps:
+            history.append(Z.copy())
+            ts.append(t)
+            error.append((R**2).sum() / total)
+        dA = 2 * R @ Z.T
+        dB = 2 * (A.T @ R) @ X.T
+        for i, (W, G) in enumerate([(Wa, softmax_grad(A, dA)), (Wb, softmax_grad(B, dB))]):
+            m[i] = 0.9 * m[i] + 0.1 * G
+            v[i] = 0.999 * v[i] + 0.001 * G**2
+            W -= lr * (m[i] / (1 - 0.9**t)) / (np.sqrt(v[i] / (1 - 0.999**t)) + 1e-8)
+    return softmax(Wa), softmax(Wb), history, np.array(ts), np.array(error)
 
-for t in range(1, 601):
-    A, B = softmax(Wa), softmax(Wb)
-    Z = B @ X
-    R = A @ Z - X
-    if t % 6 == 1 or t == 600:
-        history.append(Z.copy())
-    dA = 2 * R @ Z.T
-    dB = 2 * (A.T @ R) @ X.T
-    for i, (W, G) in enumerate([(Wa, softmax_grad(A, dA)), (Wb, softmax_grad(B, dB))]):
-        m[i] = 0.9 * m[i] + 0.1 * G
-        v[i] = 0.999 * v[i] + 0.001 * G**2
-        W -= lr * (m[i] / (1 - 0.9**t)) / (np.sqrt(v[i] / (1 - 0.999**t)) + 1e-8)
+
+A, B, history, ts, error = min((fit(X, 3, seed=s) for s in range(4)), key=lambda r: r[4][-1])
+
+# the fit numbers the archetypes arbitrarily: reorder them so they match the three directions (and so the names and colours)
+perm = list(min(permutations(range(3)), key=lambda q: sum(np.linalg.norm(history[-1][q[j]] - anchors[j]) for j in range(3))))
+A, B, history = A[:, perm], B[perm], [h[perm] for h in history]
+Z = history[-1]
 ```
 
-```{python}
-#| fig-cap: "150 points (grey) and the three archetypes AA finds (coloured). The archetypes sit near the corners of the cloud, and the triangle they span contains the data."
-Z = history[-1]
-colors = ["#4f7cac", "#5f7a2f", "#c2713a"]
+## A cloud of athletes
 
-fig = plt.figure(figsize=(3.3, 3.0))
-ax = fig.add_axes([0, 0, 1, 1])
-ax.scatter(*X.T, s=10, color="#a8a29e")
-ax.fill(*Z.T, color="#5f7a2f", alpha=0.10)
-ax.scatter(*Z.T, s=90, color=colors)
-ax.set_xlim(-1.1, 1.1)
-ax.set_ylim(-0.8, 1.2)
-ax.set_aspect("equal")
-ax.axis("off")
+Imagine we measured 150 athletes and drew each one as a dot. Athletes who are alike end up close together. (In statistics, each athlete is one **observation**.)
+
+To be able to draw them, each athlete is described here by just two numbers. Real data usually have many more, dozens or even thousands of measurements, but the ideas below are exactly the same; we just cannot draw them. (The data here are made up, just to have something to look at.)
+
+```{python}
+#| fig-cap: "150 athletes, one dot each. Similar athletes are close together."
+#| fig-alt: "A cloud of grey dots with a roughly triangular shape."
+fig, ax = panel()
+ax.scatter(*X.T, s=12, color=GREY)
 plt.show()
 ```
 
-## Every point is a mixture
-
-Take any point of the cloud. It can be written as a weighted average of the archetypes: the weights are never negative and add up to one, so they say *how much* of each archetype the point contains. Below, each point is coloured by blending the colours of the archetypes with its weights, and one point is highlighted with a line to each archetype, as thick as its weight. Points near a corner are almost pure; points in the middle mix all three.
+Look at the shape of the cloud: it sticks out in three directions. Near the tip of each one live athletes who are extreme in some way: very fast over a short distance, very enduring, very strong. Let us give those tips names.
 
 ```{python}
-#| fig-cap: "Each point is a mixture of the archetypes. The highlighted point is joined to every archetype by a line whose thickness is its weight."
-rgb = np.array([to_rgb(c) for c in colors])
-Z = history[-1]
-i = int(np.argmin(np.abs(np.sort(A, axis=1)[:, ::-1] - [0.5, 0.3, 0.2]).sum(axis=1)))  # a clearly mixed point
-
-fig = plt.figure(figsize=(3.3, 3.0))
-ax = fig.add_axes([0, 0, 1, 1])
-ax.fill(*Z.T, color="#5f7a2f", alpha=0.10)
-ax.scatter(*X.T, s=14, color=A @ rgb)
-for j in range(3):
-    ax.plot(*np.stack([X[i], Z[j]]).T, color=colors[j], lw=0.5 + 6 * A[i, j], solid_capstyle="round", alpha=0.9)
-ax.scatter(*X[i], s=60, color=A[i] @ rgb, edgecolor="#78716c", linewidth=1.5, zorder=3)
-ax.scatter(*Z.T, s=90, color=colors, zorder=3)
-ax.set_xlim(-1.1, 1.1)
-ax.set_ylim(-0.8, 1.2)
-ax.set_aspect("equal")
-ax.axis("off")
+#| fig-cap: "The three archetypes: the extreme cases at the tips of the cloud. The triangle they form contains most athletes."
+#| fig-alt: "The same cloud, with a coloured dot at each tip labelled Sprinter, Marathoner and Weightlifter, joined by a triangle."
+fig, ax = panel()
+ax.scatter(*X.T, s=12, color=GREY)
+hull(ax, Z)
+ax.scatter(*Z.T, s=110, color=COLORS, zorder=3)
+label(ax, Z)
 plt.show()
 ```
 
-In matrix form, with the data $X \in \mathbb{R}^{n \times p}$ and $k$ archetypes stored as the rows of $Z \in \mathbb{R}^{k \times p}$, the weights of the $n$ observations form a matrix $A \in \mathbb{R}^{n \times k}$ and the data are approximated by $X \approx A Z$. The second ingredient is what makes AA special: the archetypes are themselves mixtures of observations, $Z = B X$. Fitting the model means solving
+Nobody has to be exactly a sprinter, a marathoner or a weightlifter. A decathlete, for example, is a bit of all three. (Some athletes fall outside the triangle; we will get to them in a moment.) That is the whole idea: *the extremes are the building blocks, and every athlete is a mixture of them*.
 
-$$
-\min_{A,\,B}\ \lVert X - A B X \rVert_F^2
-\quad\text{s.t.}\quad A\mathbf{1} = \mathbf{1},\ B\mathbf{1} = \mathbf{1},\ A, B \ge 0 .
-$$
+## Every athlete is a mixture
 
-$A$ says how much of each archetype every observation has; $B$ says which observations each archetype is made of. Because $B$ is also a mixture, the archetypes never leave the data: they are extreme, but they look like real observations, so you can inspect them as such.
-
-## Archetypes are not centroids
-
-A centroid, as in k-means, is the average of a group: it describes a *typical* case, and it lies inside the cloud. An archetype is the opposite: it describes an *extreme* case, and it lies on the boundary. Same data, same number of groups, very different summaries.
+To say how much of each archetype an athlete has, we use three percentages that add up to 100%. They are the athlete's **weights**. Watch one athlete walk around the triangle: the lines go to the archetypes, the bar chart shows the weights, and the dot takes the blend of the archetypes' colours that matches them.
 
 ```{python}
-#| fig-cap: "k-means (left) and archetypal analysis (right) on the same points. Each point is coloured by similarity: k-means splits the plane into groups (dashed lines) and gives each point the colour of its nearest centroid, AA blends the colours of the archetypes with its weights. Centroids describe typical cases inside the cloud; archetypes describe the extremes."
-rng_km = np.random.default_rng(0)
-centers = X[rng_km.choice(n, 3, replace=False)]
-for _ in range(50):
-    labels = ((X[:, None] - centers[None]) ** 2).sum(axis=2).argmin(axis=1)
-    centers = np.array([X[labels == j].mean(axis=0) for j in range(3)])
-labels = ((X[:, None] - centers[None]) ** 2).sum(axis=2).argmin(axis=1)
-Z = history[-1]
+#| fig-cap: "One athlete moves through the triangle. The bars give the share of each archetype. At an archetype the athlete is 100% that archetype; along an edge only two archetypes matter; in the middle there is a bit of everything. The closer to an archetype, the larger its share. The dot is coloured by the blend of the archetypes' colours given by its weights."
+#| fig-alt: "An animation of a dot moving inside the triangle of archetypes, with three bars showing how much of each archetype it contains."
+fig = plt.figure(figsize=(W, H2))
+left = fig.add_axes([0, 0, 0.55, 1])
+stage(left)
+right = fig.add_axes([0.62, 0.1, 0.36, 0.8])
+right.set_xlim(0, 1.3)
+right.set_ylim(-0.4, 2.9)
+right.axis("off")
 
-# give each centroid the colour of its nearest archetype, so colours match across panels
-perm = min(permutations(range(3)), key=lambda q: sum(np.linalg.norm(centers[j] - Z[q[j]]) for j in range(3)))
-centroid_colors = np.array([rgb[q] for q in perm])
+left.scatter(*X.T, s=10, color=GREY, alpha=0.5)
+hull(left, Z)
+lines = [left.plot([0, 0], [0, 0], color=COLORS[j], solid_capstyle="round", zorder=2)[0] for j in range(3)]
+dot = left.scatter([0], [0], s=100, edgecolor=INK, linewidth=1.5, zorder=4)
+left.scatter(*Z.T, s=90, color=COLORS, zorder=3)
+label(left, Z)
 
-fig = plt.figure(figsize=(6.6, 3.0))
+ys = [2, 1, 0]
+right.barh(ys, [1, 1, 1], height=0.5, color=GREY, alpha=0.2)
+bars = right.barh(ys, [0, 0, 0], height=0.5, color=COLORS)
+pct = [right.text(1.04, y, "", va="center") for y in ys]
+for y, name in zip(ys, NAMES):
+    right.text(0, y + 0.36, name, va="bottom")
+
+
+def show(w):
+    p = w @ Z
+    for j, line in enumerate(lines):
+        line.set_data([p[0], Z[j, 0]], [p[1], Z[j, 1]])
+        line.set_linewidth(0.4 + 8 * w[j])
+    dot.set_offsets([p])
+    dot.set_facecolor([w @ RGB])
+    shares = np.round(100 * w).astype(int)
+    shares[np.argmax(w)] += 100 - shares.sum()  # make the rounded shares add up to exactly 100
+    for j in range(3):
+        bars[j].set_width(w[j])
+        pct[j].set_text(f"{shares[j]}%")
+
+
+stops = [[1, 0, 0], [0, 1, 0], [0, 0, 1], [1, 0, 0], [0.34, 0.33, 0.33], [0.5, 0.3, 0.2], [1, 0, 0]]
+frames = []
+for a, b in zip(stops[:-1], stops[1:]):
+    frames += [np.array(a)] * 5
+    for s in np.linspace(0, 1, 13)[1:-1]:
+        e = s * s * (3 - 2 * s)  # ease in and out
+        frames.append((1 - e) * np.array(a) + e * np.array(b))
+frames += [np.array(stops[-1])] * 5
+
+svg = anim_to_svg(fig, lambda f: show(frames[f]), len(frames), fps=20, hold=0.5, interpolate=True)
+plt.close(fig)
+SVG(data=svg)
+```
+
+## Athletes outside the triangle
+
+Look at the cloud again: some athletes lie *outside* the triangle. A mixture of the archetypes can only land *inside* it, so these athletes cannot be written exactly as a mixture.
+
+AA deals with them in the simplest possible way: each athlete is described by the **closest point of the triangle**, the mixture that looks most like them. Watch the athletes outside the triangle slide to their closest mixture. The thin line they leave behind is what the description gets wrong.
+
+```{python}
+#| fig-cap: "Athletes outside the triangle (dark dots) are described by the closest mixture of the archetypes, on its edge. The line that joins each athlete to its description is the part that the archetypes fail to explain."
+#| fig-alt: "An animation in which the dark dots outside the triangle slide to the nearest point of its border, leaving a thin line behind, and then go back."
+Xhat = A @ Z  # each athlete rebuilt as a mixture of the archetypes
+out = np.flatnonzero(np.linalg.norm(X - Xhat, axis=1) > 0.05)
+inside = np.setdiff1d(np.arange(n), out)
+
+fig, ax = panel()
+hull(ax, Z)
+ax.scatter(*X[inside].T, s=12, color=GREY)
+gaps = [ax.plot([0, 0], [0, 0], color=INK, lw=0.8, alpha=0.7)[0] for _ in out]
+moving = ax.scatter(*X[out].T, s=16, color=INK, zorder=3)
+ax.scatter(*Z.T, s=90, color=COLORS, zorder=3)
+label(ax, Z)
+
+
+def move(t):
+    pos = X[out] + t * (Xhat[out] - X[out])
+    moving.set_offsets(pos)
+    for line, start, now in zip(gaps, X[out], pos):
+        line.set_data([start[0], now[0]], [start[1], now[1]])
+
+
+ease = [s * s * (3 - 2 * s) for s in np.linspace(0, 1, 10)]
+steps = [0.0] * 6 + ease + [1.0] * 10 + ease[::-1]
+svg = anim_to_svg(fig, lambda f: move(steps[f]), len(steps), fps=20, hold=0.5, interpolate=True)
+plt.close(fig)
+SVG(data=svg)
+```
+
+Two things follow from this. First, the leftover gap is exactly the **error** we will use later to find the archetypes and to decide how many we need. Second, since archetypes are built from real athletes, the triangle can never reach beyond the data: the most extreme athletes will usually be a little outside it. That is the price of keeping the archetypes realistic.
+
+## Archetypes come from real data
+
+There is a catch. If we were free to put the three archetypes anywhere, we could invent "athletes" that nobody has ever seen. AA avoids this with a second rule: **each archetype must itself be a mixture of real athletes**.
+
+So archetypes are extreme, but never imaginary: they sit at the edge of the data, built from observations that actually exist. You can always go and look at the athletes behind an archetype, which makes the result easy to interpret. In the figure below, the zoom visits each archetype in turn.
+
+```{python}
+#| fig-cap: "An archetype is built from real observations. Left: the cloud, with the area being shown marked. Right: zoom into that area, which visits each archetype in turn. An archetype (large dot) is a weighted average of a few real athletes, joined to it by lines that are thicker the larger their weight. The Sprinter needs no lines: it coincides with a single real athlete."
+#| fig-alt: "An animation with two panels. The left one shows the cloud with a small dashed square that moves from one archetype to the next. The right one zooms into that square, where a large coloured dot, the archetype, is joined by lines of different thickness to a few real athletes."
+R = []  # for each archetype, a window that holds every athlete behind it
+for m in range(3):
+    ids = np.flatnonzero(B[m] > 0.02)
+    R.append(float(np.clip(1.3 * np.linalg.norm(X[ids] - Z[m], axis=1).max(), 0.3, 0.7)))
+
+fig = plt.figure(figsize=(W, H2))
+left = fig.add_axes([0, 0, 0.5, 1])
+stage(left)
+right = fig.add_axes([0.56, 0.12, 0.42, 0.84])  # leaves room under the zoom for the name
+right.set_aspect("equal")
+right.set_xticks([])
+right.set_yticks([])
+for side in right.spines.values():
+    side.set_linestyle("--")
+    side.set_alpha(0.6)
+
+zoom = min(0.5 * W / np.ptp(XLIM), H2 / np.ptp(YLIM)) / (min(0.42 * W, 0.84 * H2) / (2 * np.mean(R)))  # how much smaller the left panel draws things than the right one
+left.scatter(*X.T, s=12, color=GREY)
+hull(left, Z)
+
+right.scatter(*X.T, s=40, color=GREY)
+rlines = []  # the lines of the right panel, with their ends, to hide the ones that fall outside the window
+for m in range(3):
+    ids = np.flatnonzero(B[m] > 0.02)
+    if len(ids) < 2:  # an archetype that is one single athlete needs no lines
+        continue
+    for i in ids:
+        left.plot(*np.stack([Z[m], X[i]]).T, color=COLORS[m], lw=max(0.8, zoom * (0.5 + 10 * B[m, i])), solid_capstyle="round", alpha=0.9)
+        rlines.append((right.plot(*np.stack([Z[m], X[i]]).T, color=COLORS[m], lw=0.5 + 10 * B[m, i], solid_capstyle="round", alpha=0.9)[0], Z[m], X[i]))
+    left.scatter(*X[ids].T, s=12, color=COLORS[m], zorder=3)
+    right.scatter(*X[ids].T, s=40, color=COLORS[m], zorder=3)
+left.scatter(*Z.T, s=90, color=COLORS, zorder=3)
+right.scatter(*Z.T, s=220, color=COLORS, edgecolor=INK, linewidth=1.5, zorder=4)
+label(left, Z)
+name = right.text(0.5, -0.03, "", transform=right.transAxes, ha="center", va="top", fontsize=13)  # fixed under the zoom
+box = left.add_patch(plt.Rectangle((0, 0), 1, 1, fill=False, linestyle="--", edgecolor=INK, alpha=0.6))
+
+
+def look(a, b, t):
+    """Point both panels at the window between archetype a and archetype b (t from 0 to 1)."""
+    c, r = (1 - t) * Z[a] + t * Z[b], (1 - t) * R[a] + t * R[b]
+    right.set_xlim(c[0] - r, c[0] + r)
+    right.set_ylim(c[1] - r, c[1] + r)
+    box.set_xy(c - r)
+    box.set_width(2 * r)
+    box.set_height(2 * r)
+    name.set_text(NAMES[a if t < 0.5 else b])
+    for line, p, q in rlines:
+        pts = p + np.linspace(0, 1, 40)[:, None] * (q - p)
+        line.set_visible(bool((np.abs(pts - c) <= r).all(axis=1).any()))
+
+
+ease = [s * s * (3 - 2 * s) for s in np.linspace(0, 1, 11)]
+tour = []
+for a, b in [(0, 1), (1, 2), (2, 0)]:
+    tour += [(a, b, 0.0)] * 12 + [(a, b, t) for t in ease[1:]]
+svg = anim_to_svg(fig, lambda f: look(*tour[f]), len(tour), fps=10, hold=0, interpolate=True)
+plt.close(fig)
+SVG(data=svg)
+```
+
+## Archetypes are not averages
+
+A more familiar way to summarise data is **clustering**: split the athletes into groups and describe each group by its average, the *centroid*. A centroid is the *typical* member of a group, so it lies in the middle of the cloud. An archetype is the opposite: the *extreme* member, on the edge.
+
+The closest relative of AA is **fuzzy c-means**, a "soft" clustering method. Like AA, it gives every athlete percentages that add up to 100%, one for each group. But the percentages mean something different. In c-means they say *how close the athlete is to each typical case*. In AA they say *how much of each extreme the athlete is made of*.
+
+```{python}
+#| fig-cap: "Fuzzy c-means (left) and archetypal analysis (right) on the same athletes. Each dot is coloured by the blend of the colours of its three references, according to its percentages. c-means measures closeness to three typical cases, the squares, which sit inside the cloud. AA describes each athlete as a mixture of three extremes, the dots on the edge. The triangle of the centres leaves most athletes outside; the triangle of the archetypes covers most of them."
+#| fig-alt: "Two panels with the same cloud. On the left, three squares inside the cloud, the centres found by fuzzy c-means. On the right, the three archetypes at the tips."
+def fuzzy_cmeans(X, c=3, m=2.0, steps=100, seed=0):
+    """Fuzzy c-means: every point gets a membership in each group, from its distance to the group centres."""
+    rng = np.random.default_rng(seed)
+    U = rng.dirichlet(np.ones(c), len(X))
+    for _ in range(steps):
+        Wm = U**m
+        centers = (Wm.T @ X) / Wm.sum(axis=0)[:, None]
+        d = np.linalg.norm(X[:, None] - centers[None], axis=2) + 1e-12
+        U = 1 / ((d[:, :, None] / d[:, None, :]) ** (2 / (m - 1))).sum(axis=2)
+    return U, centers
+
+
+U, centers = fuzzy_cmeans(X)
+
+# give each centre the colour of its nearest archetype, so colours match across panels
+cperm = min(permutations(range(3)), key=lambda q: sum(np.linalg.norm(centers[j] - Z[q[j]]) for j in range(3)))
+centre_colors = RGB[list(cperm)]
+
+fig = plt.figure(figsize=(W, H2))
 left = fig.add_axes([0, 0, 0.5, 1])
 right = fig.add_axes([0.5, 0, 0.5, 1])
-for ax, title in [(left, "k-means"), (right, "archetypal analysis")]:
-    ax.text(-1.05, 1.12, title, fontsize=10, va="top")
-    ax.set_xlim(-1.1, 1.1)
-    ax.set_ylim(-0.8, 1.2)
-    ax.set_aspect("equal")
-    ax.axis("off")
-gx, gy = np.meshgrid(np.linspace(-1.1, 1.1, 300), np.linspace(-0.8, 1.2, 300))
-grid = np.stack([gx.ravel(), gy.ravel()], axis=1)
-cell = ((grid[:, None] - centers[None]) ** 2).sum(axis=2).argmin(axis=1).reshape(gx.shape)
-borders = left.contour(gx, gy, cell, levels=[0.5, 1.5], colors="#78716c", linewidths=1, linestyles="dashed", alpha=0.6)  # group boundaries
-borders.set_clip_path(Polygon(corners, transform=left.transData))  # only inside the triangle where the data lives
-left.scatter(*X.T, s=14, color=centroid_colors[labels])
-left.scatter(*centers.T, s=120, marker="s", color=centroid_colors, zorder=3)
-right.fill(*Z.T, color="#5f7a2f", alpha=0.10)
-right.scatter(*X.T, s=14, color=A @ rgb)
-right.scatter(*Z.T, s=90, color=colors, zorder=3)
+for ax, title in [(left, "fuzzy c-means"), (right, "archetypal analysis")]:
+    stage(ax)
+    ax.text(XLIM[0], YLIM[1], title, fontsize=12, va="top")
+hull(left, centers)
+left.scatter(*X.T, s=14, color=U @ centre_colors)
+left.scatter(*centers.T, s=120, marker="s", color=centre_colors, edgecolor=INK, linewidth=1, zorder=3)
+hull(right, Z)
+right.scatter(*X.T, s=14, color=A @ RGB)
+right.scatter(*Z.T, s=90, color=COLORS, zorder=3)
 plt.show()
 ```
 
-Compared with methods like PCA, which can produce components with negative loadings that look like no real observation, archetypes are always non-negative mixtures of the data itself, so they stay within its range and are easy to interpret.
+## How are archetypes found?
 
-## How the archetypes move
+Nobody knows the archetypes in advance, so the computer finds them by trial and improvement:
 
-Fitting starts from random archetypes. Each iteration moves them towards the extremes while the reconstruction error $\lVert X - ABX\rVert_F^2$ drops.
+1. **Guess.** Start with three random athletes as archetypes.
+2. **Check.** Try to rebuild every athlete as a mixture of the archetypes. The gap between each athlete and its rebuilt version is the **error**. We report it as the share of the athletes' variation that is left unexplained, which is why the axis of the figure below says "unexplained variation".
+3. **Improve.** Nudge the archetypes, and the weights, in the direction that makes the error smaller.
+4. **Repeat** until the error stops improving.
 
-The animation is a single looping SVG, generated from the matplotlib figure with [svganim](https://github.com/aleixalcacer/svganim): no GIF and no JavaScript.
+At 0% unexplained variation the archetypes rebuild everyone perfectly; at 100% they do no better than describing everybody as "the average athlete". A bad first guess can be even worse than that, so the curve starts above 100%. Watch the archetypes (left) leave their random starting points and slide towards the tips while the unexplained variation (right) drops.
 
 ```{python}
-#| fig-cap: "Archetypes during fitting: they start at random positions and move to the extremes."
-#| fig-alt: "Archetypes moving towards the extremes of the data"
-from IPython.display import SVG
-from svganim import anim_to_svg
+#| fig-cap: "Fitting archetypes. Left: they start at three random athletes and move towards the extremes. Right: the unexplained variation drops quickly at first, then flattens out as the archetypes settle."
+#| fig-alt: "An animation of three coloured dots moving from the middle of a cloud to its tips, next to a curve of the unexplained variation going down."
+fig = plt.figure(figsize=(W, H2))
+left = fig.add_axes([0, 0, 0.55, 1])
+stage(left)
+right = fig.add_axes([0.66, 0.2, 0.32, 0.65])
+right.plot(ts, error, color=GREY, lw=2)
+right.set_xlabel("step")
+right.set_ylabel("unexplained variation")
+right.set_ylim(0, error.max() * 1.05)
+right.yaxis.set_major_formatter(PercentFormatter(1, decimals=0))
+right.spines[["top", "right"]].set_visible(False)
 
-fig = plt.figure(figsize=(3.3, 3.0))
-ax = fig.add_axes([0, 0, 1, 1])
-ax.scatter(*X.T, s=10, color="#a8a29e")
-hull = ax.fill(*history[0].T, color="#5f7a2f", alpha=0.10)[0]
-arch = ax.scatter(*history[0].T, s=90, color=colors)
-ax.set_xlim(-1.1, 1.1)
-ax.set_ylim(-0.8, 1.2)
-ax.set_aspect("equal")
-ax.axis("off")
+left.scatter(*X.T, s=10, color=GREY)
+poly = hull(left, history[0])
+arch = left.scatter(*history[0].T, s=90, color=COLORS, zorder=3)
+marker = right.scatter([ts[0]], [error[0]], s=60, color=GREEN, zorder=3)
 
 
 def update(f):
-    hull.set_xy(history[f])
+    poly.set_xy(history[f])
     arch.set_offsets(history[f])
+    marker.set_offsets([[ts[f], error[f]]])
 
 
 svg = anim_to_svg(fig, update, len(history), fps=20, hold=1.5)
 plt.close(fig)
 SVG(data=svg)
 ```
+
+## How many archetypes?
+
+We have used three because that is what this cloud looks like. With real data we have to choose. Too few archetypes cannot describe the data well; too many make the description longer and harder to read, and eventually they stop being "extreme" and start to pick up individual odd athletes.
+
+A common recipe is to try several values and watch how much variation is left unexplained.
+
+```{python}
+#| fig-cap: "The same athletes described with 2, 3, 4 and 5 archetypes. With two, the line cannot reach most of the cloud (a lot of variation is left unexplained). With three, the triangle covers most athletes. Beyond that, the extra archetypes barely help."
+#| fig-alt: "Four panels with the same cloud and different numbers of archetypes, each with the unexplained variation below."
+fits = {k: min((fit(X, k, seed=s) for s in range(4)), key=lambda r: r[4][-1]) for k in range(2, 7)}
+
+fig, axes = plt.subplots(2, 2, figsize=(5.6, 5.2))
+for ax, k in zip(axes.ravel(), [2, 3, 4, 5]):
+    stage(ax)
+    Zk = fits[k][2][-1]
+    order = np.argsort(np.arctan2(*(Zk - Zk.mean(axis=0)).T[::-1]))
+    ax.scatter(*X.T, s=8, color=GREY)
+    if k > 2:
+        ax.fill(*Zk[order].T, color=GREEN, alpha=0.10)
+    ax.plot(*Zk[order].T, color=GREEN, lw=1.2) if k == 2 else None
+    ax.scatter(*Zk.T, s=45, color=GREEN, zorder=3)
+    ax.text(np.mean(XLIM), YLIM[1], f"{k} archetypes", ha="center", va="top", fontsize=12)
+    ax.text(np.mean(XLIM), YLIM[0], f"unexplained {fits[k][4][-1]:.1%}", ha="center", va="bottom")
+fig.subplots_adjust(left=0, right=1, bottom=0, top=1, wspace=0, hspace=0.08)
+plt.show()
+```
+
+Plotting the final unexplained variation against the number of archetypes makes the choice easier. We look for the **elbow**: the point after which adding archetypes stops paying off.
+
+```{python}
+#| fig-cap: "Unexplained variation against the number of archetypes. It falls sharply up to three archetypes and hardly changes afterwards: the elbow is at three. In real data the elbow is rarely this sharp, so the choice also depends on what you want to interpret."
+#| fig-alt: "A line chart of the unexplained variation against the number of archetypes, dropping steeply until three and flat afterwards."
+ks = list(fits)
+errs = [fits[k][4][-1] for k in ks]
+
+fig, ax = plt.subplots(figsize=(5.6, 3.1), layout="constrained")
+ax.plot(ks, errs, color=GREY, lw=2, zorder=1)
+ax.scatter(ks, errs, s=50, color=[GREEN if k == 3 else GREY for k in ks], zorder=2)
+ax.set_xticks(ks)
+ax.set_xlabel("number of archetypes")
+ax.set_ylabel("unexplained variation")
+ax.yaxis.set_major_formatter(PercentFormatter(1, decimals=0))
+ax.spines[["top", "right"]].set_visible(False)
+plt.show()
+```
+
+## Where is it useful?
+
+AA shines whenever the extremes tell you more than the averages. It was introduced by Adele Cutler and Leo Breiman [-@cutler1994], and it fits questions like these:
+
+- **Describing people or objects by a few extreme profiles**, such as body shapes, player styles or customer types, instead of forcing everyone into a single group.
+- **Finding the extreme situations in data**, such as unusual weather patterns, rather than their averages.
+
+## Things to keep in mind
+
+- **Outliers matter.** Archetypes live at the extremes, so a few very unusual observations can pull them. It is worth looking at the data first.
+- **The answer is not unique.** Different starting guesses can end in slightly different archetypes. Here we tried four starts and kept the best.
+- **Choosing the number of archetypes is a judgement.** The elbow helps, but what you want to interpret matters too.
+- **Scales matter.** If the variables are in very different units, the largest ones dominate, so they are usually put on a comparable scale first.
+
+## In short
+
+- **Archetypes** are a few extreme cases that summarise a dataset.
+- Every observation is a **mixture** of them: percentages that add up to 100%.
+- Archetypes are built from **real observations**, so they are extreme but realistic.
+- They are different from **averages**: archetypes sit on the edge of the data, centroids in the middle.
+- The computer finds them by **trial and improvement**, and we choose how many to use by watching the **unexplained variation**.
+- They are sensitive to **outliers**, and the solution is not unique, so look at the data first.
+
+## The maths, for the curious
+
+Put the $n$ observations, each described by $p$ numbers, in a matrix $X \in \mathbb{R}^{n \times p}$, and the $k$ archetypes in the rows of $Z \in \mathbb{R}^{k \times p}$. The weights of each observation form a matrix $A \in \mathbb{R}^{n \times k}$, and the data are approximated by
+
+$$
+X \approx A Z .
+$$
+
+The second rule, that archetypes are mixtures of real observations, reads $Z = B X$, where $B \in \mathbb{R}^{k \times n}$ holds the weights. Fitting the model means solving
+
+$$
+\min_{A,\,B}\ \lVert X - A B X \rVert_F^2
+\quad\text{s.t.}\quad A\mathbf{1} = \mathbf{1},\ B\mathbf{1} = \mathbf{1},\ A, B \ge 0 .
+$$
+
+$A$ says how much of each archetype every observation has; $B$ says which observations each archetype is made of. The constraints are exactly the two rules above: every row of weights is non-negative and adds up to one, so every mixture is an average. The unexplained variation shown in the figures is $\lVert X - ABX\rVert_F^2$ divided by the total variation of the data, $\lVert X - \bar{X}\rVert_F^2$, that is, $1 - R^2$. Distances are squared, so a value of 3% corresponds to a typical gap of about $\sqrt{0.03} \approx 17\%$ of the spread of the data.
+
+## References
+
+::: {#refs}
+:::
+
+*The animations on this page are looping SVGs made with [svganim](https://github.com/aleixalcacer/svganim).*
