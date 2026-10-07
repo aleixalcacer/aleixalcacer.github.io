@@ -22,12 +22,14 @@ import warnings
 import matplotlib.pyplot as plt
 import numpy as np
 from archetypes import AA
+from IPython.display import SVG
 from matplotlib.colors import LinearSegmentedColormap
 from matplotlib.ticker import PercentFormatter
 from matplotlib_inline.backend_inline import set_matplotlib_formats
 from sklearn.cluster import KMeans
 from sklearn.datasets import load_digits
 from sklearn.decomposition import NMF, PCA
+from svganim import anim_to_svg
 
 warnings.filterwarnings("ignore")
 
@@ -40,6 +42,13 @@ W = 5.6  # every figure is 5.6 inches wide
 
 PAPER = LinearSegmentedColormap.from_list("paper", [BG, DARK])  # white paper to black ink
 SIGNED = LinearSegmentedColormap.from_list("signed", [ORANGE, BG, GREEN])  # orange is negative, green is positive
+
+
+def play(fig, update, n_frames, fps, hold=1.5):
+    """Turn a figure and the function that changes it frame by frame into a looping SVG."""
+    svg = anim_to_svg(fig, update, n_frames, fps=fps, hold=hold)
+    plt.close(fig)
+    return SVG(data=svg)
 
 
 def pic(ax, pixels, cmap=PAPER, vmin=0, vmax=1, frame=GREY, width=0.8):
@@ -96,8 +105,8 @@ worst = max(errors, key=errors.get)
 Here are the 10 blocks that each method finds. Each block is a picture of 8×8 pixels.
 
 ```{python}
-#| fig-cap: "The 10 building blocks found by PCA, NMF, k-means and archetypal analysis on the same digits. For PCA, green pixels are added and orange pixels are subtracted."
-#| fig-alt: "Four rows of ten small pictures. The first row has abstract green and orange patterns, the second row has strokes and parts of digits, the third has blurry digits and the fourth has crisp digits."
+#| fig-cap: "The 10 building blocks found by PCA, NMF, k-means and archetypal analysis on the same digits, one method after another. For PCA, green pixels are added and orange pixels are subtracted."
+#| fig-alt: "An animation in which four rows of ten small pictures appear one after another. The first row has abstract green and orange patterns, the second row has strokes and parts of digits, the third has blurry digits and the fourth has crisp digits."
 rows = [
     ("PCA", "directions", pca_blocks, SIGNED, True),
     ("NMF", "parts", nmf_blocks, PAPER, False),
@@ -108,10 +117,13 @@ H = 3.3
 fig = plt.figure(figsize=(W, H))
 cw = 0.0795
 side = cw * W / H
+row_parts = []
 for r, (name, subtitle, blocks, cmap, signed) in enumerate(rows):
     y0 = 0.745 - r * 0.245
-    fig.text(0.175, y0 + side / 2 + 0.018, name, ha="right", va="center", fontweight="bold", color=DARK)
-    fig.text(0.175, y0 + side / 2 - 0.045, subtitle, ha="right", va="center", fontsize=9)
+    parts = [
+        fig.text(0.175, y0 + side / 2 + 0.018, name, ha="right", va="center", fontweight="bold", color=DARK),
+        fig.text(0.175, y0 + side / 2 - 0.045, subtitle, ha="right", va="center", fontsize=9),
+    ]
     for j in range(K):
         ax = fig.add_axes([0.19 + j * (cw + 0.0016), y0, cw, side])
         block = blocks[j]
@@ -122,7 +134,17 @@ for r, (name, subtitle, blocks, cmap, signed) in enumerate(rows):
             pic(ax, block, vmax=block.max())
         else:
             pic(ax, block)
-plt.show()
+        parts.append(ax)
+    row_parts.append(parts)
+
+
+def show_rows(f):
+    for r, parts in enumerate(row_parts):
+        for part in parts:
+            part.set_visible(r <= f)
+
+
+play(fig, show_rows, 4, fps=0.9, hold=3)
 ```
 
 The four rows look nothing alike:
@@ -137,8 +159,8 @@ The four rows look nothing alike:
 Each method also describes every digit with a recipe: how much of each block it takes. This is one 8 under each of them, with its three most important ingredients.
 
 ```{python}
-#| fig-cap: "One 8 described by each method with its three main ingredients. PCA and NMF use free numbers, k-means picks a single average, and archetypes use percentages that add up to 100%."
-#| fig-alt: "A picture of a handwritten 8 on the left and, on the right, four rows with the three main ingredients that each method uses to describe it."
+#| fig-cap: "One 8 described by each method with its three main ingredients, one method after another. PCA and NMF use free numbers, k-means picks a single average, and archetypes use percentages that add up to 100%."
+#| fig-alt: "An animation of a picture of a handwritten 8 on the left and, on the right, four rows that appear one after another with the three main ingredients that each method uses to describe it."
 gap = ((aa_rebuilt - X) ** 2).sum(axis=1)
 sorted_recipes = np.sort(A, axis=1)[:, ::-1]
 candidates = [i for i in np.flatnonzero(y == 8) if 0.55 < sorted_recipes[i, :3].sum() < 0.95 and sorted_recipes[i, 2] > 0.12]
@@ -151,11 +173,12 @@ pic(fig.add_axes([0.02, 0.5 - big / 2, 0.16, big]), X[i], frame=DARK, width=1.4)
 fig.text(0.10, 0.5 - big / 2 - 0.03, "a real 8", ha="center", va="top")
 
 side = 0.14 * W / H
+recipe_parts = []
 
 
-def recipe(r, name, ingredients, labels, cmap=PAPER, signed=False, one=False):
+def recipe(r, name, ingredients, labels, cmap=PAPER, signed=False, normalise=False):
     y0 = 0.80 - r * 0.245
-    fig.text(0.215, y0 + side / 2, name, ha="left", va="center", fontweight="bold", color=DARK)
+    parts = [fig.text(0.215, y0 + side / 2, name, ha="left", va="center", fontweight="bold", color=DARK)]
     for c, (block, label) in enumerate(zip(ingredients, labels)):
         x0 = 0.43 + c * 0.19
         ax = fig.add_axes([x0, y0, 0.14, side])
@@ -163,20 +186,29 @@ def recipe(r, name, ingredients, labels, cmap=PAPER, signed=False, one=False):
             m = np.abs(block).max()
             pic(ax, block, cmap=cmap, vmin=-m, vmax=m)
         else:
-            pic(ax, block, vmax=max(block.max(), 1e-9) if cmap is PAPER and not one and name == "NMF" else 1)
-        fig.text(x0 + 0.07, y0 - 0.015, label, ha="center", va="top", fontsize=10)
+            pic(ax, block, vmax=max(block.max(), 1e-9) if normalise else 1)
+        parts += [ax, fig.text(x0 + 0.07, y0 - 0.015, label, ha="center", va="top", fontsize=10)]
         if c < len(ingredients) - 1:
-            fig.text(x0 + 0.165, y0 + side / 2, "+", ha="center", va="center", fontsize=14)
+            parts.append(fig.text(x0 + 0.165, y0 + side / 2, "+", ha="center", va="center", fontsize=14))
+    recipe_parts.append(parts)
 
 
 top = np.argsort(np.abs(P[i]))[::-1][:3]
 recipe(0, "PCA", pca_blocks[top], [f"{P[i, j]:+.1f} ×" for j in top], SIGNED, signed=True)
 top = np.argsort(N[i])[::-1][:3]
-recipe(1, "NMF", nmf_blocks[top], [f"{N[i, j]:.1f} ×" for j in top])
-recipe(2, "k-means", km_blocks[[km.labels_[i]]], ["100% one group"], one=True)
+recipe(1, "NMF", nmf_blocks[top], [f"{N[i, j]:.1f} ×" for j in top], normalise=True)
+recipe(2, "k-means", km_blocks[[km.labels_[i]]], ["100% one group"])
 top = np.argsort(A[i])[::-1][:3]
 recipe(3, "archetypes", aa_blocks[top], [f"{A[i, j]:.0%}" for j in top])
-plt.show()
+
+
+def show_recipes(f):
+    for r, parts in enumerate(recipe_parts):
+        for part in parts:
+            part.set_visible(r < f)
+
+
+play(fig, show_recipes, 5, fps=1.0, hold=3)
 ```
 
 The recipes are different in nature, and that is the real difference between the methods:
@@ -192,18 +224,29 @@ All four methods use 10 building blocks. How much of the variation of the digits
 
 ```{python}
 #| fig-cap: "Unexplained variation with 10 building blocks. Lower is better."
-#| fig-alt: "A bar chart with four bars, one for each method, showing the share of variation left unexplained."
-labels = list(errors)
+#| fig-alt: "An animation of a bar chart whose four bars, one for each method, grow until they show the share of variation left unexplained."
+labels = list(errors)[::-1]
 values = [errors[m] for m in labels]
 fig, ax = plt.subplots(figsize=(W, 2.6), layout="constrained")
-ax.barh(labels[::-1], values[::-1], color=[GREEN if m == "archetypes" else GREY for m in labels[::-1]], height=0.6)
-for k, v in enumerate(values[::-1]):
-    ax.text(v + 0.01, k, f"{v:.0%}", va="center")
+bars = ax.barh(labels, np.zeros(4), color=[GREEN if m == "archetypes" else GREY for m in labels], height=0.6)
+numbers = [ax.text(v + 0.01, k, f"{v:.0%}", va="center") for k, v in enumerate(values)]
 ax.set_xlim(0, max(values) * 1.15)
 ax.xaxis.set_major_formatter(PercentFormatter(1, decimals=0))
 ax.set_xlabel("unexplained variation")
 ax.spines[["top", "right"]].set_visible(False)
-plt.show()
+n_frames = 14
+
+
+def grow(f):
+    t = f / (n_frames - 1)
+    t = t * t * (3 - 2 * t)  # ease in and out
+    for bar, v in zip(bars, values):
+        bar.set_width(v * t)
+    for number in numbers:
+        number.set_visible(f == n_frames - 1)
+
+
+play(fig, grow, n_frames, fps=12, hold=3)
 ```
 
 `{python} best` rebuilds the digits best and `{python} worst` the worst. There is nothing wrong with that: rebuilding the data as faithfully as possible is only one of the things we can ask from a summary. PCA, in particular, is the best you can do if that is all you want.
