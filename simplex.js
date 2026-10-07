@@ -35,7 +35,6 @@ if (svg) {
   svg.setAttribute("viewBox", "-48 -48 96 96");
   svg.replaceChildren();
   const edges = [...hull].map((e) => [make("line", "hull"), ...e.split(",").map(Number)]);
-  const mixes = mixOf.map((i) => [make("line", "mix"), i]);
   const points = P.map(() => make("circle", "p"));
   const verts = V.map(() => make("circle", "v"));
 
@@ -59,7 +58,6 @@ if (svg) {
   const draw = () => {
     const v = V.map(rotate), p = P.map(rotate);
     edges.forEach(([el, a, b]) => line(el, v[a], v[b]));
-    mixes.forEach(([el, i]) => line(el, p[0], v[i]));
     points.forEach((el, i) => dotAt(el, p[i], 2));
     verts.forEach((el, i) => dotAt(el, v[i], 3));
   };

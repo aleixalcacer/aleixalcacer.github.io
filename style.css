@@ -42,7 +42,6 @@ header p { margin: .3rem 0 0; color: var(--muted); }
 /* archetypal-analysis motif: a simplex whose interior points are mixtures of its vertices */
 .simplex { width: 120px; margin: -12px 0 -12px auto; flex: none; overflow: visible; cursor: grab; touch-action: none; user-select: none; }
 .simplex .hull { fill: color-mix(in srgb, var(--accent) 10%, transparent); stroke: var(--accent); stroke-width: 1.2; stroke-linejoin: round; }
-.simplex .mix { fill: none; stroke: var(--accent); stroke-width: 1; stroke-dasharray: 2 3; }
 .simplex .v { fill: var(--accent); }
 .simplex .p { fill: var(--muted); }
 @media (max-width: 34rem) {
