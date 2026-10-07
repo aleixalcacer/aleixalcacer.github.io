@@ -182,11 +182,3 @@ svg = anim_to_svg(fig, update, len(history), fps=20, hold=1.5)
 plt.close(fig)
 SVG(data=svg)
 ```
-
-## Going further
-
-AA is most useful when the extremes tell you more than the averages do. It has been used, for example, to [classify 3D foot shapes](https://doi.org/10.1371/journal.pone.0228016) from landmarks, describing each foot as a mixture of a few archetypal shapes.
-
-The idea also goes beyond a single data matrix. [Biarchetype analysis](https://doi.org/10.1109/TPAMI.2024.3400730) finds archetypes of the observations and of the features at the same time, and [A Survey on Archetypal Analysis](https://doi.org/10.1109/TPAMI.2026.3740133) reviews the method, its variants and its applications.
-
-The code behind the figures here is a short from-scratch implementation, written only to illustrate the idea. For real analyses use [archetypes](https://github.com/aleixalcacer/archetypes), a Python library for archetypal analysis that is compatible with scikit-learn.
