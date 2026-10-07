@@ -86,6 +86,13 @@ figcaption { margin-top: .5rem; color: var(--muted); font-size: .85rem; }
 /* references (notes) */
 #refs .csl-entry { margin: .5rem 0; padding-left: 1.5rem; text-indent: -1.5rem; color: var(--muted); font-size: .9rem; }
 
+/* notes index */
+ul.notes li { margin-bottom: 1.6rem; }
+.note-title { font-size: 1.15rem; font-weight: 600; letter-spacing: -.01em; }
+ul.notes p { margin: .25rem 0 0; }
+ul.notes p.meta { margin-top: .5rem; display: flex; flex-wrap: wrap; align-items: center; gap: .5rem; color: var(--muted); font: .78rem var(--mono); }
+ul.notes p.meta span { padding: .05rem .55rem; border: 1px solid var(--line); border-radius: 6px; }
+
 /* site navigation */
 nav.site { max-width: 44rem; margin: 0 auto; padding: 1.25rem 1.25rem 0; display: flex; gap: 1.25rem; font: .8rem var(--mono); letter-spacing: .04em; }
 nav.site a { color: var(--text); padding-bottom: .15rem; border-bottom: 2px solid transparent; transition: color .15s, border-color .15s; }
