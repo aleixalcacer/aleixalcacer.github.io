@@ -1,0 +1,3 @@
+# Use it to see the draft notes while writing: uv run quarto preview --profile drafts
+website:
+  draft-mode: visible
