@@ -516,8 +516,10 @@ $$
 The second rule, that archetypes are mixtures of real observations, reads $Z = B X$, where $B \in \mathbb{R}^{k \times n}$ holds the weights. Fitting the model means solving
 
 $$
-\min_{A,\,B}\ \lVert X - A B X \rVert_F^2
-\quad\text{s.t.}\quad A\mathbf{1} = \mathbf{1},\ B\mathbf{1} = \mathbf{1},\ A, B \ge 0 .
+\begin{aligned}
+&\min_{A,\,B}\ \lVert X - A B X \rVert_F^2 \\
+&\text{subject to}\ \ A\mathbf{1} = \mathbf{1},\ B\mathbf{1} = \mathbf{1},\ A, B \ge 0 .
+\end{aligned}
 $$
 
 $A$ says how much of each archetype every observation has; $B$ says which observations each archetype is made of. The constraints are exactly the two rules above: every row of weights is non-negative and adds up to one, so every mixture is an average. The unexplained variation shown in the figures is $\lVert X - ABX\rVert_F^2$ divided by the total variation of the data, $\lVert X - \bar{X}\rVert_F^2$, that is, $1 - R^2$. Distances are squared, so a value of 3% corresponds to a typical gap of about $\sqrt{0.03} \approx 17\%$ of the spread of the data.

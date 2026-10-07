@@ -84,7 +84,10 @@ figure img { max-width: 100%; height: auto; }
 figcaption { margin-top: .5rem; color: var(--muted); font-size: .85rem; }
 
 /* references (notes) */
-#refs .csl-entry { margin: .5rem 0; padding-left: 1.5rem; text-indent: -1.5rem; color: var(--muted); font-size: .9rem; }
+#refs .csl-entry { margin: .5rem 0; padding-left: 1.5rem; text-indent: -1.5rem; color: var(--muted); font-size: .9rem; overflow-wrap: anywhere; }
+
+/* maths: a wide formula scrolls on its own instead of widening the page */
+.katex-display { overflow-x: auto; overflow-y: hidden; }
 
 /* notes index */
 ul.notes li { margin-bottom: 1.6rem; }
