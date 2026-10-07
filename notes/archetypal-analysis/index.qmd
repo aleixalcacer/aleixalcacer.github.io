@@ -5,25 +5,9 @@ date: "2026-10-07"
 categories: [archetypal analysis]
 bibliography: references.bib
 link-citations: true
-pagetitle: "Archetypal analysis, visually — Aleix Alcacer Sales"
-format:
-  html:
-    include-in-header:
-      - text: |
-          <link rel="canonical" href="https://www.aleixalcacer.com/notes/archetypal-analysis.html">
-          <meta property="og:type" content="article">
-          <meta property="og:site_name" content="Aleix Alcacer Sales">
-          <meta property="og:title" content="Archetypal analysis, visually">
-          <meta property="og:description" content="A gentle, visual introduction to archetypal analysis: describing data as mixtures of a few extreme cases.">
-          <meta property="og:url" content="https://www.aleixalcacer.com/notes/archetypal-analysis.html">
-          <meta property="og:image" content="https://www.aleixalcacer.com/notes/og-archetypal-analysis.png">
-          <meta name="twitter:card" content="summary_large_image">
-          <script type="application/ld+json">
-          {"@context": "https://schema.org", "@type": "Article", "headline": "Archetypal analysis, visually",
-           "description": "A gentle, visual introduction to archetypal analysis: describing data as mixtures of a few extreme cases.",
-           "image": "https://www.aleixalcacer.com/notes/og-archetypal-analysis.png", "datePublished": "2026-10-07", "url": "https://www.aleixalcacer.com/notes/archetypal-analysis.html",
-           "author": {"@type": "Person", "name": "Aleix Alcacer Sales", "url": "https://www.aleixalcacer.com/"}}
-          </script>
+image: og.png
+aliases:
+  - /notes/archetypal-analysis.html
 ---
 
 Think of a paint shop. It does not sell thousands of colours: it sells a few pure ones, and every other colour is a mix of them. **Archetypal analysis** (AA) does the same with data. It looks for a handful of extreme, "pure" cases, the **archetypes**, and describes everything else as a mixture of them.
@@ -564,6 +548,6 @@ for z, name, dy, va in zip(Z, NAMES, [0.12, -0.12, -0.12], ["bottom", "top", "to
 fig.text(0.06, 0.60, "Archetypal analysis,\nvisually", fontsize=42, fontweight="bold", color=TEXT, va="center", linespacing=1.15)
 fig.text(0.06, 0.34, "Describing data as mixtures\nof a few extreme cases", fontsize=20, color=INK, va="center", linespacing=1.4)
 fig.text(0.06, 0.09, "aleixalcacer.com", fontsize=16, color=GREEN)
-fig.savefig("og-archetypal-analysis.png", dpi=100, facecolor=BG)
+fig.savefig("og.png", dpi=100, facecolor=BG)
 plt.close(fig)
 ```

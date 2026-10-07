@@ -1,5 +1,5 @@
 project:
-  type: default
+  type: website
   output-dir: docs
   resources:
     - /CNAME
@@ -7,8 +7,7 @@ project:
     - /favicon.svg
     - /profile.jpg
     - /robots.txt
-    - /sitemap.xml
-    - /notes/og-archetypal-analysis.png
+    - /notes/*/og.png
     - /simplex.js
 
 execute:
@@ -25,4 +24,12 @@ format:
     toc: false
     html-math-method: katex
     include-in-header: head.html
+    canonical-url: true
     include-before-body: nav.html
+
+website:
+  site-url: https://www.aleixalcacer.com
+  title: Aleix Alcacer Sales
+  open-graph: true
+  twitter-card: true
+  search: false
