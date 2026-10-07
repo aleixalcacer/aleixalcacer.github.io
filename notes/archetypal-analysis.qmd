@@ -12,6 +12,7 @@ format:
       - text: |
           <link rel="canonical" href="https://www.aleixalcacer.com/notes/archetypal-analysis.html">
           <meta property="og:type" content="article">
+          <meta property="og:site_name" content="Aleix Alcacer Sales">
           <meta property="og:title" content="Archetypal analysis, visually">
           <meta property="og:description" content="A gentle, visual introduction to archetypal analysis: describing data as mixtures of a few extreme cases.">
           <meta property="og:url" content="https://www.aleixalcacer.com/notes/archetypal-analysis.html">
@@ -550,16 +551,19 @@ $A$ says how much of each archetype every observation has; $B$ says which observ
 
 ```{python}
 #| include: false
-# the picture shown when the note is shared: the figure with the three archetypes, as a PNG (1200 x 630), because social networks do not show SVG
-BG = "#fffdf9"
+# the picture shown when the note is shared (1200 x 630, a PNG because social networks do not show SVG), drawn with the same data and colours as the note
+BG, TEXT = "#fffdf9", "#1c1917"
 fig = plt.figure(figsize=(12, 6.3), dpi=100, facecolor=BG)
-ax = fig.add_axes([0.2, 0.02, 0.6, 0.96])
+ax = fig.add_axes([0.50, 0.04, 0.49, 0.92])
 stage(ax)
 hull(ax, Z)
 ax.scatter(*X.T, s=DOT * 3, color=GREY)
 ax.scatter(*Z.T, s=ARCH * 3.5, color=COLORS, zorder=3)
 for z, name, dy, va in zip(Z, NAMES, [0.12, -0.12, -0.12], ["bottom", "top", "top"]):
     ax.text(z[0], z[1] + dy, name, ha="center", va=va, fontsize=17, color=INK, bbox=dict(facecolor=BG, edgecolor="none", pad=2, alpha=0.85))
+fig.text(0.06, 0.60, "Archetypal analysis,\nvisually", fontsize=42, fontweight="bold", color=TEXT, va="center", linespacing=1.15)
+fig.text(0.06, 0.34, "Describing data as mixtures\nof a few extreme cases", fontsize=20, color=INK, va="center", linespacing=1.4)
+fig.text(0.06, 0.09, "aleixalcacer.com", fontsize=16, color=GREEN)
 fig.savefig("og-archetypal-analysis.png", dpi=100, facecolor=BG)
 plt.close(fig)
 ```
