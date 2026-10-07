@@ -35,14 +35,6 @@ image: og.png            # optional
 ---
 ```
 
-To write a note without publishing it, add `draft: true` to its front matter. A draft is not rendered, listed or added to the sitemap (its address only shows an empty page). To see the drafts while you write, use the `drafts` profile, which shows them in the notes index, tagged as drafts:
-
-```bash
-uv run quarto preview --profile drafts
-```
-
-If you always want the drafts on your machine, create a file called `_environment.local` in the project root with the line `QUARTO_PROFILE=drafts`. It is not committed, so the published site is not affected, and every preview or render on your machine will show the drafts, also the preview button of the VS Code extension. Quarto only runs one preview at a time: starting a new one stops the previous one.
-
-To publish a draft, delete the `draft: true` line and push: the build runs its code by itself. Before pushing, it is worth rendering it once (`uv run quarto render`) to check it, and committing `_freeze/` too. If a note is renamed, add `aliases: [/notes/old-name/]` to its front matter so the old address redirects.
+If a note is renamed, add `aliases: [/notes/old-name/]` to its front matter so the old address redirects.
 
 Quarto sometimes fails with a "No such file or directory" error when it moves the generated HTML; running `uv run quarto render` again fixes it. After changing a note's text or code, render twice and commit `_freeze/` too.
