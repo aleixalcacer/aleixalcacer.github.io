@@ -1,7 +1,6 @@
 ---
 title: "Notes"
 description: "Short, visual explanations of topics I work on."
-image: ../profile.jpg
 listing:
   contents: "*/index.qmd"
   sort: "date desc"

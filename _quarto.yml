@@ -7,7 +7,7 @@ project:
     - /favicon.svg
     - /profile.jpg
     - /robots.txt
-    - /notes/*/og.png
+    - /og.png
     - /simplex.js
 
 format:
@@ -17,14 +17,15 @@ format:
     css: style.css
     title-block-style: none
     toc: false
-    html-math-method: katex
-    include-in-header: head.html
+    html-math-method: mathml
     canonical-url: true
     include-before-body: nav.html
 
 website:
   site-url: https://www.aleixalcacer.com
   title: Aleix Alcacer Sales
+  favicon: /favicon.svg
+  image: /og.png
   open-graph: true
   twitter-card: true
   search: false

@@ -102,5 +102,4 @@ figcaption { margin-top: .5rem; color: var(--muted); font-size: .85rem; }
 nav.site { max-width: 44rem; margin: 0 auto; padding: 1.25rem 1.25rem 0; display: flex; gap: 1.25rem; font: .8rem var(--mono); letter-spacing: .04em; }
 nav.site a { color: var(--text); padding-bottom: .15rem; border-bottom: 2px solid transparent; transition: color .15s, border-color .15s; }
 nav.site a:hover { color: var(--accent); text-decoration: none; }
-nav.site a.cur { color: var(--accent); border-bottom-color: var(--accent); text-decoration: none; }
 nav.site + main { padding-top: 2.25rem; }

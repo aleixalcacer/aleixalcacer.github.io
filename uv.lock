@@ -14,7 +14,6 @@ dependencies = [
     { name = "jupyter" },
     { name = "matplotlib" },
     { name = "numpy" },
-    { name = "pyyaml" },
     { name = "svganim" },
 ]
 
@@ -23,7 +22,6 @@ requires-dist = [
     { name = "jupyter" },
     { name = "matplotlib" },
     { name = "numpy" },
-    { name = "pyyaml" },
     { name = "svganim", specifier = ">=0.3.0" },
 ]
 

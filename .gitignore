@@ -4,10 +4,8 @@ __pycache__/
 .DS_Store
 
 /.quarto/
-**/*.quarto_ipynb*
-
-/docs/
-
 **/*.quarto_ipynb
 
-/_*.local
+/docs/
+/site_libs/
+/notes/*/*_files/
