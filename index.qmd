@@ -5,6 +5,7 @@ format:
   html:
     template-partials:
       - title-block.html
+    include-in-header: head-home.html
 pagetitle: "Aleix Alcacer Sales — Archetypal analysis"
 description: "Assistant Professor at Universitat Jaume I. Research on archetypal analysis: interpretable representations of data as mixtures of extreme cases."
 ---

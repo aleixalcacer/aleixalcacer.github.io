@@ -6,6 +6,9 @@ project:
     - /favicon.ico
     - /favicon.svg
     - /profile.jpg
+    - /robots.txt
+    - /sitemap.xml
+    - /notes/og-archetypal-analysis.png
     - /simplex.js
 
 execute:
