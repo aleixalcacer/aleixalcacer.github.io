@@ -1,6 +1,8 @@
 ---
 title: "Archetypal analysis, visually"
 description: "A gentle, visual introduction to archetypal analysis: describing data as mixtures of a few extreme cases."
+date: "2026-10-07"
+categories: [archetypal analysis]
 bibliography: references.bib
 link-citations: true
 ---
@@ -15,14 +17,27 @@ from itertools import permutations
 import matplotlib.pyplot as plt
 import numpy as np
 from IPython.display import SVG
-from matplotlib.colors import to_rgb
+from matplotlib.colors import to_rgb, to_rgba
+from matplotlib.patches import Polygon
 from matplotlib.ticker import PercentFormatter
 from matplotlib_inline.backend_inline import set_matplotlib_formats
 from svganim import anim_to_svg
 
 INK, GREY, GREEN = "#78716c", "#a8a29e", "#5f7a2f"
+
+# one visual vocabulary for all the figures, so text and dots look the same from one figure to the next
+FONT, TITLE = 11, 12  # text and panel titles (points)
+DOT, ARCH, MARK = 14, 100, 60  # athlete dots, archetype dots and markers on curves (points squared)
+ZOOM_DOT, ZOOM_ARCH = 40, 220  # the same, magnified, in the zoom panel
+
+
+def thick(w):
+    """Line width that shows a weight w."""
+    return 0.5 + 8 * w
+
+
 plt.rcParams.update({"text.color": INK, "axes.edgecolor": INK, "axes.labelcolor": INK, "xtick.color": INK, "ytick.color": INK,
-                     "figure.facecolor": "none", "axes.facecolor": "none", "savefig.facecolor": "none", "font.size": 11})
+                     "figure.facecolor": "none", "axes.facecolor": "none", "savefig.facecolor": "none", "font.size": FONT})
 set_matplotlib_formats("svg", bbox_inches=None)  # keep the full canvas, no cropping
 
 NAMES = ["Sprinter", "Marathoner", "Weightlifter"]
@@ -47,7 +62,8 @@ def panel(width=5.6):
 
 
 def hull(ax, Z):
-    return ax.fill(*Z.T, color=GREEN, alpha=0.10)[0]
+    """The shape (a triangle for three archetypes) that holds all the mixtures of the archetypes."""
+    return ax.add_patch(Polygon(Z, closed=True, facecolor=to_rgba(GREEN, 0.10), edgecolor=to_rgba(GREEN, 0.55), linewidth=1))
 
 
 def label(ax, Z):
@@ -113,17 +129,39 @@ A, B, history = A[:, perm], B[perm], [h[perm] for h in history]
 Z = history[-1]
 ```
 
+```{python}
+#| fig-cap: "Paint mixing. Every colour inside the triangle is a mix of the three pure colours at its corners."
+#| fig-alt: "A triangle with a pure blue, a pure green and a pure orange at its corners, whose inside blends smoothly between the three."
+tri = np.array([[0.0, 1.0], [-0.87, -0.5], [0.87, -0.5]])
+res = 400
+px, py = np.meshgrid(np.linspace(-1.0, 1.0, res), np.linspace(1.15, -0.65, res))
+corners_matrix = np.vstack([tri.T, np.ones(3)])  # barycentric coordinates of every pixel
+mix = np.linalg.solve(corners_matrix, np.stack([px.ravel(), py.ravel(), np.ones(px.size)])).T
+inside = (mix >= -1e-9).all(axis=1)
+image = np.dstack([(mix @ RGB).reshape(res, res, 3), inside.reshape(res, res).astype(float)])
+
+fig, ax = plt.subplots(figsize=(W, 3.3))
+ax.imshow(np.clip(image, 0, 1), extent=(-1.0, 1.0, -0.65, 1.15))
+ax.scatter(*tri.T, s=ARCH, color=COLORS, edgecolor="white", linewidth=1.5, zorder=3)
+ax.set_aspect("equal")
+ax.axis("off")
+fig.subplots_adjust(left=0, right=1, bottom=0, top=1)
+plt.show()
+```
+
+Archetypal analysis looks for the pure "colours" hidden in a dataset. Let us see how it works with a simple example.
+
 ## A cloud of athletes
 
 Imagine we measured 150 athletes and drew each one as a dot. Athletes who are alike end up close together. (In statistics, each athlete is one **observation**.)
 
-To be able to draw them, each athlete is described here by just two numbers. Real data usually have many more, dozens or even thousands of measurements, but the ideas below are exactly the same; we just cannot draw them. (The data here are made up, just to have something to look at.)
+To be able to draw them, each athlete is described here by just two numbers, say two scores that summarise their abilities. Real data usually have many more, dozens or even thousands of measurements, but the ideas below are exactly the same; we just cannot draw them. (The data here are made up, just to have something to look at.)
 
 ```{python}
 #| fig-cap: "150 athletes, one dot each. Similar athletes are close together."
 #| fig-alt: "A cloud of grey dots with a roughly triangular shape."
 fig, ax = panel()
-ax.scatter(*X.T, s=12, color=GREY)
+ax.scatter(*X.T, s=DOT, color=GREY)
 plt.show()
 ```
 
@@ -133,21 +171,23 @@ Look at the shape of the cloud: it sticks out in three directions. Near the tip 
 #| fig-cap: "The three archetypes: the extreme cases at the tips of the cloud. The triangle they form contains most athletes."
 #| fig-alt: "The same cloud, with a coloured dot at each tip labelled Sprinter, Marathoner and Weightlifter, joined by a triangle."
 fig, ax = panel()
-ax.scatter(*X.T, s=12, color=GREY)
+ax.scatter(*X.T, s=DOT, color=GREY)
 hull(ax, Z)
-ax.scatter(*Z.T, s=110, color=COLORS, zorder=3)
+ax.scatter(*Z.T, s=ARCH, color=COLORS, zorder=3)
 label(ax, Z)
 plt.show()
 ```
 
-Nobody has to be exactly a sprinter, a marathoner or a weightlifter. A decathlete, for example, is a bit of all three. (Some athletes fall outside the triangle; we will get to them in a moment.) That is the whole idea: *the extremes are the building blocks, and every athlete is a mixture of them*.
+Nobody has to be exactly a sprinter, a marathoner or a weightlifter. A decathlete, for example, is a bit of all three. (Some athletes fall outside the triangle; we will get to them in a moment.) That is the whole idea: *the extremes are the building blocks, and every athlete is a mixture of them*. This is the **first rule** of archetypal analysis.
 
 ## Every athlete is a mixture
 
 To say how much of each archetype an athlete has, we use three percentages that add up to 100%. They are the athlete's **weights**. Watch one athlete walk around the triangle: the lines go to the archetypes, the bar chart shows the weights, and the dot takes the blend of the archetypes' colours that matches them.
 
+At an archetype, the athlete is 100% that archetype. Along an edge, only two archetypes matter. In the middle there is a bit of everything. The closer to an archetype, the larger its share.
+
 ```{python}
-#| fig-cap: "One athlete moves through the triangle. The bars give the share of each archetype. At an archetype the athlete is 100% that archetype; along an edge only two archetypes matter; in the middle there is a bit of everything. The closer to an archetype, the larger its share. The dot is coloured by the blend of the archetypes' colours given by its weights."
+#| fig-cap: "One athlete moves through the triangle. The bars show how much of each archetype the athlete has."
 #| fig-alt: "An animation of a dot moving inside the triangle of archetypes, with three bars showing how much of each archetype it contains."
 fig = plt.figure(figsize=(W, H2))
 left = fig.add_axes([0, 0, 0.55, 1])
@@ -157,11 +197,11 @@ right.set_xlim(0, 1.3)
 right.set_ylim(-0.4, 2.9)
 right.axis("off")
 
-left.scatter(*X.T, s=10, color=GREY, alpha=0.5)
+left.scatter(*X.T, s=DOT, color=GREY, alpha=0.5)
 hull(left, Z)
 lines = [left.plot([0, 0], [0, 0], color=COLORS[j], solid_capstyle="round", zorder=2)[0] for j in range(3)]
-dot = left.scatter([0], [0], s=100, edgecolor=INK, linewidth=1.5, zorder=4)
-left.scatter(*Z.T, s=90, color=COLORS, zorder=3)
+dot = left.scatter([0], [0], s=ARCH, edgecolor=INK, linewidth=1.5, zorder=4)
+left.scatter(*Z.T, s=ARCH, color=COLORS, zorder=3)
 label(left, Z)
 
 ys = [2, 1, 0]
@@ -176,7 +216,7 @@ def show(w):
     p = w @ Z
     for j, line in enumerate(lines):
         line.set_data([p[0], Z[j, 0]], [p[1], Z[j, 1]])
-        line.set_linewidth(0.4 + 8 * w[j])
+        line.set_linewidth(thick(w[j]))
     dot.set_offsets([p])
     dot.set_facecolor([w @ RGB])
     shares = np.round(100 * w).astype(int)
@@ -215,10 +255,10 @@ inside = np.setdiff1d(np.arange(n), out)
 
 fig, ax = panel()
 hull(ax, Z)
-ax.scatter(*X[inside].T, s=12, color=GREY)
+ax.scatter(*X[inside].T, s=DOT, color=GREY)
 gaps = [ax.plot([0, 0], [0, 0], color=INK, lw=0.8, alpha=0.7)[0] for _ in out]
-moving = ax.scatter(*X[out].T, s=16, color=INK, zorder=3)
-ax.scatter(*Z.T, s=90, color=COLORS, zorder=3)
+moving = ax.scatter(*X[out].T, s=DOT, color=INK, zorder=3)
+ax.scatter(*Z.T, s=ARCH, color=COLORS, zorder=3)
 label(ax, Z)
 
 
@@ -245,7 +285,7 @@ There is a catch. If we were free to put the three archetypes anywhere, we could
 So archetypes are extreme, but never imaginary: they sit at the edge of the data, built from observations that actually exist. You can always go and look at the athletes behind an archetype, which makes the result easy to interpret. In the figure below, the zoom visits each archetype in turn.
 
 ```{python}
-#| fig-cap: "An archetype is built from real observations. Left: the cloud, with the area being shown marked. Right: zoom into that area, which visits each archetype in turn. An archetype (large dot) is a weighted average of a few real athletes, joined to it by lines that are thicker the larger their weight. The Sprinter needs no lines: it coincides with a single real athlete."
+#| fig-cap: "Each archetype is a weighted average of a few real athletes: the thicker the line, the larger the weight. The Sprinter coincides with one real athlete. Right: a zoom that visits each archetype in turn."
 #| fig-alt: "An animation with two panels. The left one shows the cloud with a small dashed square that moves from one archetype to the next. The right one zooms into that square, where a large coloured dot, the archetype, is joined by lines of different thickness to a few real athletes."
 R = []  # for each archetype, a window that holds every athlete behind it
 for m in range(3):
@@ -264,24 +304,24 @@ for side in right.spines.values():
     side.set_alpha(0.6)
 
 zoom = min(0.5 * W / np.ptp(XLIM), H2 / np.ptp(YLIM)) / (min(0.42 * W, 0.84 * H2) / (2 * np.mean(R)))  # how much smaller the left panel draws things than the right one
-left.scatter(*X.T, s=12, color=GREY)
+left.scatter(*X.T, s=DOT, color=GREY)
 hull(left, Z)
 
-right.scatter(*X.T, s=40, color=GREY)
+right.scatter(*X.T, s=ZOOM_DOT, color=GREY)
 rlines = []  # the lines of the right panel, with their ends, to hide the ones that fall outside the window
 for m in range(3):
     ids = np.flatnonzero(B[m] > 0.02)
     if len(ids) < 2:  # an archetype that is one single athlete needs no lines
         continue
     for i in ids:
-        left.plot(*np.stack([Z[m], X[i]]).T, color=COLORS[m], lw=max(0.8, zoom * (0.5 + 10 * B[m, i])), solid_capstyle="round", alpha=0.9)
-        rlines.append((right.plot(*np.stack([Z[m], X[i]]).T, color=COLORS[m], lw=0.5 + 10 * B[m, i], solid_capstyle="round", alpha=0.9)[0], Z[m], X[i]))
-    left.scatter(*X[ids].T, s=12, color=COLORS[m], zorder=3)
-    right.scatter(*X[ids].T, s=40, color=COLORS[m], zorder=3)
-left.scatter(*Z.T, s=90, color=COLORS, zorder=3)
-right.scatter(*Z.T, s=220, color=COLORS, edgecolor=INK, linewidth=1.5, zorder=4)
+        left.plot(*np.stack([Z[m], X[i]]).T, color=COLORS[m], lw=max(0.8, zoom * thick(B[m, i])), solid_capstyle="round", alpha=0.9)
+        rlines.append((right.plot(*np.stack([Z[m], X[i]]).T, color=COLORS[m], lw=thick(B[m, i]), solid_capstyle="round", alpha=0.9)[0], Z[m], X[i]))
+    left.scatter(*X[ids].T, s=DOT, color=COLORS[m], zorder=3)
+    right.scatter(*X[ids].T, s=ZOOM_DOT, color=COLORS[m], zorder=3)
+left.scatter(*Z.T, s=ARCH, color=COLORS, zorder=3)
+right.scatter(*Z.T, s=ZOOM_ARCH, color=COLORS, edgecolor=INK, linewidth=1.5, zorder=4)
 label(left, Z)
-name = right.text(0.5, -0.03, "", transform=right.transAxes, ha="center", va="top", fontsize=13)  # fixed under the zoom
+name = right.text(0.5, -0.03, "", transform=right.transAxes, ha="center", va="top", fontsize=TITLE)  # fixed under the zoom
 box = left.add_patch(plt.Rectangle((0, 0), 1, 1, fill=False, linestyle="--", edgecolor=INK, alpha=0.6))
 
 
@@ -310,12 +350,12 @@ SVG(data=svg)
 
 ## Archetypes are not averages
 
-A more familiar way to summarise data is **clustering**: split the athletes into groups and describe each group by its average, the *centroid*. A centroid is the *typical* member of a group, so it lies in the middle of the cloud. An archetype is the opposite: the *extreme* member, on the edge.
+A more familiar way to summarise data is **clustering**: split the athletes into groups of similar athletes, and describe each group by its average, the *centroid*. A centroid is the *typical* member of a group, so it lies in the middle of the cloud. The "average athlete" of a group is average at everything, and may look like nobody in particular. An archetype is the opposite: the *extreme* member, on the edge.
 
 The closest relative of AA is **fuzzy c-means**, a "soft" clustering method. Like AA, it gives every athlete percentages that add up to 100%, one for each group. But the percentages mean something different. In c-means they say *how close the athlete is to each typical case*. In AA they say *how much of each extreme the athlete is made of*.
 
 ```{python}
-#| fig-cap: "Fuzzy c-means (left) and archetypal analysis (right) on the same athletes. Each dot is coloured by the blend of the colours of its three references, according to its percentages. c-means measures closeness to three typical cases, the squares, which sit inside the cloud. AA describes each athlete as a mixture of three extremes, the dots on the edge. The triangle of the centres leaves most athletes outside; the triangle of the archetypes covers most of them."
+#| fig-cap: "Fuzzy c-means (left) and archetypal analysis (right) on the same athletes. The centres (squares) sit inside the cloud and the archetypes (dots) on its edge. The triangle of the centres leaves most athletes outside; the triangle of the archetypes covers most of them."
 #| fig-alt: "Two panels with the same cloud. On the left, three squares inside the cloud, the centres found by fuzzy c-means. On the right, the three archetypes at the tips."
 def fuzzy_cmeans(X, c=3, m=2.0, steps=100, seed=0):
     """Fuzzy c-means: every point gets a membership in each group, from its distance to the group centres."""
@@ -340,26 +380,30 @@ left = fig.add_axes([0, 0, 0.5, 1])
 right = fig.add_axes([0.5, 0, 0.5, 1])
 for ax, title in [(left, "fuzzy c-means"), (right, "archetypal analysis")]:
     stage(ax)
-    ax.text(XLIM[0], YLIM[1], title, fontsize=12, va="top")
+    ax.text(np.mean(XLIM), YLIM[1], title, fontsize=TITLE, ha="center", va="top")
 hull(left, centers)
-left.scatter(*X.T, s=14, color=U @ centre_colors)
-left.scatter(*centers.T, s=120, marker="s", color=centre_colors, edgecolor=INK, linewidth=1, zorder=3)
+left.scatter(*X.T, s=DOT, color=U @ centre_colors)
+left.scatter(*centers.T, s=ARCH, marker="s", color=centre_colors, edgecolor=INK, linewidth=1, zorder=3)
 hull(right, Z)
-right.scatter(*X.T, s=14, color=A @ RGB)
-right.scatter(*Z.T, s=90, color=COLORS, zorder=3)
+right.scatter(*X.T, s=DOT, color=A @ RGB)
+right.scatter(*Z.T, s=ARCH, color=COLORS, zorder=3)
 plt.show()
 ```
+
+Put simply: centres answer *"what does a typical athlete look like?"*, while archetypes answer *"what are the extremes?"*
 
 ## How are archetypes found?
 
 Nobody knows the archetypes in advance, so the computer finds them by trial and improvement:
 
 1. **Guess.** Start with three random athletes as archetypes.
-2. **Check.** Try to rebuild every athlete as a mixture of the archetypes. The gap between each athlete and its rebuilt version is the **error**. We report it as the share of the athletes' variation that is left unexplained, which is why the axis of the figure below says "unexplained variation".
+2. **Check.** Try to rebuild every athlete as a mixture of the archetypes. The gap between each athlete and its rebuilt version is the **error**.
 3. **Improve.** Nudge the archetypes, and the weights, in the direction that makes the error smaller.
 4. **Repeat** until the error stops improving.
 
-At 0% unexplained variation the archetypes rebuild everyone perfectly; at 100% they do no better than describing everybody as "the average athlete". A bad first guess can be even worse than that, so the curve starts above 100%. Watch the archetypes (left) leave their random starting points and slide towards the tips while the unexplained variation (right) drops.
+It is like walking downhill in the fog: you cannot see the valley, but at every step you can feel which way the ground slopes.
+
+To get a single number for all the gaps together, we compare them with how spread out the athletes are. We call the result the **unexplained variation**: at 0% the archetypes rebuild everyone perfectly, and at 100% they do no better than describing everybody as "the average athlete". A bad first guess can be even worse than that, so the curve starts above 100%. Watch the archetypes (left) leave their random starting points and slide towards the tips while the unexplained variation (right) drops.
 
 ```{python}
 #| fig-cap: "Fitting archetypes. Left: they start at three random athletes and move towards the extremes. Right: the unexplained variation drops quickly at first, then flattens out as the archetypes settle."
@@ -375,10 +419,10 @@ right.set_ylim(0, error.max() * 1.05)
 right.yaxis.set_major_formatter(PercentFormatter(1, decimals=0))
 right.spines[["top", "right"]].set_visible(False)
 
-left.scatter(*X.T, s=10, color=GREY)
+left.scatter(*X.T, s=DOT, color=GREY)
 poly = hull(left, history[0])
-arch = left.scatter(*history[0].T, s=90, color=COLORS, zorder=3)
-marker = right.scatter([ts[0]], [error[0]], s=60, color=GREEN, zorder=3)
+arch = left.scatter(*history[0].T, s=ARCH, color=COLORS, zorder=3)
+marker = right.scatter([ts[0]], [error[0]], s=MARK, color=GREEN, zorder=3)
 
 
 def update(f):
@@ -408,18 +452,18 @@ for ax, k in zip(axes.ravel(), [2, 3, 4, 5]):
     stage(ax)
     Zk = fits[k][2][-1]
     order = np.argsort(np.arctan2(*(Zk - Zk.mean(axis=0)).T[::-1]))
-    ax.scatter(*X.T, s=8, color=GREY)
+    ax.scatter(*X.T, s=DOT, color=GREY)
     if k > 2:
-        ax.fill(*Zk[order].T, color=GREEN, alpha=0.10)
+        hull(ax, Zk[order])
     ax.plot(*Zk[order].T, color=GREEN, lw=1.2) if k == 2 else None
-    ax.scatter(*Zk.T, s=45, color=GREEN, zorder=3)
-    ax.text(np.mean(XLIM), YLIM[1], f"{k} archetypes", ha="center", va="top", fontsize=12)
+    ax.scatter(*Zk.T, s=ARCH, color=GREEN, zorder=3)
+    ax.text(np.mean(XLIM), YLIM[1], f"{k} archetypes", ha="center", va="top", fontsize=TITLE)
     ax.text(np.mean(XLIM), YLIM[0], f"unexplained {fits[k][4][-1]:.1%}", ha="center", va="bottom")
 fig.subplots_adjust(left=0, right=1, bottom=0, top=1, wspace=0, hspace=0.08)
 plt.show()
 ```
 
-Plotting the final unexplained variation against the number of archetypes makes the choice easier. We look for the **elbow**: the point after which adding archetypes stops paying off.
+Plotting the final unexplained variation against the number of archetypes makes the choice easier. We look for the **elbow**: the curve looks like a bent arm, and the elbow is where it bends, the point after which adding archetypes stops paying off.
 
 ```{python}
 #| fig-cap: "Unexplained variation against the number of archetypes. It falls sharply up to three archetypes and hardly changes afterwards: the elbow is at three. In real data the elbow is rarely this sharp, so the choice also depends on what you want to interpret."
@@ -429,7 +473,7 @@ errs = [fits[k][4][-1] for k in ks]
 
 fig, ax = plt.subplots(figsize=(5.6, 3.1), layout="constrained")
 ax.plot(ks, errs, color=GREY, lw=2, zorder=1)
-ax.scatter(ks, errs, s=50, color=[GREEN if k == 3 else GREY for k in ks], zorder=2)
+ax.scatter(ks, errs, s=MARK, color=[GREEN if k == 3 else GREY for k in ks], zorder=2)
 ax.set_xticks(ks)
 ax.set_xlabel("number of archetypes")
 ax.set_ylabel("unexplained variation")
@@ -450,7 +494,7 @@ AA shines whenever the extremes tell you more than the averages. It was introduc
 - **Outliers matter.** Archetypes live at the extremes, so a few very unusual observations can pull them. It is worth looking at the data first.
 - **The answer is not unique.** Different starting guesses can end in slightly different archetypes. Here we tried four starts and kept the best.
 - **Choosing the number of archetypes is a judgement.** The elbow helps, but what you want to interpret matters too.
-- **Scales matter.** If the variables are in very different units, the largest ones dominate, so they are usually put on a comparable scale first.
+- **Scales matter.** If one variable is measured in grams and another in kilometres, the one with the big numbers dominates, so variables are usually put on a comparable scale first.
 
 ## In short
 
